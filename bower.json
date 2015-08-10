@@ -1,11 +1,12 @@
 {
     "name": "exentriq-bootstrap-material-ui",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "homepage": "https://github.com/ExentriqLtd/Bootstrap-Material-UI",
     "description": "Implements Google's Material Design in Bootstrap",
     "main": [
-        "/dist/exentriq-bootstrap-material-ui.min.css",
-        "/dist/exentriq-bootstrap-material-ui.min.js"
+        "dist/*",
+        "doc/*",
+        "src/*"
     ],
     "keywords" : [
         "exentriq",
@@ -24,9 +25,7 @@
     "license": "MIT",
     "ignore": [
         "**/.*",
-        "node_modules",
-        "src/bower_components",
-        "jade"
+        "jade/"
     ],
 	"dependencies": {
         "bootstrap-sass":       "^3.3.5",
