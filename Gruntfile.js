@@ -191,6 +191,22 @@ module.exports = function ( grunt ) {
             }
         },
 
+        // Jade
+        jade: {
+            compile: {
+                options: {
+                    pretty: true,
+                    data: {
+                        debug: true
+                    }
+                },
+                files: {
+                    "doc/color.html": "jade/color.jade",
+                    "doc/index.html": "jade/index.jade"
+                }
+            }
+        },
+
         // Watch
         watch: {
             sass: {
@@ -204,13 +220,19 @@ module.exports = function ( grunt ) {
                 tasks: [
                     'js_compile'
                 ]
+            },
+            jade: {
+                files: ['jade/**/*.jade', 'jade/**/*.html'],
+                tasks: [
+                    'jade_compile'
+                ]
             }
         },
 
         // Concurrent
         concurrent: {
             watch: {
-                tasks: ['watch:sass', 'watch:js', 'notify:watching', 'server'],
+                tasks: ['watch:sass', 'watch:js', 'watch:jade', 'notify:watching', 'server'],
                 options: {
                     logConcurrentOutput: true,
                     limit: 10,
@@ -318,6 +340,8 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-sass');
 
+    grunt.loadNpmTasks('grunt-contrib-jade');
+
     /** 
     * Register Grunt tasks.
     */
@@ -328,6 +352,7 @@ module.exports = function ( grunt ) {
 
     grunt.registerTask('sass_compile', ['sass:dist', 'postcss:dist', 'cssmin:dist', 'copy:css', 'notify:sass_compile']);
     grunt.registerTask('js_compile', ['jshint:beforeconcat', 'concat:dist', 'uglify:dist', 'copy:js', 'notify:js_compile']);
+    grunt.registerTask('jade_compile', ['jade:compile', 'notify:jade_compile']);
 
     grunt.registerTask('server', ['browserSync', 'notify:server']);
 
@@ -344,6 +369,7 @@ module.exports = function ( grunt ) {
         'copy:fonts',
         'copy:css',
         'copy:js',
+        'jade:compile',
         'notify:release_compile'
         ]);
 };

@@ -1,0 +1,10 @@
+include snippets/_navbar.html
+div(class="main")
+	case layout_content
+		when "index"
+			include modules/_index.html
+		when "color"
+			include modules/_color.html
+		default
+			include modules/_index.html
+include snippets/_footer.html
