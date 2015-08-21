@@ -1,5 +1,3 @@
-@mixin box-shadow-2($args1, $args2) {
-    -webkit-box-shadow: $args1, $args2;
-    -moz-box-shadow: $args1, $args2;
-    box-shadow: $args1, $args2;
+@mixin eq-ui-transition($property) {
+    transition: $property .2s cubic-bezier(0.4, 0, 0.2, 1);
 }

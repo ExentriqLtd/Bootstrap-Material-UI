@@ -11,75 +11,111 @@
     <link href="assets/css/exentriq-bootstrap-material-ui.min.css" rel="stylesheet">
     <link href="assets/css/doc.css" rel="stylesheet">
   </head>
-  <body>
-<!--[if lt IE 8]>
+  <body class="eq-ui-layout-header-fixed">
+<!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Exentriq - Bootstrap Material UI</a>
+<header class="eq-ui-layout-header">
+    
+    <div class="eq-ui-tool-bar grey-100">
+        <div class="container-fluid">
+            <div class="header-title">      
+                <span class="section-title">Tool Bar</span>
+            </div>
+        </div>
     </div>
-    <div id="navbar" class="navbar-collapse collapse">
-      <!--form class="navbar-form navbar-right" role="form">
-        <div class="form-group">
-          <input type="text" placeholder="Email" class="form-control">
+
+    <div class="eq-ui-app-bar eq-deep-blue">
+        <div class="container-fluid">
+            <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
+            <div class="header-title">      
+                <span class="section-title">Exentriq</span>
+                <i class="material-icons icon icon-left icon-24">keyboard_arrow_right</i>
+                <span class="chapter-title">App Bar</span>
+            </div>
         </div>
-        <div class="form-group">
-          <input type="password" placeholder="Password" class="form-control">
+    </div>
+
+</header>
+
+<div class="eq-ui-side-nav">
+    <div class="eq-ui-side-nav-wrapper">
+
+        <div class="brand">
+            <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
+            <img src="assets/img/exentriq_logo.svg" alt="Exentriq logo">
         </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form-->
-    </div><!--/.navbar-collapse -->
-  </div>
-</nav>
-    <div class="main">
-<!-- Main jumbotron for a primary marketing message or call to action -->
+
+        <div class="footer">
+            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="fa fa-github icon icon-left icon-18"></i></a><p class="copyright">© Exentriq</p>
+            <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
+        </div>
+
+    </div>
+</div>
+
+    <main class="eq-ui-main">    
     <div class="jumbotron">
-      <div class="container">
-        <h1 class="test-color">Hello, world! Index</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class="btn btn-primary btn-lg" href="./color.html" role="button">Learn more &raquo;</a></p>
-      </div>
+        <div class="container">
+            <h1 class="test-color">Home - Coming soon</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg waves-effect waves-light" href="./typography.html" role="button">typography</a></p>
+        </div>
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button <i class="material-icons icon icon-left icon-18">cloud</i></a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button <i class="material-icons icon icon-right icon-18">cloud</i></a></p>
+            </div>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Heading</h2>
+                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
+            </div>
         </div>
-      </div>
-
-      <hr>
-
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
-    </div> <!-- /container -->
     </div>
+
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <br/><br/><br/>
+        </div>
+    </div>
+    
+</div>
+    </main>
 <script src="assets/js/exentriq-bootstrap-material-ui.min.js"></script>
 
 <script src="assets/js/doc.js"></script>

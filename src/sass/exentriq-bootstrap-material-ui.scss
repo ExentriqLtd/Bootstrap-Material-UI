@@ -3,18 +3,20 @@
 // Common
 @import "common/mixins";
 @import "common/color";
+@import "common/icons";
 @import "common/variables";
-
-// Fonts
-@import "fonts/icons-material-design";
-@import "fonts/roboto";
 
 // Bootstrap
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
 // Global
-@import "common/global";
 @import "../bower_components/waves/src/sass/waves";
+@import "../bower_components/prism/themes/prism";
+@import "common/global";
 
 // components
-@import "components/navbar";
+@import "components/layout/layout-header";
+@import "components/layout/tool-bar";
+@import "components/layout/app-bar";
+@import "components/layout/side-nav";
+@import "components/buttons";

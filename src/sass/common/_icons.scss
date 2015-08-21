@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+// Icon Styles
+.icon {
+	line-height: inherit;
+	font-size: 24px;
+
+	// Align
+	&.icon-left {
+		float: left;
+		margin-right: 15px;
+	}
+	&.icon-right {
+		float: right;
+		margin-left: 15px;
+	}
+
+	// Sizing
+	&.icon-18 {
+		font-size: 18px;
+	}
+	&.icon-24 {
+		font-size: 24px;
+	}
+	&.icon-36 {
+		font-size: 36px;
+	}
+	&.icon-48 {
+		font-size: 48px;
+	}
+
+	// Black on a light background
+	&.icon-dark {
+		color: rgba(0, 0, 0, 0.54);
+		&.icon-inactive {
+			color: rgba(0, 0, 0, 0.26);
+		}
+	}
+
+	// White on a dark background
+	&.icon-light {
+		color: rgba(255, 255, 255, 1);
+		&.icon-inactive {
+			color: rgba(255, 255, 255, 0.3);
+		}
+	}
+}

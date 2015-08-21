@@ -1,0 +1,31 @@
+/* Vars */
+
+
+// App bar
+.eq-ui-app-bar {
+    color: #fff;
+    height: 64px;
+    line-height: 64px;
+
+    .eq-ui-side-nav-toggle {
+        // Hide nav toggle
+        display: none;
+        i {
+           margin-top: 12px;
+           margin-bottom: 11px;
+           line-height: 41px;
+        }
+    }
+}
+
+// Show nav toggle
+body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
+    display: block;
+}
+
+@media (max-width: $screen-sm-min) {
+	// Show nav toggle
+    .eq-ui-app-bar .eq-ui-side-nav-toggle {
+        display: block;
+    }
+}

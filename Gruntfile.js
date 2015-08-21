@@ -32,7 +32,7 @@ module.exports = function ( grunt ) {
                 },
                 processors: [
                     require('autoprefixer-core')({
-                        browsers: ['last 2 versions']
+                        browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
                     })
                 ]
             },
@@ -94,6 +94,9 @@ module.exports = function ( grunt ) {
                 src: [
                     'src/js/vendor/bower_components.js',
                     'src/js/global.js',
+                    'src/js/site.js',
+                    'src/js/layout/app-bar.js',
+                    'src/js/layout/side-nav.js',
                     'src/js/_init.js'
                     ],
                 dest: 'dist/js/<%= meta.name_root_file %>.js',
@@ -152,6 +155,16 @@ module.exports = function ( grunt ) {
                     }
                 ]
             },
+            img: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/', 
+                        src: ['img/**'],
+                        dest: 'doc/assets'
+                    }
+                ]
+            },
             css: {
                 files: [
                     {
@@ -174,6 +187,12 @@ module.exports = function ( grunt ) {
             },
             dist: {
                 files: [
+                    {
+                        expand: true,
+                        cwd: 'src/', 
+                        src: ['img/**'],
+                        dest: 'dist'
+                    },
                     {
                         expand: true,
                         cwd: 'src/', 
@@ -202,6 +221,8 @@ module.exports = function ( grunt ) {
                 },
                 files: {
                     "doc/color.html": "jade/color.jade",
+                    "doc/helpers.html": "jade/helpers.jade",
+                    "doc/typography.html": "jade/typography.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
@@ -367,6 +388,7 @@ module.exports = function ( grunt ) {
         'uglify:dist',
         'copy:dist',
         'copy:fonts',
+        'copy:img',
         'copy:css',
         'copy:js',
         'jade:compile',

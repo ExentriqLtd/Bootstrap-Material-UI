@@ -1,10 +1,14 @@
-include snippets/_navbar.html
-div(class="main")
+include snippets/_header.html
+main(class="eq-ui-main")
 	case layout_content
 		when "index"
 			include modules/_index.html
 		when "color"
 			include modules/_color.html
+		when "helpers"
+			include modules/_helpers.html
+		when "typography"
+			include modules/_typography.html
 		default
 			include modules/_index.html
-include snippets/_footer.html
+	include snippets/_footer.html

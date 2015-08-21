@@ -1,7 +1,7 @@
-ExentriqUI = {};
+EqUI = {};
 
 // Unique ID
-ExentriqUI.guid = (function() {
+EqUI.guid = (function() {
   function s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
@@ -13,7 +13,7 @@ ExentriqUI.guid = (function() {
   };
 })();
 
-ExentriqUI.elementOrParentIsFixed = function(element) {
+EqUI.elementOrParentIsFixed = function(element) {
     var $element = $(element);
     var $checkElements = $element.add($element.parents());
     var isFixed = false;

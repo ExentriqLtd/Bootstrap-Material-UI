@@ -1,0 +1,43 @@
+/* Vars */
+
+
+// Layout header
+.eq-ui-layout-header {
+    @extend .z-depth-1;
+	z-index: $eq-ui-zindex-app-bar;
+	padding-left: $eq-ui-side-nav-width;
+
+	@include eq-ui-transition(padding-left);
+
+    .header-title {
+        font-size: 24px;
+        .section-title {
+            float: left;
+        }
+        i {
+            margin: 0 10px;
+        }
+        .chapter-title {
+            float: left;
+        }
+    }
+}
+
+body.eq-ui-layout-header-fixed .eq-ui-layout-header {
+	display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 64px;
+}
+
+body.eq-ui-side-nav-hide .eq-ui-layout-header  {
+    padding-left: 0;
+}
+
+@media (max-width: $screen-sm-min) {
+	.eq-ui-layout-header  {
+		padding-left: 0;
+	}
+}

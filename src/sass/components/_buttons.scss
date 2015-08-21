@@ -1,0 +1,97 @@
+// Buttons
+
+@mixin eq-ui-button-variant($color, $background) {
+	color: $color;
+	background-color: $background!important;
+
+	&:focus,
+	&.focus {
+		@extend .z-depth-1;
+		color: $color;
+		background-color: darken($background, 10%);
+	}
+	&:hover {
+		@extend .z-depth-1-half;
+		color: $color;
+		background-color: darken($background, 10%);
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		color: $color;
+		background-color: darken($background, 10%);
+
+		&:hover,
+		&:focus,
+		&.focus {
+		  	color: $color;
+		  	background-color: darken($background, 17%);
+		}
+	}
+	&:active,
+	&.active,
+	.open > &.dropdown-toggle {
+		background-image: none;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+		  	background-color: $background;
+		}
+	}
+
+	.badge {
+		color: $background;
+		background-color: $color;
+	}
+}
+
+.btn {
+	@include eq-ui-transition(box-shadow);
+	@extend .z-depth-1;
+	z-index: $eq-ui-zindex-content;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: $eq-ui-button-font-size;
+	min-width: $eq-ui-button-min-width;
+	padding: $eq-ui-button-padding;
+	height: $eq-ui-button-height;
+	line-height: $eq-ui-button-line-height;
+
+	&.btn-lg {
+		font-size: $eq-ui-button-large-font-size;
+		padding: $eq-ui-button-large-padding;
+		height: $eq-ui-button-large-height;
+		line-height: $eq-ui-button-large-line-height;
+	}
+}
+
+
+// Alternate buttons
+
+.btn-default {
+	@include eq-ui-button-variant($btn-default-color, $btn-default-bg);
+}
+.btn-primary {
+  	@include eq-ui-button-variant($btn-primary-color, $btn-primary-bg);
+}
+.btn-success {
+  	@include eq-ui-button-variant($btn-success-color, $btn-success-bg);
+}
+.btn-info {
+  	@include eq-ui-button-variant($btn-info-color, $btn-info-bg);
+}
+.btn-warning {
+  	@include eq-ui-button-variant($btn-warning-color, $btn-warning-bg);
+}
+.btn-danger {
+  	@include eq-ui-button-variant($btn-danger-color, $btn-danger-bg);
+}
+
