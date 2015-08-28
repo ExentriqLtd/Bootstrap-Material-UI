@@ -10,6 +10,7 @@
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
 // Global
+@import "../bower_components/animate-sass/animate";
 @import "../bower_components/waves/src/sass/waves";
 @import "../bower_components/prism/themes/prism";
 @import "common/global";
@@ -19,4 +20,7 @@
 @import "components/layout/tool-bar";
 @import "components/layout/app-bar";
 @import "components/layout/side-nav";
+
 @import "components/buttons";
+
+@import "components/collapsible";

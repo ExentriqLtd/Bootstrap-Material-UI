@@ -1,4 +1,4 @@
-- var def_class_body = "eq-ui-layout-header-fixed"
+- var def_class_body = "eq-ui-layout-header-fixed eq-ui-side-nav-auto"
 
 meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
 meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -10,11 +10,13 @@ if meta_descript
 else
 	meta(name='description', content='Implements Google\'s Material Design in Bootstrap.')
 
-if page
-	title #{page} | Exentriq - Bootstrap Material UI
+if doc_route.name_section && doc_route.name_chapter
+	title #{doc_route.name_section} - #{doc_route.name_chapter} | Exentriq - Bootstrap Material UI
+else if doc_route.name_chapter
+	title #{doc_route.name_chapter} | Exentriq - Bootstrap Material UI
 else
 	title Documentation | Exentriq - Bootstrap Material UI
 
 // CSS
-link(href='assets/css/exentriq-bootstrap-material-ui.min.css', rel='stylesheet')
-link(href='assets/css/doc.css', rel='stylesheet')
+link(href='assets/css/exentriq-bootstrap-material-ui.min.css?v=0.1.2', rel='stylesheet')
+link(href='assets/css/doc.css?v=0.1.2', rel='stylesheet')

@@ -11,6 +11,13 @@ module.exports = function ( grunt ) {
             notify_title: 'Exentriq - Bootstrap Material UI'
         },
 
+        // Clean
+        clean: {
+            dist: {
+                src: ["dist/*"]
+            }
+        },
+
         // CSS Sass
         sass: {
             dist: {
@@ -97,6 +104,7 @@ module.exports = function ( grunt ) {
                     'src/js/site.js',
                     'src/js/layout/app-bar.js',
                     'src/js/layout/side-nav.js',
+                    'src/js/collapsible.js',
                     'src/js/_init.js'
                     ],
                 dest: 'dist/js/<%= meta.name_root_file %>.js',
@@ -223,6 +231,9 @@ module.exports = function ( grunt ) {
                     "doc/color.html": "jade/color.jade",
                     "doc/helpers.html": "jade/helpers.jade",
                     "doc/typography.html": "jade/typography.jade",
+                    "doc/buttons.html": "jade/buttons.jade",
+                    "doc/collapsible.html": "jade/collapsible.jade",
+                    "doc/showcase.html": "jade/showcase.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
@@ -352,6 +363,7 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-notify');
 
+    grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -379,6 +391,7 @@ module.exports = function ( grunt ) {
 
     // Release
     grunt.registerTask('Release', [
+        'clean:dist',
         'sass:dist', 
         'postcss:dist',
         'cssmin:dist',

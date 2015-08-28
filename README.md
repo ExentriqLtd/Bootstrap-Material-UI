@@ -41,6 +41,7 @@ No need to separately include the following libraries, are already included in t
 - Autosize (v3.0.8)
 - VelocityJS (v1.2.2)
 - Waves (v0.7.2)
+- Animate Sass (v0.6.4)
 - Prism (v1.0.1)
 
 ## Installation

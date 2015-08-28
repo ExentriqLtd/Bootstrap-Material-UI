@@ -3,9 +3,10 @@
 
 // App bar
 .eq-ui-app-bar {
-    color: #fff;
-    height: 64px;
-    line-height: 64px;
+    color: color("shades", "white");
+    background-color: $eq-ui-primary-color;
+    height: $eq-ui-tool-bar-height;
+    line-height: $eq-ui-tool-bar-height;
 
     .eq-ui-side-nav-toggle {
         // Hide nav toggle

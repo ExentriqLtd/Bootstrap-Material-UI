@@ -8,17 +8,18 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Home | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css" rel="stylesheet">
-    <link href="assets/css/doc.css" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.1.2" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.1.2" rel="stylesheet">
   </head>
-  <body class="eq-ui-layout-header-fixed">
+  <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
+    <script>var _doc_route = {root_path:"",path:"index",name_section:"",name_chapter:"Home"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <header class="eq-ui-layout-header">
     
-    <div class="eq-ui-tool-bar grey-100">
+    <div class="eq-ui-tool-bar">
         <div class="container-fluid">
             <div class="header-title">      
                 <span class="section-title">Tool Bar</span>
@@ -26,7 +27,7 @@
         </div>
     </div>
 
-    <div class="eq-ui-app-bar eq-deep-blue">
+    <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
         <div class="container-fluid">
             <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
             <div class="header-title">      
@@ -40,12 +41,104 @@
 </header>
 
 <div class="eq-ui-side-nav">
+
     <div class="eq-ui-side-nav-wrapper">
 
         <div class="brand">
             <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
-            <img src="assets/img/exentriq_logo.svg" alt="Exentriq logo">
+            <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
         </div>
+
+        <nav>
+            <div class="panel-group eq-ui-collapsible" id="collapsible-nav" role="tablist" aria-multiselectable="true">
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a id="collapsible-nav-index" href="./" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">home</i>
+                            Home
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">settings</i>
+                            <i class="material-icons icon icon-right icon-18">open_in_new</i>
+                            Getting Started
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-css" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">class</i>
+                            CSS
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsible-nav-css" class="collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <a id="collapsible-nav-css-color" href="./color.html">Color</a>
+                            <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
+                            <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-components" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">widgets</i>
+                            Components
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsible-nav-components" class="collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <a id="collapsible-nav-components-buttons" href="./buttons.html">Buttons</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-java-script" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">layers</i>
+                            JavaScript
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsible-nav-java-script" class="collapse" role="tabpanel">
+                        <div class="panel-body">
+                            <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab">
+                        <h4 class="panel-title eq-ui-waves">
+                            <a id="collapsible-nav-showcase" href="./showcase.html" aria-expanded="false">
+                            <i class="material-icons icon icon-left icon-24">favorite</i>
+                            Showcase
+                            </a>
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
 
         <div class="footer">
             <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="fa fa-github icon icon-left icon-18"></i></a><p class="copyright">© Exentriq</p>
@@ -53,51 +146,45 @@
         </div>
 
     </div>
+
 </div>
 
     <main class="eq-ui-main">    
-    <div class="jumbotron">
+    <div class="jumbotron home">
         <div class="container">
-            <h1 class="test-color">Home - Coming soon</h1>
-            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-            <p><a class="btn btn-primary btn-lg waves-effect waves-light" href="./typography.html" role="button">typography</a></p>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Exentriq - Bootstrap Material UI</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus, ante sit amet posuere scelerisque, est augue aliquam nunc, et commodo tellus erat eget purus. Maecenas dui est, maximus nec blandit sed.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="getting-started"><a class="btn btn-primary btn-lg eq-ui-waves-light" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md"><i class="material-icons icon icon-right icon-18">open_in_new</i> Getting Started</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="material-icons icon icon-right icon-18">open_in_new</i> Source in GitHub</a></p>
+                </div>
+            </div>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h2>Heading</h2>
+            <div class="col-md-4 promo">
+                <i class="material-icons icon icon-128">class</i>
+                <h4>CSS</h4>
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button</a></p>
             </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
+            <div class="col-md-4 promo">
+                <i class="material-icons icon icon-128">widgets</i>
+                <h4>Components</h4>
                 <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button <i class="material-icons icon icon-left icon-18">cloud</i></a></p>
             </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
+            <div class="col-md-4 promo">
+                <i class="material-icons icon icon-128">layers</i>
+                <h4>JavaScript</h4>
                 <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-primary waves-effect waves-light" role="button">Button <i class="material-icons icon icon-right icon-18">cloud</i></a></p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default waves-effect waves-light" role="button">Button</a></p>
             </div>
         </div>
     </div>
@@ -110,15 +197,15 @@
 
     <div class="row">
         <div class="col-md-12">
-            <br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/>
         </div>
     </div>
     
 </div>
     </main>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.1.2"></script>
 
-<script src="assets/js/doc.js"></script>
+<script src="assets/js/doc.js?v=0.1.2"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

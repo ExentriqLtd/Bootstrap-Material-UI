@@ -20724,30 +20724,22 @@ else {
     EqUI.side_nav.update = function() {
         
         if (window.innerWidth > 768) {
-            
-            /*if(!$('body').hasClass('eq-ui-side-nav-visible')){
-                $('body').addClass("eq-ui-side-nav-visible");
-            }*/
 
-            // Close menu if window is resized bigger than 992 and user has fixed sidenav
-            /*if ($('#sidenav-overlay').css('opacity') !== 0 && menuOut) {
-                removeMenu(true);
+            if($('body').hasClass('eq-ui-side-nav-auto')){
+                $('body').removeClass("eq-ui-side-nav-hide");
+                $('body').addClass("eq-ui-side-nav-visible");
+            } else if(!$('body').hasClass('eq-ui-side-nav-visible') && !$('body').hasClass('eq-ui-side-nav-hide')) {
+                $('body').addClass("eq-ui-side-nav-visible");
             }
-            else {
-                menu_id.removeAttr('style');
-                menu_id.css('width', options.menuWidth);
-            }*/
         }
         else {
 
-            /*if($('body').hasClass('eq-ui-side-nav-visible')){
+            if($('body').hasClass('eq-ui-side-nav-auto')){
                 $('body').removeClass("eq-ui-side-nav-visible");
-            }*/
-
-            /*if (options.edge === 'left')
-                menu_id.css('left', -1 * (options.menuWidth + 10));
-            else
-                menu_id.css('right', -1 * (options.menuWidth + 10));*/
+                $('body').addClass("eq-ui-side-nav-hide");
+            } else if(!$('body').hasClass('eq-ui-side-nav-visible') && !$('body').hasClass('eq-ui-side-nav-hide')) {
+                $('body').addClass("eq-ui-side-nav-hide");
+            }
         }
     };
 
@@ -20778,21 +20770,69 @@ else {
 }( jQuery ));
 
 (function ($) {
+    EqUI.collapsible = {};
+
+    EqUI.collapsible.element = $('.eq-ui-collapsible');
+
+    // Init
+    EqUI.collapsible.init = function() {
+        EqUI.collapsible.element.on('show.bs.collapse', function (event) {
+            var _element = $(event.target.parentElement);
+            _element.addClass("active");
+            _element.children('.panel-heading').find('a').addClass("active");
+        });
+        EqUI.collapsible.element.on('hide.bs.collapse', function (event) {
+            var _element = $(event.target.parentElement);
+            _element.removeClass("active");
+            _element.children('.panel-heading').find('a').removeClass("active");
+        });
+        
+        // Expandable
+        $('.eq-ui-collapsible.expandable .collapse').collapse({
+            toggle: false
+        });
+    };
+
+    // Update
+    EqUI.collapsible.update = function() {
+        
+    };
+
+    // Collapsible Toggle
+    EqUI.collapsible.toggle = function() {
+        // TODO EXENTRIQ
+    };
+
+    $(document).ready(function() {
+        // Init
+        EqUI.collapsible.init();
+
+        // Update
+        EqUI.collapsible.update();
+    });
+}( jQuery ));
+(function ($) {
 	$(document).ready(function() {
 
 		// Init Waves
         Waves.init();
-        //Waves.attach('.btn', ['waves-effect', 'waves-light']);
+        Waves.attach('.eq-ui-waves', ['waves-effect']);
+        Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
 
 		// Resize
 		$(window).resize( function() {
 			
 			EqUI.app_bar.update();
 			EqUI.side_nav.update();
+
+			EqUI.collapsible.update();
 			
 			EqUI.site.update();
 
 		});
+		
+		// Show body
+		$('body').css('visibility', 'visible');
 
 	});
 }( jQuery ));

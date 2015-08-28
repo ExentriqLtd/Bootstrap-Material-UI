@@ -7,6 +7,10 @@
 /* Default Variables                       */
 /* --------------------------------------- */
 
+/*** Grid Variables ***/
+$eq-ui-num-cols: 12 !default;
+$eq-ui-gutter-width: 32px !default;
+
 /*** Colors ***/
 $eq-ui-primary-color: color("eq-deep-blue", "500") !default;
 $eq-ui-primary-color-light: lighten($eq-ui-primary-color, 15%) !default;
@@ -19,7 +23,7 @@ $eq-ui-info-color: color("light-blue", "200") !default;
 $eq-ui-warning-color: color("amber", "500") !default;
 $eq-ui-error-color: color("red", "500") !default;
 
-$eq-ui-body-bg:	color("grey", "100") !default;
+$eq-ui-body-bg:	color("eq-medium-grey", "50") !default;
 $eq-ui-text-color:	rgba(0, 0, 0, 0.87) !default;
 
 $eq-ui-link-color: $eq-ui-primary-color !default;
@@ -30,7 +34,7 @@ $eq-ui-font-family-serif: "Roboto", Georgia, "Times New Roman", Times, serif !de
 $eq-ui-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 
 /*** Typography ***/
-$eq-ui-font-size-base: 15px !default;
+$eq-ui-font-size-base: 16px !default;
 $eq-ui-line-height-base: 1.5 !default;
 
 $eq-ui-h1-fontsize: 4.2rem !default;
@@ -67,6 +71,18 @@ $eq-ui-button-large-padding: 0 15px !default;
 $eq-ui-button-large-height: $eq-ui-button-height + 12 !default;
 $eq-ui-button-large-line-height: $eq-ui-button-line-height + 12 !default;
 
+/*** Side Nav ***/
+$eq-ui-side-nav-width: 240px !default;
+$eq-ui-side-nav-font-color: color("eq-medium-grey", "500") !default;
+$eq-ui-side-nav-bg-color: color("shades", "white") !default;
+$eq-ui-side-nav-line-color: color("eq-medium-grey", "100") !default;
+$eq-ui-side-nav-link-bg-color: color("eq-medium-grey", "50") !default;
+
+/*** Tool bar ***/
+$eq-ui-tool-bar-height: 64px !default;
+$eq-ui-tool-bar-font-color: color("eq-medium-grey", "500") !default;
+$eq-ui-tool-bar-bg-color: color("eq-medium-grey", "50") !default;
+
 /*** Cards ***/
 /*$card-padding: 20px !default;
 $card-bg-color: #fff !default;
@@ -74,9 +90,10 @@ $card-link-color: color("orange", "A200") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;*/
 
 /*** Collapsible ***/
-/*$collapsible-height: 3rem !default;
+$collapsible-height: 3rem !default;
 $collapsible-header-color: #fff !default;
-$collapsible-border-color: #ddd !default;*/
+$collapsible-border-color: #ddd !default;
+$collapsible-body-padding: 16px !default;
 
 /*** Dropdown ***/
 /*$dropdown-bg-color: #fff !default;
@@ -111,20 +128,11 @@ $datepicker-focus: rgba(0,0,0, .05) !default;
 $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;*/
 
-/*** Grid Variables ***/
-$eq-ui-num-cols: 12 !default;
-$eq-ui-gutter-width: 32px !default;
-
 /*** Navbar ***/
 /*$navbar-height: 64px !default;
 $navbar-height-mobile: 56px !default;
 $navbar-font-color: #fff !default;
 $navbar-brand-font-size: 2.1rem !default;*/
-
-/*** Side Nav ***/
-$eq-ui-side-nav-width: 240px;
-$eq-ui-side-nav-font-color: #9e9e9e !default;
-$eq-ui-side-nav-bg-color: #fafafa !default;
 
 /*** Photo Slider ***/
 /*$slider-bg-color: color('grey', '500') !default;
@@ -176,6 +184,117 @@ $eq-ui-zindex-app-bar-fab:           		60 !default;
 $eq-ui-zindex-standalone-content:          	55 !default;
 $eq-ui-zindex-app-bar:           			50 !default;
 $eq-ui-zindex-content:           			0 !default;
+
+/* --------------------------------------- */
+/* Animate CSS Default Variables           */
+/* --------------------------------------- */
+
+/** Active all animations
+-------------------------------------------------------------------------------------------------- **/
+
+// Fade Enter
+$use-fadeIn 			:	true !default;
+$use-fadeInUp 			:	true !default;
+$use-fadeInUpBig 		:	true !default;
+$use-fadeInDown 		:	true !default;
+$use-fadeInDownBig 		:	true !default;
+$use-fadeInLeft 		:	true !default;
+$use-fadeInLeftBig 		:	true !default;
+$use-fadeInRight 		:	true !default;
+$use-fadeInRightBig 	:	true !default;
+
+// Fade Exit
+$use-fadeOut			:   true !default;
+$use-fadeOutUp			:	true !default;
+$use-fadeOutUpBig   	:	true !default;
+$use-fadeOutDown		:	true !default;
+$use-fadeOutDownBig 	:	true !default;
+$use-fadeOutLeft		:	true !default;
+$use-fadeOutLeftBig 	:	true !default;
+$use-fadeOutRight		:	true !default;
+$use-fadeOutRightBig	:	true !default;
+
+// Bounce Enter
+$use-bounceIn			:	true !default;
+$use-bounceInUp			: 	true !default;
+$use-bounceInDown 		: 	true !default;
+$use-bounceInLeft 		: 	true !default;
+$use-bounceInRight 		: 	true !default;
+
+// Bounce Exit
+$use-bounceOut			:	true !default;
+$use-bounceOutUp		: 	true !default;
+$use-bounceOutDown 		: 	true !default;
+$use-bounceOutLeft 		: 	true !default;
+$use-bounceOutRight 	: 	true !default;
+
+// Rotate Enter
+$use-rotateIn 			:	true !default;
+$use-rotateInUpLeft 	: 	true !default;
+$use-rotateInUpRight 	: 	true !default;
+$use-rotateInDownLeft 	: 	true !default;
+$use-rotateInDownRight 	: 	true !default;
+
+// Rotate Exit
+$use-rotateOut 			:	true !default;
+$use-rotateOutUpLeft 	: 	true !default;
+$use-rotateOutUpRight 	: 	true !default;
+$use-rotateOutDownLeft 	: 	true !default;
+$use-rotateOutDownRight : 	true !default;
+
+// Slide Enter
+$use-slideIn			:   true !default;
+$use-slideInUp			:   true !default;
+$use-slideInDown		:   true !default;
+$use-slideInLeft		:   true !default;
+$use-slideInRight		:   true !default;
+
+// Slide Exit
+$use-slideOut			:   true !default;
+$use-slideOutUp			:   true !default;
+$use-slideOutDown		:   true !default;
+$use-slideOutLeft		:   true !default;
+$use-slideOutRight		:   true !default;
+
+// Flippers
+$use-flip				:	true !default;
+$use-flipInX			:	true !default;
+$use-flipInY			:	true !default;
+$use-flipOutX			:	true !default;
+$use-flipOutY			:	true !default;
+
+// Lightspeed
+$use-lightSpeedIn 		:	true !default;
+$use-lightSpeedOut 		:	true !default;
+
+// Attention Seekers
+$use-bounce				:	true !default;
+$use-flash				:	true !default;
+$use-pulse				:	true !default;
+$use-wiggle				:	true !default;
+$use-swing				:	true !default;
+$use-shake				:	true !default;
+$use-tada				:	true !default;
+$use-wobble				:	true !default;
+
+// Special
+$use-hinge				:	true !default;
+$use-rollIn				: 	true !default;
+$use-rollOut 			:	true !default;
+
+// Zoom In
+$use-zoomIn 			:	true !default;
+$use-zoomInDown 		:	true !default;
+$use-zoomInLeft 		:	true !default;
+$use-zoomInRight 		:	true !default;
+$use-zoomInUp 			:	true !default;
+
+// Zoom Out
+$use-zoomOut			:	true !default;
+$use-zoomOutDown		:	true !default;
+$use-zoomOutLeft		:	true !default;
+$use-zoomOutRight		:	true !default;
+$use-zoomOutUp			:	true !default;
 
 /* --------------------------------------- */
 /* Bootstrap Default Variables             */

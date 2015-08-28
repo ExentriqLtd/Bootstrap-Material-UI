@@ -1,0 +1,103 @@
+// collapsible
+
+.panel-group {
+
+    @extend .z-depth-1;
+    .panel {
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        +.panel {
+            border-top: 1px solid $collapsible-border-color;
+            margin-top: 0;
+        }
+        .panel-heading {
+            padding: 0;
+            height: $collapsible-height;
+            background-color: $collapsible-header-color;
+            .panel-title {
+                display: block;
+                line-height: $collapsible-height;
+                font-size: $eq-ui-font-size-base;
+                a {
+                    display: block;
+                    padding: 0 $collapsible-body-padding;
+                    line-height: $collapsible-height;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .panel-body {
+            border-top: 1px solid $collapsible-border-color;
+            padding: $collapsible-body-padding;
+        }
+    }
+
+}
+
+// Side nav collapsible styling
+
+.eq-ui-side-nav nav {
+    padding: 16px 0;
+    .panel-group {
+        box-shadow: none;
+        margin-bottom: 0;
+        .panel {
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+            +.panel {
+                
+            }
+            .panel-heading {
+                background-color: transparent;
+                .panel-title {
+                    a {
+                        font-weight: 700;
+                        color: $eq-ui-side-nav-font-color;
+                        padding: 0 16px 0 24px;
+                        &:hover, &.active {
+                            color: $eq-ui-link-color;
+                            background-color: $eq-ui-side-nav-link-bg-color;
+                        }
+                    }
+                }
+            }
+            .panel-body {
+                border-top: none;
+                padding: 0;
+                a {
+                    padding: 0 16px 0 (24px*2+15);
+                    display: block;
+                    color: $eq-ui-side-nav-font-color;
+                    line-height: $collapsible-height;
+                    text-decoration: none;
+                    &:hover, &.active {
+                        text-decoration: none;
+                        color: $eq-ui-link-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Popout Collapsible
+
+.panel-group.popout {
+    border: none;
+    box-shadow: none;
+    >.panel {
+        @extend .z-depth-1;
+        margin: 0 24px;
+        transition: margin .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    }
+    >.panel.active {
+        @extend .z-depth-1-half;
+        margin: 16px 0;
+    }
+}
+

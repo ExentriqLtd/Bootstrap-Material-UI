@@ -14,30 +14,22 @@
     EqUI.side_nav.update = function() {
         
         if (window.innerWidth > 768) {
-            
-            /*if(!$('body').hasClass('eq-ui-side-nav-visible')){
-                $('body').addClass("eq-ui-side-nav-visible");
-            }*/
 
-            // Close menu if window is resized bigger than 992 and user has fixed sidenav
-            /*if ($('#sidenav-overlay').css('opacity') !== 0 && menuOut) {
-                removeMenu(true);
+            if($('body').hasClass('eq-ui-side-nav-auto')){
+                $('body').removeClass("eq-ui-side-nav-hide");
+                $('body').addClass("eq-ui-side-nav-visible");
+            } else if(!$('body').hasClass('eq-ui-side-nav-visible') && !$('body').hasClass('eq-ui-side-nav-hide')) {
+                $('body').addClass("eq-ui-side-nav-visible");
             }
-            else {
-                menu_id.removeAttr('style');
-                menu_id.css('width', options.menuWidth);
-            }*/
         }
         else {
 
-            /*if($('body').hasClass('eq-ui-side-nav-visible')){
+            if($('body').hasClass('eq-ui-side-nav-auto')){
                 $('body').removeClass("eq-ui-side-nav-visible");
-            }*/
-
-            /*if (options.edge === 'left')
-                menu_id.css('left', -1 * (options.menuWidth + 10));
-            else
-                menu_id.css('right', -1 * (options.menuWidth + 10));*/
+                $('body').addClass("eq-ui-side-nav-hide");
+            } else if(!$('body').hasClass('eq-ui-side-nav-visible') && !$('body').hasClass('eq-ui-side-nav-hide')) {
+                $('body').addClass("eq-ui-side-nav-hide");
+            }
         }
     };
 

@@ -1,5 +1,22 @@
 ## CHANGELOG
 
+### v0.1.2 (Aug 28, 2015)
+
+**New**
+- Add "animate-sass" bower component
+- Create [collapsible](http://bootstrap-material-ui.exentriq.com/collapsible.html) component
+- Create side nav menu
+
+**Updates**
+- Update home
+- Update readme
+- Update Gruntfile.js, add clean
+- Update jade, add doc_route object for control side nav menu and title in app bar
+
+**Fixes**
+- Waves effect in default button
+- Side nav auto hide
+
 ### v0.1.1 (Aug 21, 2015)
 
 **New**

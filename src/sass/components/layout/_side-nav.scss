@@ -4,7 +4,7 @@
 // Side nav
 .eq-ui-side-nav {
 	@extend .z-depth-1;
-	border-right: 1px solid rgba(0,0,0,0.14);
+	border-right: 1px solid $eq-ui-side-nav-line-color;
 
 	display: block;
 	position: fixed;
@@ -17,10 +17,10 @@
     
     width: $eq-ui-side-nav-width;
     z-index: $eq-ui-zindex-nav-drawer;
-
+    
     overflow-x: hidden;
     overflow-y: auto;
-
+    
     @include eq-ui-transition(transform);
 
     &::-webkit-scrollbar-track {
@@ -44,7 +44,7 @@
     	position: relative;
 
     	.brand {
-		    border-bottom: 1px solid #e0e0e0;
+		    border-bottom: 1px solid $eq-ui-side-nav-line-color;
 		    display: block;
 		    height: 64px;
 		    line-height: 41px;
@@ -53,7 +53,7 @@
 		}
 
     	.footer {
-		    border-top: 1px solid #e0e0e0;
+		    border-top: 1px solid $eq-ui-side-nav-line-color;
 		    bottom: 0;
 		    color: inherit;
 		    font-size: 13px;

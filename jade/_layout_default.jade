@@ -1,6 +1,7 @@
+script var _doc_route = {root_path:"#{doc_route.root_path}",path:"#{doc_route.path}",name_section:"#{doc_route.name_section}",name_chapter:"#{doc_route.name_chapter}"};
 include snippets/_header.html
 main(class="eq-ui-main")
-	case layout_content
+	case doc_route.path
 		when "index"
 			include modules/_index.html
 		when "color"
@@ -9,6 +10,12 @@ main(class="eq-ui-main")
 			include modules/_helpers.html
 		when "typography"
 			include modules/_typography.html
+		when "buttons"
+			include modules/_buttons.html
+		when "collapsible"
+			include modules/_collapsible.html
+		when "showcase"
+			include modules/_showcase.html
 		default
 			include modules/_index.html
 	include snippets/_footer.html
