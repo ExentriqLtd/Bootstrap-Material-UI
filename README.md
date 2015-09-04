@@ -25,7 +25,8 @@ Use the files in the "dist" folder
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <!--Import exentriq-bootstrap-material-ui.min.js-->
+  <!--Import jQuery before exentriq-bootstrap-material-ui.min.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="js/exentriq-bootstrap-material-ui.min.js"></script>
 </body>
 </html>
@@ -33,16 +34,18 @@ Use the files in the "dist" folder
 
 ## Package dependencies
 
-No need to separately include the following libraries, are already included in this library.
+No need to separately include the following libraries, are already included in this library:
 
 - Bootstrap (v3.3.5)
-- jQuery (v2.1.4)
-- jQuery Validation (v1.14.0)
 - Autosize (v3.0.8)
 - VelocityJS (v1.2.2)
 - Waves (v0.7.2)
 - Animate Sass (v0.6.4)
 - Prism (v1.0.1)
+
+External dependencies, should be included separately:
+
+- jQuery (v2.1.4)
 
 ## Installation
 

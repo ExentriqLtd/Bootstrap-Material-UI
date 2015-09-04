@@ -146,6 +146,7 @@ pre[class*="language-"] {
 	position: relative;
     padding: 45px 35px 25px;
     border: solid 1px rgba(51, 51, 51, 0.12);
+    font-size: .85rem;
 
     &:before {
 	    position: absolute;
@@ -160,6 +161,9 @@ pre[class*="language-"] {
 	    border-top: none;
 	    border-left: none;
 	}
+}
+:not(pre)>code[class*=language-] {
+    background: #e8e6e3;
 }
 
 /* --------------------------------------- */
@@ -186,6 +190,15 @@ pre[class*="language-"] {
 }
 .right {
   	float: right !important;
+}
+
+// valign-wrapper
+.valign-wrapper {
+    display: flex;
+    align-items: center;
+    .valign {
+    	display: block;
+    }
 }
 
 // No Text Select

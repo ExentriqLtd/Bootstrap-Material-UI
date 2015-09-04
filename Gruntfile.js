@@ -66,7 +66,6 @@ module.exports = function ( grunt ) {
             },
             bower: {
                 src: [
-                    'src/bower_components/jquery/dist/jquery.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
@@ -79,8 +78,6 @@ module.exports = function ( grunt ) {
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
-                    'src/bower_components/jquery-validation/dist/jquery.validate.js',
-                    'src/bower_components/jquery-validation/dist/additional-methods.js',
                     'src/bower_components/velocity/velocity.js',
                     'src/bower_components/velocity/velocity.ui.js',
                     'src/bower_components/autosize/dist/autosize.js',
@@ -104,6 +101,7 @@ module.exports = function ( grunt ) {
                     'src/js/site.js',
                     'src/js/layout/app-bar.js',
                     'src/js/layout/side-nav.js',
+                    'src/js/buttons.js',
                     'src/js/collapsible.js',
                     'src/js/_init.js'
                     ],
@@ -146,6 +144,16 @@ module.exports = function ( grunt ) {
 
         // Copy
         copy: {
+            vendor: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/', 
+                        src: ['bower_components/jquery/dist/**'],
+                        dest: 'doc/assets/js/'
+                    }
+                ]
+            },
             fonts: {
                 files: [
                     {
@@ -216,6 +224,21 @@ module.exports = function ( grunt ) {
                     }
                 ],
             }
+        },
+
+        // String remplace
+        replace: {
+            version: {
+                src: ['doc/*.html'],
+                overwrite: true, // overwrite matched source files 
+                replacements: [
+                    {
+                        from: "?v=0.0.0",
+                        to: "?v=<%= pkg.version %>"
+                    }
+                ]
+            }
+            // ...
         },
 
         // Jade
@@ -365,6 +388,7 @@ module.exports = function ( grunt ) {
 
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -404,7 +428,9 @@ module.exports = function ( grunt ) {
         'copy:img',
         'copy:css',
         'copy:js',
+        'copy:vendor',
         'jade:compile',
+        'replace:version',
         'notify:release_compile'
         ]);
 };

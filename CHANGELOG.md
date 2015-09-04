@@ -1,5 +1,21 @@
 ## CHANGELOG
 
+### v0.1.3 (Sept 4, 2015)
+
+**New**
+- Create all [buttons](http://bootstrap-material-ui.exentriq.com/buttons.html)
+- Create basic [helpers](http://bootstrap-material-ui.exentriq.com/helpers.html)
+
+**Updates**
+- Separate the jQuery library
+- Update Gruntfile.js, add version in css and js files
+- Update readme
+
+**Fixes**
+- Name colors classes
+- Hover background color in buttons
+- Body margin top in mobile devices
+
 ### v0.1.2 (Aug 28, 2015)
 
 **New**

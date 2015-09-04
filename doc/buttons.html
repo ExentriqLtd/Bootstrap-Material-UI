@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Buttons | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.1.2" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.1.2" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.1.3" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.1.3" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"buttons",name_section:"Components",name_chapter:"Buttons"};</script>
@@ -152,50 +152,176 @@
     <main class="eq-ui-main">    
     <div class="jumbotron">
         <div class="container">
-            <h1>Buttons - Work in progress</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus, ante sit amet posuere scelerisque, est augue aliquam nunc, et commodo tellus erat eget purus. Maecenas dui est, maximus nec blandit sed.</p>
-            <p>
-            <a class="btn btn-primary btn-lg eq-ui-waves-light">Large Button</a>
-            </p>
+            <h1>Buttons</h1>
         </div>
     </div>
 
     <div class="container">
+
         <div class="row">
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary eq-ui-waves-light" role="button">Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-primary eq-ui-waves-light" role="button"><i class="material-icons icon icon-left icon-18">cloud</i> Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-primary eq-ui-waves-light" role="button"><i class="material-icons icon icon-right icon-18">cloud</i> Button</a></p>
+            <div class="col-md-12">
+                <h2 class="header">FAB</h2>
+                <p>Fab button variation, add the class <code class="language-markup">eq-ui-btn-fab</code>.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="material-icons icon">add</i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light disabled"><i class="material-icons icon">add</i></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-waves-light&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;add&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-waves-light disabled&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;add&lt;/i&gt;&lt;/a&gt;</code></pre>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default eq-ui-waves" role="button">Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <p><a class="btn btn-default eq-ui-waves" role="button">Button</a></p>
-            </div>
-            <div class="col-md-4">
-                <h2>Heading</h2>
-                <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                <p><a class="btn btn-default eq-ui-waves" role="button">Button</a></p>
+            <div class="col-md-12">
+                <h2 class="header">Mini FAB</h2>
+                <p>Mini Fab button variation, add the class <code class="language-markup">eq-ui-btn-fab eq-ui-btn-mini-fab</code>.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light"><i class="material-icons icon">add</i></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light disabled"><i class="material-icons icon">add</i></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;add&lt;/i&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light disabled&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;add&lt;/i&gt;&lt;/a&gt;</code></pre>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Action FAB</h2>
+                <p>Action Fab button variation. You can see in bottom right on this page</p>
+
+                <div class="eq-ui-btn-fab-action">
+                    <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="material-icons icon">mode_edit</i></a>
+                    <ul>
+                        <li><a href="./" class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-sea-blue-500"><i class="material-icons icon">insert_chart</i></a></li>
+                        <li><a href="./" class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-water-blue-500"><i class="material-icons icon">format_quote</i></a></li>
+                        <li><a href="./" class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-pastel-red-500"><i class="material-icons icon">publish</i></a></li>
+                        <li><a href="./" class="btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-desert-orange-500"><i class="material-icons icon">attach_file</i></a></li>
+                    </ul>
+                </div>
+
+                <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-btn-fab-action&quot;&gt;
+    &lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-waves-light&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;mode_edit&lt;/i&gt;&lt;/a&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-sea-blue-500&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;insert_chart&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-water-blue-500&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;format_quote&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-pastel-red-500&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;publish&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class=&quot;btn btn-primary eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light eq-desert-orange-500&quot;&gt;&lt;i class=&quot;material-icons icon&quot;&gt;attach_file&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+                <p>You can also toggle them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').toggleFAB();</code></pre>
+
+                <p>You can also open them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').openFAB();</code></pre>
+
+                <p>You can also close them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').closeFAB();</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Flat</h2>
+                <p>Flat button variation, add the class <code class="language-markup">eq-ui-btn-flat</code>.</p>
+                <p>
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-green-turquoise-text-500">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves disabled">Disabled</a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves eq-green-turquoise-text-500&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves disabled&quot;&gt;Disabled&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Raised</h2>
+                <p>Raised button variation, add the class <code class="language-markup">btn-default</code>.</p>
+                <p>
+                <a class="btn btn-default eq-ui-waves">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-waves disabled">Disabled</a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-default eq-ui-waves&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-waves disabled&quot;&gt;Disabled&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Colored</h2>
+                <p>Colored button variations.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-success eq-ui-waves-light">Success</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-info eq-ui-waves-light">Info</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-warning eq-ui-waves-light">Warning</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-danger eq-ui-waves-light">Danger</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-waves-light eq-desert-orange-500">Custom</a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-success eq-ui-waves-light&quot;&gt;Success&lt;/a&gt;
+&lt;a class=&quot;btn btn-info eq-ui-waves-light&quot;&gt;Info&lt;/a&gt;
+&lt;a class=&quot;btn btn-warning eq-ui-waves-light&quot;&gt;Warning&lt;/a&gt;
+&lt;a class=&quot;btn btn-danger eq-ui-waves-light&quot;&gt;Danger&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light eq-desert-orange-500&quot;&gt;Custom&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Size</h2>
+                <p>Size button variation, add the class <code class="language-markup">btn-lg</code> for large size.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light">Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary btn-lg eq-ui-waves-light">Large Button</a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary btn-lg eq-ui-waves-light&quot;&gt;Large Button&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Icon</h2>
+                <p>Icon button variation, add the left or right icon.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light"><i class="material-icons icon icon-left icon-18">cloud</i>Button</a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-waves-light"><i class="material-icons icon icon-right icon-18">cloud</i>Button</a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;i class=&quot;material-icons icon icon-left icon-18&quot;&gt;cloud&lt;/i&gt;Button&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;i class=&quot;material-icons icon icon-right icon-18&quot;&gt;cloud&lt;/i&gt;Button&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
     </div>
 
 <!--footer>
@@ -212,9 +338,10 @@
     
 </div>
     </main>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.1.2"></script>
+<script src="assets/js/bower_components/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.1.3"></script>
 
-<script src="assets/js/doc.js?v=0.1.2"></script>
+<script src="assets/js/doc.js?v=0.1.3"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

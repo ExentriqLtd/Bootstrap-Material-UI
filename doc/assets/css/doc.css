@@ -31,3 +31,12 @@ body {
 .promo > p {
     font-weight: 300;
 }
+
+/* Helpers */
+.valign-demo {
+	padding: 24px;
+	height: 500px;
+}
+.valign-demo h3 {
+	width: 100%;
+}

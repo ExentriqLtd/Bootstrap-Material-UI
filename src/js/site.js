@@ -1,12 +1,15 @@
 (function ($) {
     EqUI.site = {};
-
-    // Vars
-    //EqUI.side_nav.element = $('.eq-ui-side-nav');
+    
+    // jQuery reverse
+    $.fn.reverse = [].reverse;
 
     // Init
     EqUI.site.init = function() {
-
+        // Is touch
+        EqUI.site.isTouch = 'ontouchstart' in window || 'msmaxtouchpoints' in window.navigator;
+        if(EqUI.site.isTouch){ $('html').addClass("is-touch"); }
+        
     };
 
     // Update

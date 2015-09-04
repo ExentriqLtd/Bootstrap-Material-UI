@@ -2,30 +2,30 @@
 
 @mixin eq-ui-button-variant($color, $background) {
 	color: $color;
-	background-color: $background!important;
+	background-color: $background;
 
 	&:focus,
 	&.focus {
 		@extend .z-depth-1;
 		color: $color;
-		background-color: darken($background, 10%);
+		background-color: $background;
 	}
 	&:hover {
 		@extend .z-depth-1-half;
 		color: $color;
-		background-color: darken($background, 10%);
+		background-color: $background;
 	}
 	&:active,
 	&.active,
 	.open > &.dropdown-toggle {
 		color: $color;
-		background-color: darken($background, 10%);
+		background-color: $background;
 
 		&:hover,
 		&:focus,
 		&.focus {
 		  	color: $color;
-		  	background-color: darken($background, 17%);
+		  	background-color: $background;
 		}
 	}
 	&:active,
@@ -42,8 +42,16 @@
 		&.focus,
 		&:active,
 		&.active {
-		  	background-color: $background;
+			@extend .z-depth-1;
+			opacity:1;
+			color: $eq-ui-button-color-disabled;
+		  	background-color: $eq-ui-button-bg-color-disabled;
 		}
+	}
+
+	// FLAT
+	&.eq-ui-btn-flat.disabled {
+		background-color: transparent;
 	}
 
 	.badge {
@@ -71,6 +79,34 @@
 		height: $eq-ui-button-large-height;
 		line-height: $eq-ui-button-large-line-height;
 	}
+
+	// FLAT
+	&.eq-ui-btn-flat {
+		box-shadow: none;
+	}
+
+	// FAB
+	&.eq-ui-btn-fab {
+		    border-radius: 50%;
+		    width: 56px;
+		    min-width: 56px;
+		    height: 56px;
+		    padding: 0;
+		i {
+			line-height: 56px;
+    		width: inherit;
+		}
+	}
+
+	// MINI FAB
+	&.eq-ui-btn-fab.eq-ui-btn-mini-fab {
+		    width: 40px;
+		    min-width: 40px;
+		    height: 40px;
+		i {
+			line-height: 40px;
+		}
+	}
 }
 
 
@@ -95,3 +131,36 @@
   	@include eq-ui-button-variant($btn-danger-color, $btn-danger-bg);
 }
 
+// FAB Action Button
+
+.eq-ui-btn-fab-action {
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	padding-top: 16px;
+	margin-bottom: 0;
+	z-index: $eq-ui-zindex-app-bar-fab;
+
+	a {
+		z-index: 1;
+	}
+
+	ul {
+		left: 0;
+		right: 0;
+		height: 0;
+		text-align: center;
+		position: absolute;
+		bottom: $eq-ui-button-fab-size;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		z-index: 0;
+
+		li {
+			margin-bottom: 16px;
+			width: 100%;
+			opacity: 0;
+		}
+	}
+}

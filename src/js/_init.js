@@ -12,14 +12,21 @@
 			EqUI.app_bar.update();
 			EqUI.side_nav.update();
 
+			EqUI.buttons.update();
 			EqUI.collapsible.update();
 			
 			EqUI.site.update();
 
 		});
-		
-		// Show body
-		$('body').css('visibility', 'visible');
 
+		// Load complete
+		$(window).load(function(){ 
+	        // Site update
+	        EqUI.site.update();
+
+	        // Show body
+			$('body').css('visibility', 'visible');
+	    });
+	    
 	});
 }( jQuery ));
