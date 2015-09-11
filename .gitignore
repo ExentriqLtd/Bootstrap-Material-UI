@@ -1,8 +1,5 @@
 .DS_Store
-*.sublime-workspace
-*.sublime-project
-.sublime-grunt.cache
-sftp-config.json
+.idea
 bower_components
 node_modules
 npm-debug.log

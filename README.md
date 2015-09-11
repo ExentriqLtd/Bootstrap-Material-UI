@@ -37,6 +37,8 @@ Use the files in the "dist" folder
 No need to separately include the following libraries, are already included in this library:
 
 - Bootstrap (v3.3.5)
+- Font Awesome (v4.3.0)
+- Material Icons
 - Autosize (v3.0.8)
 - VelocityJS (v1.2.2)
 - Waves (v0.7.2)

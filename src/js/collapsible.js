@@ -1,10 +1,12 @@
 (function ($) {
     EqUI.collapsible = {};
 
-    EqUI.collapsible.element = $('.eq-ui-collapsible');
-
     // Init
     EqUI.collapsible.init = function() {
+        // Global vars
+        EqUI.collapsible.element = $('.eq-ui-collapsible');
+
+        // Events
         EqUI.collapsible.element.on('show.bs.collapse', function (event) {
             var _element = $(event.target.parentElement);
             _element.addClass("active");

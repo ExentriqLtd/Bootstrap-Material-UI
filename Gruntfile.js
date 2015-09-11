@@ -1,5 +1,9 @@
 module.exports = function ( grunt ) {
-  
+
+    var options = {
+
+    };
+
     /** 
     * Config.
     */
@@ -23,10 +27,10 @@ module.exports = function ( grunt ) {
             dist: {
                 options: {
                     outputStyle: 'expanded',
-                    sourcemap: false,
+                    sourceMap: true
                 },
                 files: {
-                    'dist/css/<%= meta.name_root_file %>.css': 'src/sass/<%= meta.name_root_file %>.scss',
+                    'dist/css/<%= meta.name_root_file %>.css': 'src/sass/<%= meta.name_root_file %>.scss'
                 }
             }
         },
@@ -34,9 +38,7 @@ module.exports = function ( grunt ) {
         // CSS autoprefixer
         postcss: {
             options: {
-                map: {
-                    inline: false // save all sourcemaps as separate files...
-                },
+                map: true,
                 processors: [
                     require('autoprefixer-core')({
                         browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']
@@ -51,7 +53,8 @@ module.exports = function ( grunt ) {
         // CSS min
         cssmin: {
             options: {
-                report: 'gzip'
+                report: 'gzip',
+                processImport: false
             },
             dist: {
                 src: 'dist/css/<%= meta.name_root_file %>.css',
@@ -63,6 +66,7 @@ module.exports = function ( grunt ) {
         concat: {
             options: {
                 // separator: ';',
+                sourceMap: true
             },
             bower: {
                 src: [
@@ -92,7 +96,7 @@ module.exports = function ( grunt ) {
                     'src/bower_components/prism/components/prism-css.js',
                     'src/bower_components/prism/components/prism-scss.js'
                     ],
-                dest: 'src/js/vendor/bower_components.js',
+                dest: 'src/js/vendor/bower_components.js'
             },
             dist: {
                 src: [
@@ -102,10 +106,11 @@ module.exports = function ( grunt ) {
                     'src/js/layout/app-bar.js',
                     'src/js/layout/side-nav.js',
                     'src/js/buttons.js',
+                    'src/js/forms.js',
                     'src/js/collapsible.js',
                     'src/js/_init.js'
                     ],
-                dest: 'dist/js/<%= meta.name_root_file %>.js',
+                dest: 'dist/js/<%= meta.name_root_file %>.js'
             }
         },
 
@@ -130,8 +135,8 @@ module.exports = function ( grunt ) {
         uglify: {
             options: {
                 mangle: true,
-                sourceMap: true,
-                sourceMapName: 'dist/js/<%= meta.name_root_file %>.js.map'
+                sourceMap: false
+                /*sourceMapName: 'dist/js/<%= meta.name_root_file %>.js.map'*/
             },
             dist: {
                 files: {
@@ -148,9 +153,9 @@ module.exports = function ( grunt ) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'src/', 
-                        src: ['bower_components/jquery/dist/**'],
-                        dest: 'doc/assets/js/'
+                        cwd: 'src/bower_components/',
+                        src: ['jquery/dist/**'],
+                        dest: 'doc/assets/js/vendor/'
                     }
                 ]
             },
@@ -186,7 +191,7 @@ module.exports = function ( grunt ) {
                     {
                         expand: true,
                         cwd: 'dist/', 
-                        src: ['css/<%= meta.name_root_file %>.min.css', 'css/<%= meta.name_root_file %>.css.map'],
+                        src: ['css/<%= meta.name_root_file %>.css', 'css/<%= meta.name_root_file %>.css.map', 'css/<%= meta.name_root_file %>.min.css'],
                         dest: 'doc/assets/'
                     }
                 ]
@@ -196,7 +201,7 @@ module.exports = function ( grunt ) {
                     {
                         expand: true,
                         cwd: 'dist/',
-                        src: ['js/<%= meta.name_root_file %>.min.js', 'js/<%= meta.name_root_file %>.js.map'],
+                        src: ['js/<%= meta.name_root_file %>.js', 'js/<%= meta.name_root_file %>.js.map', 'js/<%= meta.name_root_file %>.min.js'],
                         dest: 'doc/assets/'
                     }
                 ]
@@ -222,7 +227,7 @@ module.exports = function ( grunt ) {
                         dest: 'dist/fonts/bootstrap',
                         filter: 'isFile'
                     }
-                ],
+                ]
             }
         },
 
@@ -235,6 +240,20 @@ module.exports = function ( grunt ) {
                     {
                         from: "?v=0.0.0",
                         to: "?v=<%= pkg.version %>"
+                    }
+                ]
+            },
+            min: {
+                src: ['doc/*.html'],
+                overwrite: true, // overwrite matched source files
+                replacements: [
+                    {
+                        from: "<%= meta.name_root_file %>.css",
+                        to: "<%= meta.name_root_file %>.min.css"
+                    },
+                    {
+                        from: "<%= meta.name_root_file %>.js",
+                        to: "<%= meta.name_root_file %>.min.js"
                     }
                 ]
             }
@@ -253,8 +272,10 @@ module.exports = function ( grunt ) {
                 files: {
                     "doc/color.html": "jade/color.jade",
                     "doc/helpers.html": "jade/helpers.jade",
+                    "doc/table.html": "jade/table.jade",
                     "doc/typography.html": "jade/typography.jade",
                     "doc/buttons.html": "jade/buttons.jade",
+                    "doc/forms.html": "jade/forms.jade",
                     "doc/collapsible.html": "jade/collapsible.jade",
                     "doc/showcase.html": "jade/showcase.jade",
                     "doc/index.html": "jade/index.jade"
@@ -290,7 +311,7 @@ module.exports = function ( grunt ) {
                 tasks: ['watch:sass', 'watch:js', 'watch:jade', 'notify:watching', 'server'],
                 options: {
                     logConcurrentOutput: true,
-                    limit: 10,
+                    limit: 10
                 }
             }
         },
@@ -431,6 +452,7 @@ module.exports = function ( grunt ) {
         'copy:vendor',
         'jade:compile',
         'replace:version',
+        'replace:min',
         'notify:release_compile'
         ]);
 };

@@ -13,6 +13,7 @@
 			EqUI.side_nav.update();
 
 			EqUI.buttons.update();
+			EqUI.forms.update();
 			EqUI.collapsible.update();
 			
 			EqUI.site.update();
@@ -25,7 +26,7 @@
 	        EqUI.site.update();
 
 	        // Show body
-			$('body').css('visibility', 'visible');
+            EqUI.site.body.css('visibility', 'visible');
 	    });
 	    
 	});

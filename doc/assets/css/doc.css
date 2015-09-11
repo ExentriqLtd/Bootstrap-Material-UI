@@ -40,3 +40,8 @@ body {
 .valign-demo h3 {
 	width: 100%;
 }
+
+/* Forms */
+.doc-form {
+	margin-bottom: 25px;
+}

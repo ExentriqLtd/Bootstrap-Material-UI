@@ -1,0 +1,459 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Forms</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Input Fields</h2>
+            <p>Input form components.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <input id="first_name" type="text" class="form-control">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <input id="last_name" type="text" class="form-control">
+                                    <label for="last_name">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group eq-ui-input-field">
+                            <input id="password" type="password" class="form-control">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group eq-ui-input-field">
+                            <input id="email" type="email" class="form-control">
+                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <input placeholder="Placeholder" id="country" type="text" class="form-control">
+                                    <label for="country">Country</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <input id="disabled" type="text" value="I am not editable" class="form-control" disabled>
+                                    <label for="disabled">Disabled</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;form-control&quot;&gt;
+                &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;form-control&quot;&gt;
+                &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;form-control&quot; disabled&gt;
+                        &lt;label for=&quot;disabled&quot;&gt;Disabled&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Text Area</h2>
+            <p>Add the class <code class="language-markup">eq-ui-textarea</code> in the textarea.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group eq-ui-input-field">
+                            <textarea id="textarea_field" rows='1' class="form-control eq-ui-textarea"></textarea>
+                            <label for="textarea_field">Textarea</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                &lt;textarea id=&quot;textarea_field&quot; rows='1' class=&quot;form-control eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
+                &lt;label for=&quot;textarea_field&quot;&gt;Textarea&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Icon Fields</h2>
+            <p>Add an icon with the class <code class="language-markup">prefix</code> before the input and label.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <i class="material-icons icon prefix">account_circle</i>
+                                    <input id="first_name_pre" type="text" class="form-control">
+                                    <label for="first_name_pre">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group eq-ui-input-field">
+                                    <i class="material-icons icon prefix">phone</i>
+                                    <input id="icon_telephone" type="tel" class="form-control">
+                                    <label for="icon_telephone">Telephone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group eq-ui-input-field">
+                            <i class="material-icons icon prefix">comment</i>
+                            <textarea id="icon_textarea" rows='1' class="form-control eq-ui-textarea"></textarea>
+                            <label for="icon_textarea">Textarea</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;i class=&quot;material-icons icon prefix&quot;&gt;account_circle&lt;/i&gt;
+                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;label for=&quot;first_name_pre&quot;&gt;First Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                        &lt;i class=&quot;material-icons icon prefix&quot;&gt;phone&lt;/i&gt;
+                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;form-control&quot;&gt;
+                        &lt;label for=&quot;icon_telephone&quot;&gt;Telephone&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                &lt;i class=&quot;material-icons icon prefix&quot;&gt;comment&lt;/i&gt;
+                &lt;textarea id=&quot;icon_textarea&quot; rows='1' class=&quot;form-control eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
+                &lt;label for=&quot;icon_textarea&quot;&gt;Textarea&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Validate Fields</h2>
+            <p>You can add custom validation messages by adding either <code class="language-markup">data-error</code> or <code class="language-markup">data-success</code> attributes to your input field labels.</p>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group eq-ui-input-field">
+                            <input id="email_val" type="email" class="form-control validate">
+                            <label for="email_val" data-error="wrong" data-success="right">Email</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;form-control validate&quot;&gt;
+                &lt;label for=&quot;email_val&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Radio Buttons</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input name="group1" type="radio" id="test1" />
+                            <label for="test1">Red</label>
+                        </div>
+                        <div class="form-group">
+                            <input name="group1" type="radio" id="test2" />
+                            <label for="test2">Yellow</label>
+                        </div>
+                        <div class="form-group">
+                            <input class="with-gap" name="group1" type="radio" id="test3" />
+                            <label for="test3">Green</label>
+                        </div>
+                        <div class="form-group">
+                            <input name="group1" type="radio" id="test4" disabled="disabled" />
+                            <label for="test4">Brown</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test1&quot; /&gt;
+                &lt;label for=&quot;test1&quot;&gt;Red&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test2&quot; /&gt;
+                &lt;label for=&quot;test2&quot;&gt;Yellow&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input class=&quot;with-gap&quot; name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test3&quot; /&gt;
+                &lt;label for=&quot;test3&quot;&gt;Green&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test4&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test4&quot;&gt;Brown&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Checkboxes</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <input type="checkbox" id="test5" />
+                            <label for="test5">Red</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="test6" checked="checked" />
+                            <label for="test6">Yellow</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
+                            <label for="filled-in-box">Filled in</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" class="indeterminate-checkbox" id="test7" />
+                            <label for="test7">Indeterminate Style</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="test8" checked="checked" disabled="disabled" />
+                            <label for="test8">Green</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="test9" disabled="disabled" />
+                            <label for="test9">Brown</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test5&quot; /&gt;
+                &lt;label for=&quot;test5&quot;&gt;Red&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test6&quot; checked=&quot;checked&quot; /&gt;
+                &lt;label for=&quot;test6&quot;&gt;Yellow&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;filled-in-box&quot; checked=&quot;checked&quot; /&gt;
+                &lt;label for=&quot;filled-in-box&quot;&gt;Filled in&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; class=&quot;indeterminate-checkbox&quot; id=&quot;test7&quot; /&gt;
+                &lt;label for=&quot;test7&quot;&gt;Indeterminate Style&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test8&quot; checked=&quot;checked&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test8&quot;&gt;Green&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test9&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test9&quot;&gt;Brown&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Switches</h2>
+            <p></p>
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <!-- Switch -->
+                            <div class="eq-ui-switch">
+                                <label>
+                                    Off
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- Disabled Switch -->
+                            <div class="eq-ui-switch">
+                                <label>
+                                    Off
+                                    <input disabled type="checkbox">
+                                    <span class="lever"></span>
+                                    On
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;!-- Switch --&gt;
+                &lt;div class=&quot;eq-ui-switch&quot;&gt;
+                    &lt;label&gt;
+                        Off
+                        &lt;input type=&quot;checkbox&quot;&gt;
+                        &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;
+                        On
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+                &lt;!-- Disabled Switch --&gt;
+                &lt;div class=&quot;eq-ui-switch&quot;&gt;
+                    &lt;label&gt;
+                        Off
+                        &lt;input disabled type=&quot;checkbox&quot;&gt;
+                        &lt;span class=&quot;lever&quot;&gt;&lt;/span&gt;
+                        On
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+</div>

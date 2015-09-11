@@ -1,5 +1,19 @@
 ## CHANGELOG
 
+### v0.1.4 (Sept ?, 2015)
+
+**New**
+- Create basic [table](http://bootstrap-material-ui.exentriq.com/table.html)
+- Create basic [forms](http://bootstrap-material-ui.exentriq.com/forms.html)
+
+**Updates**
+- Optimize JS code
+- Update Gruntfile.js
+- Update readme
+
+**Fixes**
+- ...
+
 ### v0.1.3 (Sept 4, 2015)
 
 **New**

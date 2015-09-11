@@ -3,10 +3,10 @@
 /* --------------------------------------- */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
 
+
 /* --------------------------------------- */
 /* Default Variables                       */
 /* --------------------------------------- */
-
 /*** Grid Variables ***/
 $eq-ui-num-cols: 12 !default;
 $eq-ui-gutter-width: 32px !default;
@@ -82,11 +82,23 @@ $eq-ui-tool-bar-height: 64px !default;
 $eq-ui-tool-bar-font-color: color("eq-medium-grey", "500") !default;
 $eq-ui-tool-bar-bg-color: color("eq-medium-grey", "50") !default;
 
+/*** Tables ***/
+$table-border: 1px solid rgba(0,0,0,.06) !default;
+$row-height: 48px !default;
+$table-striped-color: #f2f2f2 !default;
+
 /*** Cards ***/
 /*$card-padding: 20px !default;
 $card-bg-color: #fff !default;
 $card-link-color: color("orange", "A200") !default;
 $card-link-color-light: lighten($card-link-color, 20%) !default;*/
+
+/*** Collections ***/
+/*$collection-border-color: #e0e0e0 !default;
+$collection-bg-color: #fff !default;
+$collection-active-bg-color: $secondary-color !default;
+$collection-active-color: lighten($secondary-color, 55%) !default;
+$collection-hover-bg-color: #ddd !default;*/
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
@@ -94,30 +106,35 @@ $collapsible-header-color: #fff !default;
 $collapsible-border-color: #ddd !default;
 $collapsible-body-padding: 16px !default;
 
+/*** Tabs ***/
+/*$tabs-underline-color: $primary-color-light !default;
+$tabs-text-color: $primary-color !default;
+$tabs-bg-color: #fff !default;*/
+
 /*** Dropdown ***/
 /*$dropdown-bg-color: #fff !default;
 $dropdown-hover-bg-color: #eee !default;
 $dropdown-color: $secondary-color !default;*/
 
 /*** Forms ***/
-/*$input-border-color: color("grey", "500") !default;
+$input-border-color: color("grey", "500") !default;
 $input-bg-color: #fff !default;
-$input-error-color: $error-color !default;
-$input-success-color: $success-color !default;
-$input-focus-color: $secondary-color !default;
+$input-error-color: $eq-ui-error-color !default;
+$input-success-color: $eq-ui-success-color !default;
+$input-focus-color: $eq-ui-secondary-color !default;
 $label-font-size: .8rem !default;
 $input-disabled-color: rgba(0,0,0, .26) !default;
-$input-disabled-solid-color: #BDBDBD !default;*/
+$input-disabled-solid-color: #BDBDBD !default;
 
 /*** Radio Buttons ***/
-/*$radio-fill-color: $secondary-color !default;
-$radio-empty-color: #5a5a5a !default;*/
+$radio-fill-color: $eq-ui-secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
 
 /*** Switches ***/
-/*$switch-bg-color: $secondary-color !default;
-$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%) !default;
+$switch-bg-color: $eq-ui-secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($eq-ui-secondary-color, 25%), 25%) !default;
 $switch-unchecked-bg: #F1F1F1 !default;
-$switch-unchecked-lever-bg: #818181 !default;*/
+$switch-unchecked-lever-bg: #818181 !default;
 
 /*** Date Picker ***/
 /*$datepicker-weekday-bg: darken($secondary_color, 7%) !default;
@@ -127,45 +144,10 @@ $datepicker-focus: rgba(0,0,0, .05) !default;
 $datepicker-selected: $secondary-color !default;
 $datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;*/
 
-/*** Navbar ***/
-/*$navbar-height: 64px !default;
-$navbar-height-mobile: 56px !default;
-$navbar-font-color: #fff !default;
-$navbar-brand-font-size: 2.1rem !default;*/
-
-/*** Photo Slider ***/
-/*$slider-bg-color: color('grey', '500') !default;
-$slider-bg-color-light: color('grey', '300') !default;
-$slider-indicator-color: color('green', '500') !default;*/
-
-/*** Tabs ***/
-/*$tabs-underline-color: $primary-color-light !default;
-$tabs-text-color: $primary-color !default;
-$tabs-bg-color: #fff !default;*/
-
-/*** Tables ***/
-/*$table-border-color: #d0d0d0 !default;
-$table-striped-color: #f2f2f2 !default;*/
-
 /*** Toasts ***/
 /*$toast-height: 48px !default;
 $toast-color: #323232 !default;
 $toast-text-color: #fff !default;*/
-
-/*** Footer ***/
-/*$footer-bg-color: $primary-color !default;*/
-
-/*** Flowtext ***/
-/*$range : $large-screen - $small-screen !default;
-$intervals: 20 !default;
-$interval-size: $range / $intervals !default;*/
-
-/*** Collections ***/
-/*$collection-border-color: #e0e0e0 !default;
-$collection-bg-color: #fff !default;
-$collection-active-bg-color: $secondary-color !default;
-$collection-active-color: lighten($secondary-color, 55%) !default;
-$collection-hover-bg-color: #ddd !default;*/
 
 /* Progress Bar */
 /*$progress-bar-color: $secondary-color !default;*/

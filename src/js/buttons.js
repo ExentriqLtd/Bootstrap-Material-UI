@@ -1,29 +1,32 @@
 (function ($) {
     EqUI.buttons = {};
 
-    EqUI.buttons.element = $('.btn');
-
     // Init
     EqUI.buttons.init = function() {
-        
+
+        // Global vars
+        EqUI.buttons.element = $('.btn');
+        EqUI.buttons.fab_action_id = 'eq-ui-btn-fab-action';
+        EqUI.buttons.fab_action_element = $('.'+EqUI.buttons.fab_action_id);
+
         // Events for FAB Action Button
         if(EqUI.site.isTouch){
-            $('.eq-ui-btn-fab-action').on('click', function(e) {
+            EqUI.buttons.fab_action_element.on('click', function(e) {
                 EqUI.buttons.toggleFAB($(this));
             });
 
             $('html').on('touchstart', function(e) {
                 var element = $(e.target);
-                if (!element.hasClass('eq-ui-btn-fab-action') && element.parents(".eq-ui-btn-fab-action").length !== 1) {
-                    $('.eq-ui-btn-fab-action').closeFAB();
+                if (!element.hasClass(EqUI.buttons.fab_action_id) && element.parents('.'+EqUI.buttons.fab_action_id).length !== 1) {
+                    EqUI.buttons.fab_action_element.closeFAB();
                 }
             });
         } else {
-            $('.eq-ui-btn-fab-action').on('mouseenter', function(e) {
+            EqUI.buttons.fab_action_element.on('mouseenter', function(e) {
                 EqUI.buttons.toggleFAB($(this));
             });
 
-            $('.eq-ui-btn-fab-action').on('mouseleave', function(e) {
+            EqUI.buttons.fab_action_element.on('mouseleave', function(e) {
                 EqUI.buttons.toggleFAB($(this));
             });
         }
@@ -49,7 +52,7 @@
 
     // Toggle FAB
     EqUI.buttons.toggleFAB = function(element, isClose) {
-        if(!element.hasClass('eq-ui-btn-fab-action')){
+        if(!element.hasClass(EqUI.buttons.fab_action_id)){
             return;
         }
 
@@ -65,15 +68,15 @@
 
         // End animation event
         function animationEnd() {
-            if(!element.hasClass('eq-ui-btn-fab-action active')){
-                $('.eq-ui-btn-fab-action ul').css('height', '0');
+            if(!element.hasClass(EqUI.buttons.fab_action_id+' active')){
+                $('.'+EqUI.buttons.fab_action_id+' ul').css('height', '0');
             }
         }
 
         // Add animation class
-        if(!element.hasClass('eq-ui-btn-fab-action active') && (isClose === false || isClose === 'none')){
+        if(!element.hasClass(EqUI.buttons.fab_action_id+' active') && (isClose === false || isClose === 'none')){
             // SHOW
-            $('.eq-ui-btn-fab-action ul').css('height', 'auto');
+            $('.'+EqUI.buttons.fab_action_id+' ul').css('height', 'auto');
             element.addClass("active");
 
             // Set start position

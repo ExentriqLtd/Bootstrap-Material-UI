@@ -1,5 +1,5 @@
 (function ($) {
-    EqUIDoc = {};
+    var EqUIDoc = {};
     EqUIDoc.site = {};
 
     // Init
@@ -15,12 +15,13 @@
         }
 
         // Set title in app bar
+        var _title_app_bar = $('#main-eq-ui-app-bar').find('.header-title');
         if(_doc_route.name_section !== "" && _doc_route.name_chapter !== ""){
-            $('#main-eq-ui-app-bar .header-title').html('<span class="section-title">'+_doc_route.name_section+'</span>'+
+            _title_app_bar.html('<span class="section-title">'+_doc_route.name_section+'</span>'+
                 '<i class="material-icons icon icon-left icon-24">keyboard_arrow_right</i>'+
                 '<span class="chapter-title">'+_doc_route.name_chapter+'</span>');
         } else if(_doc_route.name_chapter !== "") {
-            $('#main-eq-ui-app-bar .header-title').html('<span class="section-title">'+_doc_route.name_chapter+'</span>');
+            _title_app_bar.html('<span class="section-title">'+_doc_route.name_chapter+'</span>');
         }
     };
 
