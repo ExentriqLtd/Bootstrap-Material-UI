@@ -14,110 +14,72 @@
                 <h2 class="header">Accordion</h2>
                 <p>Basic collapsible.</p>
 
-                <div class="panel-group eq-ui-collapsible" id="collapsible_1" role="tablist" aria-multiselectable="true">
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#collapsible_1" href="#collapsible_1_item_1" aria-expanded="true">
-                                <i class="material-icons icon icon-left icon-24">filter_drama</i>
-                                Collapsible #1
-                                </a>
-                            </h4>
+                <ul class="eq-ui-collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="eq-ui-collapsible-header active">
+                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
                         </div>
-                        <div id="collapsible_1_item_1" class="collapse in" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_1" href="#collapsible_1_item_2" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">place</i>
-                                Collapsible #2
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
                         </div>
-                        <div id="collapsible_1_item_2" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_1" href="#collapsible_1_item_3" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">whatshot</i>
-                                Collapsible #3
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
                         </div>
-                        <div id="collapsible_1_item_3" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                </div>
+                    </li>
+                </ul>
 
                 <pre><code class="language-markup">
-&lt;div class=&quot;panel-group eq-ui-collapsible&quot; id=&quot;collapsible_1&quot; role=&quot;tablist&quot; aria-multiselectable=&quot;true&quot;&gt;
-                
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot; role=&quot;tab&quot;&gt;
-            &lt;h4 class=&quot;panel-title&quot;&gt;
-                &lt;a data-toggle=&quot;collapse&quot; data-parent=&quot;#collapsible_1&quot; href=&quot;#collapsible_1_item_1&quot; aria-expanded=&quot;true&quot;&gt;
-                &lt;i class=&quot;material-icons icon icon-left icon-24&quot;&gt;filter_drama&lt;/i&gt;
-                Collapsible #1
-                &lt;/a&gt;
-            &lt;/h4&gt;
+&lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;accordion&quot;&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;eq-ui-collapsible-header active&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-image-filter-drama icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #1&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div id=&quot;collapsible_1_item_1&quot; class=&quot;collapse in&quot; role=&quot;tabpanel&quot;&gt;
-            &lt;div class=&quot;panel-body&quot;&gt;
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
+            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot; role=&quot;tab&quot;&gt;
-            &lt;h4 class=&quot;panel-title&quot;&gt;
-                &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#collapsible_1&quot; href=&quot;#collapsible_1_item_2&quot; aria-expanded=&quot;false&quot;&gt;
-                &lt;i class=&quot;material-icons icon icon-left icon-24&quot;&gt;place&lt;/i&gt;
-                Collapsible #2
-                &lt;/a&gt;
-            &lt;/h4&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;eq-ui-collapsible-header&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-map-marker icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #2&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div id=&quot;collapsible_1_item_2&quot; class=&quot;collapse&quot; role=&quot;tabpanel&quot;&gt;
-            &lt;div class=&quot;panel-body&quot;&gt;
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
+            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;panel panel-default&quot;&gt;
-        &lt;div class=&quot;panel-heading&quot; role=&quot;tab&quot;&gt;
-            &lt;h4 class=&quot;panel-title&quot;&gt;
-                &lt;a class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#collapsible_1&quot; href=&quot;#collapsible_1_item_3&quot; aria-expanded=&quot;false&quot;&gt;
-                &lt;i class=&quot;material-icons icon icon-left icon-24&quot;&gt;whatshot&lt;/i&gt;
-                Collapsible #3
-                &lt;/a&gt;
-            &lt;/h4&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;div class=&quot;eq-ui-collapsible-header&quot;&gt;
+            &lt;a&gt;&lt;i class=&quot;mdi mdi-fire icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #3&lt;/a&gt;
         &lt;/div&gt;
-        &lt;div id=&quot;collapsible_1_item_3&quot; class=&quot;collapse&quot; role=&quot;tabpanel&quot;&gt;
-            &lt;div class=&quot;panel-body&quot;&gt;
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
+            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;</code></pre>
+    &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
 
             </div>
         </div>
@@ -128,60 +90,41 @@
                 <h2 class="header">Popout</h2>
                 <p>For create collapsible popout add the class <code class="language-markup">popout</code>.</p>
 
-                <div class="panel-group eq-ui-collapsible popout" id="collapsible_2" role="tablist" aria-multiselectable="true">
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_2" href="#collapsible_2_item_1" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">filter_drama</i>
-                                Collapsible popout #1
-                                </a>
-                            </h4>
+                <ul class="eq-ui-collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
                         </div>
-                        <div id="collapsible_2_item_1" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default active">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#collapsible_2" href="#collapsible_2_item_2" aria-expanded="true">
-                                <i class="material-icons icon icon-left icon-24">place</i>
-                                Collapsible popout #2
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header active">
+                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
                         </div>
-                        <div id="collapsible_2_item_2" class="collapse in" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_2" href="#collapsible_2_item_3" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">whatshot</i>
-                                Collapsible popout #3
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
                         </div>
-                        <div id="collapsible_2_item_3" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                </div>
+                    </li>
+                </ul>
 
                 <pre><code class="language-markup">
-&lt;div class=&quot;panel-group eq-ui-collapsible popout&quot; id=&quot;collapsible_2&quot; role=&quot;tablist&quot; aria-multiselectable=&quot;true&quot;&gt;
+&lt;ul class=&quot;eq-ui-collapsible popout&quot; data-collapsible=&quot;accordion&quot;&gt;
 ...</code></pre>
 
             </div>
@@ -191,62 +134,43 @@
             <div class="col-md-12">
 
                 <h2 class="header">Expandable</h2>
-                <p>For create collapsible expandable add the class <code class="language-markup">expandable</code>.</p>
+                <p>For create collapsible expandable add in the data-collapsible <code class="language-markup">expandable</code>.</p>
 
-                <div class="panel-group eq-ui-collapsible expandable" id="collapsible_3" role="tablist" aria-multiselectable="true">
-                
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_3" href="#collapsible_3_item_1" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">filter_drama</i>
-                                Collapsible expandable #1
-                                </a>
-                            </h4>
+                <ul class="eq-ui-collapsible" data-collapsible="expandable">
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
                         </div>
-                        <div id="collapsible_3_item_1" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_3" href="#collapsible_3_item_2" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">place</i>
-                                Collapsible expandable #2
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
                         </div>
-                        <div id="collapsible_3_item_2" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab">
-                            <h4 class="panel-title">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#collapsible_3" href="#collapsible_3_item_3" aria-expanded="false">
-                                <i class="material-icons icon icon-left icon-24">whatshot</i>
-                                Collapsible expandable #3
-                                </a>
-                            </h4>
+                    </li>
+                    <li>
+                        <div class="eq-ui-collapsible-header">
+                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
                         </div>
-                        <div id="collapsible_3_item_3" class="collapse" role="tabpanel">
-                            <div class="panel-body">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
+                        <div class="eq-ui-collapsible-body">
+                            <div class="eq-ui-collapsible-body-inner">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
                             </div>
                         </div>
-                    </div>
-
-                </div>
+                    </li>
+                </ul>
 
                 <pre><code class="language-markup">
-&lt;div class=&quot;panel-group eq-ui-collapsible expandable&quot; id=&quot;collapsible_3&quot; role=&quot;tablist&quot; aria-multiselectable=&quot;true&quot;&gt;
+&lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;expandable&quot;&gt;
 ...</code></pre>
 
             </div>

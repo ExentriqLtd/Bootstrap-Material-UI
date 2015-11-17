@@ -82,6 +82,9 @@ module.exports = function ( grunt ) {
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+                    'src/bower_components/jquery.easing/js/jquery.easing.js',
+                    'src/bower_components/hammerjs/hammer.js',
+                    'src/bower_components/jquery-hammerjs/jquery.hammer.js',
                     'src/bower_components/velocity/velocity.js',
                     'src/bower_components/velocity/velocity.ui.js',
                     'src/bower_components/autosize/dist/autosize.js',
@@ -106,8 +109,11 @@ module.exports = function ( grunt ) {
                     'src/js/layout/app-bar.js',
                     'src/js/layout/side-nav.js',
                     'src/js/buttons.js',
+                    'src/js/cards.js',
                     'src/js/forms.js',
                     'src/js/collapsible.js',
+                    'src/js/modals.js',
+                    'src/js/tabs.js',
                     'src/js/_init.js'
                     ],
                 dest: 'dist/js/<%= meta.name_root_file %>.js'
@@ -134,7 +140,7 @@ module.exports = function ( grunt ) {
         // JS Uglify
         uglify: {
             options: {
-                mangle: true,
+                mangle: false,
                 sourceMap: false
                 /*sourceMapName: 'dist/js/<%= meta.name_root_file %>.js.map'*/
             },
@@ -172,6 +178,13 @@ module.exports = function ( grunt ) {
                         flatten: true,
                         src: ['src/bower_components/bootstrap-sass/assets/fonts/bootstrap/*'],
                         dest: 'doc/assets/fonts/bootstrap',
+                        filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['src/bower_components/mdi/fonts/*'],
+                        dest: 'doc/assets/fonts',
                         filter: 'isFile'
                     }
                 ]
@@ -226,6 +239,13 @@ module.exports = function ( grunt ) {
                         src: ['src/bower_components/bootstrap-sass/assets/fonts/bootstrap/*'],
                         dest: 'dist/fonts/bootstrap',
                         filter: 'isFile'
+                    },
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['src/bower_components/mdi/fonts/*'],
+                        dest: 'dist/fonts',
+                        filter: 'isFile'
                     }
                 ]
             }
@@ -275,8 +295,12 @@ module.exports = function ( grunt ) {
                     "doc/table.html": "jade/table.jade",
                     "doc/typography.html": "jade/typography.jade",
                     "doc/buttons.html": "jade/buttons.jade",
+                    "doc/cards.html": "jade/cards.jade",
+                    "doc/list.html": "jade/list.jade",
                     "doc/forms.html": "jade/forms.jade",
                     "doc/collapsible.html": "jade/collapsible.jade",
+                    "doc/modals.html": "jade/modals.jade",
+                    "doc/tabs.html": "jade/tabs.jade",
                     "doc/showcase.html": "jade/showcase.jade",
                     "doc/index.html": "jade/index.jade"
                 }

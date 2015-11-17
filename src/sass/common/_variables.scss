@@ -76,6 +76,7 @@ $eq-ui-side-nav-font-color: color("eq-medium-grey", "500") !default;
 $eq-ui-side-nav-bg-color: color("shades", "white") !default;
 $eq-ui-side-nav-line-color: color("eq-medium-grey", "100") !default;
 $eq-ui-side-nav-link-bg-color: color("eq-medium-grey", "50") !default;
+$eq-ui-side-nav-menu-padding-left: 24px !default;
 
 /*** Tool bar ***/
 $eq-ui-tool-bar-height: 64px !default;
@@ -87,18 +88,13 @@ $table-border: 1px solid rgba(0,0,0,.06) !default;
 $row-height: 48px !default;
 $table-striped-color: #f2f2f2 !default;
 
-/*** Cards ***/
-/*$card-padding: 20px !default;
-$card-bg-color: #fff !default;
-$card-link-color: color("orange", "A200") !default;
-$card-link-color-light: lighten($card-link-color, 20%) !default;*/
-
-/*** Collections ***/
-/*$collection-border-color: #e0e0e0 !default;
-$collection-bg-color: #fff !default;
-$collection-active-bg-color: $secondary-color !default;
-$collection-active-color: lighten($secondary-color, 55%) !default;
-$collection-hover-bg-color: #ddd !default;*/
+/*** List ***/
+$eq-ui-list-bg-color: #fff !default;
+$eq-ui-list-active-color: $eq-ui-secondary-color !default;
+$eq-ui-list-hover-bg-color: color("eq-medium-grey", "50") !default;
+$eq-ui-list-line-color: $eq-ui-side-nav-line-color !default;
+$eq-ui-list-primary-line-text-color: $eq-ui-text-color !default;
+$eq-ui-list-secondary-line-text-color: color("eq-medium-grey", "500") !default;
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
@@ -106,10 +102,17 @@ $collapsible-header-color: #fff !default;
 $collapsible-border-color: #ddd !default;
 $collapsible-body-padding: 16px !default;
 
+/*** Modals ***/
+$modals-header-height: 64px !default;
+$modals-footer-height: 36px !default;
+$modals-line-color: $eq-ui-side-nav-line-color !default;
+
 /*** Tabs ***/
-/*$tabs-underline-color: $primary-color-light !default;
-$tabs-text-color: $primary-color !default;
-$tabs-bg-color: #fff !default;*/
+$eq-ui-tabs-text-color: #fff !default;
+$eq-ui-tabs-underline-color: $eq-ui-secondary-color !default;
+
+$eq-ui-tabs-text-color-inverted: $eq-ui-primary-color !default;
+$eq-ui-tabs-underline-color-inverted: $eq-ui-primary-color !default;
 
 /*** Dropdown ***/
 /*$dropdown-bg-color: #fff !default;
@@ -156,6 +159,7 @@ $toast-text-color: #fff !default;*/
 $eq-ui-zindex-status-bar:        			300 !default;
 $eq-ui-zindex-modal:           	 			250 !default;
 $eq-ui-zindex-modal-overlay:     			249 !default;
+$eq-ui-zindex-app-bar-primary:        		210 !default;
 $eq-ui-zindex-nav-drawer:        			200 !default;
 $eq-ui-zindex-nav-drawer-overlay:			199 !default;
 $eq-ui-zindex-app-bar-search:       		100 !default;

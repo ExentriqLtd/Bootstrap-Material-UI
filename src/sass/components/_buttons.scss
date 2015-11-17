@@ -1,31 +1,36 @@
 // Buttons
 
-@mixin eq-ui-button-variant($color, $background) {
+@mixin eq-ui-button-variant($color, $background, $background_hover) {
 	color: $color;
 	background-color: $background;
+
+    // FLAT
+    &.eq-ui-btn-flat {
+        background-color: transparent;
+    }
 
 	&:focus,
 	&.focus {
 		@extend .z-depth-1;
 		color: $color;
-		background-color: $background;
+		background-color: $background_hover;
 	}
 	&:hover {
 		@extend .z-depth-1-half;
 		color: $color;
-		background-color: $background;
+		background-color: $background_hover;
 	}
 	&:active,
 	&.active,
 	.open > &.dropdown-toggle {
 		color: $color;
-		background-color: $background;
+		background-color: $background_hover;
 
 		&:hover,
 		&:focus,
 		&.focus {
 		  	color: $color;
-		  	background-color: $background;
+		  	background-color: $background_hover;
 		}
 	}
 	&:active,
@@ -50,7 +55,7 @@
 	}
 
 	// FLAT
-	&.eq-ui-btn-flat.disabled {
+    &.eq-ui-btn-flat.disabled {
 		background-color: transparent;
 	}
 
@@ -107,28 +112,38 @@
 			line-height: 40px;
 		}
 	}
+
+    // MENU FAB
+    &.eq-ui-btn-fab.eq-ui-btn-menu-fab {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        i {
+            line-height: 32px;
+        }
+    }
 }
 
 
 // Alternate buttons
 
 .btn-default {
-	@include eq-ui-button-variant($btn-default-color, $btn-default-bg);
+	@include eq-ui-button-variant($btn-default-color, $btn-default-bg, rgba(158,158,158,.2));
 }
 .btn-primary {
-  	@include eq-ui-button-variant($btn-primary-color, $btn-primary-bg);
+  	@include eq-ui-button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-bg);
 }
 .btn-success {
-  	@include eq-ui-button-variant($btn-success-color, $btn-success-bg);
+  	@include eq-ui-button-variant($btn-success-color, $btn-success-bg, $btn-success-bg);
 }
 .btn-info {
-  	@include eq-ui-button-variant($btn-info-color, $btn-info-bg);
+  	@include eq-ui-button-variant($btn-info-color, $btn-info-bg, $btn-info-bg);
 }
 .btn-warning {
-  	@include eq-ui-button-variant($btn-warning-color, $btn-warning-bg);
+  	@include eq-ui-button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-bg);
 }
 .btn-danger {
-  	@include eq-ui-button-variant($btn-danger-color, $btn-danger-bg);
+  	@include eq-ui-button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-bg);
 }
 
 // FAB Action Button
@@ -162,5 +177,18 @@
 			width: 100%;
 			opacity: 0;
 		}
+	}
+}
+
+// Floating Button
+
+.eq-ui-btn-fab-floating {
+	display: block;
+	position: absolute;
+	right: 24px;
+	bottom: -28px;
+	a {
+		display: block;
+		position: relative;
 	}
 }

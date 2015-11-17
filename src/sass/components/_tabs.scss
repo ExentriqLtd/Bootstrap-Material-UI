@@ -1,0 +1,71 @@
+// Tabs
+
+.eq-ui-tabs {
+    position: absolute;
+    display: inline-block;
+    height: 48px;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+
+    .eq-ui-tab {
+        display: table-cell;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        padding: 0 20px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+
+        a {
+            color: $eq-ui-tabs-text-color;
+            font-weight: 500;
+            opacity: 0.6;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+
+            @include eq-ui-transition-ease(opacity);
+
+            &:hover,&.active {
+                opacity: 1;
+            }
+        }
+
+        &.disabled a {
+            opacity: 0.3;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    .eq-ui-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: $eq-ui-tabs-underline-color;
+        will-change: left, right;
+    }
+
+    // Color inverted
+    &.eq-ui-tabs-color-inverted {
+        .eq-ui-tab {
+            a {
+                color: $eq-ui-tabs-text-color-inverted;
+            }
+        }
+        .eq-ui-indicator {
+            background-color: $eq-ui-tabs-underline-color-inverted;
+        }
+    }
+
+    // Justified
+    &.eq-ui-tabs-justified {
+        .eq-ui-tab {
+            width: 1%;
+        }
+    }
+}

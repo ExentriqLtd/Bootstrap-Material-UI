@@ -18,38 +18,45 @@
     width: $eq-ui-side-nav-width;
     z-index: $eq-ui-zindex-nav-drawer;
     
-    overflow-x: hidden;
-    overflow-y: auto;
-    
     @include eq-ui-transition(transform);
 
-    &::-webkit-scrollbar-track {
-		border-radius: 2px;
-	}
-
-	&::-webkit-scrollbar {
-		width: 5px;
-		background-color: #F7F7F7;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		border-radius: 10px;
-		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-		background-color: #BFBFBF;
-	}
-
     .eq-ui-side-nav-wrapper {
-    	min-height: 100%;
-    	padding-bottom: 96px;
-    	position: relative;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
 
     	.brand {
 		    border-bottom: 1px solid $eq-ui-side-nav-line-color;
 		    display: block;
+            width: 100%;
 		    height: 64px;
 		    line-height: 41px;
 		    padding: 12px 0 11px 24px;
-		    position: relative;
+		    position: absolute;
+		}
+
+		.eq-ui-side-nav-content-wrapper {
+            position: relative;
+            margin-top: 64px;
+            overflow: hidden;
+            width: 100%;
+            // Offset Header + Footer
+            height: calc(100% - 128px);
+
+            nav {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                overflow-y: auto;
+                overflow-x: hidden;
+                word-wrap: break-word;
+
+                @extend .eq-ui-scrollbar-y;
+            }
 		}
 
     	.footer {
@@ -69,6 +76,13 @@
 		    	margin: 0;
 		    }
 		}
+    }
+}
+
+// Is primary app is visible
+body.eq-ui-layout-header-primary-visible {
+    .eq-ui-side-nav {
+        top: 64px;
     }
 }
 

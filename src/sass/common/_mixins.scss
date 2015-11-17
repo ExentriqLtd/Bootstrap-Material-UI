@@ -1,3 +1,7 @@
 @mixin eq-ui-transition($property) {
     transition: $property .2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+@mixin eq-ui-transition-ease($property) {
+    transition: $property .28s ease;
+}

@@ -1,0 +1,40 @@
+// Nav Menu
+
+.eq-ui-nav-menu {
+    margin: 0;
+    padding: 0;
+    height: $eq-ui-tool-bar-height;
+
+    >li {
+        position: relative;
+        color: inherit;
+        margin-right: 15px;
+        line-height: inherit;
+        float: left;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        >a {
+            display: block;
+            color: inherit;
+            line-height: inherit;
+
+            &:hover {
+                color: inherit;
+                text-decoration: none;
+            }
+
+        }
+    }
+
+    // Item with icon
+    >li.eq-ui-nav-menu-item-icon {
+
+        >a {
+            line-height: 32px;
+            margin: (($eq-ui-tool-bar-height - 32px)/2) 0;
+        }
+    }
+}

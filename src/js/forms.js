@@ -5,7 +5,7 @@
     EqUI.forms.init = function() {
         // Global vars
         EqUI.forms.element = $('.btn');
-        EqUI.forms.input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
+        EqUI.forms.input_selector = 'input.eq-ui-input[type=text], input.eq-ui-input[type=password], input.eq-ui-input[type=email], input.eq-ui-input[type=url], input.eq-ui-input[type=tel], input.eq-ui-input[type=number], input.eq-ui-input[type=search], textarea.eq-ui-textarea';
 
         // Update Labels
         $(EqUI.forms.input_selector).each(function(index, element) {

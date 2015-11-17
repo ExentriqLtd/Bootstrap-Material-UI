@@ -68,6 +68,11 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/*** List default ***/
+ul li {
+    list-style: none;
+}
+
 /*** Body lead ***/
 .lead {
 	font-size: $eq-ui-font-size-base + 4;
@@ -166,9 +171,79 @@ pre[class*="language-"] {
     background: #e8e6e3;
 }
 
+/*** Scrollbar  ***/
+.eq-ui-scrollbar {
+    &::-webkit-scrollbar-track {
+        border-radius: 2px;
+    }
+    &::-webkit-scrollbar {
+        background-color: #F7F7F7;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #BFBFBF;
+    }
+}
+.eq-ui-scrollbar-y {
+    @extend .eq-ui-scrollbar;
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+.eq-ui-scrollbar-x {
+    @extend .eq-ui-scrollbar;
+    &::-webkit-scrollbar {
+        height: 5px;
+    }
+}
+
+.eq-ui-scrollbar-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    overflow-x: auto;
+    overflow-y: auto;
+    word-wrap: break-word;
+
+    &.eq-ui-scrollbar-wrap-x {
+        @extend .eq-ui-scrollbar-x;
+        overflow-y: hidden;
+    }
+
+    &.eq-ui-scrollbar-wrap-y {
+        @extend .eq-ui-scrollbar-y;
+        overflow-x: hidden;
+    }
+
+    &.eq-ui-scrollbar-wrap-hide {
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
 /* --------------------------------------- */
 /* Utility Classes                         */
 /* --------------------------------------- */
+
+// Primary Color
+.eq-ui-primary-color, .eq-ui-primary-color-hover:hover {
+    background-color: $eq-ui-primary-color !important;
+}
+.eq-ui-primary-color-text, .eq-ui-primary-color-text-hover:hover {
+    color: $eq-ui-primary-color !important;
+}
+
+// Secondary Color
+.eq-ui-secondary-color, .eq-ui-secondary-color-hover:hover {
+    background-color: $eq-ui-secondary-color !important;
+}
+.eq-ui-secondary-color-text, .eq-ui-secondary-color-text-hover:hover {
+    color: $eq-ui-secondary-color !important;
+}
 
 .hide {
 	display: none !important;
@@ -195,6 +270,7 @@ pre[class*="language-"] {
 // valign-wrapper
 .valign-wrapper {
     display: flex;
+	flex-direction: row !important;
     align-items: center;
     .valign {
     	display: block;

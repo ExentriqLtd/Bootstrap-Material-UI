@@ -38,7 +38,9 @@ No need to separately include the following libraries, are already included in t
 
 - Bootstrap (v3.3.5)
 - Font Awesome (v4.3.0)
-- Material Icons
+- Material Design Icons
+- jQuery Easing (v1.3.0)
+- jQuery Hammer (v2.0.0)
 - Autosize (v3.0.8)
 - VelocityJS (v1.2.2)
 - Waves (v0.7.2)

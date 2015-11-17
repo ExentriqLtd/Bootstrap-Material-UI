@@ -8,142 +8,452 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Forms | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.1.4" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.1.4" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.0" rel="stylesheet">
   </head>
-  <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
+  <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"forms",name_section:"Components",name_chapter:"Forms"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<header class="eq-ui-layout-header">
-    
-    <div class="eq-ui-tool-bar">
+<!-- Primary app bar -->
+<header class="eq-ui-layout-header-primary">
+
+    <div class="eq-ui-tool-bar-primary">
         <div class="container-fluid">
-            <div class="header-title">      
+
+            <!-- Title -->
+            <div class="header-title">
                 <span class="section-title">Tool Bar</span>
             </div>
+
+            <!-- Nav Menu -->
+            <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-top-search-show">
+                        <i class="mdi mdi-magnify icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-home icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./showcase.html" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-heart icon"></i>
+                    </a>
+                </li>
+                <li><a href="#">text</a></li>
+            </ul>
+
+            <!-- Top Search -->
+            <div class="eq-ui-top-search">
+                <i class="eq-ui-top-search-close mdi mdi-arrow-left icon icon-left"></i>
+                <!-- Search -->
+                <div class="eq-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                </div>
+            </div>
+
         </div>
     </div>
 
+</header>
+
+<!-- Secondary app bar -->
+<header class="eq-ui-layout-header">
+
     <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
         <div class="container-fluid">
-            <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
-            <div class="header-title">      
+
+            <!-- Toggle -->
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+
+            <!-- Title -->
+            <div class="header-title">
                 <span class="section-title">Exentriq</span>
-                <i class="material-icons icon icon-left icon-24">keyboard_arrow_right</i>
+                <i class="mdi mdi-chevron-right icon icon-left icon-24"></i>
                 <span class="chapter-title">App Bar</span>
+            </div>
+
+            <!-- Nav Menu -->
+            <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-dots-vertical icon"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Floating Btn -->
+            <div class="eq-ui-btn-fab-floating">
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="mdi mdi-plus icon"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="eq-ui-tool-bar">
+        <div class="container-fluid">
+            <div class="header-title">
+                <span class="section-title">Tool Bar</span>
             </div>
         </div>
     </div>
 
 </header>
 
+<!-- Side nav -->
 <div class="eq-ui-side-nav">
 
     <div class="eq-ui-side-nav-wrapper">
 
         <div class="brand">
-            <div class="eq-ui-side-nav-toggle"><i class="material-icons icon icon-left icon-24">menu</i></div>
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
             <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
         </div>
 
-        <nav>
-            <div class="panel-group eq-ui-collapsible" id="collapsible-nav" role="tablist" aria-multiselectable="true">
+        <div class="eq-ui-side-nav-content-wrapper">
+            <nav>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a id="collapsible-nav-index" href="./" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">home</i>
-                            Home
-                            </a>
-                        </h4>
-                    </div>
+                <!-- Search -->
+                <div class="eq-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
                 </div>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">settings</i>
-                            <i class="material-icons icon icon-right icon-18">open_in_new</i>
-                            Getting Started
-                            </a>
-                        </h4>
-                    </div>
-                </div>
+                <!-- Collapsible Menu -->
+                <ul class="eq-ui-collapsible" data-collapsible="accordion">
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-css" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">class</i>
-                            CSS
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-index" href="./">
+                                <i class="mdi mdi-home icon icon-left icon-24"></i>
+                                Home
                             </a>
-                        </h4>
-                    </div>
-                    <div id="collapsible-nav-css" class="collapse" role="tabpanel">
-                        <div class="panel-body">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md">
+                                <i class="mdi mdi-settings icon icon-left icon-24"></i>
+                                <i class="mdi mdi-open-in-new icon icon-right icon-18"></i>
+                                Getting Started
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-css">
+                                <i class="mdi mdi-book-variant icon icon-left icon-24"></i>
+                                CSS
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
                             <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-components" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">widgets</i>
-                            Components
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-components">
+                                <i class="mdi mdi-puzzle icon icon-left icon-24"></i>
+                                Components
                             </a>
-                        </h4>
-                    </div>
-                    <div id="collapsible-nav-components" class="collapse" role="tabpanel">
-                        <div class="panel-body">
+                        </div>
+                        <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-components-buttons" href="./buttons.html">Buttons</a>
+                            <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
+                            <a id="collapsible-nav-components-list" href="./list.html">List</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
                         </div>
-                    </div>
-                </div>
+                    </li>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#collapsible-nav" href="#collapsible-nav-java-script" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">layers</i>
-                            JavaScript
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-java-script">
+                                <i class="mdi mdi-layers icon icon-left icon-24"></i>
+                                JavaScript
                             </a>
-                        </h4>
-                    </div>
-                    <div id="collapsible-nav-java-script" class="collapse" role="tabpanel">
-                        <div class="panel-body">
-                            <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
                         </div>
-                    </div>
-                </div>
+                        <div class="eq-ui-collapsible-body">
+                            <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
+                            <!--a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a-->
+                        </div>
+                    </li>
 
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab">
-                        <h4 class="panel-title eq-ui-waves">
-                            <a id="collapsible-nav-showcase" href="./showcase.html" aria-expanded="false">
-                            <i class="material-icons icon icon-left icon-24">favorite</i>
-                            Showcase
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-showcase" href="./showcase.html">
+                                <i class="mdi mdi-heart icon icon-left icon-24"></i>
+                                Showcase
                             </a>
-                        </h4>
-                    </div>
-                </div>
+                        </div>
+                    </li>
 
-            </div>
+                </ul>
 
-        </nav>
+                <!-- Collapsible Group Menu -->
+                <ul style="display:none;" class="eq-ui-collapsible eq-ui-collapsible-group" data-collapsible="expandable">
+
+                    <!-- Group 1 -->
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves active">
+                            <a id="collapsible-nav-group-1">
+                                <i class="mdi mdi-image-filter-none icon icon-left icon-24"></i>
+                                <i class="mdi mdi-plus icon icon-right icon-24 eq-ui-collapsible-view-close"></i>
+                                <i class="mdi mdi-minus icon icon-right icon-24 eq-ui-collapsible-view-open"></i>
+                                Group 1
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+
+                            <!-- 1º level menu -->
+                            <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                <!-- 1º level menu 1 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-1">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 1 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 1 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 1 sub 1 -->
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 1 sub 1 -->
+
+                                        </ul><!-- 2º level menu 1 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 1 -->
+
+                                <!-- 1º level menu 2 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-2">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 2 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 2 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 2 sub 1 -->
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 2 sub 1 -->
+
+                                        </ul><!-- 2º level menu 2 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 2 -->
+
+                                <!-- 1º level menu 3 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-3">
+                                            <i class="mdi mdi-file icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                </li><!-- 1º level menu 3 -->
+
+                            </ul><!-- 1º level menu -->
+
+                        </div>
+                    </li><!-- Group 1 -->
+
+                    <!-- Group 2 -->
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves active">
+                            <a id="collapsible-nav-group-2">
+                                <i class="mdi mdi-image-filter-none icon icon-left icon-24"></i>
+                                <i class="mdi mdi-plus icon icon-right icon-24 eq-ui-collapsible-view-close"></i>
+                                <i class="mdi mdi-minus icon icon-right icon-24 eq-ui-collapsible-view-open"></i>
+                                Group 2
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+
+                            <!-- 1º level menu -->
+                            <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                <!-- 1º level menu 1 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-1">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 1 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 1 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 1 sub 1 -->
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 1 sub 1 -->
+
+                                        </ul><!-- 2º level menu 1 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 1 -->
+
+                                <!-- 1º level menu 2 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-2">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 2 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 2 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 2 sub 1 -->
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 2 sub 1 -->
+
+                                        </ul><!-- 2º level menu 2 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 2 -->
+
+                                <!-- 1º level menu 3 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-3">
+                                            <i class="mdi mdi-file icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                </li><!-- 1º level menu 3 -->
+
+                            </ul><!-- 1º level menu -->
+
+                        </div>
+                    </li><!-- Group 2 -->
+
+                </ul><!-- Group Menu -->
+
+            </nav>
+        </div>
 
         <div class="footer">
-            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="fa fa-github icon icon-left icon-18"></i></a><p class="copyright">© Exentriq</p>
+            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; Exentriq</p>
             <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
         </div>
 
@@ -169,7 +479,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <input id="first_name" type="text" class="form-control">
+                                    <input id="first_name" type="text" class="form-control eq-ui-input">
                                     <label for="first_name">First Name</label>
                                 </div>
                             </div>
@@ -179,7 +489,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <input id="last_name" type="text" class="form-control">
+                                    <input id="last_name" type="text" class="form-control eq-ui-input">
                                     <label for="last_name">Last Name</label>
                                 </div>
                             </div>
@@ -189,7 +499,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group eq-ui-input-field">
-                            <input id="password" type="password" class="form-control">
+                            <input id="password" type="password" class="form-control eq-ui-input">
                             <label for="password">Password</label>
                         </div>
                     </div>
@@ -197,7 +507,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group eq-ui-input-field">
-                            <input id="email" type="email" class="form-control">
+                            <input id="email" type="email" class="form-control eq-ui-input">
                             <label for="email" data-error="wrong" data-success="right">Email</label>
                         </div>
                     </div>
@@ -207,7 +517,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <input placeholder="Placeholder" id="country" type="text" class="form-control">
+                                    <input placeholder="Placeholder" id="country" type="text" class="form-control eq-ui-input">
                                     <label for="country">Country</label>
                                 </div>
                             </div>
@@ -217,7 +527,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <input id="disabled" type="text" value="I am not editable" class="form-control" disabled>
+                                    <input id="disabled" type="text" value="I am not editable" class="form-control eq-ui-input" disabled>
                                     <label for="disabled">Disabled</label>
                                 </div>
                             </div>
@@ -232,7 +542,7 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                         &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -242,7 +552,7 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                         &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -252,7 +562,7 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;form-control&quot;&gt;
+                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                 &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -260,7 +570,7 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;form-control&quot;&gt;
+                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                 &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -270,7 +580,7 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                         &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -280,7 +590,7 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;form-control&quot; disabled&gt;
+                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;form-control eq-ui-input&quot; disabled&gt;
                         &lt;label for=&quot;disabled&quot;&gt;Disabled&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -329,8 +639,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <i class="material-icons icon prefix">account_circle</i>
-                                    <input id="first_name_pre" type="text" class="form-control">
+                                    <i class="mdi mdi-account-circle icon prefix"></i>
+                                    <input id="first_name_pre" type="text" class="form-control eq-ui-input">
                                     <label for="first_name_pre">First Name</label>
                                 </div>
                             </div>
@@ -340,8 +650,8 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group eq-ui-input-field">
-                                    <i class="material-icons icon prefix">phone</i>
-                                    <input id="icon_telephone" type="tel" class="form-control">
+                                    <i class="mdi mdi-phone icon prefix"></i>
+                                    <input id="icon_telephone" type="tel" class="form-control eq-ui-input">
                                     <label for="icon_telephone">Telephone</label>
                                 </div>
                             </div>
@@ -351,7 +661,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group eq-ui-input-field">
-                            <i class="material-icons icon prefix">comment</i>
+                            <i class="mdi mdi-comment-text icon prefix"></i>
                             <textarea id="icon_textarea" rows='1' class="form-control eq-ui-textarea"></textarea>
                             <label for="icon_textarea">Textarea</label>
                         </div>
@@ -365,8 +675,8 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;i class=&quot;material-icons icon prefix&quot;&gt;account_circle&lt;/i&gt;
-                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;form-control&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-account-circle icon prefix&quot;&gt;&lt;/i&gt;
+                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                         &lt;label for=&quot;first_name_pre&quot;&gt;First Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -376,8 +686,8 @@
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
                     &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;i class=&quot;material-icons icon prefix&quot;&gt;phone&lt;/i&gt;
-                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;form-control&quot;&gt;
+                        &lt;i class=&quot;mdi mdi-phone icon prefix&quot;&gt;&lt;/i&gt;
+                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;form-control eq-ui-input&quot;&gt;
                         &lt;label for=&quot;icon_telephone&quot;&gt;Telephone&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -387,7 +697,7 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;i class=&quot;material-icons icon prefix&quot;&gt;comment&lt;/i&gt;
+                &lt;i class=&quot;mdi mdi-comment-text icon prefix&quot;&gt;&lt;/i&gt;
                 &lt;textarea id=&quot;icon_textarea&quot; rows='1' class=&quot;form-control eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
                 &lt;label for=&quot;icon_textarea&quot;&gt;Textarea&lt;/label&gt;
             &lt;/div&gt;
@@ -405,7 +715,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group eq-ui-input-field">
-                            <input id="email_val" type="email" class="form-control validate">
+                            <input id="email_val" type="email" class="form-control eq-ui-input validate">
                             <label for="email_val" data-error="wrong" data-success="right">Email</label>
                         </div>
                     </div>
@@ -416,8 +726,37 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;form-control validate&quot;&gt;
+                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;form-control eq-ui-input validate&quot;&gt;
                 &lt;label for=&quot;email_val&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Search</h2>
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-search">
+                            <input type="text" placeholder="Search">
+                            <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                            <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-search&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;i class=&quot;eq-ui-search-icon-left mdi mdi-magnify icon icon-left&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18&quot;&gt;&lt;/i&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -433,19 +772,19 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input name="group1" type="radio" id="test1" />
+                            <input name="group1" type="radio" id="test1" class="eq-ui-input" />
                             <label for="test1">Red</label>
                         </div>
                         <div class="form-group">
-                            <input name="group1" type="radio" id="test2" />
+                            <input name="group1" type="radio" id="test2" class="eq-ui-input" />
                             <label for="test2">Yellow</label>
                         </div>
                         <div class="form-group">
-                            <input class="with-gap" name="group1" type="radio" id="test3" />
+                            <input name="group1" type="radio" id="test3" class="eq-ui-input with-gap" />
                             <label for="test3">Green</label>
                         </div>
                         <div class="form-group">
-                            <input name="group1" type="radio" id="test4" disabled="disabled" />
+                            <input name="group1" type="radio" id="test4" class="eq-ui-input" disabled="disabled" />
                             <label for="test4">Brown</label>
                         </div>
                     </div>
@@ -456,19 +795,19 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test1&quot; /&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test1&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test1&quot;&gt;Red&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test2&quot; /&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test2&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test2&quot;&gt;Yellow&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input class=&quot;with-gap&quot; name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test3&quot; /&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test3&quot; class=&quot;eq-ui-input with-gap&quot; /&gt;
                 &lt;label for=&quot;test3&quot;&gt;Green&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test4&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test4&quot; class=&quot;eq-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
                 &lt;label for=&quot;test4&quot;&gt;Brown&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -485,28 +824,28 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
-                            <input type="checkbox" id="test5" />
+                            <input type="checkbox" id="test5" class="eq-ui-input" />
                             <label for="test5">Red</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" id="test6" checked="checked" />
+                            <input type="checkbox" id="test6" class="eq-ui-input" checked="checked" />
                             <label for="test6">Yellow</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" class="filled-in" id="filled-in-box" checked="checked" />
-                            <label for="filled-in-box">Filled in</label>
+                            <input type="checkbox" id="test7" class="eq-ui-input filled-in" checked="checked" />
+                            <label for="test7">Filled in</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" class="indeterminate-checkbox" id="test7" />
-                            <label for="test7">Indeterminate Style</label>
+                            <input type="checkbox" id="test8" class="eq-ui-input indeterminate-checkbox" />
+                            <label for="test8">Indeterminate Style</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" id="test8" checked="checked" disabled="disabled" />
-                            <label for="test8">Green</label>
+                            <input type="checkbox" id="test9" class="eq-ui-input" checked="checked" disabled="disabled" />
+                            <label for="test9">Green</label>
                         </div>
                         <div class="form-group">
-                            <input type="checkbox" id="test9" disabled="disabled" />
-                            <label for="test9">Brown</label>
+                            <input type="checkbox" id="test10" class="eq-ui-input" disabled="disabled" />
+                            <label for="test10">Brown</label>
                         </div>
                     </div>
                 </div>
@@ -516,28 +855,28 @@
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;test5&quot; /&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test5&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test5&quot;&gt;Red&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;test6&quot; checked=&quot;checked&quot; /&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test6&quot; class=&quot;eq-ui-input&quot; checked=&quot;checked&quot; /&gt;
                 &lt;label for=&quot;test6&quot;&gt;Yellow&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;filled-in&quot; id=&quot;filled-in-box&quot; checked=&quot;checked&quot; /&gt;
-                &lt;label for=&quot;filled-in-box&quot;&gt;Filled in&lt;/label&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test7&quot; class=&quot;eq-ui-input filled-in&quot; checked=&quot;checked&quot; /&gt;
+                &lt;label for=&quot;test7&quot;&gt;Filled in&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; class=&quot;indeterminate-checkbox&quot; id=&quot;test7&quot; /&gt;
-                &lt;label for=&quot;test7&quot;&gt;Indeterminate Style&lt;/label&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test8&quot; class=&quot;eq-ui-input indeterminate-checkbox&quot; /&gt;
+                &lt;label for=&quot;test8&quot;&gt;Indeterminate Style&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;test8&quot; checked=&quot;checked&quot; disabled=&quot;disabled&quot; /&gt;
-                &lt;label for=&quot;test8&quot;&gt;Green&lt;/label&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test9&quot; class=&quot;eq-ui-input&quot; checked=&quot;checked&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test9&quot;&gt;Green&lt;/label&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-group&quot;&gt;
-                &lt;input type=&quot;checkbox&quot; id=&quot;test9&quot; disabled=&quot;disabled&quot; /&gt;
-                &lt;label for=&quot;test9&quot;&gt;Brown&lt;/label&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;test10&quot; class=&quot;eq-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
+                &lt;label for=&quot;test10&quot;&gt;Brown&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -625,9 +964,9 @@
 </div>
     </main>
 <script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.1.4"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.0"></script>
 
-<script src="assets/js/doc.js?v=0.1.4"></script>
+<script src="assets/js/doc.js?v=0.2.0"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
