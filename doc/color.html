@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>CSS - Color | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.5" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.5" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"css",path:"color",name_section:"CSS",name_chapter:"Color"};</script>
@@ -45,7 +45,15 @@
                         <i class="mdi mdi-heart icon"></i>
                     </a>
                 </li>
-                <li><a href="#">text</a></li>
+                <li>
+                    <!-- Dropdown Structure -->
+                    <a style="text-decoration: none;" data-target="doc-dropdown-user" data-hover="true" data-below-origin="true" href="#!" class="dropdown-trigger">user</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- Top Search -->
@@ -83,9 +91,15 @@
             <!-- Nav Menu -->
             <ul class="right eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-dots-vertical icon"></i>
                     </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Option 1</a></li>
+                        <li><a href="#!">Option 2</a></li>
+                        <li><a href="#!">Option 3</a></li>
+                    </ul>
                 </li>
             </ul>
 
@@ -176,6 +190,7 @@
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
+                            <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
                         </div>
                     </li>
 
@@ -188,8 +203,9 @@
                         </div>
                         <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
                             <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
-                            <!--a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a-->
+                            <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
                         </div>
                     </li>
 
@@ -463,14 +479,68 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Color - Coming soon</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus, ante sit amet posuere scelerisque, est augue aliquam nunc, et commodo tellus erat eget purus. Maecenas dui est, maximus nec blandit sed.</p>
-        <p><a class="btn btn-primary btn-lg btn-lg eq-ui-waves-light" href="./" role="button">Go to home</a></p>
+        <h1>Color</h1>
     </div>
 </div>
 
 <div class="container">
-    
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Normal</h2>
+            <p>To apply a background color, add the color name <code class="language-markup">eq-deep-blue-500</code>. To apply a text color, add the color name <code class="language-markup">eq-green-turquoise-text-500</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500 eq-green-turquoise-text-500">
+                <div class="eq-ui-card-supporting-text">
+                    Sample color usage
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-card eq-deep-blue-500 eq-green-turquoise-text-500&quot;&gt;
+    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
+        Sample color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="header">Hover</h2>
+            <p>To apply a hover for background color and text color, add <code class="language-markup">-hover</code> after the name color.</p>
+
+            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500-hover eq-green-turquoise-text-500-hover">
+                <div class="eq-ui-card-supporting-text">
+                    Sample hover color usage
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-card eq-deep-blue-500-hover eq-green-turquoise-text-500-hover&quot;&gt;
+    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
+        Sample hover color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Sass</h2>
+            <p>You can apply the color simply by extending the classes like the example below</p>
+
+            <pre><code class="language-scss">
+.custom-container {
+    @extend .eq-deep-blue-500;
+}</code></pre>
+
+        </div>
+    </div>
+
+    <!-- Render color palette -->
+    <doc-color-palette></doc-color-palette>
+
 </div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>
@@ -485,11 +555,15 @@
     </div>
     
 </div>
-    </main>
-<script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.0"></script>
+    </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.5"></script>
 
-<script src="assets/js/doc.js?v=0.2.0"></script>
+<script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
+<script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
+
+<script src="assets/js/doc.js?v=0.2.5"></script>
+<script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

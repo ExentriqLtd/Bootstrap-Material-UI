@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Forms | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.5" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.5" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"forms",name_section:"Components",name_chapter:"Forms"};</script>
@@ -45,7 +45,15 @@
                         <i class="mdi mdi-heart icon"></i>
                     </a>
                 </li>
-                <li><a href="#">text</a></li>
+                <li>
+                    <!-- Dropdown Structure -->
+                    <a style="text-decoration: none;" data-target="doc-dropdown-user" data-hover="true" data-below-origin="true" href="#!" class="dropdown-trigger">user</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- Top Search -->
@@ -83,9 +91,15 @@
             <!-- Nav Menu -->
             <ul class="right eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-dots-vertical icon"></i>
                     </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Option 1</a></li>
+                        <li><a href="#!">Option 2</a></li>
+                        <li><a href="#!">Option 3</a></li>
+                    </ul>
                 </li>
             </ul>
 
@@ -176,6 +190,7 @@
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
+                            <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
                         </div>
                     </li>
 
@@ -188,8 +203,9 @@
                         </div>
                         <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
                             <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
-                            <!--a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a-->
+                            <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
                         </div>
                     </li>
 
@@ -478,8 +494,8 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
-                                    <input id="first_name" type="text" class="form-control eq-ui-input">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="first_name" type="text" class="eq-ui-input">
                                     <label for="first_name">First Name</label>
                                 </div>
                             </div>
@@ -488,8 +504,8 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
-                                    <input id="last_name" type="text" class="form-control eq-ui-input">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="last_name" type="text" class="eq-ui-input">
                                     <label for="last_name">Last Name</label>
                                 </div>
                             </div>
@@ -498,16 +514,16 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group eq-ui-input-field">
-                            <input id="password" type="password" class="form-control eq-ui-input">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input id="password" type="password" class="eq-ui-input">
                             <label for="password">Password</label>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group eq-ui-input-field">
-                            <input id="email" type="email" class="form-control eq-ui-input">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input id="email" type="email" class="eq-ui-input">
                             <label for="email" data-error="wrong" data-success="right">Email</label>
                         </div>
                     </div>
@@ -516,8 +532,8 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
-                                    <input placeholder="Placeholder" id="country" type="text" class="form-control eq-ui-input">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input placeholder="Placeholder" id="country" type="text" class="eq-ui-input">
                                     <label for="country">Country</label>
                                 </div>
                             </div>
@@ -526,8 +542,8 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
-                                    <input id="disabled" type="text" value="I am not editable" class="form-control eq-ui-input" disabled>
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="disabled" type="text" value="I am not editable" class="eq-ui-input" disabled>
                                     <label for="disabled">Disabled</label>
                                 </div>
                             </div>
@@ -541,8 +557,8 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;first_name&quot; type=&quot;text&quot; class=&quot;eq-ui-input&quot;&gt;
                         &lt;label for=&quot;first_name&quot;&gt;First Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -551,8 +567,8 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;last_name&quot; type=&quot;text&quot; class=&quot;eq-ui-input&quot;&gt;
                         &lt;label for=&quot;last_name&quot;&gt;Last Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -561,16 +577,16 @@
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;password&quot; type=&quot;password&quot; class=&quot;eq-ui-input&quot;&gt;
                 &lt;label for=&quot;password&quot;&gt;Password&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;eq-ui-input&quot;&gt;
                 &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -579,8 +595,8 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input placeholder=&quot;Placeholder&quot; id=&quot;country&quot; type=&quot;text&quot; class=&quot;eq-ui-input&quot;&gt;
                         &lt;label for=&quot;country&quot;&gt;Country&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -589,8 +605,8 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;form-control eq-ui-input&quot; disabled&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;disabled&quot; type=&quot;text&quot; value=&quot;I am not editable&quot; class=&quot;eq-ui-input&quot; disabled&gt;
                         &lt;label for=&quot;disabled&quot;&gt;Disabled&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -608,8 +624,8 @@
             <form class="doc-form">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group eq-ui-input-field">
-                            <textarea id="textarea_field" rows='1' class="form-control eq-ui-textarea"></textarea>
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <textarea id="textarea_field" rows='1' class="eq-ui-textarea"></textarea>
                             <label for="textarea_field">Textarea</label>
                         </div>
                     </div>
@@ -619,8 +635,8 @@
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;textarea id=&quot;textarea_field&quot; rows='1' class=&quot;form-control eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;textarea id=&quot;textarea_field&quot; rows='1' class=&quot;eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
                 &lt;label for=&quot;textarea_field&quot;&gt;Textarea&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -638,9 +654,9 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
+                                <div class="eq-ui-form-group eq-ui-input-field">
                                     <i class="mdi mdi-account-circle icon prefix"></i>
-                                    <input id="first_name_pre" type="text" class="form-control eq-ui-input">
+                                    <input id="first_name_pre" type="text" class="eq-ui-input">
                                     <label for="first_name_pre">First Name</label>
                                 </div>
                             </div>
@@ -649,9 +665,9 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group eq-ui-input-field">
+                                <div class="eq-ui-form-group eq-ui-input-field">
                                     <i class="mdi mdi-phone icon prefix"></i>
-                                    <input id="icon_telephone" type="tel" class="form-control eq-ui-input">
+                                    <input id="icon_telephone" type="tel" class="eq-ui-input">
                                     <label for="icon_telephone">Telephone</label>
                                 </div>
                             </div>
@@ -660,9 +676,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group eq-ui-input-field">
+                        <div class="eq-ui-form-group eq-ui-input-field">
                             <i class="mdi mdi-comment-text icon prefix"></i>
-                            <textarea id="icon_textarea" rows='1' class="form-control eq-ui-textarea"></textarea>
+                            <textarea id="icon_textarea" rows='1' class="eq-ui-textarea"></textarea>
                             <label for="icon_textarea">Textarea</label>
                         </div>
                     </div>
@@ -674,9 +690,9 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
                         &lt;i class=&quot;mdi mdi-account-circle icon prefix&quot;&gt;&lt;/i&gt;
-                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                        &lt;input id=&quot;first_name_pre&quot; type=&quot;text&quot; class=&quot;eq-ui-input&quot;&gt;
                         &lt;label for=&quot;first_name_pre&quot;&gt;First Name&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -685,9 +701,9 @@
         &lt;div class=&quot;col-md-6&quot;&gt;
             &lt;div class=&quot;row&quot;&gt;
                 &lt;div class=&quot;col-md-12&quot;&gt;
-                    &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
                         &lt;i class=&quot;mdi mdi-phone icon prefix&quot;&gt;&lt;/i&gt;
-                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                        &lt;input id=&quot;icon_telephone&quot; type=&quot;tel&quot; class=&quot;eq-ui-input&quot;&gt;
                         &lt;label for=&quot;icon_telephone&quot;&gt;Telephone&lt;/label&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
@@ -696,9 +712,9 @@
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
                 &lt;i class=&quot;mdi mdi-comment-text icon prefix&quot;&gt;&lt;/i&gt;
-                &lt;textarea id=&quot;icon_textarea&quot; rows='1' class=&quot;form-control eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
+                &lt;textarea id=&quot;icon_textarea&quot; rows='1' class=&quot;eq-ui-textarea&quot;&gt;&lt;/textarea&gt;
                 &lt;label for=&quot;icon_textarea&quot;&gt;Textarea&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -710,12 +726,12 @@
     <div class="row">
         <div class="col-md-12">
             <h2 class="header">Validate Fields</h2>
-            <p>You can add custom validation messages by adding either <code class="language-markup">data-error</code> or <code class="language-markup">data-success</code> attributes to your input field labels.</p>
+            <p>You can add custom validation messages by adding either <code class="language-markup">data-error</code> or <code class="language-markup">data-success</code> attributes to your input field labels. For more info for validate, go to: <a href="/form-validation.html">Form Validation</a></p>
             <form class="doc-form">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group eq-ui-input-field">
-                            <input id="email_val" type="email" class="form-control eq-ui-input validate">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input id="email_val" type="email" class="eq-ui-input validate">
                             <label for="email_val" data-error="wrong" data-success="right">Email</label>
                         </div>
                     </div>
@@ -725,8 +741,8 @@
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;form-control eq-ui-input validate&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email_val&quot; type=&quot;email&quot; class=&quot;eq-ui-input validate&quot;&gt;
                 &lt;label for=&quot;email_val&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -771,19 +787,19 @@
             <form>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input name="group1" type="radio" id="test1" class="eq-ui-input" />
                             <label for="test1">Red</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input name="group1" type="radio" id="test2" class="eq-ui-input" />
                             <label for="test2">Yellow</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input name="group1" type="radio" id="test3" class="eq-ui-input with-gap" />
                             <label for="test3">Green</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input name="group1" type="radio" id="test4" class="eq-ui-input" disabled="disabled" />
                             <label for="test4">Brown</label>
                         </div>
@@ -794,19 +810,19 @@
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test1&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test1&quot;&gt;Red&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test2&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test2&quot;&gt;Yellow&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test3&quot; class=&quot;eq-ui-input with-gap&quot; /&gt;
                 &lt;label for=&quot;test3&quot;&gt;Green&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input name=&quot;group1&quot; type=&quot;radio&quot; id=&quot;test4&quot; class=&quot;eq-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
                 &lt;label for=&quot;test4&quot;&gt;Brown&lt;/label&gt;
             &lt;/div&gt;
@@ -823,27 +839,27 @@
             <form>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test5" class="eq-ui-input" />
                             <label for="test5">Red</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test6" class="eq-ui-input" checked="checked" />
                             <label for="test6">Yellow</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test7" class="eq-ui-input filled-in" checked="checked" />
                             <label for="test7">Filled in</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test8" class="eq-ui-input indeterminate-checkbox" />
                             <label for="test8">Indeterminate Style</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test9" class="eq-ui-input" checked="checked" disabled="disabled" />
                             <label for="test9">Green</label>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <input type="checkbox" id="test10" class="eq-ui-input" disabled="disabled" />
                             <label for="test10">Brown</label>
                         </div>
@@ -854,27 +870,27 @@
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test5&quot; class=&quot;eq-ui-input&quot; /&gt;
                 &lt;label for=&quot;test5&quot;&gt;Red&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test6&quot; class=&quot;eq-ui-input&quot; checked=&quot;checked&quot; /&gt;
                 &lt;label for=&quot;test6&quot;&gt;Yellow&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test7&quot; class=&quot;eq-ui-input filled-in&quot; checked=&quot;checked&quot; /&gt;
                 &lt;label for=&quot;test7&quot;&gt;Filled in&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test8&quot; class=&quot;eq-ui-input indeterminate-checkbox&quot; /&gt;
                 &lt;label for=&quot;test8&quot;&gt;Indeterminate Style&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test9&quot; class=&quot;eq-ui-input&quot; checked=&quot;checked&quot; disabled=&quot;disabled&quot; /&gt;
                 &lt;label for=&quot;test9&quot;&gt;Green&lt;/label&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;input type=&quot;checkbox&quot; id=&quot;test10&quot; class=&quot;eq-ui-input&quot; disabled=&quot;disabled&quot; /&gt;
                 &lt;label for=&quot;test10&quot;&gt;Brown&lt;/label&gt;
             &lt;/div&gt;
@@ -891,7 +907,7 @@
             <form>
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <!-- Switch -->
                             <div class="eq-ui-switch">
                                 <label>
@@ -902,7 +918,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="eq-ui-form-group">
                             <!-- Disabled Switch -->
                             <div class="eq-ui-switch">
                                 <label>
@@ -920,7 +936,7 @@
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;!-- Switch --&gt;
                 &lt;div class=&quot;eq-ui-switch&quot;&gt;
                     &lt;label&gt;
@@ -931,7 +947,7 @@
                     &lt;/label&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group&quot;&gt;
                 &lt;!-- Disabled Switch --&gt;
                 &lt;div class=&quot;eq-ui-switch&quot;&gt;
                     &lt;label&gt;
@@ -945,6 +961,148 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">File Input</h2>
+            <p>Simple upload</p>
+
+            <form action="#" class="doc-margin-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-file">
+                            <a class="btn btn-primary eq-ui-waves-light">
+                                Upload
+                                <input id="file_input_test1" type="file">
+                            </a>
+                            <div class="eq-ui-input-file-path">
+                                <input type="text" class="eq-ui-input" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-file&quot;&gt;
+                &lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;
+                    Upload
+                    &lt;input id=&quot;file_input_test1&quot; type=&quot;file&quot;&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;eq-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;eq-ui-input&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            <br>
+
+            <p>Multiple upload</p>
+
+            <form action="#" class="doc-margin-bottom">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-file">
+                            <a class="btn btn-primary eq-ui-waves-light">
+                                Upload
+                                <input id="file_input_test2" type="file" multiple>
+                            </a>
+                            <div class="eq-ui-input-file-path">
+                                <input type="text" class="eq-ui-input" placeholder="Upload one or more files" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-file&quot;&gt;
+                &lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;
+                    Upload
+                    &lt;input id=&quot;file_input_test2&quot; type=&quot;file&quot; multiple&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;eq-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;eq-ui-input&quot; placeholder=&quot;Upload one or more files&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
+            <h2 class="header">File Input - Image Preview</h2>
+            <p>Image preview for upload</p>
+
+            <!-- Avatar -->
+            <ul class="eq-ui-list eq-ui-hoverable doc-margin-bottom">
+                <li id="img-preview-file_input_test3" class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate">
+                    <img class="circle img-preview" src="assets/img/doc/avatar/avatar_0.jpg">
+                    <h6 class="eq-ui-list-title img-preview-loading">UPLOAD AVATAR</h6>
+                </li>
+            </ul>
+
+            <!-- Form -->
+            <form action="#">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Fake input file -->
+                        <div class="eq-ui-form-group eq-ui-input-file eq-ui-input-file-fake">
+                            <a class="btn btn-primary eq-ui-waves-light">
+                                Fake
+                                <input id="file_input_test3" type="file"
+                                data-img-preview="img-preview-file_input_test3"
+                                data-img-preview-text-loading="Loading...">
+                            </a>
+                            <div class="eq-ui-input-file-path">
+                                <input type="text" class="eq-ui-input" readonly>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;!-- Avatar --&gt;
+&lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
+    &lt;li id=&quot;img-preview-file_input_test3&quot; class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate&quot;&gt;
+        &lt;img class=&quot;circle img-preview&quot; src=&quot;assets/img/doc/avatar/avatar_0.jpg&quot;&gt;
+        &lt;h6 class=&quot;eq-ui-list-title img-preview-loading&quot;&gt;UPLOAD AVATAR&lt;/h6&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Form --&gt;
+&lt;form action=&quot;#&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+
+            &lt;!-- Fake input file --&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-file eq-ui-input-file-fake&quot;&gt;
+                &lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;
+                    Fake
+                    &lt;input id=&quot;file_input_test3&quot; type=&quot;file&quot;
+                    data-img-preview=&quot;img-preview-file_input_test3&quot;
+                    data-img-preview-text-loading=&quot;Loading...&quot;&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;eq-ui-input-file-path&quot;&gt;
+                    &lt;input type=&quot;text&quot; class=&quot;eq-ui-input&quot; readonly&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+
         </div>
     </div>
 
@@ -962,11 +1120,15 @@
     </div>
     
 </div>
-    </main>
-<script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.0"></script>
+    </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.5"></script>
 
-<script src="assets/js/doc.js?v=0.2.0"></script>
+<script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
+<script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
+
+<script src="assets/js/doc.js?v=0.2.5"></script>
+<script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

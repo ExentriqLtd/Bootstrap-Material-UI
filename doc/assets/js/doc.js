@@ -1,5 +1,5 @@
+var EqUIDoc = {};
 (function ($) {
-    var EqUIDoc = {};
     EqUIDoc.site = {};
 
     // Init
@@ -49,6 +49,56 @@
             ready: function() { console.log('Modal Open'); }, // Callback for Modal open
             complete: function() { console.log('Modal Close'); } // Callback for Modal close
         });
+
+        // Form validations
+        if(_doc_route.path === "form-validation"){
+            EqUIDoc.site.form_validations();
+        }
+
+        // Build Git in Home
+        if(_doc_route.path === "index"){
+            EqUIDoc.site.build_git_home();
+        }
+    };
+
+    // Form validations
+    EqUIDoc.site.form_validations = function() {
+
+        // Validate form (Test 1)
+        EqUI.forms.add_form_for_submit_validate($('#form-validation-test1'));
+        $('#form-validation-test1-submit').on('click', function(e) {
+            var result = EqUI.forms.validate_field($('#username-test1'));
+            console.log(result);
+
+            $('#form-validation-test1').submit();
+        });
+    };
+
+    // Build Git in Home
+    EqUIDoc.site.build_git_home = function() {
+
+        var _download_in_git_hub = $('.download-in-git-hub');
+        if (_download_in_git_hub.length) {
+            $.ajax({
+                url: "https://api.github.com/repos/ExentriqLtd/Bootstrap-Material-UI/tags",
+                dataType: "json",
+                success: function (data) {
+                    _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download v.'+data[0].name).attr('href', data[0].zipball_url);
+                }
+            });
+        }
+        var _last_commit_in_git_hub = $('.last-commit-in-git-hub');
+        if (_last_commit_in_git_hub.length) {
+            $.ajax({
+                url: "https://api.github.com/repos/ExentriqLtd/Bootstrap-Material-UI/commits/master",
+                dataType: "json",
+                success: function (data) {
+                    var date = $.timeago(data.commit.author.date);
+                    _last_commit_in_git_hub.html(date).attr('href', data.html_url);
+
+                }
+            });
+        }
     };
 
     // Update

@@ -1,0 +1,261 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Form Validation</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>Validation based in <a target="_blank" href="https://github.com/guillaumepotier/Parsley.js">Parsley</a> plugin. For more info and view the documentation, go to: <a target="_blank" href="http://parsleyjs.org/doc/index.html#validators-list">Parsley Doc</a></p>
+            <form id="form-validation-test1" class="doc-form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input id="username-test1" type="text" data-parsley-minlength="6" class="form-control eq-ui-input" required>
+                            <label for="username-test1" data-error="Min length 6">Username</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="first_name-test1" type="text" data-parsley-minlength="3" class="form-control eq-ui-input">
+                                    <label for="first_name-test1" data-error="Min length 3">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="last_name-test1" type="text" data-parsley-minlength="3" class="form-control eq-ui-input">
+                                    <label for="last_name-test1" data-error="Min length 3">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="password-test1" type="password" data-parsley-minlength="6" class="form-control eq-ui-input" required>
+                                    <label for="password-test1" data-error="Min length 6">Password</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="password-confirm-test1" type="password" data-parsley-minlength="6" data-parsley-equalto="#password-test1" class="form-control eq-ui-input" required>
+                                    <label for="password-confirm-test1" data-error="Min length 6 or Password not equal">Confirm Password</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input id="email-test1" type="email" class="form-control eq-ui-input" required>
+                            <label for="email-test1" data-error="Email not valid">Email</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="city-test1" type="text" class="form-control eq-ui-input" required>
+                                    <label for="city-test1" data-error="Required">City</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="country-test1" type="text" class="form-control eq-ui-input" required>
+                                    <label for="country-test1" data-error="Required">Country</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <input type="checkbox" id="agree-test1" data-parsley-class-handler="#agree-test1" class="eq-ui-input filled-in" required/>
+                            <label for="agree-test1">I agree to the terms and conditions</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <a id="form-validation-test1-submit" class="btn btn-primary eq-ui-waves-light">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <pre><code class="language-markup">
+&lt;form id=&quot;form-validation-test1&quot;&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;username-test1&quot; type=&quot;text&quot; data-parsley-minlength=&quot;6&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                &lt;label for=&quot;username-test1&quot; data-error=&quot;Min length 6&quot;&gt;Username&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;first_name-test1&quot; type=&quot;text&quot; data-parsley-minlength=&quot;3&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                        &lt;label for=&quot;first_name-test1&quot; data-error=&quot;Min length 3&quot;&gt;First Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;last_name-test1&quot; type=&quot;text&quot; data-parsley-minlength=&quot;3&quot; class=&quot;form-control eq-ui-input&quot;&gt;
+                        &lt;label for=&quot;last_name-test1&quot; data-error=&quot;Min length 3&quot;&gt;Last Name&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;password-test1&quot; type=&quot;password&quot; data-parsley-minlength=&quot;6&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                        &lt;label for=&quot;password-test1&quot; data-error=&quot;Min length 6&quot;&gt;Password&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;password-confirm-test1&quot; type=&quot;password&quot; data-parsley-minlength=&quot;6&quot; data-parsley-equalto=&quot;#password-test1&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                        &lt;label for=&quot;password-confirm-test1&quot; data-error=&quot;Min length 6 or Password not equal&quot;&gt;Confirm Password&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input id=&quot;email-test1&quot; type=&quot;email&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                &lt;label for=&quot;email-test1&quot; data-error=&quot;Email not valid&quot;&gt;Email&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;city-test1&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                        &lt;label for=&quot;city-test1&quot; data-error=&quot;Required&quot;&gt;City&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;country-test1&quot; type=&quot;text&quot; class=&quot;form-control eq-ui-input&quot; required&gt;
+                        &lt;label for=&quot;country-test1&quot; data-error=&quot;Required&quot;&gt;Country&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;input type=&quot;checkbox&quot; id=&quot;agree-test1&quot; data-parsley-class-handler=&quot;#agree-test1&quot; class=&quot;eq-ui-input filled-in&quot; required/&gt;
+                &lt;label for=&quot;agree-test1&quot;&gt;I agree to the terms and conditions&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                &lt;a id=&quot;form-validation-test1-submit&quot; class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;Submit&lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Sample usage</h2>
+            <p>Sample usage with submit</p>
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    // Validate form (Test 1)
+    EqUI.forms.add_form_for_submit_validate($('#form-validation-test1'));
+    $('#form-validation-test1-submit').on('click', function(e) {
+        $('#form-validation-test1').submit();
+    });
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Java Script Methods</h2>
+            <p>Programmatically validations for the form and individual fiels</p>
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    // Validate form (Return boolean)
+    $('#form-validation-test1-submit').on('click', function(e) {
+        var result = EqUI.forms.validate_form($('#form-validation-test1'));
+        console.log(result);
+    });
+
+    // Validate field (Return boolean)
+    $('#form-validation-test1-submit').on('click', function(e) {
+        var result = EqUI.forms.validate_field($('#username-test1'));
+        console.log(result);
+    });
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Using other plugins</h2>
+            <p>For using other validation plugins, set this option in <code class=" language-markup">custom</code> mode</p>
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    EqUI.forms.validateLib = 'custom'; // parsley | custom
+});</code></pre>
+        </div>
+    </div>
+
+</div>

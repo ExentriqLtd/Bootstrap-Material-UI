@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="Implements Google's Material Design in Bootstrap.">
+    <title>JavaScript - Dropdown | Exentriq - Bootstrap Material UI</title>
+    <!-- CSS-->
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.5" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.5" rel="stylesheet">
+  </head>
+  <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
+    <script>var _doc_route = {root_path:"java-script",path:"dropdown",name_section:"JavaScript",name_chapter:"Dropdown"};</script>
+<!--[if lt IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Primary app bar -->
+<header class="eq-ui-layout-header-primary">
+
+    <div class="eq-ui-tool-bar-primary">
+        <div class="container-fluid">
+
+            <!-- Title -->
+            <div class="header-title">
+                <span class="section-title">Tool Bar</span>
+            </div>
+
+            <!-- Nav Menu -->
+            <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-top-search-show">
+                        <i class="mdi mdi-magnify icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-home icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./showcase.html" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-heart icon"></i>
+                    </a>
+                </li>
+                <li>
+                    <!-- Dropdown Structure -->
+                    <a style="text-decoration: none;" data-target="doc-dropdown-user" data-hover="true" data-below-origin="true" href="#!" class="dropdown-trigger">user</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Top Search -->
+            <div class="eq-ui-top-search">
+                <i class="eq-ui-top-search-close mdi mdi-arrow-left icon icon-left"></i>
+                <!-- Search -->
+                <div class="eq-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</header>
+
+<!-- Secondary app bar -->
+<header class="eq-ui-layout-header">
+
+    <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
+        <div class="container-fluid">
+
+            <!-- Toggle -->
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+
+            <!-- Title -->
+            <div class="header-title">
+                <span class="section-title">Exentriq</span>
+                <i class="mdi mdi-chevron-right icon icon-left icon-24"></i>
+                <span class="chapter-title">App Bar</span>
+            </div>
+
+            <!-- Nav Menu -->
+            <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-dots-vertical icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Option 1</a></li>
+                        <li><a href="#!">Option 2</a></li>
+                        <li><a href="#!">Option 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Floating Btn -->
+            <div class="eq-ui-btn-fab-floating">
+                <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="mdi mdi-plus icon"></i></a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="eq-ui-tool-bar">
+        <div class="container-fluid">
+            <div class="header-title">
+                <span class="section-title">Tool Bar</span>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<!-- Side nav -->
+<div class="eq-ui-side-nav">
+
+    <div class="eq-ui-side-nav-wrapper">
+
+        <div class="brand">
+            <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
+            <img src="assets/img/doc/exentriq_logo.svg" alt="Exentriq logo">
+        </div>
+
+        <div class="eq-ui-side-nav-content-wrapper">
+            <nav>
+
+                <!-- Search -->
+                <div class="eq-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                </div>
+
+                <!-- Collapsible Menu -->
+                <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-index" href="./">
+                                <i class="mdi mdi-home icon icon-left icon-24"></i>
+                                Home
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-getting-started" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md">
+                                <i class="mdi mdi-settings icon icon-left icon-24"></i>
+                                <i class="mdi mdi-open-in-new icon icon-right icon-18"></i>
+                                Getting Started
+                            </a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-css">
+                                <i class="mdi mdi-book-variant icon icon-left icon-24"></i>
+                                CSS
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+                            <a id="collapsible-nav-css-color" href="./color.html">Color</a>
+                            <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
+                            <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-components">
+                                <i class="mdi mdi-puzzle icon icon-left icon-24"></i>
+                                Components
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+                            <a id="collapsible-nav-components-buttons" href="./buttons.html">Buttons</a>
+                            <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
+                            <a id="collapsible-nav-components-list" href="./list.html">List</a>
+                            <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
+                            <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-java-script">
+                                <i class="mdi mdi-layers icon icon-left icon-24"></i>
+                                JavaScript
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+                            <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
+                            <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
+                            <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-showcase" href="./showcase.html">
+                                <i class="mdi mdi-heart icon icon-left icon-24"></i>
+                                Showcase
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <!-- Collapsible Group Menu -->
+                <ul style="display:none;" class="eq-ui-collapsible eq-ui-collapsible-group" data-collapsible="expandable">
+
+                    <!-- Group 1 -->
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves active">
+                            <a id="collapsible-nav-group-1">
+                                <i class="mdi mdi-image-filter-none icon icon-left icon-24"></i>
+                                <i class="mdi mdi-plus icon icon-right icon-24 eq-ui-collapsible-view-close"></i>
+                                <i class="mdi mdi-minus icon icon-right icon-24 eq-ui-collapsible-view-open"></i>
+                                Group 1
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+
+                            <!-- 1º level menu -->
+                            <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                <!-- 1º level menu 1 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-1">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 1 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 1 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 1 sub 1 -->
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-1-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 1 sub 1 -->
+
+                                        </ul><!-- 2º level menu 1 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 1 -->
+
+                                <!-- 1º level menu 2 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-2">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 2 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 2 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 2 sub 1 -->
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-1-menu-2-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 2 sub 1 -->
+
+                                        </ul><!-- 2º level menu 2 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 2 -->
+
+                                <!-- 1º level menu 3 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-1-menu-3">
+                                            <i class="mdi mdi-file icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                </li><!-- 1º level menu 3 -->
+
+                            </ul><!-- 1º level menu -->
+
+                        </div>
+                    </li><!-- Group 1 -->
+
+                    <!-- Group 2 -->
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves active">
+                            <a id="collapsible-nav-group-2">
+                                <i class="mdi mdi-image-filter-none icon icon-left icon-24"></i>
+                                <i class="mdi mdi-plus icon icon-right icon-24 eq-ui-collapsible-view-close"></i>
+                                <i class="mdi mdi-minus icon icon-right icon-24 eq-ui-collapsible-view-open"></i>
+                                Group 2
+                            </a>
+                        </div>
+                        <div class="eq-ui-collapsible-body">
+
+                            <!-- 1º level menu -->
+                            <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                <!-- 1º level menu 1 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-1">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 1 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 1 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 1 sub 1 -->
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-1-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 1 sub 1 -->
+
+                                        </ul><!-- 2º level menu 1 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 1 -->
+
+                                <!-- 1º level menu 2 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-2">
+                                            <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                    <div class="eq-ui-collapsible-body">
+
+                                        <!-- 2º level menu 2 -->
+                                        <ul class="eq-ui-collapsible" data-collapsible="accordion">
+
+                                            <!-- 2º level menu 2 sub 1 -->
+                                            <li>
+                                                <div class="eq-ui-collapsible-header eq-ui-waves">
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1">
+                                                        <i class="mdi mdi-folder icon icon-left icon-24"></i>
+                                                        Second level
+                                                    </a>
+                                                </div>
+                                                <div class="eq-ui-collapsible-body">
+
+                                                    <!-- 3º level menu 2 sub 1 -->
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample1" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample2" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample3" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+                                                    <a id="collapsible-nav-group-2-menu-2-sub1-sample4" href="./">
+                                                        <i class="mdi mdi-file icon icon-left icon-24"></i>Third level
+                                                    </a>
+
+                                                </div>
+                                            </li><!-- 2º level menu 2 sub 1 -->
+
+                                        </ul><!-- 2º level menu 2 -->
+
+                                    </div>
+                                </li><!-- 1º level menu 2 -->
+
+                                <!-- 1º level menu 3 -->
+                                <li>
+                                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                                        <a id="collapsible-nav-group-2-menu-3">
+                                            <i class="mdi mdi-file icon icon-left icon-24"></i>
+                                            First level
+                                        </a>
+                                    </div>
+                                </li><!-- 1º level menu 3 -->
+
+                            </ul><!-- 1º level menu -->
+
+                        </div>
+                    </li><!-- Group 2 -->
+
+                </ul><!-- Group Menu -->
+
+            </nav>
+        </div>
+
+        <div class="footer">
+            <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon icon-left icon-18"></i></a><p class="copyright">&copy; Exentriq</p>
+            <a target="_blank" href="http://opensource.org/licenses/MIT">Free & Open Source (MIT)</a>
+        </div>
+
+    </div>
+
+</div>
+
+    <main class="eq-ui-main"><div class="jumbotron">
+    <div class="container">
+        <h1>Dropdown</h1>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Top Left</h2>
+            <p>For open to below the origin add <code class="language-markup">data-below-origin="true"</code>, in trigger.</p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-eq-ui-card-dropdown doc-eq-ui-card-dropdown-left">
+                <div class="eq-ui-card-menu">
+                    <ul class="right eq-ui-nav-menu">
+                        <li class="eq-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test1" data-hover="false" data-below-origin="true" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test1" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="header">Right Top</h2>
+            <p>For open to right top add <code class="language-markup">eq-ui-dropdown-right-top</code> after <code class="language-markup">eq-ui-dropdown</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-eq-ui-card-dropdown">
+                <div class="eq-ui-card-menu">
+                    <ul class="right eq-ui-nav-menu">
+                        <li class="eq-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test2" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test2" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Left Bottom</h2>
+            <p>For open to left bottom add <code class="language-markup">eq-ui-dropdown-left-bottom</code> after <code class="language-markup">eq-ui-dropdown</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-eq-ui-card-dropdown doc-eq-ui-card-dropdown-left doc-eq-ui-card-dropdown-bottom">
+                <div class="eq-ui-card-menu">
+                    <ul class="right eq-ui-nav-menu">
+                        <li class="eq-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test3" data-hover="false" data-below-origin="true" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test3" class="eq-ui-dropdown eq-ui-dropdown-left-bottom">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2 class="header">Right Bottom</h2>
+            <p>For open to right bottom add <code class="language-markup">eq-ui-dropdown-right-bottom</code> after <code class="language-markup">eq-ui-dropdown</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-eq-ui-card-dropdown doc-eq-ui-card-dropdown-bottom">
+                <div class="eq-ui-card-menu">
+                    <ul class="right eq-ui-nav-menu">
+                        <li class="eq-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test4" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test4" class="eq-ui-dropdown eq-ui-dropdown-right-bottom">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Structure</h2>
+            <p>Add class <code class="language-markup">dropdown-trigger</code> for trigger element. And add target id for dropdown in <code class="language-markup">data-target</code> attr.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test1&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
+
+&lt;!-- Dropdown Structure --&gt;
+&lt;ul id=&quot;dropdown-test1&quot; class=&quot;eq-ui-dropdown&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Some Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Disabled Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot; class=&quot;active&quot;&gt;Item Active&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Sub Menu (desktop aplications)</h2>
+            <p>Use only in desktop aplications.</p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-eq-ui-card-dropdown doc-eq-ui-card-dropdown-left">
+                <div class="eq-ui-card-menu">
+                    <ul class="right eq-ui-nav-menu">
+                        <li class="eq-ui-nav-menu-item-icon">
+                            <!-- Dropdown Trigger -->
+                            <a data-target="dropdown-test5" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                                <i class="mdi mdi-dots-vertical icon"></i>
+                            </a>
+                            <!-- Dropdown Structure -->
+                            <ul id="dropdown-test5" class="eq-ui-dropdown">
+                                <li><a href="#!"><i class="mdi mdi-home icon"></i> Some Action</a></li>
+                                <li><a href="#!"><i class="mdi mdi-puzzle icon"></i> Another Action</a></li>
+                                <li class="divider"></li>
+                                <li>
+                                    <i class="mdi mdi-menu-right icon"></i>
+                                    <!-- Dropdown Trigger -->
+                                    <a data-target="dropdown-test5-sub" class="dropdown-trigger">
+                                        <i class="mdi mdi-layers icon"></i> Another Action
+                                    </a>
+                                    <!-- Dropdown Sub -->
+                                    <ul id="dropdown-test5-sub" class="eq-ui-dropdown">
+                                        <li><a href="#!"><i class="mdi mdi-home icon"></i> Some Action</a></li>
+                                        <li><a href="#!"><i class="mdi mdi-puzzle icon"></i> Another Action</a></li>
+                                        <li>
+                                            <i class="mdi mdi-menu-right icon"></i>
+                                            <!-- Dropdown Trigger -->
+                                            <a data-target="dropdown-test5-sub2" class="dropdown-trigger">
+                                                <i class="mdi mdi-layers icon"></i> Another Action
+                                            </a>
+                                            <!-- Dropdown Sub -->
+                                            <ul id="dropdown-test5-sub2" class="eq-ui-dropdown">
+                                                <li><a href="#!"><i class="mdi mdi-home icon"></i> Some Action</a></li>
+                                                <li><a href="#!"><i class="mdi mdi-layers icon"></i> Another Action</a></li>
+                                                <li><a href="#!"><i class="mdi mdi-settings icon"></i> Yet Another Action</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!"><i class="mdi mdi-settings icon"></i> Yet Another Action</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <p>Structure for sub menu.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test5&quot; class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
+
+&lt;!-- Dropdown Structure --&gt;
+&lt;ul id=&quot;dropdown-test5&quot; class=&quot;eq-ui-dropdown&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-puzzle icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;
+        &lt;i class=&quot;mdi mdi-menu-right icon&quot;&gt;&lt;/i&gt;
+        &lt;!-- Dropdown Trigger --&gt;
+        &lt;a data-target=&quot;dropdown-test5-sub&quot; class=&quot;dropdown-trigger&quot;&gt;
+            &lt;i class=&quot;mdi mdi-layers icon&quot;&gt;&lt;/i&gt; Another Action
+        &lt;/a&gt;
+        &lt;!-- Dropdown Sub --&gt;
+        &lt;ul id=&quot;dropdown-test5-sub&quot; class=&quot;eq-ui-dropdown&quot;&gt;
+            &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-puzzle icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;
+                &lt;i class=&quot;mdi mdi-menu-right icon&quot;&gt;&lt;/i&gt;
+                &lt;!-- Dropdown Trigger --&gt;
+                &lt;a data-target=&quot;dropdown-test5-sub2&quot; class=&quot;dropdown-trigger&quot;&gt;
+                    &lt;i class=&quot;mdi mdi-layers icon&quot;&gt;&lt;/i&gt; Another Action
+                &lt;/a&gt;
+                &lt;!-- Dropdown Sub --&gt;
+                &lt;ul id=&quot;dropdown-test5-sub2&quot; class=&quot;eq-ui-dropdown&quot;&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt; Some Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-layers icon&quot;&gt;&lt;/i&gt; Another Action&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt; Yet Another Action&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Options</h2>
+
+            <table class="table eq-ui-data-table z-depth-1 doc-margin-bottom">
+                <thead>
+                <tr>
+                    <th class="eq-ui-data-table-cell-non-numeric">Option Name</th>
+                    <th class="eq-ui-data-table-cell-non-numeric">Description</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td style="width: 25%;" class="eq-ui-data-table-cell-non-numeric">inDuration</td>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">The duration of the transition enter in milliseconds. Default: 300</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric">outDuration</td>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">The duration of the transition out in milliseconds. Default: 225</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric">hover</td>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">If true, the dropdown will open on hover. Default: false</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric">gutter</td>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">This defines the spacing from the aligned edge. Default: 0</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric">belowOrigin</td>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">If true, the dropdown will show below the trigger. Default: false</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>To use these inline you have to add them as data attributes.</p>
+
+            <pre><code class="language-markup">
+&lt;!-- Dropdown Trigger --&gt;
+&lt;a data-target=&quot;dropdown-test3&quot; data-hover=&quot;false&quot; data-below-origin=&quot;true&quot; class=&quot;btn btn-default dropdown-trigger&quot;&gt;&lt;/a&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">jQuery Plugin Initialization</h2>
+            <p>Initialization for dropdowns is only necessary if you create them dynamically.</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('.dropdown-trigger').dropdown({
+        inDuration: 300,
+        outDuration: 225,
+        hover: true,
+        gutter: 0,
+        belowOrigin: false
+    });
+});</code></pre>
+        </div>
+    </div>
+
+</div>
+<!--footer>
+    <p>&copy; Exentriq 2015</p>
+</footer-->
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <br/><br/><br/><br/><br/><br/>
+        </div>
+    </div>
+    
+</div>
+    </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.5"></script>
+
+<script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
+<script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
+
+<script src="assets/js/doc.js?v=0.2.5"></script>
+<script src="assets/js/ctrl/ctrl-color.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+  </body>
+</html>

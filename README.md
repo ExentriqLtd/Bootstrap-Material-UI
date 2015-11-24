@@ -37,8 +37,8 @@ Use the files in the "dist" folder
 No need to separately include the following libraries, are already included in this library:
 
 - Bootstrap (v3.3.5)
-- Font Awesome (v4.3.0)
 - Material Design Icons
+- Parsley (2.1.3)
 - jQuery Easing (v1.3.0)
 - jQuery Hammer (v2.0.0)
 - Autosize (v3.0.8)

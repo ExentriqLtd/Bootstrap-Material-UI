@@ -12,6 +12,12 @@ body {
 .jumbotron.home .source-in-git-hub {
 	text-align: left;
 }
+p.last-commit-in-git-hub-p {
+    font-weight: 300;
+}
+.last-commit-in-git-hub, .last-commit-in-git-hub:hover {
+    text-decoration: none;
+}
 @media (max-width: 768px){
 	.jumbotron.home .getting-started,
 	.jumbotron.home .source-in-git-hub {
@@ -69,6 +75,20 @@ body {
 	margin-bottom: 25px;
 }
 
+/* Dropdown */
+.doc-eq-ui-card-dropdown {
+    min-height: 250px;
+    overflow: visible;
+}
+.doc-eq-ui-card-dropdown-bottom .eq-ui-card-menu {
+    bottom: 16px;
+    top: auto;
+}
+.doc-eq-ui-card-dropdown-left .eq-ui-card-menu {
+    left: 16px;
+    right: auto;
+}
+
 /* Tabs */
 .doc-tabs {
     background-color: #f5f5f5;
@@ -87,3 +107,15 @@ body {
 .doc-margin-bottom {
 	margin-bottom: 25px;
 }
+
+/* Media */
+@media only screen and (max-width: 768px) {
+    .eq-ui-app-bar .header-title span,
+    .eq-ui-app-bar .header-title i {
+        display: none;
+    }
+    .eq-ui-app-bar .header-title span:last-of-type {
+        display: block;
+    }
+}
+

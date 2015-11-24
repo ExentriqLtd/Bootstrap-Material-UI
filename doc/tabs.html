@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Tabs | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.5" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.5" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"tabs",name_section:"JavaScript",name_chapter:"Tabs"};</script>
@@ -45,7 +45,15 @@
                         <i class="mdi mdi-heart icon"></i>
                     </a>
                 </li>
-                <li><a href="#">text</a></li>
+                <li>
+                    <!-- Dropdown Structure -->
+                    <a style="text-decoration: none;" data-target="doc-dropdown-user" data-hover="true" data-below-origin="true" href="#!" class="dropdown-trigger">user</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- Top Search -->
@@ -83,9 +91,15 @@
             <!-- Nav Menu -->
             <ul class="right eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-dots-vertical icon"></i>
                     </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Option 1</a></li>
+                        <li><a href="#!">Option 2</a></li>
+                        <li><a href="#!">Option 3</a></li>
+                    </ul>
                 </li>
             </ul>
 
@@ -176,6 +190,7 @@
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
+                            <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
                         </div>
                     </li>
 
@@ -188,8 +203,9 @@
                         </div>
                         <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
                             <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
-                            <!--a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a-->
+                            <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
                         </div>
                     </li>
 
@@ -463,7 +479,7 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Tabs - Work in progress</h1>
+        <h1>Tabs</h1>
     </div>
 </div>
 
@@ -472,7 +488,7 @@
     <div class="row">
         <div class="col-md-12">
             <h2 class="header">Normal</h2>
-            <!--p>Align vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items.</p-->
+            <p><code class="language-markup">eq-ui-scrollbar-wrap</code>  is used to enable the horizontal scroll, when the tabs do not fit on the screen. This is only for touch enabled devices</p>
 
             <div class="eq-ui-card eq-deep-blue-500 doc-margin-bottom doc-tabs">
                 <div class="eq-ui-card-supporting-text">
@@ -495,12 +511,32 @@
         <div id="eq-ui-tab-s1-t2" class="col-md-12">Item two...</div>
         <div id="eq-ui-tab-s1-t3" class="col-md-12">Disabled...</div>
         <div id="eq-ui-tab-s1-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+&lt;div class=&quot;col-md-12&quot;&gt;
+    &lt;div class=&quot;eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide&quot;&gt;
+        &lt;ul class=&quot;eq-ui-tabs&quot;&gt;
+            &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s1-t1&quot;&gt;Item one&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#eq-ui-tab-s1-t2&quot;&gt;Item two&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;eq-ui-tab disabled&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s1-t3&quot;&gt;Disabled&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s1-t4&quot;&gt;Item four&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;eq-ui-tab-s1-t1&quot; class=&quot;col-md-12&quot;&gt;Item one...&lt;/div&gt;
+&lt;div id=&quot;eq-ui-tab-s1-t2&quot; class=&quot;col-md-12&quot;&gt;Item two...&lt;/div&gt;
+&lt;div id=&quot;eq-ui-tab-s1-t3&quot; class=&quot;col-md-12&quot;&gt;Disabled...&lt;/div&gt;
+&lt;div id=&quot;eq-ui-tab-s1-t4&quot; class=&quot;col-md-12&quot;&gt;Item four...&lt;/div&gt;</code></pre>
+        </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
             <h2 class="header">Justified</h2>
-            <!--p>Align vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items.</p-->
+            <p>Inverted color by adding the class <code class="language-markup">eq-ui-tabs-color-inverted</code>. Justified by adding the class <code class="language-markup">eq-ui-tabs-justified</code></p>
 
             <div class="eq-ui-card doc-margin-bottom doc-tabs doc-tabs-not-padding">
                 <div class="eq-ui-card-supporting-text">
@@ -523,12 +559,20 @@
         <div id="eq-ui-tab-s2-t2" class="col-md-12">Item two...</div>
         <div id="eq-ui-tab-s2-t3" class="col-md-12">Disabled...</div>
         <div id="eq-ui-tab-s2-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;eq-ui-tabs eq-ui-tabs-color-inverted eq-ui-tabs-justified&quot;&gt;
+...</code></pre>
+        </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
             <h2 class="header">Links</h2>
-            <!--p>Align vertically center things by adding the class <code class="language-markup">valign-wrapper</code> to the container holding the items.</p-->
+            <p>You can also use tabs with links</p>
 
             <div class="eq-ui-card doc-margin-bottom doc-tabs doc-tabs-not-padding">
                 <div class="eq-ui-card-supporting-text">
@@ -536,7 +580,7 @@
                     <div class="eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide">
                         <ul class="eq-ui-tabs eq-ui-tabs-color-inverted eq-ui-tabs-justified">
                             <li class="eq-ui-tab"><a href="/color.html">Color</a></li>
-                            <li class="eq-ui-tab"><a href="/helpers.html">Helpers</a></li>
+                            <li class="eq-ui-tab"><a class="active" href="/helpers.html">Helpers</a></li>
                             <li class="eq-ui-tab"><a href="/table.html">Table</a></li>
                             <li class="eq-ui-tab"><a href="/typography.html">Typography</a></li>
                         </ul>
@@ -546,39 +590,165 @@
             </div>
 
         </div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;/color.html&quot;&gt;Color&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;/helpers.html&quot;&gt;Helpers&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;/table.html&quot;&gt;Table&lt;/a&gt;&lt;/li&gt;
+&lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;/typography.html&quot;&gt;Typography&lt;/a&gt;&lt;/li&gt;
+...</code></pre>
+        </div>
     </div>
 
-    <!--div class="row">
+    <div class="row">
         <div class="col-md-12">
-            <h2 class="header">Text Align</h2>
-            <p>For horizontally aligning content. We have <code class=" language-markup">.left-align</code>, <code class=" language-markup">.right-align</code> and <code class=" language-markup">.center-align</code></p>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="left-align">Left aligned</h5>
+            <h2 class="header">Icons</h2>
+            <p>You can also use tabs with icons by adding the class <code class="language-markup">eq-ui-tabs-with-icons</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-tabs doc-tabs-not-padding">
+                <div class="eq-ui-card-supporting-text">
+
+                    <div class="eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide">
+                        <ul class="eq-ui-tabs eq-ui-tabs-with-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified">
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s3-t1"><i class="mdi mdi-home icon"></i></a></li>
+                            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s3-t2"><i class="mdi mdi-settings icon"></i></a></li>
+                            <li class="eq-ui-tab disabled"><a href="#eq-ui-tab-s3-t3"><i class="mdi mdi-book-variant icon"></i></a></li>
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s3-t4"><i class="mdi mdi-heart icon"></i></a></li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="right-align">Right aligned</h5>
-                </div>
-            </div>
-            <div class="eq-ui-card doc-margin-bottom">
-            	<div class="eq-ui-card-supporting-text">
-                	<h5 class="center-align">Center aligned</h5>
-                </div>
-            </div>
-            <pre><code class="language-markup">
-&lt;div&gt;
-    &lt;h5 class=&quot;left-align&quot;&gt;Left aligned&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;h5 class=&quot;right-align&quot;&gt;Right aligned&lt;/h5&gt;
-&lt;/div&gt;
-&lt;div&gt;
-    &lt;h5 class=&quot;center-align&quot;&gt;Center aligned&lt;/h5&gt;
-&lt;/div&gt;</code></pre>
+
         </div>
-    </div-->
+
+        <div id="eq-ui-tab-s3-t1" class="col-md-12">Item one...</div>
+        <div id="eq-ui-tab-s3-t2" class="col-md-12">Item two...</div>
+        <div id="eq-ui-tab-s3-t3" class="col-md-12">Disabled...</div>
+        <div id="eq-ui-tab-s3-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;eq-ui-tabs eq-ui-tabs-with-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s3-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#eq-ui-tab-s3-t2&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab disabled&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s3-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s3-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Left Icons</h2>
+            <p>You can also use tabs with left icons by adding the class <code class="language-markup">eq-ui-tabs-with-left-icons</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-tabs doc-tabs-not-padding">
+                <div class="eq-ui-card-supporting-text">
+
+                    <div class="eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide">
+                        <ul class="eq-ui-tabs eq-ui-tabs-with-left-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified">
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s4-t1"><i class="mdi mdi-home icon"></i> Home</a></li>
+                            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s4-t2"><i class="mdi mdi-settings icon"></i> Settings</a></li>
+                            <li class="eq-ui-tab disabled"><a href="#eq-ui-tab-s4-t3"><i class="mdi mdi-book-variant icon"></i> Components</a></li>
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s4-t4"><i class="mdi mdi-heart icon"></i> Showcase</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="eq-ui-tab-s4-t1" class="col-md-12">Item one...</div>
+        <div id="eq-ui-tab-s4-t2" class="col-md-12">Item two...</div>
+        <div id="eq-ui-tab-s4-t3" class="col-md-12">Disabled...</div>
+        <div id="eq-ui-tab-s4-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;eq-ui-tabs eq-ui-tabs-with-left-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s4-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#eq-ui-tab-s4-t2&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt; Settings&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab disabled&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s4-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant icon&quot;&gt;&lt;/i&gt; Components&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s4-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart icon&quot;&gt;&lt;/i&gt; Showcase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Top Icons</h2>
+            <p>You can also use tabs with top icons by adding the class <code class="language-markup">eq-ui-tabs-with-top-icons</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom doc-tabs doc-tabs-not-padding">
+                <div class="eq-ui-card-supporting-text">
+
+                    <div class="eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide">
+                        <ul class="eq-ui-tabs eq-ui-tabs-with-top-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified">
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s5-t1"><i class="mdi mdi-home icon"></i><br>Home</a></li>
+                            <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-s5-t2"><i class="mdi mdi-settings icon"></i><br>Settings</a></li>
+                            <li class="eq-ui-tab disabled"><a href="#eq-ui-tab-s5-t3"><i class="mdi mdi-book-variant icon"></i><br>Components</a></li>
+                            <li class="eq-ui-tab"><a href="#eq-ui-tab-s5-t4"><i class="mdi mdi-heart icon"></i><br>Showcase</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div id="eq-ui-tab-s5-t1" class="col-md-12">Item one...</div>
+        <div id="eq-ui-tab-s5-t2" class="col-md-12">Item two...</div>
+        <div id="eq-ui-tab-s5-t3" class="col-md-12">Disabled...</div>
+        <div id="eq-ui-tab-s5-t4" class="col-md-12">Item four...</div>
+
+        <div class="col-md-12">
+            <br>
+            <pre><code class="language-markup">
+...
+&lt;ul class=&quot;eq-ui-tabs eq-ui-tabs-with-top-icons eq-ui-tabs-color-inverted eq-ui-tabs-justified&quot;&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s5-t1&quot;&gt;&lt;i class=&quot;mdi mdi-home icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a class=&quot;active&quot; href=&quot;#eq-ui-tab-s5-t2&quot;&gt;&lt;i class=&quot;mdi mdi-settings icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Settings&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab disabled&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s5-t3&quot;&gt;&lt;i class=&quot;mdi mdi-book-variant icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Components&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;eq-ui-tab&quot;&gt;&lt;a href=&quot;#eq-ui-tab-s5-t4&quot;&gt;&lt;i class=&quot;mdi mdi-heart icon&quot;&gt;&lt;/i&gt;&lt;br&gt;Showcase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+...</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">jQuery Plugin Initialization</h2>
+            <p>Tabs are initialized automatically, but if you add tabs dynamically you will have to initialize them like this.</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('ul.eq-ui-tabs').tabs();
+});</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">jQuery Plugin Methods</h2>
+            <p>You can programmatically trigger a tab change with our <code class=" language-markup">select_tab</code> method. You have to input the id of the tab you want to switch to. For sample id: <code class=" language-markup">#eq-ui-tab-s3-t1</code></p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+    $('ul.eq-ui-tabs').tabs('select_tab', 'eq-ui-tab-s3-t1');
+});</code></pre>
+        </div>
+    </div>
 
 </div>
 <!--footer>
@@ -594,11 +764,15 @@
     </div>
     
 </div>
-    </main>
-<script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.0"></script>
+    </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.5"></script>
 
-<script src="assets/js/doc.js?v=0.2.0"></script>
+<script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
+<script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
+
+<script src="assets/js/doc.js?v=0.2.5"></script>
+<script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

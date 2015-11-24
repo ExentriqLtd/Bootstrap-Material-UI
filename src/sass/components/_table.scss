@@ -36,8 +36,18 @@ table {
 				height: $row-height;
 
 				td {
-					border-top: $table-border;
+                    display: table-cell;
+                    border-top: $table-border;
 					border-bottom: $table-border;
+                    white-space: nowrap;
+
+                    // Truncate
+                    &.eq-ui-data-table-cell-truncate {
+                        max-width:1px;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
 				}
 			}
 		}
@@ -71,7 +81,7 @@ table {
 
                 &:first-of-type {
                     text-align: left;
-                    width: 44px;
+                    width: 45px;
                 }
 
                 input[type=checkbox] + label {
@@ -120,6 +130,12 @@ table {
 				text-align: center;
 			}
 		}
+
+        // Is selected
+        tbody > tr.is-selected {
+            @include eq-ui-transition(background-color);
+            background-color: transparentize($eq-ui-secondary-color, .95);
+        }
 
 	}
 }

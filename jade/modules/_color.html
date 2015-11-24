@@ -1,11 +1,65 @@
 <div class="jumbotron">
     <div class="container">
-        <h1>Color - Coming soon</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus, ante sit amet posuere scelerisque, est augue aliquam nunc, et commodo tellus erat eget purus. Maecenas dui est, maximus nec blandit sed.</p>
-        <p><a class="btn btn-primary btn-lg btn-lg eq-ui-waves-light" href="./" role="button">Go to home</a></p>
+        <h1>Color</h1>
     </div>
 </div>
 
 <div class="container">
-    
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Normal</h2>
+            <p>To apply a background color, add the color name <code class="language-markup">eq-deep-blue-500</code>. To apply a text color, add the color name <code class="language-markup">eq-green-turquoise-text-500</code></p>
+
+            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500 eq-green-turquoise-text-500">
+                <div class="eq-ui-card-supporting-text">
+                    Sample color usage
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-card eq-deep-blue-500 eq-green-turquoise-text-500&quot;&gt;
+    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
+        Sample color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="header">Hover</h2>
+            <p>To apply a hover for background color and text color, add <code class="language-markup">-hover</code> after the name color.</p>
+
+            <div class="eq-ui-card doc-margin-bottom eq-deep-blue-500-hover eq-green-turquoise-text-500-hover">
+                <div class="eq-ui-card-supporting-text">
+                    Sample hover color usage
+                </div>
+            </div>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-card eq-deep-blue-500-hover eq-green-turquoise-text-500-hover&quot;&gt;
+    &lt;div class=&quot;eq-ui-card-supporting-text&quot;&gt;
+        Sample hover color usage
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Sass</h2>
+            <p>You can apply the color simply by extending the classes like the example below</p>
+
+            <pre><code class="language-scss">
+.custom-container {
+    @extend .eq-deep-blue-500;
+}</code></pre>
+
+        </div>
+    </div>
+
+    <!-- Render color palette -->
+    <doc-color-palette></doc-color-palette>
+
 </div>

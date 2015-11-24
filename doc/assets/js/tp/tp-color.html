@@ -1,0 +1,93 @@
+<doc-color-palette>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Exentriq Palette (Background)</h2>
+        </div>
+
+        <div each={ name, value in exentriq_palette } class="col-xs-12 col-sm-6 col-md-4 palette">
+            <div class="color-wrap z-depth-1">
+                <div each={ name_c, value_c in value } style="color: {EqUIDoc.color.get_color_label(name_c)};" class="{EqUIDoc.color.get_class_background(name, name_c)}">
+                    <span class="name-class">{EqUIDoc.color.get_class_background(name, name_c)}</span>
+                    <span class="cod-color">{value_c}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Material Palette (Background)</h2>
+        </div>
+
+        <div each={ name, value in material_palette } class="col-xs-12 col-sm-6 col-md-4 palette">
+            <div class="color-wrap z-depth-1">
+                <div each={ name_c, value_c in value } style="color: {EqUIDoc.color.get_color_label(name_c)};" class="{EqUIDoc.color.get_class_background(name, name_c)}">
+                    <span class="name-class">{EqUIDoc.color.get_class_background(name, name_c)}</span>
+                    <span class="cod-color">{value_c}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Exentriq Palette (Text)</h2>
+        </div>
+
+        <div each={ name, value in exentriq_palette } class="col-xs-12 col-sm-6 col-md-4 palette">
+            <div class="color-wrap z-depth-1">
+                <div each={ name_c, value_c in value } style="background-color: {EqUIDoc.color.get_color_label(name_c)};" class="{EqUIDoc.color.get_class_color(name, name_c)}">
+                    <span class="name-class">{EqUIDoc.color.get_class_color(name, name_c)}</span>
+                    <span class="cod-color">{value_c}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Material Palette (Text)</h2>
+        </div>
+
+        <div each={ name, value in material_palette } class="col-xs-12 col-sm-6 col-md-4 palette">
+            <div class="color-wrap z-depth-1">
+                <div each={ name_c, value_c in value } style="background-color: {EqUIDoc.color.get_color_label(name_c)};" class="{EqUIDoc.color.get_class_color(name, name_c)}">
+                    <span class="name-class">{EqUIDoc.color.get_class_color(name, name_c)}</span>
+                    <span class="cod-color">{value_c}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        doc-color-palette .color-wrap {
+            margin-bottom: 25px;
+        }
+        doc-color-palette .color-wrap > div {
+            padding: 15px;
+        }
+        doc-color-palette .palette {
+            min-height: 786px;
+        }
+        doc-color-palette .color-wrap div .cod-color {
+            float: right;
+        }
+    </style>
+
+    <script>
+        var self = this;
+        self.exentriq_palette = opts.exentriq_palette;
+        self.material_palette = opts.material_palette;
+
+        self.on('update', function(){
+            //...
+        });
+
+        self.on('mount', function(){
+            //...
+        });
+
+    </script>
+
+</doc-color-palette>

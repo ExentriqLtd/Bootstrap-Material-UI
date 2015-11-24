@@ -472,22 +472,12 @@ $colors: (
 
 @each $color_name, $color in $colors {
     @each $color_type, $color_value in $color {
-        /*@if $color_type == "500" {
-            .#{$color_name} {
-                background-color: $color_value !important;
-            }
-            .#{$color_name}-text {
-                color: $color_value !important;
-            }
-        }*/
-        /*@else {*/
-            .#{$color_name}-#{$color_type}, .#{$color_name}-#{$color_type}-hover:hover {
-                background-color: $color_value !important;
-            }
-            .#{$color_name}-text-#{$color_type}, .#{$color_name}-text-#{$color_type}-hover:hover {
-                color: $color_value !important;
-            }
-        /*}*/
+        .#{$color_name}-#{$color_type}, .#{$color_name}-#{$color_type}-hover:hover {
+            background-color: $color_value !important;
+        }
+        .#{$color_name}-text-#{$color_type}, .#{$color_name}-text-#{$color_type}-hover:hover {
+            color: $color_value !important;
+        }
     }
 }
 

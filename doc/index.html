@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Home | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.5" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.5" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-primary-visible eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"",path:"index",name_section:"",name_chapter:"Home"};</script>
@@ -45,7 +45,15 @@
                         <i class="mdi mdi-heart icon"></i>
                     </a>
                 </li>
-                <li><a href="#">text</a></li>
+                <li>
+                    <!-- Dropdown Structure -->
+                    <a style="text-decoration: none;" data-target="doc-dropdown-user" data-hover="true" data-below-origin="true" href="#!" class="dropdown-trigger">user</a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
 
             <!-- Top Search -->
@@ -83,9 +91,15 @@
             <!-- Nav Menu -->
             <ul class="right eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-dots-vertical icon"></i>
                     </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Option 1</a></li>
+                        <li><a href="#!">Option 2</a></li>
+                        <li><a href="#!">Option 3</a></li>
+                    </ul>
                 </li>
             </ul>
 
@@ -176,6 +190,7 @@
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
+                            <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
                         </div>
                     </li>
 
@@ -188,8 +203,9 @@
                         </div>
                         <div class="eq-ui-collapsible-body">
                             <a id="collapsible-nav-java-script-collapsible" href="./collapsible.html">Collapsible</a>
+                            <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
                             <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
-                            <!--a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a-->
+                            <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
                         </div>
                     </li>
 
@@ -467,7 +483,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <h1>Exentriq - Bootstrap Material UI</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rhoncus, ante sit amet posuere scelerisque, est augue aliquam nunc, et commodo tellus erat eget purus. Maecenas dui est, maximus nec blandit sed.</p>
+                    <p>Responsive front-end framework than Implements Google's Material Design in Bootstrap</p>
                 </div>
             </div>
             <div class="row">
@@ -475,7 +491,12 @@
                     <p class="getting-started"><a class="btn btn-primary btn-lg eq-ui-waves-light" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md"><i class="mdi mdi-open-in-new icon icon-right icon-18"></i> Getting Started</a></p>
                 </div>
                 <div class="col-sm-6">
-                    <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light" target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-open-in-new icon icon-right icon-18"></i> Source in GitHub</a></p>
+                    <p class="source-in-git-hub"><a class="btn btn-primary btn-lg eq-ui-waves-light download-in-git-hub" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip"><i class="mdi mdi-download icon icon-right icon-18"></i> Download</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="last-commit-in-git-hub-p"><a target="_blank" class="shades-text-black eq-deep-blue-text-500-hover" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI"><i class="mdi mdi-github-circle icon"></i></a> Latest Commit: <a class="last-commit-in-git-hub eq-green-turquoise-text-500" target="_blank" href="#">Loading...</a></p>
                 </div>
             </div>
         </div>
@@ -514,11 +535,15 @@
     </div>
     
 </div>
-    </main>
-<script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.0"></script>
+    </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.5"></script>
 
-<script src="assets/js/doc.js?v=0.2.0"></script>
+<script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
+<script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
+
+<script src="assets/js/doc.js?v=0.2.5"></script>
+<script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

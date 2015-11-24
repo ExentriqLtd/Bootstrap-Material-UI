@@ -16,6 +16,7 @@
 			EqUI.cards.update();
 			EqUI.forms.update();
 			EqUI.collapsible.update();
+            EqUI.dropdown.update();
 			EqUI.modals.update();
 			EqUI.tabs.update();
 			
@@ -32,6 +33,7 @@
             EqUI.site.body.css('visibility', 'visible');
 
             // Loads
+            EqUI.dropdown.load();
             EqUI.tabs.load();
 	    });
 	    

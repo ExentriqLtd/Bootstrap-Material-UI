@@ -1,10 +1,22 @@
 ## CHANGELOG
 
-### v0.2.1 (Nov ?, 2015)
+### v0.2.5 (Nov 24, 2015)
 
 **New**
+- Create doc for [color](http://bootstrap-material-ui.exentriq.com/color.html)
 - Create [dropdown](http://bootstrap-material-ui.exentriq.com/dropdown.html)
 - Create [tabs](http://bootstrap-material-ui.exentriq.com/tabs.html)
+- Create File Input and Image Preview [forms](http://bootstrap-material-ui.exentriq.com/forms.html)
+- Integrate [form validation](http://bootstrap-material-ui.exentriq.com/form-validation.html)
+
+**Updates**
+- Include bower components in repo, for easy custom and extending sass
+- Add truncate doc in Helpers
+- Add Blockquote doc in Typography
+- Add (eq-ui-data-table-cell-truncate) class, for table cell
+- Add (is-selected) class in tr, for (table -> eq-ui-data-table-js), when checkbox is checked
+- Remove Font Awesome to the core
+- Update [Home](http://bootstrap-material-ui.exentriq.com) with api Git
 
 ### v0.2.0 (Nov 17, 2015)
 

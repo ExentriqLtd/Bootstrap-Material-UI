@@ -115,9 +115,10 @@ $eq-ui-tabs-text-color-inverted: $eq-ui-primary-color !default;
 $eq-ui-tabs-underline-color-inverted: $eq-ui-primary-color !default;
 
 /*** Dropdown ***/
-/*$dropdown-bg-color: #fff !default;
+$dropdown-bg-color: #fff !default;
 $dropdown-hover-bg-color: #eee !default;
-$dropdown-color: $secondary-color !default;*/
+$dropdown-color: $eq-ui-text-color !default;
+$dropdown-item-height: 48px;
 
 /*** Forms ***/
 $input-border-color: color("grey", "500") !default;

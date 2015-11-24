@@ -82,6 +82,7 @@ module.exports = function ( grunt ) {
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
                     'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
+                    'src/bower_components/parsleyjs/dist/parsley.js',
                     'src/bower_components/jquery.easing/js/jquery.easing.js',
                     'src/bower_components/hammerjs/hammer.js',
                     'src/bower_components/jquery-hammerjs/jquery.hammer.js',
@@ -112,6 +113,7 @@ module.exports = function ( grunt ) {
                     'src/js/cards.js',
                     'src/js/forms.js',
                     'src/js/collapsible.js',
+                    'src/js/dropdown.js',
                     'src/js/modals.js',
                     'src/js/tabs.js',
                     'src/js/_init.js'
@@ -160,7 +162,7 @@ module.exports = function ( grunt ) {
                     {
                         expand: true,
                         cwd: 'src/bower_components/',
-                        src: ['jquery/dist/**'],
+                        src: ['jquery/dist/**', 'jquery-timeago/**', 'riot/**'],
                         dest: 'doc/assets/js/vendor/'
                     }
                 ]
@@ -298,7 +300,9 @@ module.exports = function ( grunt ) {
                     "doc/cards.html": "jade/cards.jade",
                     "doc/list.html": "jade/list.jade",
                     "doc/forms.html": "jade/forms.jade",
+                    "doc/form-validation.html": "jade/form-validation.jade",
                     "doc/collapsible.html": "jade/collapsible.jade",
+                    "doc/dropdown.html": "jade/dropdown.jade",
                     "doc/modals.html": "jade/modals.jade",
                     "doc/tabs.html": "jade/tabs.jade",
                     "doc/showcase.html": "jade/showcase.jade",

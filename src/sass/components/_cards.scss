@@ -2,7 +2,7 @@
 
 .eq-ui-card {
     @extend .z-depth-1;
-    z-index: $eq-ui-zindex-content;
+    /*z-index: $eq-ui-zindex-content;*/
     position: relative;
     background: #fff;
     border-radius: 2px;

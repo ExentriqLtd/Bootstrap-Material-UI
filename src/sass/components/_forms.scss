@@ -19,6 +19,10 @@ input.eq-ui-input[type=search],
 textarea.eq-ui-textarea {
 
 	// General Styles
+    display: block;
+    font-size: $eq-ui-font-size-base;
+    line-height: $eq-ui-line-height-base;
+    color: color("grey", "800");
 	background-color: transparent;
 	border: none;
 	border-bottom: 1px solid $input-border-color;
@@ -64,6 +68,22 @@ textarea.eq-ui-textarea {
         box-shadow: 0 1px 0 0 $input-success-color;
     }
 
+    // Form Message Shared Styles
+    & + label:after {
+        display: block;
+        font-size: $label-font-size;
+        content: "";
+        position: absolute;
+        top: 65px;
+        opacity: 0;
+        transition: .2s opacity ease-out, .2s color ease-out;
+    }
+
+    & + label:not(.active):after {
+        /*top: 38px;*/
+        opacity: 0 !important;
+    }
+
     // Custom Success Message
     &.valid + label:after,
     &:focus.valid + label:after {
@@ -87,16 +107,11 @@ textarea.eq-ui-textarea {
         opacity: 1;
     }
 
-    // Form Message Shared Styles
-    & + label:after {
-        display: block;
-        content: "";
-        position: absolute;
-        top: 65px;
-        opacity: 0;
-        transition: .2s opacity ease-out, .2s color ease-out;
-    }
+}
 
+// Form group wrapper
+.eq-ui-form-group {
+    margin-bottom: 15px;
 }
 
 // Input field wrapper
@@ -107,6 +122,7 @@ textarea.eq-ui-textarea {
     label {
         color: $input-border-color;
         position: absolute;
+        width: 100%;
         top: 0.8rem;
         left: 0;
         cursor: text;
@@ -140,6 +156,45 @@ textarea.eq-ui-textarea {
     overflow-y: hidden !important; /* prevents scroll bar flash */
     resize: none;
     padding: 12px 0;
+}
+
+/* --------------------------------------- */
+/* File Input
+/* --------------------------------------- */
+.eq-ui-input-file {
+
+    .btn {
+        float: left;
+    }
+
+    input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+
+    .eq-ui-input-file-path {
+        overflow: hidden;
+        padding-left: 15px;
+
+        input[type=text] {
+            height: 36px;
+            margin-bottom: 1px;
+            cursor: pointer;
+        }
+    }
+
+    // Fake
+    &.eq-ui-input-file-fake {
+        display: none;
+    }
+
 }
 
 /* --------------------------------------- */
@@ -372,6 +427,15 @@ input.eq-ui-input[type="checkbox"].filled-in {
         top: 0;
         z-index: 0;
     }
+
+    // Custom Error message
+    &.invalid + label:after {
+        border: 2px solid $input-error-color;
+    }
+    &.invalid + label {
+        color: $input-error-color;
+    }
+
     // Checked style
     &:checked {
         + label:before {

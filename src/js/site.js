@@ -16,8 +16,8 @@
         // Set checkbox to indeterminate
         EqUI.site.set_checkbox_indeterminate();
 
-        // Select all checkbox in table
-        EqUI.site.table_select_all_checkbox();
+        // Active js table
+        EqUI.site.table_js();
 
         // Dismissable list
         EqUI.site.dismissableList();
@@ -59,16 +59,67 @@
         });
     };
 
-    // Select all checkbox in table
-    EqUI.site.table_select_all_checkbox = function() {
-        $('.eq-ui-data-table.eq-ui-with-checkbox thead input[type="checkbox"]').click(function(e) {
+    // Active js table
+    EqUI.site.table_js = function() {
+
+        // Select all checkboxes
+        $('.eq-ui-data-table.eq-ui-data-table-js thead input[type="checkbox"]').click(function(e) {
             var _tbody = $(this).parents('table').children('tbody');
             var _is_checked = this.checked;
 
             _tbody.find('tr input[type="checkbox"]').each(function() {
                 this.checked = _is_checked;
+
+                var _parent = $(this).parent().parent();
+
+                if(this.checked){
+                    _parent.addClass('is-selected');
+                } else {
+                    _parent.removeClass('is-selected');
+                }
             });
         });
+
+        // Select checkbox
+        $('.eq-ui-data-table.eq-ui-data-table-js tbody tr input[type="checkbox"]').click(function(e) {
+            var _parent = $(this).parent().parent();
+
+            if(this.checked){
+                _parent.addClass('is-selected');
+            } else {
+                _parent.removeClass('is-selected');
+            }
+        });
+    };
+
+    // Get query string
+    EqUI.site.query_string = function () {
+        var query_string = {};
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            // If first entry with this name
+            if (typeof query_string[pair[0]] === "undefined") {
+                query_string[pair[0]] = decodeURIComponent(pair[1]);
+                // If second entry with this name
+            } else if (typeof query_string[pair[0]] === "string") {
+                query_string[pair[0]] = [ query_string[pair[0]],decodeURIComponent(pair[1]) ];
+                // If third or later entry with this name
+            } else {
+                query_string[pair[0]].push(decodeURIComponent(pair[1]));
+            }
+        }
+        return query_string;
+    }();
+
+    // Toogle class
+    EqUI.site.toogle_class = function(element,class_name) {
+        if($(element).hasClass(class_name)){
+            $(element).removeClass(class_name);
+        } else  {
+            $(element).addClass(class_name);
+        }
     };
 
     /* --------------------------------------- */

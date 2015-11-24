@@ -20,12 +20,13 @@
         letter-spacing: .8px;
 
         a {
+            line-height: 48px;
+            height: 48px;
             color: $eq-ui-tabs-text-color;
             font-weight: 500;
             opacity: 0.6;
             display: block;
             width: 100%;
-            height: 100%;
             text-decoration: none;
 
             @include eq-ui-transition-ease(opacity);
@@ -48,6 +49,43 @@
         height: 2px;
         background-color: $eq-ui-tabs-underline-color;
         will-change: left, right;
+    }
+
+    // With-icons
+    &.eq-ui-tabs-with-icons {
+        .eq-ui-tab {
+            a {
+                i.icon {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    // With-left-icons
+    &.eq-ui-tabs-with-left-icons {
+        .eq-ui-tab {
+            a {
+                i.icon {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    // With-top-icons
+    &.eq-ui-tabs-with-top-icons {
+        .eq-ui-tab {
+            a {
+                line-height: 17px;
+                font-size: 13px;
+                padding-top: 5px;
+                padding-bottom: 10px;
+                i.icon {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 
     // Color inverted

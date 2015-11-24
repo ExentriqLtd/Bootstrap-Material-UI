@@ -1,0 +1,56 @@
+{
+  "name": "riot",
+  "version": "2.3.1",
+  "description": "A React-like user interface micro-library",
+  "homepage": "http://riotjs.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/riot/riot.git"
+  },
+  "authors": [
+    "Muut, Inc. and other contributors"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "custom tags",
+    "custom elements",
+    "web components",
+    "virtual dom",
+    "shadow dom",
+    "polymer",
+    "react",
+    "jsx",
+    "minimal",
+    "minimalist",
+    "client-side",
+    "framework",
+    "declarative",
+    "templating",
+    "template",
+    "data binding",
+    "mvc",
+    "router",
+    "model",
+    "view",
+    "controller",
+    "riotjs",
+    "riot.js"
+  ],
+  "ignore": [
+    "**/*",
+    "!/riot.js",
+    "!/riot.min.js",
+    "!/riot+compiler.js",
+    "!/riot+compiler.min.js"
+  ],
+  "main": "riot.js",
+  "_release": "2.3.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.3.1",
+    "commit": "d427a2b98eb74fc61703a68e088b40d599146a37"
+  },
+  "_source": "git://github.com/muut/riotjs.git",
+  "_target": "^2.3.0",
+  "_originalSource": "riot"
+}

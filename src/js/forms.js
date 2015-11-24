@@ -1,6 +1,8 @@
 (function ($) {
     EqUI.forms = {};
 
+    EqUI.forms.validateLib = 'parsley'; // parsley | html5 | custom
+
     // Init
     EqUI.forms.init = function() {
         // Global vars
@@ -63,6 +65,16 @@
         // Textarea auto size
         autosize($('textarea.eq-ui-textarea'));
 
+        // Is parsley
+        if(EqUI.forms.validateLib === 'parsley'){
+            Parsley.options.noFocus = true;
+            Parsley.options.errorsMessagesDisabled = false;
+            Parsley.options.successClass = 'valid';
+            Parsley.options.errorClass = 'invalid';
+        }
+
+        // Init file inputs
+        EqUI.forms.file_input('.eq-ui-input-file');
     };
 
     // Update
@@ -70,8 +82,53 @@
 
     };
 
+    // Add form for validate on submit
+    EqUI.forms.add_form_for_submit_validate = function(object) {
+
+        // Validate using a parsley lib
+        if (EqUI.forms.validateLib === 'parsley') {
+            return object.parsley();
+        }
+
+        return null;
+    };
+
+    // Validate form
+    EqUI.forms.validate_form = function(object) {
+
+        // Validate using a parsley lib
+        if (EqUI.forms.validateLib === 'parsley') {
+            var instance = object.parsley();
+            return instance.validate();
+        }
+
+        return null;
+    };
+
     // Validate
     EqUI.forms.validate_field = function(object) {
+
+        // Validate using a parsley lib
+        if (EqUI.forms.validateLib === 'parsley') {
+            return EqUI.forms.validate_field_parsley(object);
+        }
+
+        // Validate using a html5
+        if (EqUI.forms.validateLib === 'html5') {
+            return EqUI.forms.validate_field_html5(object);
+        }
+
+        return null;
+    };
+
+    // Validate using a parsley lib (http://parsleyjs.org/)
+    EqUI.forms.validate_field_parsley = function(object) {
+        var instance = object.parsley();
+        return instance.validate();
+    };
+
+    // Validate using a HTML5
+    EqUI.forms.validate_field_html5 = function(object) {
         var hasLength = object.attr('length') !== undefined;
         var lenAttr = parseInt(object.attr('length'));
         var len = object.val().length;
@@ -88,13 +145,101 @@
                 if ((object.is(':valid') && hasLength && (len < lenAttr)) || (object.is(':valid') && !hasLength)) {
                     object.removeClass('invalid');
                     object.addClass('valid');
+                    return true;
                 }
                 else {
                     object.removeClass('valid');
                     object.addClass('invalid');
+                    return false;
                 }
             }
         }
+
+        return null;
+    };
+
+    // Init file input
+    EqUI.forms.file_input = function(object_class) {
+
+        // Trigger - Image preview
+        $(object_class+' input[type=file]').each(function(){
+            var img_preview = $("#"+ $(this).attr('data-img-preview'));
+            if(img_preview.length){
+                var _parent = $(this).closest('.eq-ui-input-file');
+                var file_input = _parent.find('input[type=file]');
+                img_preview.on('click', function() {
+                    file_input.trigger('click');
+                });
+            }
+        });
+
+        // Trigger
+        $(object_class+' input[type=text]').on('click', function() {
+            var _parent = $(this).closest('.eq-ui-input-file');
+            var file_input = _parent.find('input[type=file]');
+            file_input.trigger('click');
+        });
+
+        // On Change
+        $(object_class+' input[type=file]').on('change', function() {
+            var _parent = $(this).closest('.eq-ui-input-file');
+            var path_input = _parent.find('input[type=text]');
+            var files = $(this)[0].files;
+            var file_names = [];
+            var file_images = [];
+            for (var i = 0; i < files.length; i++) {
+                file_names.push(files[i].name);
+
+                // Only add image files.
+                if (files[i].type.match('image.*')) {
+                    file_images.push(files[i]);
+                }
+            }
+            path_input.val(file_names.join(", "));
+            path_input.trigger('change');
+
+            // Image preview
+            var img_preview = $("#"+ $(this).attr('data-img-preview'));
+            if(img_preview.length){
+                for (var ii = 0; ii < file_images.length; ii++) {
+                    EqUI.forms.img_preview_file_read(file_images[ii],img_preview);
+                }
+            }
+        });
+    };
+
+    // Img preview file read
+    EqUI.forms.img_preview_file_read = function(file, img_preview) {
+        if(!window.FileReader){
+            return false;
+        }
+
+        var img_preview_img = img_preview.find('img');
+        var img_preview_loading = img_preview.find('.img-preview-loading');
+        var img_preview_text_loading = $(this).attr('data-img-preview-text-loading') || 'Loading...';
+
+        // Loading text
+        if(img_preview_loading.length){
+            img_preview_loading.html(img_preview_text_loading);
+        }
+
+        var reader = new FileReader();
+
+        // Closure to capture the file information.
+        reader.onload = (function(theFile) {
+            return function(e) {
+                // Render thumbnail.
+                img_preview_img.attr("src", e.target.result);
+
+                // Loading text
+                if(img_preview_loading.length){
+                    img_preview_loading.html(escape(theFile.name));
+                }
+            };
+        })(file);
+
+        // Read in the image file as a data URL.
+        reader.readAsDataURL(file);
     };
 
     $(document).ready(function() {

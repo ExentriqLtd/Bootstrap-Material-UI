@@ -141,6 +141,15 @@
             height: calc(100% - 118px);
         }
     }
+
+    // Without Footer
+    &.eq-ui-modal-without-footer {
+        .eq-ui-modal-header {
+            &+.eq-ui-modal-content {
+                height: calc(100% - 65px);
+            }
+        }
+    }
 }
 
 // Modal Top and Bottom Sheet Style
