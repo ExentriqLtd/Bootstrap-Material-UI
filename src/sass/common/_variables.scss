@@ -11,6 +11,10 @@
 $eq-ui-num-cols: 12 !default;
 $eq-ui-gutter-width: 32px !default;
 
+/*** Custom Colors ***/
+//$eq-ui-primary-color: #808080 !default;
+//$eq-ui-secondary-color: #1bbc9b !default;
+
 /*** Colors ***/
 $eq-ui-primary-color: color("eq-deep-blue", "500") !default;
 $eq-ui-primary-color-light: lighten($eq-ui-primary-color, 15%) !default;

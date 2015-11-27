@@ -8,37 +8,37 @@
 	font-size: 24px;
 
 	// Align
-	&.icon-left, .eq-ui-icon-left {
+	&.icon-left, &.eq-ui-icon-left {
 		float: left;
 		margin-right: 15px;
 	}
-	&.icon-right, .eq-ui-icon-right {
+	&.icon-right, &.eq-ui-icon-right {
 		float: right;
 		margin-left: 15px;
 	}
 
 	// Sizing
-	&.icon-18, .eq-ui-icon-18 {
+	&.icon-18, &.eq-ui-icon-18 {
 		font-size: 18px;
 	}
-	&.icon-24, .eq-ui-icon-24 {
+	&.icon-24, &.eq-ui-icon-24 {
 		font-size: 24px;
 	}
-	&.icon-36, .eq-ui-icon-36 {
+	&.icon-36, &.eq-ui-icon-36 {
 		font-size: 36px;
 	}
-	&.icon-48, .eq-ui-icon-48 {
+	&.icon-48, &.eq-ui-icon-48 {
 		font-size: 48px;
 	}
-	&.icon-96, .eq-ui-icon-96 {
+	&.icon-96, &.eq-ui-icon-96 {
 		font-size: 96px;
 	}
-	&.icon-128, .eq-ui-icon-128 {
+	&.icon-128, &.eq-ui-icon-128 {
 		font-size: 128px;
 	}
 
 	// Black on a light background
-	&.icon-dark, .eq-ui-icon-dark {
+	&.icon-dark, &.eq-ui-icon-dark {
 		color: rgba(0, 0, 0, 0.54);
 		&.icon-inactive, .eq-ui-icon-inactive {
 			color: rgba(0, 0, 0, 0.26);
@@ -46,7 +46,7 @@
 	}
 
 	// White on a dark background
-	&.icon-light, .eq-ui-icon-light {
+	&.icon-light, &.eq-ui-icon-light {
 		color: rgba(255, 255, 255, 1);
 		&.icon-inactive, .eq-ui-icon-inactive {
 			color: rgba(255, 255, 255, 0.3);

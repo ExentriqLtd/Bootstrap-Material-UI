@@ -8285,53 +8285,53 @@
   font-size: 24px;
 }
 
-.icon.icon-left, .icon .eq-ui-icon-left, .eq-ui-icon.icon-left, .eq-ui-icon .eq-ui-icon-left {
+.icon.icon-left, .icon.eq-ui-icon-left, .eq-ui-icon.icon-left, .eq-ui-icon.eq-ui-icon-left {
   float: left;
   margin-right: 15px;
 }
 
-.icon.icon-right, .icon .eq-ui-icon-right, .eq-ui-icon.icon-right, .eq-ui-icon .eq-ui-icon-right {
+.icon.icon-right, .icon.eq-ui-icon-right, .eq-ui-icon.icon-right, .eq-ui-icon.eq-ui-icon-right {
   float: right;
   margin-left: 15px;
 }
 
-.icon.icon-18, .icon .eq-ui-icon-18, .eq-ui-icon.icon-18, .eq-ui-icon .eq-ui-icon-18 {
+.icon.icon-18, .icon.eq-ui-icon-18, .eq-ui-icon.icon-18, .eq-ui-icon.eq-ui-icon-18 {
   font-size: 18px;
 }
 
-.icon.icon-24, .icon .eq-ui-icon-24, .eq-ui-icon.icon-24, .eq-ui-icon .eq-ui-icon-24 {
+.icon.icon-24, .icon.eq-ui-icon-24, .eq-ui-icon.icon-24, .eq-ui-icon.eq-ui-icon-24 {
   font-size: 24px;
 }
 
-.icon.icon-36, .icon .eq-ui-icon-36, .eq-ui-icon.icon-36, .eq-ui-icon .eq-ui-icon-36 {
+.icon.icon-36, .icon.eq-ui-icon-36, .eq-ui-icon.icon-36, .eq-ui-icon.eq-ui-icon-36 {
   font-size: 36px;
 }
 
-.icon.icon-48, .icon .eq-ui-icon-48, .eq-ui-icon.icon-48, .eq-ui-icon .eq-ui-icon-48 {
+.icon.icon-48, .icon.eq-ui-icon-48, .eq-ui-icon.icon-48, .eq-ui-icon.eq-ui-icon-48 {
   font-size: 48px;
 }
 
-.icon.icon-96, .icon .eq-ui-icon-96, .eq-ui-icon.icon-96, .eq-ui-icon .eq-ui-icon-96 {
+.icon.icon-96, .icon.eq-ui-icon-96, .eq-ui-icon.icon-96, .eq-ui-icon.eq-ui-icon-96 {
   font-size: 96px;
 }
 
-.icon.icon-128, .icon .eq-ui-icon-128, .eq-ui-icon.icon-128, .eq-ui-icon .eq-ui-icon-128 {
+.icon.icon-128, .icon.eq-ui-icon-128, .eq-ui-icon.icon-128, .eq-ui-icon.eq-ui-icon-128 {
   font-size: 128px;
 }
 
-.icon.icon-dark, .icon .eq-ui-icon-dark, .eq-ui-icon.icon-dark, .eq-ui-icon .eq-ui-icon-dark {
+.icon.icon-dark, .icon.eq-ui-icon-dark, .eq-ui-icon.icon-dark, .eq-ui-icon.eq-ui-icon-dark {
   color: rgba(0, 0, 0, 0.54);
 }
 
-.icon.icon-dark.icon-inactive, .icon.icon-dark .eq-ui-icon-inactive, .icon .eq-ui-icon-dark.icon-inactive, .icon .eq-ui-icon-dark .eq-ui-icon-inactive, .eq-ui-icon.icon-dark.icon-inactive, .eq-ui-icon.icon-dark .eq-ui-icon-inactive, .eq-ui-icon .eq-ui-icon-dark.icon-inactive, .eq-ui-icon .eq-ui-icon-dark .eq-ui-icon-inactive {
+.icon.icon-dark.icon-inactive, .icon.icon-dark .eq-ui-icon-inactive, .icon.eq-ui-icon-dark.icon-inactive, .icon.eq-ui-icon-dark .eq-ui-icon-inactive, .eq-ui-icon.icon-dark.icon-inactive, .eq-ui-icon.icon-dark .eq-ui-icon-inactive, .eq-ui-icon.eq-ui-icon-dark.icon-inactive, .eq-ui-icon.eq-ui-icon-dark .eq-ui-icon-inactive {
   color: rgba(0, 0, 0, 0.26);
 }
 
-.icon.icon-light, .icon .eq-ui-icon-light, .eq-ui-icon.icon-light, .eq-ui-icon .eq-ui-icon-light {
+.icon.icon-light, .icon.eq-ui-icon-light, .eq-ui-icon.icon-light, .eq-ui-icon.eq-ui-icon-light {
   color: white;
 }
 
-.icon.icon-light.icon-inactive, .icon.icon-light .eq-ui-icon-inactive, .icon .eq-ui-icon-light.icon-inactive, .icon .eq-ui-icon-light .eq-ui-icon-inactive, .eq-ui-icon.icon-light.icon-inactive, .eq-ui-icon.icon-light .eq-ui-icon-inactive, .eq-ui-icon .eq-ui-icon-light.icon-inactive, .eq-ui-icon .eq-ui-icon-light .eq-ui-icon-inactive {
+.icon.icon-light.icon-inactive, .icon.icon-light .eq-ui-icon-inactive, .icon.eq-ui-icon-light.icon-inactive, .icon.eq-ui-icon-light .eq-ui-icon-inactive, .eq-ui-icon.icon-light.icon-inactive, .eq-ui-icon.icon-light .eq-ui-icon-inactive, .eq-ui-icon.eq-ui-icon-light.icon-inactive, .eq-ui-icon.eq-ui-icon-light .eq-ui-icon-inactive {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -8342,6 +8342,7 @@
 /* Default Variables                       */
 /* --------------------------------------- */
 /*** Grid Variables ***/
+/*** Custom Colors ***/
 /*** Colors ***/
 /*** Fonts ***/
 /*** Typography ***/

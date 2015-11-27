@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.2.6 (Nov ?, 2015)
+
+**Fixes**
+- icons, name class
+
 ### v0.2.5 (Nov 24, 2015)
 
 **New**
