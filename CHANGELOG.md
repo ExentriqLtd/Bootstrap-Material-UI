@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-### v0.2.6 (Nov ?, 2015)
+### v0.2.6 (Nov 27, 2015)
 
 **Updates**
 - Add dropdown close action
