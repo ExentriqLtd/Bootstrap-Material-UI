@@ -21177,7 +21177,7 @@ textarea.eq-ui-textarea:focus.invalid + label:after {
 }
 
 .eq-ui-form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .eq-ui-input-field {

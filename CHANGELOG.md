@@ -2,8 +2,12 @@
 
 ### v0.2.6 (Nov ?, 2015)
 
+**Updates**
+- Add dropdown close action
+
 **Fixes**
 - icons, name class
+- margin bottom form group
 
 ### v0.2.5 (Nov 24, 2015)
 

@@ -9,7 +9,8 @@
             outDuration: 225,
             hover: true,
             gutter: 0,
-            belowOrigin: false
+            belowOrigin: false,
+            close: false
         };
 
         this.each(function(){
@@ -20,6 +21,12 @@
 
             // Update options
             updateOptions();
+
+            // Is close option
+            if(options.close){
+                dropdownClose(target);
+                return;
+            }
 
             // If below Origin
             if(options.belowOrigin){
