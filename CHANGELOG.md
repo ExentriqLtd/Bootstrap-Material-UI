@@ -1,5 +1,19 @@
 ## CHANGELOG
 
+### v0.2.7 (Dec ?, 2015)
+
+**Updates**
+- Create new tool system bar in layout
+- Create [Select](http://bootstrap-material-ui.exentriq.com/forms.html#forms-select)
+
+**Updates**
+- Layout structure
+- Top Bar
+- Home
+
+**Fixes**
+- Justified in [tabs](http://bootstrap-material-ui.exentriq.com/tabs.html)
+
 ### v0.2.6 (Nov 27, 2015)
 
 **Updates**

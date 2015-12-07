@@ -2,6 +2,7 @@
 
 // Tool bar
 .eq-ui-tool-bar, .eq-ui-tool-bar-primary  {
+    position: relative;
     color: $eq-ui-tool-bar-font-color;
     background-color: $eq-ui-tool-bar-bg-color;
     height: $eq-ui-tool-bar-height;
@@ -10,7 +11,7 @@
 
 // Tool bar primary
 .eq-ui-tool-bar-primary {
-    background: #FFFFFF;
+
 }
 
 @media (max-width: $screen-sm-min) {

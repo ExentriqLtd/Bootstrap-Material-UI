@@ -10,7 +10,7 @@
     white-space: nowrap;
 
     .eq-ui-tab {
-        display: table-cell;
+        display: inline-block;
         text-align: center;
         line-height: 48px;
         height: 48px;
@@ -102,8 +102,11 @@
 
     // Justified
     &.eq-ui-tabs-justified {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
         .eq-ui-tab {
-            width: 1%;
+            width: 100%;
         }
     }
 }

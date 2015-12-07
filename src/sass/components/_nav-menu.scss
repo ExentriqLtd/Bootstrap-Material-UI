@@ -38,3 +38,19 @@
         }
     }
 }
+
+// In system bar
+.eq-ui-tool-bar-system {
+    .eq-ui-nav-menu {
+        height: $eq-ui-tool-bar-system-height;
+
+        // Item with icon
+        >li.eq-ui-nav-menu-item-icon {
+
+            >a {
+                line-height: 32px;
+                margin: (($eq-ui-tool-bar-system-height - 32px)/2) 0;
+            }
+        }
+    }
+}

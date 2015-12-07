@@ -59,6 +59,14 @@ var EqUIDoc = {};
         if(_doc_route.path === "index"){
             EqUIDoc.site.build_git_home();
         }
+
+        // Show layout structures
+        if(_doc_route.path === "buttons"){
+            EqUI.site.body.addClass('doc-show-in-layout-struture-1');
+        }
+
+        // When our page loads, check to see if it contains and anchor
+        EqUIDoc.site.scroll_if_anchor(window.location.hash);
     };
 
     // Form validations
@@ -78,12 +86,14 @@ var EqUIDoc = {};
     EqUIDoc.site.build_git_home = function() {
 
         var _download_in_git_hub = $('.download-in-git-hub');
+        var _download_in_git_hub_href = $('.download-in-git-hub-href');
         if (_download_in_git_hub.length) {
             $.ajax({
                 url: "https://api.github.com/repos/ExentriqLtd/Bootstrap-Material-UI/tags",
                 dataType: "json",
                 success: function (data) {
                     _download_in_git_hub.html('<i class="mdi mdi-download icon icon-right icon-18"></i> Download v.'+data[0].name).attr('href', data[0].zipball_url);
+                    _download_in_git_hub_href.attr('href', data[0].zipball_url);
                 }
             });
         }
@@ -95,9 +105,27 @@ var EqUIDoc = {};
                 success: function (data) {
                     var date = $.timeago(data.commit.author.date);
                     _last_commit_in_git_hub.html(date).attr('href', data.html_url);
-
                 }
             });
+        }
+    };
+
+
+    // Scroll if anchor
+    EqUIDoc.site.scroll_if_anchor = function(href) {
+        href = typeof(href) == "string" ? href : $(this).attr("href");
+        var fromTop = 160;
+
+        if(href.indexOf("#") == 0) {
+            var $target = $(href);
+
+            if($target.length) {
+                $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, 1000);
+                if(history && "pushState" in history) {
+                    history.pushState({}, document.title, window.location.pathname + href);
+                    return false;
+                }
+            }
         }
     };
 

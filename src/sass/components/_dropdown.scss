@@ -41,11 +41,11 @@
                 font-size: 18px;
             }
 
-            &:hover, &.active, &.selected {
+            &.active {
                 background-color: $dropdown-hover-bg-color;
             }
 
-            &.active.selected {
+            &:hover {
                 background-color: darken($dropdown-hover-bg-color, 5%);
             }
         }
@@ -68,6 +68,7 @@
 
             a {
                 opacity: 0.3;
+                background: transparent;
                 pointer-events: none;
                 cursor: default;
             }
@@ -156,4 +157,21 @@
 
     }
 
+}
+
+html.is-touch {
+    .eq-ui-dropdown {
+        li {
+
+            & > a {
+
+                &:hover {
+                    background-color: $dropdown-hover-bg-color;
+                }
+                &:not(.active):hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
 }

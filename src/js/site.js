@@ -28,14 +28,27 @@
 
     // Update
     EqUI.site.update = function() {
-        
-        // Is layout header is fixed
+
         var _layout_header_offset = 0;
-        if(EqUI.site.body.hasClass('eq-ui-layout-header-primary-visible')){
-            _layout_header_offset = 64;
+        var _layout_header = $('.eq-ui-layout-header');
+        var _layout_header_primary = $('.eq-ui-layout-header-primary');
+
+        // Is header primary visible
+        if(_layout_header_primary.length){
+            _layout_header_offset = _layout_header_primary.outerHeight(true);
+            if(_layout_header_offset > 0){ _layout_header_offset = _layout_header_offset-1; }
+            $('.eq-ui-side-nav').css('top', _layout_header_offset+'px');
+        } else {
+            $('.eq-ui-side-nav').css('top', '0px');
         }
+
+        // Is header fixed layout
         if(EqUI.site.body.hasClass('eq-ui-layout-header-fixed')){
-            EqUI.site.body.css('margin-top', $('.eq-ui-layout-header').outerHeight(true)+_layout_header_offset+'px');
+            _layout_header.css('top', _layout_header_offset+'px');
+            EqUI.site.body.css('margin-top', _layout_header.outerHeight(true)+_layout_header_offset+'px');
+        } else {
+            _layout_header.css('top', '0px');
+            EqUI.site.body.css('margin-top', _layout_header_offset+'px');
         }
         
         if (window.innerWidth > 768) {

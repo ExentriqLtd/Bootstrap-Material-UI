@@ -10,21 +10,6 @@
         // Build palettes
         EqUIDoc.color.build_palettes();
 
-        // This route
-        riot.route.exec(function(collection, id, action) {
-
-            // Is id
-            /*if(EqUI.site.query_string.id != undefined){
-                EqUIDoc.color.id = EqUI.site.query_string.id;
-            }*/
-
-        });
-
-        // Change route
-        riot.route(function(collection, id, action) {
-            // console.log(collection);
-        });
-
         // Render in color view
         if(_doc_route.path === "color"){
             // Render UI -> Color palette

@@ -122,9 +122,9 @@ textarea.eq-ui-textarea {
     label {
         color: $input-border-color;
         position: absolute;
-        width: 100%;
         top: 0.8rem;
         left: 0;
+        right: 0;
         cursor: text;
         transition: .2s ease-out;
     }
@@ -156,6 +156,152 @@ textarea.eq-ui-textarea {
     overflow-y: hidden !important; /* prevents scroll bar flash */
     resize: none;
     padding: 12px 0;
+}
+
+/* --------------------------------------- */
+/* Browser Select
+/* --------------------------------------- */
+
+/* Remove focus box in moz */
+@-moz-document url-prefix() {
+    select:-moz-focusring, select::-moz-focus-inner {
+        color: transparent !important;
+        text-shadow: 0 0 0 #000 !important;
+    }
+}
+
+select.eq-ui-browser-select {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+
+    font-size: $eq-ui-font-size-base;
+    line-height: $eq-ui-line-height-base;
+    color: color("grey", "800");
+    border-bottom: 1px solid $input-border-color;
+    border-radius: 0;
+    outline: none;
+    height: 3.06rem;
+    width: 100%;
+    padding-right: 28px;
+    cursor: pointer;
+
+    &:disabled {
+        cursor: default;
+        color: rgba(0,0,0,.3);
+        border-bottom: 1px dotted $input-disabled-color;
+
+        + span.eq-ui-caret {
+            color: $input-disabled-color;
+        }
+    }
+}
+
+.eq-ui-browser-select-field {
+    position: relative;
+    margin-top: 1rem;
+
+    @include eq-ui-select-caret();
+
+    label {
+        color: $input-border-color;
+        position: absolute;
+        top: -14px;
+        left: 0;
+        right: 0;
+        cursor: text;
+        transition: .2s ease-out;
+        font-size: 0.8rem;
+    }
+}
+
+/* --------------------------------------- */
+/* Select
+/* --------------------------------------- */
+
+.eq-ui-select-wrapper {
+    position: relative;
+
+    @include eq-ui-select-caret();
+
+    input.eq-ui-input[type=text] {
+        position: relative;
+        cursor: pointer;
+        padding-right: 28px;
+        box-sizing: inherit;
+        height: 3.06rem;
+
+        // Form Message Shared Styles
+        & ~ .eq-ui-select-fake-msg-error,
+        & ~ .eq-ui-select-fake-msg-success {
+            display: block;
+            font-size: $label-font-size;
+            position: absolute;
+            top: 52px;
+            opacity: 0;
+        }
+
+        &.valid {
+            & ~ .eq-ui-select-fake-msg-success {
+                color: $input-success-color;
+                opacity: 1;
+            }
+        }
+
+        &.invalid {
+            & ~ .eq-ui-select-fake-msg-error {
+                color: $input-error-color;
+                opacity: 1;
+            }
+        }
+
+        &:disabled, &[readonly="readonly"] {
+            cursor: default;
+        }
+    }
+
+    .eq-ui-dropdown {
+        width: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        word-wrap: break-word;
+
+        @extend .eq-ui-scrollbar-y;
+
+        &.active {
+            + span.eq-ui-caret {
+                border-top: none;
+                border-bottom: 6px dashed;
+                z-index: 9999;
+            }
+        }
+
+        li {
+            a {
+                .eq-ui-select-icon {
+                    visibility: hidden;
+                }
+
+                &.active {
+                    .eq-ui-select-icon {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    + label {
+        position: absolute;
+        top: -14px;
+        font-size: 0.8rem;
+    }
+
+    .eq-ui-select {
+        display: none;
+    }
 }
 
 /* --------------------------------------- */
@@ -535,7 +681,7 @@ input.eq-ui-input[type="checkbox"].filled-in {
             border-radius: 15px;
             transition: background 0.3s ease;
             vertical-align: middle;
-            margin: 0 16px;
+            margin: 0 8px;
 
             &:after {
                 content: "";

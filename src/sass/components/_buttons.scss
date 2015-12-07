@@ -187,6 +187,7 @@
 	position: absolute;
 	right: 24px;
 	bottom: -28px;
+    z-index: $eq-ui-zindex-app-bar-fab;
 	a {
 		display: block;
 		position: relative;

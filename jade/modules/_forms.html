@@ -42,10 +42,28 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="eq-ui-form-group eq-ui-input-field">
-                            <input id="email" type="email" class="eq-ui-input">
-                            <label for="email" data-error="wrong" data-success="right">Email</label>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="email" type="email" class="eq-ui-input">
+                                    <label for="email" data-error="wrong" data-success="right">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <select id="gender" class="eq-ui-select">
+                                        <option value="" disabled selected>Choose your gender</option>
+                                        <option value="1">Male</option>
+                                        <option value="2">Female</option>
+                                    </select>
+                                    <label>Gender</label>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -105,10 +123,28 @@
         &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-md-12&quot;&gt;
-            &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
-                &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;eq-ui-input&quot;&gt;
-                &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;input id=&quot;email&quot; type=&quot;email&quot; class=&quot;eq-ui-input&quot;&gt;
+                        &lt;label for=&quot;email&quot; data-error=&quot;wrong&quot; data-success=&quot;right&quot;&gt;Email&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;col-md-6&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-12&quot;&gt;
+                    &lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+                        &lt;select id=&quot;gender&quot; class=&quot;eq-ui-select&quot;&gt;
+                            &lt;option value=&quot;&quot; disabled selected&gt;Choose your gender&lt;/option&gt;
+                            &lt;option value=&quot;1&quot;&gt;Male&lt;/option&gt;
+                            &lt;option value=&quot;2&quot;&gt;Female&lt;/option&gt;
+                        &lt;/select&gt;
+                        &lt;label&gt;Gender&lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
@@ -269,6 +305,146 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;</code></pre>
+        </div>
+    </div>
+
+    <div id="forms-select" class="row">
+        <div class="col-md-12">
+            <h2 class="header">Select</h2>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <select class="eq-ui-select">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Normal Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+    &lt;select class=&quot;eq-ui-select&quot;&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Normal Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <select class="eq-ui-select" multiple>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Multiple Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-form-group eq-ui-input-field&quot;&gt;
+    &lt;select class=&quot;eq-ui-select&quot; multiple&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Multiple Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="eq-ui-form-group eq-ui-browser-select-field">
+                            <span class="eq-ui-caret"></span>
+                            <select class="eq-ui-browser-select">
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Browser Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;div class=&quot;eq-ui-form-group eq-ui-browser-select-field&quot;&gt;
+    &lt;span class=&quot;eq-ui-caret&quot;&gt;&lt;/span&gt;
+    &lt;select class=&quot;eq-ui-browser-select&quot;&gt;
+        &lt;option value=&quot;&quot; disabled selected&gt;Choose your option&lt;/option&gt;
+        &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+        &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+        &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;label&gt;Browser Select&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+            <br><br>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="eq-ui-form-group eq-ui-browser-select-field">
+                            <select class="eq-ui-browser-select" disabled>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <span class="eq-ui-caret"></span>
+                            <label>Disabled Browser Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form class="doc-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="eq-ui-form-group eq-ui-input-field">
+                            <select class="eq-ui-select" disabled>
+                                <option value="" disabled selected>Choose your option</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label>Disabled Normal Select</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <pre><code class="language-markup">
+&lt;!-- Disabled Browser Select --&gt;
+...
+&lt;select class=&quot;eq-ui-browser-select&quot; disabled&gt;
+...
+
+&lt;!-- Disabled Normal Select --&gt;
+...
+&lt;select class=&quot;eq-ui-select&quot; disabled&gt;
+...</code></pre>
+
         </div>
     </div>
 

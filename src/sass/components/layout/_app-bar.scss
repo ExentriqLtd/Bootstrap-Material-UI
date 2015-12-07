@@ -3,6 +3,7 @@
 
 // App bar
 .eq-ui-app-bar {
+    position: relative;
     color: color("shades", "white");
     background-color: $eq-ui-primary-color;
     height: $eq-ui-tool-bar-height;

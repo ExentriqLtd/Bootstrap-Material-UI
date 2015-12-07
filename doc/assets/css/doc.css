@@ -2,6 +2,15 @@ body {
     
 }
 
+/* Layout */
+*:not(body).doc-show-in-layout-struture-1 {
+    display: none;
+}
+
+body.doc-show-in-layout-struture-1 .doc-show-in-layout-struture-1 {
+    display: block;
+}
+
 /* Home */
 .jumbotron.home {
 	text-align: center;

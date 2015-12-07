@@ -12,8 +12,8 @@ $eq-ui-num-cols: 12 !default;
 $eq-ui-gutter-width: 32px !default;
 
 /*** Custom Colors ***/
-//$eq-ui-primary-color: #808080 !default;
-//$eq-ui-secondary-color: #1bbc9b !default;
+//$eq-ui-primary-color: #3e50b4 !default;
+//$eq-ui-secondary-color: #FF4081 !default;
 
 /*** Colors ***/
 $eq-ui-primary-color: color("eq-deep-blue", "500") !default;
@@ -85,7 +85,14 @@ $eq-ui-side-nav-menu-padding-left: 24px !default;
 /*** Tool bar ***/
 $eq-ui-tool-bar-height: 64px !default;
 $eq-ui-tool-bar-font-color: color("eq-medium-grey", "500") !default;
-$eq-ui-tool-bar-bg-color: color("eq-medium-grey", "50") !default;
+$eq-ui-tool-bar-bg-color: #ffffff !default;
+
+/*** System bar ***/
+$eq-ui-tool-bar-system-height: 48px !default;
+$eq-ui-tool-bar-system-font-color: #ffffff !default;
+$eq-ui-tool-bar-system-bg-color: $eq-ui-primary-color-dark !default;
+$eq-ui-tool-bar-system-font-color-inverted: $eq-ui-tool-bar-font-color !default;
+$eq-ui-tool-bar-system-bg-color-inverted: $eq-ui-tool-bar-bg-color !default;
 
 /*** Tables ***/
 $table-border: 1px solid rgba(0,0,0,.06) !default;

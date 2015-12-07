@@ -3,6 +3,7 @@
 
 // Layout header
 .eq-ui-layout-header, .eq-ui-layout-header-primary {
+    position: relative;
     @extend .z-depth-1;
 	z-index: $eq-ui-zindex-app-bar;
 	padding-left: $eq-ui-side-nav-width;
@@ -34,12 +35,7 @@ body.eq-ui-layout-header-fixed .eq-ui-layout-header, .eq-ui-layout-header-primar
     top: 0;
     width: 100%;
     box-sizing: border-box;
-    min-height: 64px;
-}
-
-// Is primary app is visible
-body.eq-ui-layout-header-fixed.eq-ui-layout-header-primary-visible .eq-ui-layout-header {
-    top: 64px;
+    min-height: 48px;
 }
 
 // Primary app bar
@@ -49,14 +45,7 @@ body.eq-ui-layout-header-fixed.eq-ui-layout-header-primary-visible .eq-ui-layout
     border-bottom: 1px solid #e1e1e1;
     z-index: $eq-ui-zindex-app-bar-primary;
 
-    display: none;
-}
-
-// Is primary app is visible
-body.eq-ui-layout-header-primary-visible {
-    .eq-ui-layout-header-primary {
-        display: block;
-    }
+    display: block;
 }
 
 body.eq-ui-side-nav-hide .eq-ui-layout-header  {

@@ -13986,14 +13986,27 @@ else {
 
     // Update
     EqUI.site.update = function() {
-        
-        // Is layout header is fixed
+
         var _layout_header_offset = 0;
-        if(EqUI.site.body.hasClass('eq-ui-layout-header-primary-visible')){
-            _layout_header_offset = 64;
+        var _layout_header = $('.eq-ui-layout-header');
+        var _layout_header_primary = $('.eq-ui-layout-header-primary');
+
+        // Is header primary visible
+        if(_layout_header_primary.length){
+            _layout_header_offset = _layout_header_primary.outerHeight(true);
+            if(_layout_header_offset > 0){ _layout_header_offset = _layout_header_offset-1; }
+            $('.eq-ui-side-nav').css('top', _layout_header_offset+'px');
+        } else {
+            $('.eq-ui-side-nav').css('top', '0px');
         }
+
+        // Is header fixed layout
         if(EqUI.site.body.hasClass('eq-ui-layout-header-fixed')){
-            EqUI.site.body.css('margin-top', $('.eq-ui-layout-header').outerHeight(true)+_layout_header_offset+'px');
+            _layout_header.css('top', _layout_header_offset+'px');
+            EqUI.site.body.css('margin-top', _layout_header.outerHeight(true)+_layout_header_offset+'px');
+        } else {
+            _layout_header.css('top', '0px');
+            EqUI.site.body.css('margin-top', _layout_header_offset+'px');
         }
         
         if (window.innerWidth > 768) {
@@ -14526,6 +14539,7 @@ else {
     EqUI.forms.init = function() {
         // Global vars
         EqUI.forms.element = $('.btn');
+        EqUI.forms.select_selector = '.eq-ui-select';
         EqUI.forms.input_selector = 'input.eq-ui-input[type=text], input.eq-ui-input[type=password], input.eq-ui-input[type=email], input.eq-ui-input[type=url], input.eq-ui-input[type=tel], input.eq-ui-input[type=number], input.eq-ui-input[type=search], textarea.eq-ui-textarea';
 
         // Update Labels
@@ -14594,6 +14608,9 @@ else {
 
         // Init file inputs
         EqUI.forms.file_input('.eq-ui-input-file');
+
+        // Init select
+        $(EqUI.forms.select_selector).eq_select();
     };
 
     // Update
@@ -14759,6 +14776,165 @@ else {
 
         // Read in the image file as a data URL.
         reader.readAsDataURL(file);
+    };
+
+    // Select
+    $.fn.eq_select = function (callback) {
+        $(this).each(function() {
+            var select = $(this);
+            var select_id = $(this).attr('id') || '';
+            var input_id = select_id + '-fake';
+            var valuesSelected = [];
+            var is_multiple = select.attr('multiple') ? true : false;
+            var last_ID = select.attr('data-select-id');
+            var label = '';
+
+            // If exist, rebuild
+            if (last_ID) {
+                select.parent().find('span.eq-ui-caret').remove();
+                select.parent().find('input').remove();
+
+                select.unwrap();
+                $('ul#dropdown-'+last_ID).remove();
+            }
+
+            // If destroying the select, remove the select-id and reset it to it's uninitialized state.
+            if(callback === 'destroy') {
+                select.attr('data-select-id', null).removeClass('initialized');
+                select.attr('data-parsley-class-handler', null);
+                return;
+            }
+
+            // Set ID
+            var unique_ID = EqUI.guid();
+            select.attr('data-select-id', unique_ID);
+            var select_options = select.children('option');
+
+            // Set class handler for parsley
+            if(EqUI.forms.validateLib === 'parsley'){
+                select.attr('data-parsley-class-handler', '#'+select_id+'-fake');
+            }
+
+            // Get msg text's
+            var label_text_error = select.parent().find('label').attr('data-error') || '';
+            var label_text_success = select.parent().find('label').attr('data-success') || '';
+
+            // Get label
+            if (select.find('option:selected').length > 0) {
+                label = select.find('option:selected');
+            } else {
+                label = select_options.first();
+            }
+
+            // Wrapper
+            var wrapper = $('<div class="eq-ui-select-wrapper"></div>');
+            select.wrap(wrapper);
+
+            // Add extra elements
+            var dropdown_icon = $('<span class="eq-ui-caret"></span>');
+            if (select.is(':disabled')){ dropdown_icon.addClass('disabled'); }
+            var sanitizedLabelHtml = label.html() && label.html().replace(/"/g, '&quot;');
+            var select_fake = $('' +
+            '<input id="'+input_id+'" data-target="dropdown-'+unique_ID+'" type="text" class="eq-ui-input eq-ui-select-fake" readonly="true" ' + ((select.is(':disabled')) ? 'disabled' : '') + ' value="'+ sanitizedLabelHtml +'"/>' +
+            '<span class="eq-ui-select-fake-msg-error">'+label_text_error+'</span>' +
+            '<span class="eq-ui-select-fake-msg-success">'+label_text_success+'</span>'
+            );
+
+            select.before(select_fake);
+
+            // Dropdown
+            var select_dropdown = $('<ul id="dropdown-'+unique_ID+'" class="eq-ui-dropdown"></ul>');
+
+            // Render option
+            var append_option = function(select, option) {
+                var disabled_class = (option.is(':disabled')) ? 'disabled ' : '';
+                var slected_class = (option.is(':selected')) ? 'active' : '';
+
+                select_dropdown.append($('' +
+                '<li class="' + disabled_class + '">' +
+                '<a ' + (is_multiple ? 'data-target="fake"' : '') + ' class="truncate ' + slected_class + '">' +
+                '<i class="mdi mdi-check icon eq-ui-select-icon"></i> <span>' + option.html() + '</span>' +
+                '</a></li>'));
+            };
+
+            // Create dropdown structure
+            if (select_options.length) {
+                select_options.each(function () {
+                    append_option(select, $(this));
+                });
+            }
+
+            // Add dropdown
+            select.before(select_dropdown);
+            select.before(dropdown_icon);
+
+            // Init dropdown
+            $('.eq-ui-select-wrapper input').dropdown({
+                inDuration: 300,
+                outDuration: 225,
+                hover: false,
+                gutter: -62,
+                belowOrigin: false,
+                close: false
+            });
+
+            // Add select dropdown events
+            select_dropdown.find('li').each(function (i) {
+                var curr_select = select;
+                $(this).click(function (e) {
+                    var element = $(e.target);
+
+                    if (is_multiple) {
+                        element.toggleClass('active');
+                        build_values_selected_from_multiple(valuesSelected, $(this).index(), curr_select);
+                        curr_select.find('option:disabled').eq(0).prop('selected', false);
+                        select_dropdown.find('li a').eq(0).removeClass('active');
+                    } else {
+                        select_dropdown.find('li a').removeClass('active');
+                        element.toggleClass('active');
+                        curr_select.siblings('input.eq-ui-select-fake').val(element.find('span').text());
+                    }
+
+                    curr_select.find('option').eq(i).prop('selected', element.hasClass('active'));
+                    curr_select.trigger('change');
+                });
+            });
+
+            // Set initialized
+            select.addClass('initialized');
+        });
+
+        function build_values_selected_from_multiple(entriesArray, entryIndex, select) {
+            var index = entriesArray.indexOf(entryIndex);
+
+            if (index === -1) {
+                entriesArray.push(entryIndex);
+            } else {
+                entriesArray.splice(index, 1);
+            }
+
+            set_input_from_multiple(entriesArray, select);
+        }
+
+        function set_input_from_multiple(entriesArray, select) {
+            var value = '';
+
+            for (var i = 0, count = entriesArray.length; i < count; i++) {
+                var text = select.find('option').eq(entriesArray[i]).text();
+
+                if(i === 0){
+                    value += text;
+                } else {
+                    value += ', ' + text;
+                }
+            }
+
+            if (value === '') {
+                value = select.find('option:disabled').eq(0).text();
+            }
+
+            select.siblings('input.eq-ui-select-fake').val(value);
+        }
     };
 
     $(document).ready(function() {

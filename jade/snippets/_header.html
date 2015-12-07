@@ -3,27 +3,41 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<!-- Primary app bar -->
+<!-- Primary Layout -->
 <header class="eq-ui-layout-header-primary">
 
-    <div class="eq-ui-tool-bar-primary">
+    <div class="eq-ui-tool-bar-system eq-ui-tool-bar-system-inverted">
         <div class="container-fluid">
 
             <!-- Title -->
-            <div class="header-title">
-                <span class="section-title">Tool Bar</span>
-            </div>
+            <!--div class="header-title">
+                <span class="section-title">System Bar</span>
+            </div-->
 
-            <!-- Nav Menu -->
-            <ul class="right eq-ui-nav-menu">
+            <!-- Left Nav Menu -->
+            <ul class="left eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
                     <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-top-search-show">
                         <i class="mdi mdi-magnify icon"></i>
                     </a>
                 </li>
+            </ul>
+
+            <!-- Right Nav Menu -->
+            <ul class="right eq-ui-nav-menu">
                 <li class="eq-ui-nav-menu-item-icon">
                     <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
                         <i class="mdi mdi-home icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a target="_blank" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/README.md" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-settings icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves download-in-git-hub-href">
+                        <i class="mdi mdi-download icon"></i>
                     </a>
                 </li>
                 <li class="eq-ui-nav-menu-item-icon">
@@ -56,9 +70,20 @@
         </div>
     </div>
 
+    <div class="eq-ui-tool-bar-primary" style="display: none;">
+        <div class="container-fluid">
+
+            <!-- Title -->
+            <div class="header-title">
+                <span class="section-title">Tool Bar</span>
+            </div>
+
+        </div>
+    </div>
+
 </header>
 
-<!-- Secondary app bar -->
+<!-- Secondary Layout -->
 <header class="eq-ui-layout-header">
 
     <div id="main-eq-ui-app-bar" class="eq-ui-app-bar">
@@ -89,20 +114,20 @@
                 </li>
             </ul>
 
-            <!-- Floating Btn -->
-            <div class="eq-ui-btn-fab-floating">
-                <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="mdi mdi-plus icon"></i></a>
-            </div>
-
         </div>
     </div>
 
-    <div class="eq-ui-tool-bar">
+    <div class="eq-ui-tool-bar doc-show-in-layout-struture-1">
         <div class="container-fluid">
             <div class="header-title">
                 <span class="section-title">Tool Bar</span>
             </div>
         </div>
+    </div>
+
+    <!-- Floating Btn -->
+    <div class="eq-ui-btn-fab-floating doc-show-in-layout-struture-1">
+        <a class="btn btn-primary eq-ui-btn-fab eq-ui-waves-light"><i class="mdi mdi-plus icon"></i></a>
     </div>
 
 </header>
@@ -192,6 +217,15 @@
                             <a id="collapsible-nav-java-script-dropdown" href="./dropdown.html">Dropdown</a>
                             <a id="collapsible-nav-java-script-modals" href="./modals.html">Modals</a>
                             <a id="collapsible-nav-java-script-tabs" href="./tabs.html">Tabs</a>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="eq-ui-collapsible-header eq-ui-waves">
+                            <a id="collapsible-nav-download" class="download-in-git-hub-href" href="https://github.com/ExentriqLtd/Bootstrap-Material-UI/archive/master.zip">
+                                <i class="mdi mdi-download icon icon-left icon-24"></i>
+                                Download
+                            </a>
                         </div>
                     </li>
 

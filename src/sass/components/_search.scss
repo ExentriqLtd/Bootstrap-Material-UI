@@ -96,7 +96,25 @@
 
 }
 
-// Search in Side Nav
+// In System bar
+
+.eq-ui-tool-bar-system {
+
+    .eq-ui-top-search {
+
+        // Hide
+        top: -($eq-ui-tool-bar-system-height);
+
+        // Search in top
+        .eq-ui-search {
+            line-height: $eq-ui-tool-bar-system-height;
+        }
+
+    }
+
+}
+
+// In Side Nav
 
 .eq-ui-side-nav nav {
     .eq-ui-search {

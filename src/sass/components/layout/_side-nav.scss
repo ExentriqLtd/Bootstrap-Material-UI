@@ -79,13 +79,6 @@
     }
 }
 
-// Is primary app is visible
-body.eq-ui-layout-header-primary-visible {
-    .eq-ui-side-nav {
-        top: 64px;
-    }
-}
-
 // Show Side nav
 body.eq-ui-side-nav-visible .eq-ui-side-nav {
 	transform: translateX(0);
