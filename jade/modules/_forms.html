@@ -803,4 +803,47 @@
         </div>
     </div>
 
+    <div id="forms-file-upload-drop" class="row">
+        <div class="col-md-12">
+            <h2 class="header">File Upload - Drag and Drop</h2>
+            <p>Based in <a target="_blank" href="https://github.com/enyo/dropzone">DropzoneJS</a> plugin. For more info and view the documentation, go to: <a target="_blank" href="http://www.dropzonejs.com/#configuration-options">DropzoneJS Doc</a></p>
+
+            <ul class="eq-ui-list eq-ui-file-upload-drop-zone doc-margin-bottom">
+                <div class="eq-ui-file-upload-drop-zone-message doc-drop-zone-message">
+                    DRAG & DROP HERE<br>
+                    <span class="doc-drop-zone-message-browse">or <span class="doc-drop-zone-message-browse-link">Browse</span></span>
+                </div>
+            </ul>
+
+            <p>Sample drop zone</p>
+            <pre><code class="language-markup">
+&lt;ul class=&quot;eq-ui-list eq-ui-file-upload-drop-zone&quot;&gt;
+    &lt;div class=&quot;eq-ui-file-upload-drop-zone-message doc-drop-zone-message&quot;&gt;
+        DRAG &amp; DROP HERE&lt;br&gt;
+        &lt;span class=&quot;doc-drop-zone-message-browse&quot;&gt;or &lt;span class=&quot;doc-drop-zone-message-browse-link&quot;&gt;Browse&lt;/span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ul&gt;</code></pre>
+
+            <br>
+            <p>Sample usage</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+
+    // Create File Upload Drop
+    var _dropzone = EqUI.forms.file_upload_drop('.eq-ui-file-upload-drop-zone', {
+        url: 'http://domain/upload/',
+        defaultImageThumbnail: "assets/img/doc/files/empty.png"
+    });
+
+    // File Upload Drop - Sample Event
+    _dropzone.on("addedfile", function(file) {
+        console.log(file);
+    });
+
+});</code></pre>
+
+        </div>
+    </div>
+
 </div>

@@ -86,6 +86,7 @@ module.exports = function ( grunt ) {
                     'src/bower_components/jquery.easing/js/jquery.easing.js',
                     'src/bower_components/hammerjs/hammer.js',
                     'src/bower_components/jquery-hammerjs/jquery.hammer.js',
+                    'src/bower_components/dropzone/dist/dropzone.js',
                     'src/bower_components/velocity/velocity.js',
                     'src/bower_components/velocity/velocity.ui.js',
                     'src/bower_components/autosize/dist/autosize.js',

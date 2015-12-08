@@ -117,6 +117,19 @@ p.last-commit-in-git-hub-p {
 	margin-bottom: 25px;
 }
 
+/* Drop zone */
+.doc-drop-zone-message {
+    text-align: center;
+    font-weight: 500;
+    color: #4e4e4e;
+}
+.doc-drop-zone-message .doc-drop-zone-message-browse {
+    font-weight: 400;
+}
+.doc-drop-zone-message .doc-drop-zone-message-browse-link {
+    text-decoration: underline;
+}
+
 /* Media */
 @media only screen and (max-width: 768px) {
     .eq-ui-app-bar .header-title span,

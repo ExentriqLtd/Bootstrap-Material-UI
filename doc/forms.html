@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Forms | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.6" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.6" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.7" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.7" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"forms",name_section:"Components",name_chapter:"Forms"};</script>
@@ -1316,6 +1316,49 @@
         </div>
     </div>
 
+    <div id="forms-file-upload-drop" class="row">
+        <div class="col-md-12">
+            <h2 class="header">File Upload - Drag and Drop</h2>
+            <p>Based in <a target="_blank" href="https://github.com/enyo/dropzone">DropzoneJS</a> plugin. For more info and view the documentation, go to: <a target="_blank" href="http://www.dropzonejs.com/#configuration-options">DropzoneJS Doc</a></p>
+
+            <ul class="eq-ui-list eq-ui-file-upload-drop-zone doc-margin-bottom">
+                <div class="eq-ui-file-upload-drop-zone-message doc-drop-zone-message">
+                    DRAG & DROP HERE<br>
+                    <span class="doc-drop-zone-message-browse">or <span class="doc-drop-zone-message-browse-link">Browse</span></span>
+                </div>
+            </ul>
+
+            <p>Sample drop zone</p>
+            <pre><code class="language-markup">
+&lt;ul class=&quot;eq-ui-list eq-ui-file-upload-drop-zone&quot;&gt;
+    &lt;div class=&quot;eq-ui-file-upload-drop-zone-message doc-drop-zone-message&quot;&gt;
+        DRAG &amp; DROP HERE&lt;br&gt;
+        &lt;span class=&quot;doc-drop-zone-message-browse&quot;&gt;or &lt;span class=&quot;doc-drop-zone-message-browse-link&quot;&gt;Browse&lt;/span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/ul&gt;</code></pre>
+
+            <br>
+            <p>Sample usage</p>
+
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+
+    // Create File Upload Drop
+    var _dropzone = EqUI.forms.file_upload_drop('.eq-ui-file-upload-drop-zone', {
+        url: 'http://domain/upload/',
+        defaultImageThumbnail: "assets/img/doc/files/empty.png"
+    });
+
+    // File Upload Drop - Sample Event
+    _dropzone.on("addedfile", function(file) {
+        console.log(file);
+    });
+
+});</code></pre>
+
+        </div>
+    </div>
+
 </div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>
@@ -1332,12 +1375,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.6"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.7"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.2.6"></script>
+<script src="assets/js/doc.js?v=0.2.7"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

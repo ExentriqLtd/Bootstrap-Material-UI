@@ -74,6 +74,11 @@
             Parsley.options.errorClass = 'invalid';
         }
 
+        // Setting Dropzone Globals
+        if(Dropzone){
+            Dropzone.autoDiscover = false;
+        }
+
         // Init file inputs
         EqUI.forms.file_input('.eq-ui-input-file');
 
@@ -160,6 +165,42 @@
         }
 
         return null;
+    };
+
+    // File upload drop, using a dropzone lib (http://www.dropzonejs.com/)
+    EqUI.forms.file_upload_drop = function(object, options) {
+        var _object = $(object);
+        if(!_object.length){
+            return false;
+        }
+
+        // Defaults
+        var defaults = {
+            previewTemplate: '',
+            defaultImageThumbnail: ""
+        };
+        var _options = $.extend({}, defaults, options);
+
+        // Default template
+        if(_options.previewTemplate === ''){
+            _options.previewTemplate = '' +
+            '<li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content eq-ui-list-truncate">'+
+            '   <img class="circle" src="'+_options.defaultImageThumbnail+'" data-dz-thumbnail>'+
+            '   <div class="eq-ui-list-body">'+
+            '       <h6 class="eq-ui-list-title"><span data-dz-name></span></h6>'+
+            '       <span data-dz-size></span><span class="eq-ui-file-upload-drop-zone-error-message truncate" data-dz-errormessage></span>'+
+            '       <div class="eq-ui-progress">'+
+            '           <div class="eq-ui-determinate" data-dz-uploadprogress></div>'+
+            '       </div>'+
+            '   </div>'+
+            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-success"><i class="mdi mdi-check icon icon-24"></i></a>'+
+            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-error"><i class="mdi mdi-close icon icon-24"></i></a>'+
+            '</li>';
+        }
+
+        var _dropzone = new Dropzone(object, _options);
+
+        return _dropzone;
     };
 
     // Init file input

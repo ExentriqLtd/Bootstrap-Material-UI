@@ -1,10 +1,11 @@
 ## CHANGELOG
 
-### v0.2.7 (Dec ?, 2015)
+### v0.2.7 (Dec 8, 2015)
 
 **Updates**
 - Create new tool system bar in layout
 - Create [Select](http://bootstrap-material-ui.exentriq.com/forms.html#forms-select)
+- Create [File Upload - Drag and Drop](http://bootstrap-material-ui.exentriq.com/forms.html#forms-file-upload-drop)
 
 **Updates**
 - Layout structure

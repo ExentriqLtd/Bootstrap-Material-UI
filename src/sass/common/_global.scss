@@ -253,6 +253,30 @@ pre[class*="language-"] {
 }
 
 /* --------------------------------------- */
+/* Preloader
+/* --------------------------------------- */
+
+.eq-ui-progress {
+    position: relative;
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: desaturate(lighten($progress-bar-color, 40%), 20%);
+    border-radius: 2px;
+    margin: 8px 0;
+    overflow: hidden;
+
+    .eq-ui-determinate {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: $progress-bar-color;
+        transition: width .3s linear;
+    }
+}
+
+/* --------------------------------------- */
 /* Utility Classes                         */
 /* --------------------------------------- */
 

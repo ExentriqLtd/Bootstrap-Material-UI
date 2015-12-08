@@ -55,6 +55,17 @@ var EqUIDoc = {};
             EqUIDoc.site.form_validations();
         }
 
+        // Create File Upload Drop
+        var _dropzone = EqUI.forms.file_upload_drop('.eq-ui-file-upload-drop-zone', {
+            url: 'http://localhost:8888/upload/',
+            defaultImageThumbnail: "assets/img/doc/files/empty.png"
+        });
+
+        // File Upload Drop - Events
+        _dropzone.on("addedfile", function(file) {
+            console.log(file);
+        });
+
         // Build Git in Home
         if(_doc_route.path === "index"){
             EqUIDoc.site.build_git_home();
