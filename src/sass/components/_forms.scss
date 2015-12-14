@@ -280,6 +280,10 @@ select.eq-ui-browser-select {
 
         li {
             a {
+                span {
+                   pointer-events: none;
+                }
+
                 .eq-ui-select-icon {
                     visibility: hidden;
                 }

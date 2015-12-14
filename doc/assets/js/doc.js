@@ -61,10 +61,12 @@ var EqUIDoc = {};
             defaultImageThumbnail: "assets/img/doc/files/empty.png"
         });
 
-        // File Upload Drop - Events
-        _dropzone.on("addedfile", function(file) {
-            console.log(file);
-        });
+        if(_dropzone){
+            // File Upload Drop - Events
+            _dropzone.on("addedfile", function(file) {
+                console.log(file);
+            });
+        }
 
         // Build Git in Home
         if(_doc_route.path === "index"){

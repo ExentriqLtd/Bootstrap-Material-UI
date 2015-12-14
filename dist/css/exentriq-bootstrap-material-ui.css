@@ -21419,6 +21419,10 @@ select.eq-ui-browser-select:disabled + span.eq-ui-caret {
   z-index: 9999;
 }
 
+.eq-ui-select-wrapper .eq-ui-dropdown li a span {
+  pointer-events: none;
+}
+
 .eq-ui-select-wrapper .eq-ui-dropdown li a .eq-ui-select-icon {
   visibility: hidden;
 }

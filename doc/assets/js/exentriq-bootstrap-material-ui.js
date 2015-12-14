@@ -16478,8 +16478,8 @@ else {
             '           <div class="eq-ui-determinate" data-dz-uploadprogress></div>'+
             '       </div>'+
             '   </div>'+
-            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-success"><i class="mdi mdi-check icon icon-24"></i></a>'+
-            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-error"><i class="mdi mdi-close icon icon-24"></i></a>'+
+            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-success"><i class="mdi mdi-check eq-ui-icon eq-ui-icon-24"></i></a>'+
+            '<a class="eq-ui-list-secondary-content-body active eq-ui-file-upload-drop-zone-error"><i class="mdi mdi-close eq-ui-icon eq-ui-icon-24"></i></a>'+
             '</li>';
         }
 
@@ -16629,7 +16629,7 @@ else {
             if (select.is(':disabled')){ dropdown_icon.addClass('disabled'); }
             var sanitizedLabelHtml = label.html() && label.html().replace(/"/g, '&quot;');
             var select_fake = $('' +
-            '<input id="'+input_id+'" data-target="dropdown-'+unique_ID+'" type="text" class="eq-ui-input eq-ui-select-fake" readonly="true" ' + ((select.is(':disabled')) ? 'disabled' : '') + ' value="'+ sanitizedLabelHtml +'"/>' +
+            '<input id="'+input_id+'" data-target="dropdown-'+unique_ID+'" type="text" class="eq-ui-input eq-ui-select-fake eq-ui-select-input-'+unique_ID+'" readonly="true" ' + ((select.is(':disabled')) ? 'disabled' : '') + ' value="'+ sanitizedLabelHtml +'"/>' +
             '<span class="eq-ui-select-fake-msg-error">'+label_text_error+'</span>' +
             '<span class="eq-ui-select-fake-msg-success">'+label_text_success+'</span>'
             );
@@ -16663,7 +16663,7 @@ else {
             select.before(dropdown_icon);
 
             // Init dropdown
-            $('.eq-ui-select-wrapper input').dropdown({
+            $('.eq-ui-select-input-'+unique_ID).dropdown({
                 inDuration: 300,
                 outDuration: 225,
                 hover: false,
@@ -17488,8 +17488,6 @@ else {
                     if ($index < 0) {
                         $index = 0;
                     }
-
-                    console.log($content);
 
                     $content.show();
 

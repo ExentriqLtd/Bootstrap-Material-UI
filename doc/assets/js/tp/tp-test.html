@@ -1,0 +1,245 @@
+<doc-test>
+
+    <div id="eq-ui-modal-create-contact" class="eq-ui-modal eq-ui-modal-fixed eq-ui-modal-medium">
+
+        <!-- Header -->
+        <div class="eq-ui-modal-header">
+            <div class="header-title">
+                <!--i class="mdi mdi-chevron-left eq-ui-icon eq-ui-icon-left eq-ui-icon-24"></i-->
+                <span class="section-title truncate">New Contact</span>
+            </div>
+            <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-modal-close">
+                        <i class="mdi mdi-close eq-ui-icon"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Content -->
+        <div class="eq-ui-modal-content">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Avatar -->
+                    <ul class="eq-ui-list eq-profile-avatar">
+                        <li id="create_contact_file_input_img_preview" class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate">
+                            <img class="circle img-preview" src="/templates/exentriqManager3/static/new-ui/img/avatar/avatar_0.jpg">
+                            <h6 class="eq-ui-list-title eq-ui-primary-color-text img-preview-loading">UPLOAD AVATAR</h6>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="eq-ui-form-group">
+                        <!-- Switch -->
+                        <div class="eq-ui-switch">
+                            <label class="eq-ui-primary-color-text">
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Set as on organization
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <form id="eq-ui-modal-create-contact-form" onsubmit={ create_contact }>
+
+                <!-- Fake input file -->
+                <div class="eq-ui-form-group riot-eq-ui-input-file eq-ui-input-file eq-ui-input-file-fake">
+                    <a class="btn btn-primary eq-ui-waves-light">
+                        Fake
+                        <input id="create_contact_file_input" type="file"
+                               data-img-preview="create_contact_file_input_img_preview"
+                               data-img-preview-text-loading="Loading...">
+                    </a>
+                    <div class="eq-ui-input-file-path">
+                        <input type="text" class="eq-ui-input" readonly>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <!-- Left colummn -->
+                    <div class="col-md-6">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_first_name" type="text" class="eq-ui-input">
+                                    <label for="create_contact_first_name">First Name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_last_name" type="text" class="eq-ui-input">
+                                    <label for="create_contact_last_name">Last Name</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_email" type="email" class="eq-ui-input" required>
+                                    <label for="create_contact_email" data-error="Email not valid">Email</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_phone" type="tel" class="eq-ui-input">
+                                    <label for="create_contact_phone">Phone Number</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <select id="create_contact_group" class="eq-ui-select riot-eq-ui-select">
+                                        <option value="" disabled selected>Group</option>
+                                        <option value="1">Sample 1</option>
+                                        <option value="2">Sample 2</option>
+                                    </select>
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- Left colummn -->
+
+                    <!-- Right colummn -->
+                    <div class="col-md-6">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <select id="create_contact_gender" class="eq-ui-select riot-eq-ui-select">
+                                                <option value="" disabled selected>Gender</option>
+                                                <option value="1">Male</option>
+                                                <option value="2">Female</option>
+                                            </select>
+                                            <label></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <input id="create_contact_brithday" type="text" class="eq-ui-input">
+                                            <label for="create_contact_brithday">Brithday</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_city" type="text" class="eq-ui-input">
+                                    <label for="create_contact_city">City</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <input id="create_contact_address" type="text" class="eq-ui-input">
+                                    <label for="create_contact_address">Address</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <input id="create_contact_zip" type="text" class="eq-ui-input">
+                                            <label for="create_contact_zip">ZIP</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="eq-ui-form-group eq-ui-input-field">
+                                            <input id="create_contact_state" type="text" class="eq-ui-input">
+                                            <label for="create_contact_state">State</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-form-group eq-ui-input-field">
+                                    <select id="create_contact_country" class="eq-ui-select riot-eq-ui-select">
+                                        <option value="" disabled selected>Country</option>
+                                        <option value="1">Sample 1</option>
+                                        <option value="2">Sample 2</option>
+                                    </select>
+                                    <label></label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- Right colummn -->
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="eq-ui-modal-footer">
+            <a onclick={ show_modal_add_contacts } class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text eq-ui-modal-close">Cancel</a>
+            <a id="create_contact_submit" onclick={ create_contact_submit } class="btn btn-primary eq-ui-waves-light">Create Contact</a>
+        </div>
+
+    </div>
+
+    <script>
+        var self = this;
+        //self.exentriq_palette = opts.exentriq_palette;
+        //self.material_palette = opts.material_palette;
+
+        self.on('update', function(){
+            //...
+        });
+
+        self.on('mount', function(){
+            //...
+            // Init file inputs
+            EqUI.forms.file_input('.riot-eq-ui-input-file');
+
+            // Init select
+            $('.riot-eq-ui-select').eq_select();
+
+            self.modal_op = {
+                complete: self.on_modal_close
+            };
+
+            $('#eq-ui-modal-create-contact').openModal(self.modal_op);
+        });
+
+    </script>
+
+</doc-test>

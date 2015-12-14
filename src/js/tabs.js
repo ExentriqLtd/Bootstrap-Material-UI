@@ -105,8 +105,6 @@
                         $index = 0;
                     }
 
-                    console.log($content);
-
                     $content.show();
 
                     // Update indicator
