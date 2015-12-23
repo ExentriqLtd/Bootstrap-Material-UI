@@ -1,5 +1,13 @@
 ## CHANGELOG
 
+### v0.2.9 (Jan ?, 2015)
+
+**Updates**
+- Add license file in the repo
+
+**Fixes**
+- Select reduced max-height
+
 ### v0.2.8 (Dec 14, 2015)
 
 **Fixes**

@@ -21408,6 +21408,7 @@ select.eq-ui-browser-select:disabled + span.eq-ui-caret {
 
 .eq-ui-select-wrapper .eq-ui-dropdown {
   width: 100%;
+  max-height: 305px;
   overflow-y: auto;
   overflow-x: hidden;
   word-wrap: break-word;
