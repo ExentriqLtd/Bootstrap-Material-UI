@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Forms | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.8" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.8" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.9" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.2.9" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"forms",name_section:"Components",name_chapter:"Forms"};</script>
@@ -961,27 +961,72 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Search</h2>
-            <form class="doc-form">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="eq-ui-search">
-                            <input type="text" placeholder="Search">
-                            <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
-                            <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+    <div id="forms-search" class="row">
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Search</h2>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-search">
+                                    <input type="text" placeholder="Search">
+                                    <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
+                                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="header">Search Expandable</h2>
+                    <form class="doc-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="eq-ui-search eq-ui-search-expandable">
+                                    <input type="text" placeholder="Search">
+                                    <a class="eq-ui-search-icon-left eq-ui-serach-expandable-show btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                                        <i class="mdi mdi mdi-magnify icon"></i>
+                                    </a>
+                                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
             <pre><code class="language-markup">
+&lt;!-- Search --&gt;
 &lt;form&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-md-12&quot;&gt;
             &lt;div class=&quot;eq-ui-search&quot;&gt;
                 &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
                 &lt;i class=&quot;eq-ui-search-icon-left mdi mdi-magnify icon icon-left&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+&lt;!-- Search Expandable --&gt;
+&lt;form&gt;
+    &lt;div class=&quot;row&quot;&gt;
+        &lt;div class=&quot;col-md-12&quot;&gt;
+            &lt;div class=&quot;eq-ui-search eq-ui-search-expandable&quot;&gt;
+                &lt;input type=&quot;text&quot; placeholder=&quot;Search&quot;&gt;
+                &lt;a class=&quot;eq-ui-search-icon-left eq-ui-serach-expandable-show btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves&quot;&gt;
+                    &lt;i class=&quot;mdi mdi mdi-magnify icon&quot;&gt;&lt;/i&gt;
+                &lt;/a&gt;
                 &lt;i class=&quot;eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18&quot;&gt;&lt;/i&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -1375,12 +1420,12 @@ $(document).ready(function(){
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.8"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.9"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.2.8"></script>
+<script src="assets/js/doc.js?v=0.2.9"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

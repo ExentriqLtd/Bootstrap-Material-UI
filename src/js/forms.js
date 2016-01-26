@@ -331,8 +331,15 @@
             // Get label
             if (select.find('option:selected').length > 0) {
                 label = select.find('option:selected');
+                if(is_multiple && !label.is(':disabled')){
+                    label.each(function (i) {
+                        label = build_values_selected_from_multiple(valuesSelected, $(this).index(), select);
+                    });
+                } else {
+                    label = label.html();
+                }
             } else {
-                label = select_options.first();
+                label = select_options.first().html();
             }
 
             // Wrapper
@@ -342,7 +349,7 @@
             // Add extra elements
             var dropdown_icon = $('<span class="eq-ui-caret"></span>');
             if (select.is(':disabled')){ dropdown_icon.addClass('disabled'); }
-            var sanitizedLabelHtml = label.html() && label.html().replace(/"/g, '&quot;');
+            var sanitizedLabelHtml = label && label.replace(/"/g, '&quot;');
             var select_fake = $('' +
             '<input id="'+input_id+'" data-target="dropdown-'+unique_ID+'" type="text" class="eq-ui-input eq-ui-select-fake eq-ui-select-input-'+unique_ID+'" readonly="true" ' + ((select.is(':disabled')) ? 'disabled' : '') + ' value="'+ sanitizedLabelHtml +'"/>' +
             '<span class="eq-ui-select-fake-msg-error">'+label_text_error+'</span>' +
@@ -422,7 +429,7 @@
                 entriesArray.splice(index, 1);
             }
 
-            set_input_from_multiple(entriesArray, select);
+            return set_input_from_multiple(entriesArray, select);
         }
 
         function set_input_from_multiple(entriesArray, select) {
@@ -443,6 +450,8 @@
             }
 
             select.siblings('input.eq-ui-select-fake').val(value);
+
+            return value;
         }
     };
 

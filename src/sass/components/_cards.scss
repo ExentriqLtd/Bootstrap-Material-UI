@@ -142,6 +142,22 @@
             right: 16px;
             top: 22px;
         }
+
+        // Nav Menu
+        .eq-ui-nav-menu {
+
+            >li {
+                &:not(:last-child) {
+
+                }
+                >.btn:not(.disabled) {
+                    color: color("grey", "600");
+                }
+                >.btn.disabled {
+                    opacity: .5;
+                }
+            }
+        }
     }
 
     // With List

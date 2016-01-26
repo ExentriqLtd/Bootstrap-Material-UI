@@ -15734,7 +15734,13 @@ else {
         EqUI.site.dismissableList();
 
         // Search
-        EqUI.site.search();
+        EqUI.site.search('.eq-ui-search');
+
+        // Search Top
+        EqUI.site.search_top('.eq-ui-top-search');
+
+        // Search Expandable
+        EqUI.site.search_expandable('.eq-ui-search-expandable');
     };
 
     // Update
@@ -15850,13 +15856,13 @@ else {
     /* Search
     /* --------------------------------------- */
 
-    EqUI.site.search = function() {
+    EqUI.site.search = function(search_selector) {
 
         //----------------------
         // Search
         //----------------------
-        var _serach_input_selector  = '.eq-ui-search input';
-        var _serach_action_clear_element  = $('.eq-ui-search-clear');
+        var _serach_input_selector  = search_selector+' input';
+        var _serach_action_clear_element  = $(search_selector+' .eq-ui-search-clear');
 
         // Add active when element has focus
         $(document).on('focus', _serach_input_selector, function () {
@@ -15881,12 +15887,16 @@ else {
             _element_parent.removeClass('active');
             _element_parent.find('input').val('');
         });
+    };
 
-        //----------------------
-        // Top Search
-        //----------------------
-        var _top_serach_element  = $('.eq-ui-top-search');
-        var _top_serach_action_close_element  = $('.eq-ui-top-search-close');
+    /* --------------------------------------- */
+    /* Search Top
+    /* --------------------------------------- */
+
+    EqUI.site.search_top = function(search_selector) {
+
+        var _top_serach_element  = $(search_selector);
+        var _top_serach_action_close_element  = $(search_selector+' .eq-ui-top-search-close');
         var _top_serach_action_show_element  = $('.eq-ui-top-search-show');
 
         // Show top search
@@ -15905,6 +15915,26 @@ else {
             // Clear search
             _element_parent.children('.eq-ui-search').removeClass('active');
             _element_parent.children('.eq-ui-search').find('input').val('');
+        });
+    };
+
+    /* --------------------------------------- */
+    /* Search Expandable
+    /* --------------------------------------- */
+
+    EqUI.site.search_expandable = function(search_selector) {
+
+        var _serach_input_selector  = search_selector+' input';
+        var _serach_expandable_action_show_element  = $(search_selector+' .eq-ui-serach-expandable-show');
+
+        // Show search expandable
+        _serach_expandable_action_show_element.on('click', function(e) {
+            var _element = $(this);
+            var _element_parent = _element.parent();
+            _element_parent.addClass('active');
+
+            // Set focus
+            $(_serach_input_selector).focus();
         });
     };
 
@@ -16616,8 +16646,15 @@ else {
             // Get label
             if (select.find('option:selected').length > 0) {
                 label = select.find('option:selected');
+                if(is_multiple && !label.is(':disabled')){
+                    label.each(function (i) {
+                        label = build_values_selected_from_multiple(valuesSelected, $(this).index(), select);
+                    });
+                } else {
+                    label = label.html();
+                }
             } else {
-                label = select_options.first();
+                label = select_options.first().html();
             }
 
             // Wrapper
@@ -16627,7 +16664,7 @@ else {
             // Add extra elements
             var dropdown_icon = $('<span class="eq-ui-caret"></span>');
             if (select.is(':disabled')){ dropdown_icon.addClass('disabled'); }
-            var sanitizedLabelHtml = label.html() && label.html().replace(/"/g, '&quot;');
+            var sanitizedLabelHtml = label && label.replace(/"/g, '&quot;');
             var select_fake = $('' +
             '<input id="'+input_id+'" data-target="dropdown-'+unique_ID+'" type="text" class="eq-ui-input eq-ui-select-fake eq-ui-select-input-'+unique_ID+'" readonly="true" ' + ((select.is(':disabled')) ? 'disabled' : '') + ' value="'+ sanitizedLabelHtml +'"/>' +
             '<span class="eq-ui-select-fake-msg-error">'+label_text_error+'</span>' +
@@ -16707,7 +16744,7 @@ else {
                 entriesArray.splice(index, 1);
             }
 
-            set_input_from_multiple(entriesArray, select);
+            return set_input_from_multiple(entriesArray, select);
         }
 
         function set_input_from_multiple(entriesArray, select) {
@@ -16728,6 +16765,8 @@ else {
             }
 
             select.siblings('input.eq-ui-select-fake').val(value);
+
+            return value;
         }
     };
 

@@ -23,7 +23,13 @@
         EqUI.site.dismissableList();
 
         // Search
-        EqUI.site.search();
+        EqUI.site.search('.eq-ui-search');
+
+        // Search Top
+        EqUI.site.search_top('.eq-ui-top-search');
+
+        // Search Expandable
+        EqUI.site.search_expandable('.eq-ui-search-expandable');
     };
 
     // Update
@@ -139,13 +145,13 @@
     /* Search
     /* --------------------------------------- */
 
-    EqUI.site.search = function() {
+    EqUI.site.search = function(search_selector) {
 
         //----------------------
         // Search
         //----------------------
-        var _serach_input_selector  = '.eq-ui-search input';
-        var _serach_action_clear_element  = $('.eq-ui-search-clear');
+        var _serach_input_selector  = search_selector+' input';
+        var _serach_action_clear_element  = $(search_selector+' .eq-ui-search-clear');
 
         // Add active when element has focus
         $(document).on('focus', _serach_input_selector, function () {
@@ -170,12 +176,16 @@
             _element_parent.removeClass('active');
             _element_parent.find('input').val('');
         });
+    };
 
-        //----------------------
-        // Top Search
-        //----------------------
-        var _top_serach_element  = $('.eq-ui-top-search');
-        var _top_serach_action_close_element  = $('.eq-ui-top-search-close');
+    /* --------------------------------------- */
+    /* Search Top
+    /* --------------------------------------- */
+
+    EqUI.site.search_top = function(search_selector) {
+
+        var _top_serach_element  = $(search_selector);
+        var _top_serach_action_close_element  = $(search_selector+' .eq-ui-top-search-close');
         var _top_serach_action_show_element  = $('.eq-ui-top-search-show');
 
         // Show top search
@@ -194,6 +204,26 @@
             // Clear search
             _element_parent.children('.eq-ui-search').removeClass('active');
             _element_parent.children('.eq-ui-search').find('input').val('');
+        });
+    };
+
+    /* --------------------------------------- */
+    /* Search Expandable
+    /* --------------------------------------- */
+
+    EqUI.site.search_expandable = function(search_selector) {
+
+        var _serach_input_selector  = search_selector+' input';
+        var _serach_expandable_action_show_element  = $(search_selector+' .eq-ui-serach-expandable-show');
+
+        // Show search expandable
+        _serach_expandable_action_show_element.on('click', function(e) {
+            var _element = $(this);
+            var _element_parent = _element.parent();
+            _element_parent.addClass('active');
+
+            // Set focus
+            $(_serach_input_selector).focus();
         });
     };
 

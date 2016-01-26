@@ -1,14 +1,16 @@
 {
     "name": "exentriq-bootstrap-material-ui",
-    "version": "0.2.8",
+    "version": "0.2.9",
     "description": "Implements Google's Material Design in Bootstrap",
     "readme": "README.md",
     "repository": {
         "type": "git",
         "url": "https://github.com/ExentriqLtd/Bootstrap-Material-UI.git"
     },
+    "engines": {
+        "node": ">=4.0.0"
+    },
     "dependencies": {},
-    "engine": "node >= 0.10",
     "devDependencies": {
         "grunt":                    "^0.4.5",
 

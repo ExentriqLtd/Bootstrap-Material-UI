@@ -84,6 +84,10 @@ p.last-commit-in-git-hub-p {
 	margin-bottom: 25px;
 }
 
+.doc-form .eq-ui-search-expandable {
+    float: right;
+}
+
 /* Dropdown */
 .doc-eq-ui-card-dropdown {
     min-height: 250px;

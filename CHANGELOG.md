@@ -1,12 +1,16 @@
 ## CHANGELOG
 
-### v0.2.9 (Jan ?, 2015)
+### v0.2.9 (Jan 26, 2016)
 
 **Updates**
+- Create [Search Expandable](http://bootstrap-material-ui.exentriq.com/forms.html#forms-search)
 - Add license file in the repo
+- Update min. node version in package
 
 **Fixes**
 - Select reduced max-height
+- Select multiple
+- List
 
 ### v0.2.8 (Dec 14, 2015)
 
