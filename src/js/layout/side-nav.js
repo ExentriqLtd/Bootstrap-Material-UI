@@ -20,7 +20,7 @@
 
     // Update
     EqUI.side_nav.update = function() {
-        
+
         if (window.innerWidth > 768) {
 
             if(EqUI.site.body.hasClass('eq-ui-side-nav-auto')){

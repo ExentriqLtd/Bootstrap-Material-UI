@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Collapsible | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.2.9" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.2.9" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"collapsible",name_section:"JavaScript",name_chapter:"Collapsible"};</script>
@@ -18,7 +18,7 @@
 <![endif]-->
 
 <!-- Primary Layout -->
-<header class="eq-ui-layout-header-primary">
+<header class="eq-ui-layout-header-primary-off" style="display: none;">
 
     <div class="eq-ui-tool-bar-system eq-ui-tool-bar-system-inverted">
         <div class="container-fluid">
@@ -71,13 +71,13 @@
             </ul>
 
             <!-- Top Search -->
-            <div class="eq-ui-top-search">
+            <div class="eq-ui-top-search" style="display: none;">
                 <i class="eq-ui-top-search-close mdi mdi-arrow-left icon icon-left"></i>
                 <!-- Search -->
                 <div class="eq-ui-search">
                     <input type="text" placeholder="Search">
                     <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
-                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close icon icon-right icon-18"></i>
                 </div>
             </div>
 
@@ -107,26 +107,73 @@
             <div class="eq-ui-side-nav-toggle"><i class="mdi mdi-menu icon icon-left icon-24"></i></div>
 
             <!-- Title -->
-            <div class="header-title">
+            <!--div class="header-title">
                 <span class="section-title">Exentriq</span>
                 <i class="mdi mdi-chevron-right icon icon-left icon-24"></i>
                 <span class="chapter-title">App Bar</span>
+            </div-->
+
+            <!-- Breadcrumb -->
+            <div class="eq-ui-breadcrumb" data-only-one="true">
+                <a href="./" class="eq-ui-breadcrumb-item"><span>Home</span></a>
+                <a href="./" class="eq-ui-breadcrumb-item"><span>Exentriq</span></a>
+                <a href="./" class="eq-ui-breadcrumb-item"><span>App Bar</span></a>
             </div>
 
             <!-- Nav Menu -->
             <ul class="right eq-ui-nav-menu">
+                <li class="eq-ui-nav-menu-item-icon eq-ui-hidden-xs">
+                    <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-top-search-show">
+                        <i class="mdi mdi-magnify icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon eq-ui-hidden-xs">
+                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-apps icon"></i>
+                    </a>
+                </li>
                 <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-bell icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                        <i class="mdi mdi-comment icon"></i>
+                    </a>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon">
+                    <a data-target="doc-dropdown-app-bar-user" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
+                        <i class="mdi mdi-account icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul id="doc-dropdown-app-bar-user" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                        <li><a href="#!">Profile</a></li>
+                        <li><a href="#!">Logout</a></li>
+                    </ul>
+                </li>
+                <li class="eq-ui-nav-menu-item-icon hide eq-ui-visible-xs-block">
                     <a data-target="doc-dropdown-app-bar" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-dots-vertical icon"></i>
                     </a>
                     <!-- Dropdown Structure -->
                     <ul id="doc-dropdown-app-bar" class="eq-ui-dropdown eq-ui-dropdown-right-top">
-                        <li><a href="#!">Option 1</a></li>
-                        <li><a href="#!">Option 2</a></li>
-                        <li><a href="#!">Option 3</a></li>
+                        <li><a class="eq-ui-top-search-show"><i class="mdi mdi-magnify icon"></i> Search</a></li>
+                        <li><a href="./"><i class="mdi mdi-apps icon"></i> Apps</a></li>
                     </ul>
                 </li>
             </ul>
+
+            <!-- Top Search -->
+            <div class="eq-ui-top-search">
+                <i class="eq-ui-top-search-close mdi mdi-arrow-left eq-ui-icon eq-ui-icon-left"></i>
+                <!-- Search -->
+                <div id="doc-eq-ui-top-search-autocomplete" class="eq-ui-search">
+                    <input type="text" placeholder="Search">
+                    <i class="eq-ui-search-icon-left mdi mdi-magnify eq-ui-icon eq-ui-icon-left"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close eq-ui-icon eq-ui-icon-right"></i>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -160,10 +207,10 @@
             <nav>
 
                 <!-- Search -->
-                <div class="eq-ui-search">
+                <div id="doc-eq-ui-side-nav-search-autocomplete" class="eq-ui-search">
                     <input type="text" placeholder="Search">
                     <i class="eq-ui-search-icon-left mdi mdi-magnify icon icon-left"></i>
-                    <i class="eq-ui-search-clear mdi mdi-close-circle icon icon-right icon-18"></i>
+                    <i class="eq-ui-search-clear mdi mdi-close icon icon-right icon-18"></i>
                 </div>
 
                 <!-- Collapsible Menu -->
@@ -706,12 +753,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.2.9"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.0"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.2.9"></script>
+<script src="assets/js/doc.js?v=0.3.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

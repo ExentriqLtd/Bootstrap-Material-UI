@@ -149,6 +149,17 @@ textarea.eq-ui-textarea {
     }
     .prefix ~ textarea { padding-top: .8rem; }
     .prefix ~ label { margin-left: 3rem; }
+
+    // Autocomplete
+    .autocomplete-suggestions {
+        border: 1px solid #e1e1e1;
+        top: 48px;
+
+        // Group
+        .autocomplete-group {
+            border-top: 1px solid #e1e1e1;
+        }
+    }
 }
 
 // Text Area

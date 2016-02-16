@@ -41,6 +41,8 @@ No need to separately include the following libraries, are already included in t
 - Parsley (2.1.3)
 - jQuery Easing (v1.3.0)
 - jQuery Hammer (v2.0.0)
+- jQuery Element Resize (v0.2.2)
+- Ajax AutoComplete for jQuery (v1.2.24)
 - Dropzone (v4.2.0)
 - Autosize (v3.0.8)
 - VelocityJS (v1.2.2)

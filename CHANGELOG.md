@@ -1,5 +1,19 @@
 ## CHANGELOG
 
+### v0.3.0 (Feb 16, 2016)
+
+**New**
+- [Autocomplete](http://bootstrap-material-ui.exentriq.com/forms.html#forms-autocomplete)
+
+**Updates**
+- New breadcrumb
+- Restructuring top bar
+- Update close button in search
+
+**Fixes**
+- Dropdown icon
+- Search Expandable
+
 ### v0.2.9 (Jan 26, 2016)
 
 **Updates**

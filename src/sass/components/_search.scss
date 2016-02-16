@@ -49,7 +49,7 @@
     // Expandable
     &.eq-ui-search-expandable {
         display: inline-block;
-        overflow: hidden;
+        /*overflow: hidden;*/
         position: relative;
         line-height: 32px;
         border: 0 solid #e1e1e1;
@@ -91,8 +91,28 @@
 
             }
         }
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            border: 1px solid #e1e1e1;
+            top: 40px;
+            left: 32px;
+            right: 0;
+
+            // Group
+            .autocomplete-group {
+                border-top: 1px solid #e1e1e1;
+            }
+        }
+    }
+
+    // Autocomplete
+    .autocomplete-suggestions {
+        right: 16px;
+        left: 16px;
     }
 }
+
 
 // Top Search
 
@@ -105,6 +125,7 @@
     padding-left: 63px;
     padding-right: 30px;
     background-color: #fff;
+    color: $eq-ui-tool-bar-system-font-color-inverted;
 
     // Hide
     top: -64px;
@@ -132,11 +153,32 @@
             border: none;
 
             input {
-                width: calc(100% - 33px);
+                width: calc(100% - 39px);
             }
         }
         .eq-ui-search-icon-left {
             display: none;
+        }
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            border: 1px solid #e1e1e1;
+            right: 0;
+            left: 0;
+
+            // Suggestion
+            .autocomplete-suggestion {
+                padding: 0 24px;
+            }
+
+            // Group
+            .autocomplete-group {
+                border-top: 1px solid #e1e1e1;
+
+                strong {
+                    padding: 0 24px;
+                }
+            }
         }
     }
 
@@ -154,6 +196,27 @@
         // Search in top
         .eq-ui-search {
             line-height: $eq-ui-tool-bar-system-height;
+
+            // Autocomplete
+            .autocomplete-suggestions {
+                border: 1px solid #e1e1e1;
+                right: 0;
+                left: 0;
+
+                // Suggestion
+                .autocomplete-suggestion {
+                    padding: 0 24px;
+                }
+
+                // Group
+                .autocomplete-group {
+                    border-top: 1px solid #e1e1e1;
+
+                    strong {
+                        padding: 0 24px;
+                    }
+                }
+            }
         }
 
     }
@@ -166,6 +229,12 @@
     .eq-ui-search {
         margin: 0 10px 16px 10px;
         padding-right: 6px;
+
+        // Autocomplete
+        .autocomplete-suggestions {
+            right: 10px;
+            left: 10px;
+        }
     }
 }
 

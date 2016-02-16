@@ -174,6 +174,10 @@
             var _element = $(this);
             var _element_parent = _element.parent();
             _element_parent.removeClass('active');
+            // Clear autocomplete
+            if(_element_parent.find('autocomplete-suggestions')){
+                _element_parent.find('input').autocomplete('hide');
+            }
             _element_parent.find('input').val('');
         });
     };
@@ -203,6 +207,10 @@
 
             // Clear search
             _element_parent.children('.eq-ui-search').removeClass('active');
+            // Clear autocomplete
+            if(_element_parent.find('autocomplete-suggestions')){
+                _element_parent.children('.eq-ui-search').find('input').autocomplete('hide');
+            }
             _element_parent.children('.eq-ui-search').find('input').val('');
         });
     };
@@ -213,8 +221,7 @@
 
     EqUI.site.search_expandable = function(search_selector) {
 
-        var _serach_input_selector  = search_selector+' input';
-        var _serach_expandable_action_show_element  = $(search_selector+' .eq-ui-serach-expandable-show');
+        var _serach_expandable_action_show_element = $(search_selector + ' .eq-ui-serach-expandable-show');
 
         // Show search expandable
         _serach_expandable_action_show_element.on('click', function(e) {
@@ -223,7 +230,7 @@
             _element_parent.addClass('active');
 
             // Set focus
-            $(_serach_input_selector).focus();
+            _element_parent.find('input').focus();
         });
     };
 

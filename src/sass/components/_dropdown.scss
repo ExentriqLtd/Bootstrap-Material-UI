@@ -36,7 +36,7 @@
             white-space: nowrap;
             text-decoration: none;
 
-            i.icon {
+            i.icon, i.eq-ui-icon {
                 pointer-events: none;
                 font-size: 18px;
             }
@@ -51,7 +51,7 @@
         }
 
         // Icon menu right
-        i.icon.mdi-menu-right {
+        i.icon.mdi-menu-right, i.eq-ui-icon.mdi-menu-right {
             pointer-events: none;
             position: absolute;
             right: 8px;
