@@ -1,5 +1,16 @@
 ## CHANGELOG
 
+### v0.3.2 (Mar 8, 2016)
+
+**New**
+- ...
+
+**Updates**
+- Material Design Icons (1.4.57)
+
+**Fixes**
+- ...
+
 ### v0.3.1 (Mar 8, 2016)
 
 **New**
