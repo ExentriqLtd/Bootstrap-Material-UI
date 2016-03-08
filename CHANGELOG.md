@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+### v0.3.1 (Mar 8, 2016)
+
+**New**
+- [Badges](http://bootstrap-material-ui.exentriq.com/badges.html) 
+- Add left and right [modals](http://bootstrap-material-ui.exentriq.com/modals.html)
+
+**Updates**
+- Top bar, add badge
+- Tabs, add badge
+
+**Fixes**
+- Tabs
+
 ### v0.3.0 (Feb 16, 2016)
 
 **New**

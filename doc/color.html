@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>CSS - Color | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.1" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.3.1" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"css",path:"color",name_section:"CSS",name_chapter:"Color"};</script>
@@ -128,17 +128,18 @@
                     </a>
                 </li>
                 <li class="eq-ui-nav-menu-item-icon eq-ui-hidden-xs">
-                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="eq-ui-modal-header-doc-1"  class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-modal-trigger">
                         <i class="mdi mdi-apps icon"></i>
                     </a>
                 </li>
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="eq-ui-modal-header-doc-1"  class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-modal-trigger">
                         <i class="mdi mdi-bell icon"></i>
                     </a>
+                    <span class="eq-ui-badge eq-ui-badge-overlap" data-badge="12"></span>
                 </li>
                 <li class="eq-ui-nav-menu-item-icon">
-                    <a href="./" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves">
+                    <a data-target="eq-ui-modal-header-doc-1" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-modal-trigger">
                         <i class="mdi mdi-comment icon"></i>
                     </a>
                 </li>
@@ -243,6 +244,7 @@
                             </a>
                         </div>
                         <div class="eq-ui-collapsible-body">
+                            <a id="collapsible-nav-css-badges" href="./badges.html">Badges</a>
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
@@ -558,6 +560,151 @@
 
 </div>
 
+
+<!-- Modal Right (Notifications) -->
+<div id="eq-ui-modal-header-doc-1" class="eq-ui-modal eq-ui-modal-fixed eq-ui-modal-right-sheet">
+
+    <!-- Header -->
+    <div class="eq-ui-modal-header">
+        <div class="header-title">
+            <!--i class="mdi mdi-close icon icon-left icon-24 eq-ui-modal-close"></i-->
+            <span class="section-title">Notifications</span>
+        </div>
+        <ul class="right eq-ui-nav-menu">
+            <li class="eq-ui-nav-menu-item-icon">
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves eq-ui-modal-close">
+                    <i class="mdi mdi-close eq-ui-icon"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="eq-ui-modal-content">
+
+        <ul class="eq-ui-list eq-ui-hoverable">
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+            <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
+                <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
+                <div class="eq-ui-list-body">
+                    <h6 class="eq-ui-list-title">Title</h6>
+                    Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum.
+                </div>
+                <a class="eq-ui-list-secondary-content-body shades-text-black-hover"><i class="mdi mdi-close-circle icon icon-18"></i></a>
+            </li>
+
+
+
+        </ul>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="eq-ui-modal-footer">
+        <a href="#" class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-modal-close">View All</a>
+    </div>
+
+</div>
+
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
         <h1>Color</h1>
@@ -638,12 +785,12 @@
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.1"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.0"></script>
+<script src="assets/js/doc.js?v=0.3.1"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

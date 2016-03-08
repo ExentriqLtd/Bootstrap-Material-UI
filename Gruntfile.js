@@ -296,6 +296,7 @@ module.exports = function ( grunt ) {
                     }
                 },
                 files: {
+                    "doc/badges.html": "jade/badges.jade",
                     "doc/color.html": "jade/color.jade",
                     "doc/helpers.html": "jade/helpers.jade",
                     "doc/table.html": "jade/table.jade",

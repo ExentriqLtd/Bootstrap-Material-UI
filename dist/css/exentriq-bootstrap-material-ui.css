@@ -19996,6 +19996,73 @@ table.eq-ui-data-table tbody > tr.is-selected {
   margin: 8px 0;
 }
 
+.eq-ui-badge {
+  position: relative;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.eq-ui-badge:not([data-badge]) {
+  margin-right: auto;
+}
+
+.eq-ui-badge[data-badge]:after {
+  line-height: 16px;
+  pointer-events: none;
+  content: attr(data-badge);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -6px;
+  right: -20px;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  width: 20px;
+  height: 16px;
+  border-radius: 8px;
+  background: #fc344d;
+  color: #fff;
+}
+
+.eq-ui-badge.eq-ui-badge-overlap {
+  margin-right: 0;
+}
+
+.eq-ui-badge.eq-ui-badge-overlap:after {
+  right: -8px;
+}
+
+.eq-ui-badge[data-badge='0']:after {
+  display: none;
+}
+
+.eq-ui-app-bar .eq-ui-nav-menu .eq-ui-nav-menu-item-icon .eq-ui-badge.eq-ui-badge-overlap:after {
+  right: -36px;
+  top: -50px;
+}
+
 .btn {
   -webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -22321,6 +22388,32 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
   will-change: bottom, opacity;
 }
 
+.eq-ui-modal.eq-ui-modal-left-sheet {
+  right: auto;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  width: 320px;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 0;
+  will-change: left, opacity;
+}
+
+.eq-ui-modal.eq-ui-modal-right-sheet {
+  left: auto;
+  right: -100%;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  width: 320px;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 0;
+  will-change: right, opacity;
+}
+
 .eq-ui-modal.eq-ui-modal-full-sheet {
   top: -100%;
   bottom: 0;
@@ -22400,21 +22493,24 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 
 .eq-ui-tabs.eq-ui-tabs-with-icons .eq-ui-tab a i.icon {
   font-size: 24px;
+  width: 24px;
 }
 
 .eq-ui-tabs.eq-ui-tabs-with-left-icons .eq-ui-tab a i.icon {
   font-size: 18px;
+  width: 18px;
 }
 
 .eq-ui-tabs.eq-ui-tabs-with-top-icons .eq-ui-tab a {
-  line-height: 17px;
-  font-size: 13px;
-  padding-top: 5px;
-  padding-bottom: 10px;
+  line-height: 15px;
+  font-size: 11px;
+  padding-top: 4px;
 }
 
 .eq-ui-tabs.eq-ui-tabs-with-top-icons .eq-ui-tab a i.icon {
   font-size: 24px;
+  line-height: 24px;
+  width: 24px;
 }
 
 .eq-ui-tabs.eq-ui-tabs-color-inverted .eq-ui-tab a {

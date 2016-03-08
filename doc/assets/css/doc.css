@@ -34,6 +34,49 @@ p.last-commit-in-git-hub-p {
 	}
 }
 
+/* Notifications modal */
+#eq-ui-modal-header-doc-1 {
+    width: 360px;
+}
+
+@media (max-width: 480px){
+    #eq-ui-modal-header-doc-1 {
+        width: 320px;
+    }
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-header {
+    background-color: #fff;
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-header {
+    padding-left: 16px;
+    padding-right: 10px;
+}
+
+#eq-ui-modal-header-doc-1 .section-title {
+    font-size: 20px;
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-content {
+    background-color: #fff;
+    padding: 0;
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-content .eq-ui-list {
+    border: none;
+    border-radius: 0;
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-footer {
+    background-color: #fff;
+    text-align: center;
+}
+
+#eq-ui-modal-header-doc-1 .eq-ui-modal-footer a {
+    float: none;
+}
+
 /* Promo */
 .promo {
     text-align: center;
@@ -132,6 +175,17 @@ p.last-commit-in-git-hub-p {
 }
 .doc-drop-zone-message .doc-drop-zone-message-browse-link {
     text-decoration: underline;
+}
+
+/* Badges */
+.doc-badge-icon {
+    line-height: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.doc-badge-text {
+    line-height: 28px;
 }
 
 /* Media */

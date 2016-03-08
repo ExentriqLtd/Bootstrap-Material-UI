@@ -55,8 +55,10 @@
     &.eq-ui-tabs-with-icons {
         .eq-ui-tab {
             a {
+
                 i.icon {
                     font-size: 24px;
+                    width: 24px;
                 }
             }
         }
@@ -66,8 +68,10 @@
     &.eq-ui-tabs-with-left-icons {
         .eq-ui-tab {
             a {
+
                 i.icon {
                     font-size: 18px;
+                    width: 18px;
                 }
             }
         }
@@ -77,12 +81,13 @@
     &.eq-ui-tabs-with-top-icons {
         .eq-ui-tab {
             a {
-                line-height: 17px;
-                font-size: 13px;
-                padding-top: 5px;
-                padding-bottom: 10px;
+                line-height: 15px;
+                font-size: 11px;
+                padding-top: 4px;
                 i.icon {
                     font-size: 24px;
+                    line-height: 24px;
+                    width: 24px;
                 }
             }
         }

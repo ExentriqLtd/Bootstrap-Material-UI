@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>JavaScript - Collapsible | Exentriq - Bootstrap Material UI</title>
+    <title>CSS - Badges | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
     <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.1" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.3.1" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"java-script",path:"collapsible",name_section:"JavaScript",name_chapter:"Collapsible"};</script>
+    <script>var _doc_route = {root_path:"css",path:"badges",name_section:"CSS",name_chapter:"Badges"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -705,186 +705,51 @@
 
 </div>
 
-    <main class="eq-ui-main">    
-    <div class="jumbotron">
-        <div class="container">
-            <h1>Collapsible</h1>
-            <p>Collapsibles are accordion elements that expand when clicked on. They allow you to hide content that is not immediately relevant to the user.</p>
-        </div>
-    </div>
-
+    <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
+        <h1>Badges</h1>
+    </div>
+</div>
 
-        <div class="row">
-            <div class="col-md-12">
+<div class="container">
 
-                <h2 class="header">Accordion</h2>
-                <p>Basic collapsible.</p>
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="header">Overlap</h2>
+            <p>Add <code class="language-markup">eq-ui-badge eq-ui-badge-overlap</code>.</p>
 
-                <ul class="eq-ui-collapsible" data-collapsible="accordion">
-                    <li>
-                        <div class="eq-ui-collapsible-header active">
-                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;accordion&quot;&gt;
-    &lt;li&gt;
-        &lt;div class=&quot;eq-ui-collapsible-header active&quot;&gt;
-            &lt;a&gt;&lt;i class=&quot;mdi mdi-image-filter-drama icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #1&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
-            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;div class=&quot;eq-ui-collapsible-header&quot;&gt;
-            &lt;a&gt;&lt;i class=&quot;mdi mdi-map-marker icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #2&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
-            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;
-        &lt;div class=&quot;eq-ui-collapsible-header&quot;&gt;
-            &lt;a&gt;&lt;i class=&quot;mdi mdi-fire icon icon-left icon-24&quot;&gt;&lt;/i&gt;Collapsible #3&lt;/a&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;eq-ui-collapsible-body&quot;&gt;
-            &lt;div class=&quot;eq-ui-collapsible-body-inner&quot;&gt;
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-
+            <div class="eq-ui-card doc-margin-bottom">
+                <div class="eq-ui-card-supporting-text">
+                    <a class="doc-badge-icon">
+                        <i class="mdi mdi-comment icon eq-ui-badge eq-ui-badge-overlap" data-badge="12"></i>
+                    </a>
+                </div>
             </div>
+
+            <pre><code class="language-markup">
+&lt;a&gt;
+    &lt;i class=&quot;mdi mdi-comment icon eq-ui-badge eq-ui-badge-overlap&quot; data-badge=&quot;12&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
+        <div class="col-md-6">
+            <h2 class="header">Normal</h2>
+            <p>Add <code class="language-markup">eq-ui-badge</code>.</p>
 
-                <h2 class="header">Popout</h2>
-                <p>For create collapsible popout add the class <code class="language-markup">popout</code>.</p>
-
-                <ul class="eq-ui-collapsible popout" data-collapsible="accordion">
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header active">
-                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-collapsible popout&quot; data-collapsible=&quot;accordion&quot;&gt;
-...</code></pre>
-
+            <div class="eq-ui-card doc-margin-bottom">
+                <div class="eq-ui-card-supporting-text">
+                    <a class="eq-ui-badge doc-badge-text" data-badge="12">Inbox</a>
+                </div>
             </div>
+
+            <pre><code class="language-markup">
+&lt;a class=&quot;eq-ui-badge&quot; data-badge=&quot;12&quot;&gt;Inbox&lt;/a&gt;</code></pre>
+
         </div>
-
-        <div class="row">
-            <div class="col-md-12">
-
-                <h2 class="header">Expandable</h2>
-                <p>For create collapsible expandable add in the data-collapsible <code class="language-markup">expandable</code>.</p>
-
-                <ul class="eq-ui-collapsible" data-collapsible="expandable">
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #1</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-map-marker icon icon-left icon-24"></i>Collapsible #2</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="eq-ui-collapsible-header">
-                            <a><i class="mdi mdi-fire icon icon-left icon-24"></i>Collapsible #3</a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <div class="eq-ui-collapsible-body-inner">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee.
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-collapsible&quot; data-collapsible=&quot;expandable&quot;&gt;
-...</code></pre>
-
-            </div>
-        </div>
-
     </div>
 
+</div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->

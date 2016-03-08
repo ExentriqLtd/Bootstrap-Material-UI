@@ -7,6 +7,8 @@
     EqUI.modals.overlay_class = 'eq-ui-modal-overlay';
     EqUI.modals.top_sheet_class = 'eq-ui-modal-top-sheet';
     EqUI.modals.bottom_sheet_class = 'eq-ui-modal-bottom-sheet';
+    EqUI.modals.left_sheet_class = 'eq-ui-modal-left-sheet';
+    EqUI.modals.right_sheet_class = 'eq-ui-modal-right-sheet';
     EqUI.modals.full_sheet_class = 'eq-ui-modal-full-sheet';
 
     EqUI.modals.stack = 0;
@@ -98,6 +100,32 @@
                         }
                     }
                 });
+            } // Left Sheet
+            else if ($modal.hasClass(EqUI.modals.left_sheet_class)) {
+                $modal.velocity({left: "0", opacity: 1}, {
+                    duration: options.in_duration,
+                    queue: false,
+                    ease: "easeOutCubic",
+                    // Handle modal ready callback
+                    complete: function() {
+                        if (typeof(options.ready) === "function") {
+                            options.ready();
+                        }
+                    }
+                });
+            } // Right Sheet
+            else if ($modal.hasClass(EqUI.modals.right_sheet_class)) {
+                $modal.velocity({right: "0", opacity: 1}, {
+                    duration: options.in_duration,
+                    queue: false,
+                    ease: "easeOutCubic",
+                    // Handle modal ready callback
+                    complete: function() {
+                        if (typeof(options.ready) === "function") {
+                            options.ready();
+                        }
+                    }
+                });
             } // Normal
             else {
                 $.Velocity.hook($modal, "scaleX", 0.7);
@@ -162,6 +190,42 @@
             } // Bottom Sheet
             else if ($modal.hasClass(EqUI.modals.bottom_sheet_class)) {
                 $modal.velocity({bottom: "-100%", opacity: 0}, {
+                    duration: options.out_duration,
+                    queue: false,
+                    ease: "easeOutCubic",
+                    // Handle modal ready callback
+                    complete: function() {
+                        $overlay.css({display:"none"});
+
+                        // Call complete callback
+                        if (typeof(options.complete) === "function") {
+                            options.complete();
+                        }
+                        $overlay.remove();
+                        EqUI.modals.stack--;
+                    }
+                });
+            } // Left Sheet
+            else if ($modal.hasClass(EqUI.modals.left_sheet_class)) {
+                $modal.velocity({left: "-100%", opacity: 0}, {
+                    duration: options.out_duration,
+                    queue: false,
+                    ease: "easeOutCubic",
+                    // Handle modal ready callback
+                    complete: function() {
+                        $overlay.css({display:"none"});
+
+                        // Call complete callback
+                        if (typeof(options.complete) === "function") {
+                            options.complete();
+                        }
+                        $overlay.remove();
+                        EqUI.modals.stack--;
+                    }
+                });
+            } // Right Sheet
+            else if ($modal.hasClass(EqUI.modals.right_sheet_class)) {
+                $modal.velocity({right: "-100%", opacity: 0}, {
                     duration: options.out_duration,
                     queue: false,
                     ease: "easeOutCubic",
