@@ -1,5 +1,16 @@
 ## CHANGELOG
 
+### v0.3.3 (May 2, 2016)
+
+**New**
+- ...
+
+**Updates**
+- Grunfile (add to build new variant without libs)
+
+**Fixes**
+- ...
+
 ### v0.3.2 (Mar 8, 2016)
 
 **New**

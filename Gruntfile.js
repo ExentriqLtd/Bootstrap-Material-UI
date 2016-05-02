@@ -1,7 +1,57 @@
 module.exports = function ( grunt ) {
 
     var options = {
-
+        imports_bower_bootstrap: [
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js'
+        ],
+        imports_bower: [
+            'src/bower_components/parsleyjs/dist/parsley.js',
+            'src/bower_components/jquery.easing/js/jquery.easing.js',
+            'src/bower_components/hammerjs/hammer.js',
+            'src/bower_components/jquery-hammerjs/jquery.hammer.js',
+            'src/bower_components/jquery-elementresize/dist/jquery.elementresize.js',
+            'src/bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
+            'src/bower_components/dropzone/dist/dropzone.js',
+            'src/bower_components/velocity/velocity.js',
+            'src/bower_components/velocity/velocity.ui.js',
+            'src/bower_components/autosize/dist/autosize.js',
+            'src/bower_components/waves/dist/waves.js',
+            'src/bower_components/prism/prism.js',
+            'src/bower_components/prism/components/prism-php.js',
+            'src/bower_components/prism/components/prism-git.js',
+            'src/bower_components/prism/components/prism-bash.js',
+            'src/bower_components/prism/components/prism-http.js',
+            'src/bower_components/prism/components/prism-javascript.js',
+            'src/bower_components/prism/components/prism-markdown.js',
+            'src/bower_components/prism/components/prism-css.js',
+            'src/bower_components/prism/components/prism-scss.js'
+        ],
+        imports_js: [
+            'src/js/global.js',
+            'src/js/site.js',
+            'src/js/layout/app-bar.js',
+            'src/js/layout/side-nav.js',
+            'src/js/layout/breadcrumb.js',
+            'src/js/buttons.js',
+            'src/js/cards.js',
+            'src/js/forms.js',
+            'src/js/collapsible.js',
+            'src/js/dropdown.js',
+            'src/js/modals.js',
+            'src/js/tabs.js',
+            'src/js/_init.js'
+        ]
     };
 
     /** 
@@ -12,6 +62,7 @@ module.exports = function ( grunt ) {
 
         meta: {
             name_root_file: 'exentriq-bootstrap-material-ui',
+            name_root_file_without_libs: 'exentriq-bootstrap-material-ui-without-libs',
             notify_title: 'Exentriq - Bootstrap Material UI'
         },
 
@@ -70,59 +121,23 @@ module.exports = function ( grunt ) {
             },
             bower: {
                 src: [
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
-                    'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js',
-                    'src/bower_components/parsleyjs/dist/parsley.js',
-                    'src/bower_components/jquery.easing/js/jquery.easing.js',
-                    'src/bower_components/hammerjs/hammer.js',
-                    'src/bower_components/jquery-hammerjs/jquery.hammer.js',
-                    'src/bower_components/jquery-elementresize/dist/jquery.elementresize.js',
-                    'src/bower_components/devbridge-autocomplete/dist/jquery.autocomplete.js',
-                    'src/bower_components/dropzone/dist/dropzone.js',
-                    'src/bower_components/velocity/velocity.js',
-                    'src/bower_components/velocity/velocity.ui.js',
-                    'src/bower_components/autosize/dist/autosize.js',
-                    'src/bower_components/waves/dist/waves.js',
-                    'src/bower_components/prism/prism.js',
-                    'src/bower_components/prism/components/prism-php.js',
-                    'src/bower_components/prism/components/prism-git.js',
-                    'src/bower_components/prism/components/prism-bash.js',
-                    'src/bower_components/prism/components/prism-http.js',
-                    'src/bower_components/prism/components/prism-javascript.js',
-                    'src/bower_components/prism/components/prism-markdown.js',
-                    'src/bower_components/prism/components/prism-css.js',
-                    'src/bower_components/prism/components/prism-scss.js'
-                    ],
+                    options.imports_bower_bootstrap,
+                    options.imports_bower
+                ],
                 dest: 'src/js/vendor/bower_components.js'
             },
             dist: {
                 src: [
                     'src/js/vendor/bower_components.js',
-                    'src/js/global.js',
-                    'src/js/site.js',
-                    'src/js/layout/app-bar.js',
-                    'src/js/layout/side-nav.js',
-                    'src/js/layout/breadcrumb.js',
-                    'src/js/buttons.js',
-                    'src/js/cards.js',
-                    'src/js/forms.js',
-                    'src/js/collapsible.js',
-                    'src/js/dropdown.js',
-                    'src/js/modals.js',
-                    'src/js/tabs.js',
-                    'src/js/_init.js'
-                    ],
+                    options.imports_js
+                ],
                 dest: 'dist/js/<%= meta.name_root_file %>.js'
+            },
+            dist_without_libs: {
+                src: [
+                    options.imports_js
+                    ],
+                dest: 'dist/js/<%= meta.name_root_file_without_libs %>.js'
             }
         },
 
@@ -140,7 +155,7 @@ module.exports = function ( grunt ) {
                 reporter: require('jshint-stylish')
             },
             beforeconcat: ['src/js/*.js'],
-            afterconcat: ['dist/js/<%= meta.name_root_file %>.js']
+            afterconcat: ['dist/js/<%= meta.name_root_file %>.js', 'dist/js/<%= meta.name_root_file_without_libs %>.js']
         },
 
         // JS Uglify
@@ -154,6 +169,13 @@ module.exports = function ( grunt ) {
                 files: {
                     'dist/js/<%= meta.name_root_file %>.min.js': [
                         'dist/js/<%= meta.name_root_file %>.js'
+                    ]
+                }
+            },
+            dist_without_libs: {
+                files: {
+                    'dist/js/<%= meta.name_root_file_without_libs %>.min.js': [
+                        'dist/js/<%= meta.name_root_file_without_libs %>.js'
                     ]
                 }
             }
@@ -462,7 +484,7 @@ module.exports = function ( grunt ) {
     grunt.registerTask('Watch', ['concurrent:watch']);
 
     grunt.registerTask('sass_compile', ['sass:dist', 'postcss:dist', 'cssmin:dist', 'copy:css', 'notify:sass_compile']);
-    grunt.registerTask('js_compile', ['jshint:beforeconcat', 'concat:dist', 'uglify:dist', 'copy:js', 'notify:js_compile']);
+    grunt.registerTask('js_compile', ['jshint:beforeconcat', 'concat:dist', 'concat:dist_without_libs', 'uglify:dist', 'uglify:dist_without_libs', 'copy:js', 'notify:js_compile']);
     grunt.registerTask('jade_compile', ['jade:compile', 'notify:jade_compile']);
 
     grunt.registerTask('server', ['browserSync', 'notify:server']);
@@ -476,7 +498,9 @@ module.exports = function ( grunt ) {
         'concat:bower',
         'jshint:beforeconcat',
         'concat:dist',
+        'concat:dist_without_libs',
         'uglify:dist',
+        'uglify:dist_without_libs',
         'copy:dist',
         'copy:fonts',
         'copy:img',
