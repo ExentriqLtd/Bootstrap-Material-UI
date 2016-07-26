@@ -1,5 +1,16 @@
 ## CHANGELOG
 
+### v0.3.4 (July 26, 2016)
+
+**New**
+- Add new events in Tabs
+
+**Updates**
+- Rebuild node version
+
+**Fixes**
+- ...
+
 ### v0.3.3 (May 2, 2016)
 
 **New**

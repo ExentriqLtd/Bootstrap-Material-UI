@@ -277,6 +277,13 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('ul.eq-ui-tabs').tabs('select_tab', 'eq-ui-tab-s3-t1');
 });</code></pre>
+
+            <p>Events</p>
+
+            <pre><code class="language-javascript">
+$('#eq-ui-tab-s3-t1').bind('isShow', function () {
+    console.log($(this), 'show...');
+});</code></pre>
         </div>
     </div>
 

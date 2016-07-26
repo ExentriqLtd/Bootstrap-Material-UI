@@ -11,7 +11,7 @@
 
 .mdi {
   display: inline-block;
-  font: normal normal normal 24px / 1 "Material Design Icons";
+  font: normal normal normal 24px/1 "Material Design Icons";
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -18879,8 +18879,8 @@ body {
 }
 
 .zoomIn {
-  -webkit-animation-name: "zoomIn";
-  animation-name: "zoomIn";
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
 }
 
 @-webkit-keyframes zoomInDown {
@@ -18914,8 +18914,8 @@ body {
 }
 
 .zoomInDown {
-  -webkit-animation-name: "zoomInDown";
-  animation-name: "zoomInDown";
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
 }
 
 @-webkit-keyframes zoomInLeft {
@@ -18949,8 +18949,8 @@ body {
 }
 
 .zoomInLeft {
-  -webkit-animation-name: "zoomInLeft";
-  animation-name: "zoomInLeft";
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
 }
 
 @-webkit-keyframes zoomInRight {
@@ -18984,8 +18984,8 @@ body {
 }
 
 .zoomInRight {
-  -webkit-animation-name: "zoomInRight";
-  animation-name: "zoomInRight";
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
 }
 
 @-webkit-keyframes zoomInUp {
@@ -19019,8 +19019,8 @@ body {
 }
 
 .zoomInUp {
-  -webkit-animation-name: "zoomInUp";
-  animation-name: "zoomInUp";
+  -webkit-animation-name: zoomInUp;
+  animation-name: zoomInUp;
 }
 
 @-webkit-keyframes zoomOut {
@@ -19051,8 +19051,8 @@ body {
 }
 
 .zoomOut {
-  -webkit-animation-name: "zoomOut";
-  animation-name: "zoomOut";
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
 }
 
 @-webkit-keyframes zoomOutDown {
@@ -19089,8 +19089,8 @@ body {
 }
 
 .zoomOutDown {
-  -webkit-animation-name: "zoomOutDown";
-  animation-name: "zoomOutDown";
+  -webkit-animation-name: zoomOutDown;
+  animation-name: zoomOutDown;
 }
 
 @-webkit-keyframes zoomOutLeft {
@@ -19121,8 +19121,8 @@ body {
 }
 
 .zoomOutLeft {
-  -webkit-animation-name: "zoomOutLeft";
-  animation-name: "zoomOutLeft";
+  -webkit-animation-name: zoomOutLeft;
+  animation-name: zoomOutLeft;
 }
 
 @-webkit-keyframes zoomOutRight {
@@ -19153,8 +19153,8 @@ body {
 }
 
 .zoomOutRight {
-  -webkit-animation-name: "zoomOutRight";
-  animation-name: "zoomOutRight";
+  -webkit-animation-name: zoomOutRight;
+  animation-name: zoomOutRight;
 }
 
 @-webkit-keyframes zoomOutUp {
@@ -19191,8 +19191,8 @@ body {
 }
 
 .zoomOutUp {
-  -webkit-animation-name: "zoomOutUp";
-  animation-name: "zoomOutUp";
+  -webkit-animation-name: zoomOutUp;
+  animation-name: zoomOutUp;
 }
 
 /*!
@@ -19921,16 +19921,13 @@ pre[class*="language-"]:before {
 
 .valign-wrapper {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal !important;
   -webkit-box-direction: normal !important;
-  -webkit-flex-direction: row !important;
       -ms-flex-direction: row !important;
           flex-direction: row !important;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -20475,26 +20472,20 @@ table.eq-ui-data-table tbody > tr.is-selected {
   pointer-events: none;
   content: attr(data-badge);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-align-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -20990,12 +20981,10 @@ fieldset[disabled] .btn-danger.active {
   background: #fff;
   border-radius: 2px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
@@ -21003,15 +20992,12 @@ fieldset[disabled] .btn-danger.active {
 
 .eq-ui-card .eq-ui-card-title {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: stretch;
-  -webkit-justify-content: stretch;
       -ms-flex-pack: stretch;
           justify-content: stretch;
   padding: 16px;
@@ -21020,12 +21006,10 @@ fieldset[disabled] .btn-danger.active {
 
 .eq-ui-card .eq-ui-card-title .eq-ui-card-title-text {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
   color: inherit;
   font-weight: 400;
   font-size: 24px;
@@ -21039,7 +21023,6 @@ fieldset[disabled] .btn-danger.active {
 
 .eq-ui-card .eq-ui-card-title.eq-ui-card-title-expand {
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
@@ -21090,7 +21073,6 @@ fieldset[disabled] .btn-danger.active {
 
 .eq-ui-card.eq-ui-card-event .eq-ui-card-title {
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
 }
@@ -22987,12 +22969,10 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 
 .eq-ui-tabs.eq-ui-tabs-justified {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
 }
 

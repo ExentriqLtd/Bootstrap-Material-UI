@@ -2106,7 +2106,10 @@ else {
                         $index = 0;
                     }
 
-                    $content.show();
+                    // Show and event
+                    $content.show(0,function(){
+                        $(this).trigger('isShow');
+                    });
 
                     // Update indicator
                     if (($index - $prev_index) >= 0) {

@@ -27,6 +27,11 @@ var EqUIDoc = {};
             _path.parent().addClass("active");
         }
 
+        // Test
+        /*$('#eq-ui-tab-s1-t1').bind('isShow', function () {
+            console.log($(this), 'show...');
+        });*/
+
         // Set title in app bar
         /*var _title_app_bar = $('#main-eq-ui-app-bar').find('.header-title');
         if(_doc_route.name_section !== "" && _doc_route.name_chapter !== ""){
