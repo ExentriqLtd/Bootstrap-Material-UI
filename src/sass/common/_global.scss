@@ -97,6 +97,20 @@ body.eq-ui-side-nav-hide .eq-ui-main  {
 	@media (max-width: $screen-sm-min) {
 		padding-left: 0;
 	}
+
+    /*** Scrollbar Y ***/
+    &.eq-ui-scrollbar-y {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+    }
+
+    /*** Scrollbar X ***/
+    &.eq-ui-scrollbar-x {
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+    }
 }
 
 /*** Z-levels ***/
@@ -199,12 +213,14 @@ pre[class*="language-"] {
         border-radius: 2px;
     }
     &::-webkit-scrollbar {
-        background-color: #F7F7F7;
+        background-color: #fafafa;
     }
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-        background-color: #BFBFBF;
+        background-color: #c1c1c1;
+        &:hover {
+            background-color: #7d7d7d;
+        }
     }
 }
 
@@ -212,7 +228,7 @@ pre[class*="language-"] {
 .eq-ui-scrollbar-y {
     @extend .eq-ui-scrollbar;
     &::-webkit-scrollbar {
-        width: 5px;
+        width: 6px;
     }
 }
 
@@ -220,7 +236,7 @@ pre[class*="language-"] {
 .eq-ui-scrollbar-x {
     @extend .eq-ui-scrollbar;
     &::-webkit-scrollbar {
-        height: 5px;
+        height: 6px;
     }
 }
 

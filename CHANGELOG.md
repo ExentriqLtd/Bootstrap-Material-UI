@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.3.5 (Sept 06, 2016)
+
+**Updates**
+- Scroll bar
+
 ### v0.3.4 (July 26, 2016)
 
 **New**

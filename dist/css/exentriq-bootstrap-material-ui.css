@@ -19610,12 +19610,22 @@ body.eq-ui-side-nav-hide .eq-ui-main {
   padding-left: 240px;
   -webkit-transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           transition: padding-left 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  /*** Scrollbar Y ***/
+  /*** Scrollbar X ***/
 }
 
 @media (max-width: 768px) {
   .eq-ui-main {
     padding-left: 0;
   }
+}
+
+.eq-ui-main.eq-ui-scrollbar-y::-webkit-scrollbar, .eq-ui-main.eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-y::-webkit-scrollbar, .eq-ui-main.autocomplete-suggestions::-webkit-scrollbar, .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper nav.eq-ui-main::-webkit-scrollbar, .eq-ui-select-wrapper .eq-ui-main.eq-ui-dropdown::-webkit-scrollbar, .eq-ui-main.eq-ui-dropdown.eq-ui-dropdown-scroll::-webkit-scrollbar, .eq-ui-main.eq-ui-modal::-webkit-scrollbar, .eq-ui-modal.eq-ui-modal-fixed .eq-ui-main.eq-ui-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.eq-ui-main.eq-ui-scrollbar-x::-webkit-scrollbar, .eq-ui-main.eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-x::-webkit-scrollbar {
+  height: 8px;
 }
 
 /*** Z-levels ***/
@@ -19761,23 +19771,26 @@ pre[class*="language-"]:before {
 }
 
 .eq-ui-scrollbar::-webkit-scrollbar, .eq-ui-scrollbar-y::-webkit-scrollbar, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-y::-webkit-scrollbar, .autocomplete-suggestions::-webkit-scrollbar, .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper nav::-webkit-scrollbar, .eq-ui-select-wrapper .eq-ui-dropdown::-webkit-scrollbar, .eq-ui-dropdown.eq-ui-dropdown-scroll::-webkit-scrollbar, .eq-ui-modal::-webkit-scrollbar, .eq-ui-modal.eq-ui-modal-fixed .eq-ui-modal-content::-webkit-scrollbar, .eq-ui-scrollbar-x::-webkit-scrollbar, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-x::-webkit-scrollbar {
-  background-color: #F7F7F7;
+  background-color: #fafafa;
 }
 
 .eq-ui-scrollbar::-webkit-scrollbar-thumb, .eq-ui-scrollbar-y::-webkit-scrollbar-thumb, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-y::-webkit-scrollbar-thumb, .autocomplete-suggestions::-webkit-scrollbar-thumb, .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper nav::-webkit-scrollbar-thumb, .eq-ui-select-wrapper .eq-ui-dropdown::-webkit-scrollbar-thumb, .eq-ui-dropdown.eq-ui-dropdown-scroll::-webkit-scrollbar-thumb, .eq-ui-modal::-webkit-scrollbar-thumb, .eq-ui-modal.eq-ui-modal-fixed .eq-ui-modal-content::-webkit-scrollbar-thumb, .eq-ui-scrollbar-x::-webkit-scrollbar-thumb, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-x::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #BFBFBF;
+  background-color: #c1c1c1;
+}
+
+.eq-ui-scrollbar::-webkit-scrollbar-thumb:hover, .eq-ui-scrollbar-y::-webkit-scrollbar-thumb:hover, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-y::-webkit-scrollbar-thumb:hover, .autocomplete-suggestions::-webkit-scrollbar-thumb:hover, .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper nav::-webkit-scrollbar-thumb:hover, .eq-ui-select-wrapper .eq-ui-dropdown::-webkit-scrollbar-thumb:hover, .eq-ui-dropdown.eq-ui-dropdown-scroll::-webkit-scrollbar-thumb:hover, .eq-ui-modal::-webkit-scrollbar-thumb:hover, .eq-ui-modal.eq-ui-modal-fixed .eq-ui-modal-content::-webkit-scrollbar-thumb:hover, .eq-ui-scrollbar-x::-webkit-scrollbar-thumb:hover, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-x::-webkit-scrollbar-thumb:hover {
+  background-color: #7d7d7d;
 }
 
 /*** Scrollbar Y ***/
 .eq-ui-scrollbar-y::-webkit-scrollbar, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-y::-webkit-scrollbar, .autocomplete-suggestions::-webkit-scrollbar, .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper nav::-webkit-scrollbar, .eq-ui-select-wrapper .eq-ui-dropdown::-webkit-scrollbar, .eq-ui-dropdown.eq-ui-dropdown-scroll::-webkit-scrollbar, .eq-ui-modal::-webkit-scrollbar, .eq-ui-modal.eq-ui-modal-fixed .eq-ui-modal-content::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 
 /*** Scrollbar X ***/
 .eq-ui-scrollbar-x::-webkit-scrollbar, .eq-ui-scrollbar-wrap.eq-ui-scrollbar-wrap-x::-webkit-scrollbar {
-  height: 5px;
+  height: 6px;
 }
 
 /*** Scrollbar Wrap ***/
