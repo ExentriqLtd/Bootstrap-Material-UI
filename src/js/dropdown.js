@@ -112,16 +112,20 @@
             function dropdownOpen(object) {
                 if ((options.hover && !object.hasClass('active')) || (!options.hover && !object.hasClass('open'))){
 
-                    object.addClass('active');
-
-                    object.stop(true,false).slideDown({
-                        duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
-                            object.addClass('open');
-                            $(this).css('height', '');
-                        }
-                    });
+					if(!object.hasClass("active")){
+						object.addClass('active');
+						
+						object.stop(true,false).slideDown({
+	                        duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
+	                            object.addClass('open');
+	                            $(this).css('height', '');
+	                        }
+	                    });
+					}
+                    
                 }
             }
+            
 
             // Dropdown Close
             function dropdownClose(object) {
