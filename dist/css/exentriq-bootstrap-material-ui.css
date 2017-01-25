@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* MaterialDesignIcons.com */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
+@import url(../bower_components/prism/themes/prism.css);
 @font-face {
   font-family: "Material Design Icons";
   src: url("../fonts/materialdesignicons-webfont.eot?v=1.4.57");
@@ -19332,140 +19333,6 @@ a.waves-effect .waves-ripple {
   z-index: -1;
 }
 
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-code[class*="language-"],
-pre[class*="language-"] {
-  color: black;
-  text-shadow: 0 1px white;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  direction: ltr;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  word-break: normal;
-  line-height: 1.5;
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-}
-
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
-code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
-code[class*="language-"]::selection, code[class*="language-"] ::selection {
-  text-shadow: none;
-  background: #b3d4fc;
-}
-
-@media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
-    text-shadow: none;
-  }
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: .5em 0;
-  overflow: auto;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-  background: #f5f2f0;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: slategray;
-}
-
-.token.punctuation {
-  color: #999;
-}
-
-.namespace {
-  opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.boolean,
-.token.number,
-.token.constant,
-.token.symbol,
-.token.deleted {
-  color: #905;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #690;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-  color: #a67f59;
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.token.atrule,
-.token.attr-value,
-.token.keyword {
-  color: #07a;
-}
-
-.token.function {
-  color: #DD4A68;
-}
-
-.token.regex,
-.token.important,
-.token.variable {
-  color: #e90;
-}
-
-.token.important,
-.token.bold {
-  font-weight: bold;
-}
-
-.token.italic {
-  font-style: italic;
-}
-
-.token.entity {
-  cursor: help;
-}
-
 /* --------------------------------------- */
 /* Typography                              */
 /* --------------------------------------- */
@@ -19563,6 +19430,13 @@ small {
 
 .thin {
   font-weight: 200;
+}
+
+/* --------------------------------------- */
+/* Tools Custom AND                        */
+/* --------------------------------------- */
+.eq-ui-tool-bar .eq-ui-tool-bar-cont-tab {
+  height: 50px !important;
 }
 
 /* --------------------------------------- */
@@ -20123,8 +19997,8 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
   position: relative;
   color: #9b9b9b;
   background-color: #ffffff;
-  height: 64px;
-  line-height: 64px;
+  height: 50px;
+  line-height: 50px;
 }
 
 /* Vars */
@@ -20132,8 +20006,8 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
   position: relative;
   color: #FFFFFF;
   background-color: #2f4357;
-  height: 64px;
-  line-height: 64px;
+  height: 50px;
+  line-height: 50px;
 }
 
 .eq-ui-app-bar .eq-ui-side-nav-toggle {
@@ -20142,8 +20016,8 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
 }
 
 .eq-ui-app-bar .eq-ui-side-nav-toggle i {
-  margin-top: 12px;
-  margin-bottom: 11px;
+  margin-top: 5px;
+  margin-bottom: 0px;
   line-height: 41px;
 }
 
@@ -20185,15 +20059,15 @@ body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
   border-bottom: 1px solid #e1e1e1;
   display: block;
   width: 100%;
-  height: 64px;
-  line-height: 41px;
-  padding: 12px 0 11px 24px;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px 0 12px 21px;
   position: absolute;
 }
 
 .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper {
   position: relative;
-  margin-top: 64px;
+  margin-top: 50px;
   overflow: hidden;
   width: 100%;
   height: calc(100% - 128px);
@@ -20430,7 +20304,7 @@ table.eq-ui-data-table tbody > tr.is-selected {
 .eq-ui-nav-menu {
   margin: 0;
   padding: 0;
-  height: 64px;
+  height: 50px;
 }
 
 .eq-ui-nav-menu > li {
@@ -20458,7 +20332,7 @@ table.eq-ui-data-table tbody > tr.is-selected {
 
 .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon > a {
   line-height: 32px;
-  margin: 16px 0;
+  margin: 9px 0;
 }
 
 .eq-ui-tool-bar-system .eq-ui-nav-menu {
@@ -20528,7 +20402,7 @@ table.eq-ui-data-table tbody > tr.is-selected {
 
 .eq-ui-app-bar .eq-ui-nav-menu .eq-ui-nav-menu-item-icon .eq-ui-badge.eq-ui-badge-overlap:after {
   right: -36px;
-  top: -50px;
+  top: -45px;
 }
 
 .btn {
@@ -22300,7 +22174,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-top-search .eq-ui-search {
-  line-height: 64px;
+  line-height: 50px;
   border: none;
   padding: 0;
 }
@@ -22641,7 +22515,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 
 .eq-ui-dropdown.eq-ui-dropdown-right-top {
   left: auto;
-  right: 0;
+  right: 0px;
 }
 
 .eq-ui-dropdown.eq-ui-dropdown-right-top li > .eq-ui-dropdown {
@@ -22740,8 +22614,8 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-modal .eq-ui-modal-header {
   position: relative;
   display: block;
-  min-height: 64px;
-  line-height: 64px;
+  min-height: 50px;
+  line-height: 50px;
   width: 100%;
   padding: 0 24px;
 }
@@ -22819,7 +22693,7 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 }
 
 .eq-ui-modal.eq-ui-modal-fixed .eq-ui-modal-header + .eq-ui-modal-content {
-  margin-top: 65px;
+  margin-top: 51px;
   height: calc(100% - 118px);
 }
 

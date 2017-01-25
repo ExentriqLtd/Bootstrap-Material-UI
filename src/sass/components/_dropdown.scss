@@ -11,7 +11,7 @@
     min-width: 124px;
     max-height: 480px;
     margin: 0;
-    padding: 0px 0;
+    padding: 8px 0;
     z-index: 999;
     will-change: width, height;
 
@@ -28,7 +28,6 @@
             display: block;
             cursor: pointer;
             font-size: 16px;
-            text-align: center;
             color: $dropdown-color;
             height: $dropdown-item-height;
             line-height: $dropdown-item-height;
@@ -93,8 +92,8 @@
     // Align Right Top
     &.eq-ui-dropdown-right-top {
         left: auto;
-        right: -38px;
-        top:50px !important;
+        right: 0px;
+
 
         // Dropdown Sub
         li > .eq-ui-dropdown {

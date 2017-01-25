@@ -6562,7 +6562,7 @@
 
 .icon, .eq-ui-icon {
   line-height: inherit;
-  font-size: 19px; }
+  font-size: 24px; }
   .icon.icon-left, .icon.eq-ui-icon-left, .eq-ui-icon.icon-left, .eq-ui-icon.eq-ui-icon-left {
     float: left;
     margin-right: 15px; }
@@ -15644,6 +15644,12 @@ small {
   font-weight: 200; }
 
 /* --------------------------------------- */
+/* Tools Custom ANDR                       */
+/* --------------------------------------- */
+.eq-ui-tool-bar .eq-ui-tool-bar-cont-tab {
+  height: 50px !important; }
+
+/* --------------------------------------- */
 /* Default styles                          */
 /* --------------------------------------- */
 *:focus {
@@ -16085,7 +16091,7 @@ body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
       position: absolute; }
     .eq-ui-side-nav .eq-ui-side-nav-wrapper .eq-ui-side-nav-content-wrapper {
       position: relative;
-      margin-top: 64px;
+      margin-top: 50px;
       overflow: hidden;
       width: 100%;
       height: calc(100% - 128px); }
@@ -16133,7 +16139,7 @@ body.eq-ui-side-nav-hide .eq-ui-side-nav {
     position: relative;
     line-height: inherit;
     color: inherit;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     float: left; }
     .eq-ui-breadcrumb .eq-ui-breadcrumb-item:not(.eq-ui-breadcrumb-item-hide):not(:first-of-type):after {
@@ -17675,7 +17681,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
   min-width: 124px;
   max-height: 480px;
   margin: 0;
-  padding: 0px 0;
+  padding: 8px 0;
   z-index: 999;
   will-change: width, height; }
   .eq-ui-dropdown li {
@@ -17690,7 +17696,6 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
       display: block;
       cursor: pointer;
       font-size: 16px;
-      text-align: center;
       color: rgba(0, 0, 0, 0.87);
       height: 48px;
       line-height: 48px;
@@ -17730,8 +17735,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
     top: -8px; }
   .eq-ui-dropdown.eq-ui-dropdown-right-top {
     left: auto;
-    right: -38px;
-    top: 50px !important; }
+    right: 0px; }
     .eq-ui-dropdown.eq-ui-dropdown-right-top li > .eq-ui-dropdown {
       left: auto;
       right: 100%; }
