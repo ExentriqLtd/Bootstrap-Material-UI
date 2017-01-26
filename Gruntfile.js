@@ -384,7 +384,7 @@ module.exports = function ( grunt ) {
                     baseDir: "./doc"
                 },
                 open: true,
-                browser: ["google chrome"],
+                browser: ["chrome.exe"],
                 port: 9090
             }
         },
