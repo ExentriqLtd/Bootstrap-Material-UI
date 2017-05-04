@@ -333,6 +333,7 @@ module.exports = function ( grunt ) {
                     "doc/modals.html": "jade/modals.jade",
                     "doc/tabs.html": "jade/tabs.jade",
                     "doc/showcase.html": "jade/showcase.jade",
+                    "doc/loader.html": "jade/loader.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
