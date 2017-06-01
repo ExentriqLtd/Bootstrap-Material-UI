@@ -22869,7 +22869,7 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 
 .loader_1 {
   width: 100%;
-  height: 300px;
+  height: 350px;
 }
 
 .relative {
@@ -22950,6 +22950,27 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 }
 
 .eq-ui-loader-line:before {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -200px;
+  width: 200px;
+  height: 6px;
+  background-color: #1bbc9b;
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+
+.eq-ui-loader-line-lazy {
+  height: 6px;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  background-color: #ddd;
+  bottom: 0px;
+}
+
+.eq-ui-loader-line-lazy:before {
   display: block;
   position: absolute;
   content: "";
