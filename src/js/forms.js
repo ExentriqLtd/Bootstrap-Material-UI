@@ -198,9 +198,7 @@
             '</li>';
         }
 
-        var _dropzone = new Dropzone(object, _options);
-
-        return _dropzone;
+        return new Dropzone(object, _options);
     };
 
     // Init file input

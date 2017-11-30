@@ -87,11 +87,12 @@
             var _is_checked = this.checked;
 
             _tbody.find('tr input[type="checkbox"]').each(function() {
-                this.checked = _is_checked;
+                var _self = this;
+                _self.checked = _is_checked;
 
                 var _parent = $(this).parent().parent();
 
-                if(this.checked){
+                if(_self.checked){
                     _parent.addClass('is-selected');
                 } else {
                     _parent.removeClass('is-selected');
