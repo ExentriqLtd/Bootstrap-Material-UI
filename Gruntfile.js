@@ -333,6 +333,7 @@ module.exports = function ( grunt ) {
                     "doc/modals.html": "jade/modals.jade",
                     "doc/tabs.html": "jade/tabs.jade",
                     "doc/showcase.html": "jade/showcase.jade",
+                    "doc/loader.html": "jade/loader.jade",
                     "doc/index.html": "jade/index.jade"
                 }
             }
@@ -384,7 +385,7 @@ module.exports = function ( grunt ) {
                     baseDir: "./doc"
                 },
                 open: true,
-                browser: ["google chrome"],
+                browser: ["chrome.exe"],
                 port: 9090
             }
         },

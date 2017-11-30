@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 // Fonts
 @import "../bower_components/mdi/scss/materialdesignicons";
 
@@ -15,7 +14,7 @@
 // Global
 @import "../bower_components/animate-sass/animate";
 @import "../bower_components/waves/src/sass/waves";
-@import "../bower_components/prism/themes/prism";
+@import "../bower_components/prism/themes/prism.css";
 @import "common/global";
 
 // components
@@ -40,3 +39,4 @@
 @import "components/dropdown";
 @import "components/modals";
 @import "components/tabs";
+@import "components/loader";

@@ -1,7 +1,7 @@
 /* Vars */
 
 
-// Side nav
+// Side navv
 .eq-ui-side-nav {
 	@extend .z-depth-1;
 	border-right: 1px solid $eq-ui-side-nav-line-color;
@@ -31,15 +31,15 @@
 		    border-bottom: 1px solid $eq-ui-side-nav-line-color;
 		    display: block;
             width: 100%;
-		    height: 64px;
-		    line-height: 41px;
-		    padding: 12px 0 11px 24px;
+		    height: 50px;
+		    line-height: 30px;
+			padding: 10px 0 12px 21px;
 		    position: absolute;
 		}
 
 		.eq-ui-side-nav-content-wrapper {
             position: relative;
-            margin-top: 64px;
+            margin-top: 50px;
             overflow: hidden;
             width: 100%;
             // Offset Header + Footer
