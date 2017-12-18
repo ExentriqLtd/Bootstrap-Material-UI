@@ -7,7 +7,9 @@ a {
 }
 
 html {
-	line-height: $eq-ui-line-height-base;
+    height: 100%;
+
+    line-height: $eq-ui-line-height-base;
 
 	@media only screen and (min-width: 0) {
 		font-size: $eq-ui-font-size-base - 1;
@@ -67,7 +69,9 @@ small { font-size: 75%; }
 }
 
 body {
-	visibility: hidden;
+    height: 100%;
+
+    visibility: hidden;
 	@include eq-ui-transition(visibility);
 
 	background-color: $eq-ui-body-bg;

@@ -1,5 +1,19 @@
 ## CHANGELOG
 
+### v0.3.7 (Dec 18, 2017)
+
+**Updates**
+- Add new fixed header for Table
+
+**Fixes**
+- Error global reference in js
+- Error to load prism.css
+- Body height in fixed mode with empty content
+
+### v0.3.6 (?)
+
+??
+
 ### v0.3.5 (Sept 06, 2016)
 
 **Updates**

@@ -52,9 +52,11 @@
         if(EqUI.site.body.hasClass('eq-ui-layout-header-fixed')){
             _layout_header.css('top', _layout_header_offset+'px');
             EqUI.site.body.css('margin-top', _layout_header.outerHeight(true)+_layout_header_offset+'px');
+            EqUI.site.body.css('height', 'calc(100% - '+(_layout_header.outerHeight(true)+_layout_header_offset)+'px)');
         } else {
             _layout_header.css('top', '0px');
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
+            EqUI.site.body.css('height', '');
         }
         
         if (window.innerWidth > 768) {

@@ -131,6 +131,46 @@ table {
 			}
 		}
 
+		// Header fixed
+		&.eq-ui-header-fixed {
+			display: flex;
+			flex-flow: column;
+
+			thead {
+				display: block;
+				padding-bottom: 0;
+
+				> tr {
+					display: flex;
+
+					>th {
+						flex: 1;
+					}
+				}
+			}
+
+			tbody {
+				display: block;
+				height: 144px;
+				overflow-y: auto;
+
+				@extend .eq-ui-scrollbar;
+				&::-webkit-scrollbar {
+					width: 6px;
+				}
+
+				> tr {
+					display: flex;
+
+					>td {
+						flex: 1;
+						border-bottom: none;
+						min-width: 1px;
+					}
+				}
+			}
+		}
+
         // Is selected
         tbody > tr.is-selected {
             @include eq-ui-transition(background-color);
