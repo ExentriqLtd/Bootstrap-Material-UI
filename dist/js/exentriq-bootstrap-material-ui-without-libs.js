@@ -751,13 +751,13 @@ else {
 
         // End animation event
         function animationEnd() {
-            if(!element.hasClass(EqUI.buttons.fab_action_id+' active')){
+            if(!element.hasClass('active')){
                 $('.'+EqUI.buttons.fab_action_id+' ul').css('height', '0');
             }
         }
 
         // Add animation class
-        if(!element.hasClass(EqUI.buttons.fab_action_id+' active') && (isClose === false || isClose === 'none')){
+        if(!element.hasClass('active') && (isClose === false || isClose === 'none')){
             // SHOW
             $('.'+EqUI.buttons.fab_action_id+' ul').css('height', 'auto');
             element.addClass("active");
