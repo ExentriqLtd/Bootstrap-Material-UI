@@ -18989,7 +18989,7 @@ else {
 		});
 
 		// Load complete
-		$(window).load(function(){
+		$(window).on('load', function(){
             // Update
             _this.load();
 	    });
