@@ -18189,8 +18189,6 @@ small {
 }
 
 body {
-  visibility: hidden;
-  transition: visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #f5f5f5;
   /* Fix for webkit rendering */
   -webkit-font-smoothing: antialiased;

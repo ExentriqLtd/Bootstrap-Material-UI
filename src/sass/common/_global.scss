@@ -67,9 +67,6 @@ small { font-size: 75%; }
 }
 
 body {
-	visibility: hidden;
-	@include eq-ui-transition(visibility);
-
 	background-color: $eq-ui-body-bg;
 
 	/* Fix for webkit rendering */
