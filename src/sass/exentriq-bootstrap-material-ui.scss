@@ -6,6 +6,7 @@
 @import "common/mixins";
 @import "common/color";
 @import "common/icons";
+@import "common/fonts";
 @import "common/variables";
 
 // Bootstrap
@@ -14,7 +15,7 @@
 // Global
 @import "../bower_components/animate-sass/animate";
 @import "../bower_components/waves/src/sass/waves";
-@import "../bower_components/prism/themes/prism.css";
+// @import "../bower_components/prism/themes/prism.css";
 @import "common/global";
 
 // components
