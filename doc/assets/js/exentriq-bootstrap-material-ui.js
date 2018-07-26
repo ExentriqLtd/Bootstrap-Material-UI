@@ -18819,6 +18819,7 @@ else {
                 if ($this.is(":visible")) {
                     $indicator.css({"right": $tab_right});
                     $indicator.css({"left": $tab_left});
+                    $indicator.css({"width": $tab_width});
                 }
 
                 // Resize
@@ -18836,6 +18837,7 @@ else {
                     if ($tab_width !== 0 && $tabs_width !== 0) {
                         $indicator.css({"right": $tab_right});
                         $indicator.css({"left": $tab_left});
+                        $indicator.css({"width": $tab_width});
                     }
                 });
 
@@ -18886,10 +18888,12 @@ else {
                     if (($index - $prev_index) >= 0) {
                         $indicator.velocity({"right": $tab_right}, { duration: 300, queue: false, easing: 'easeOutQuad'});
                         $indicator.velocity({"left": $tab_left}, {duration: 300, queue: false, easing: 'easeOutQuad', delay: 90});
+                        $indicator.velocity({"width": $tab_width});
                     }
                     else {
                         $indicator.velocity({"left": $tab_left}, { duration: 300, queue: false, easing: 'easeOutQuad'});
                         $indicator.velocity({"right": $tab_right}, {duration: 300, queue: false, easing: 'easeOutQuad', delay: 90});
+                        $indicator.velocity({"width": $tab_width});
                     }
 
                     // Prevent the anchor's default click action
