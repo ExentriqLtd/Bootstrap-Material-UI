@@ -176,9 +176,39 @@
 			margin-bottom: 16px;
 			width: 100%;
 			opacity: 0;
+
+			a{
+
+			}
+
+			.tooltip-buttons {
+
+				display: none;
+				position: absolute;
+				z-index: 99;
+				background-color: #4a4a4a;
+				top: 10px;
+				right:62px;
+				padding: 5px 15px;
+				border-radius: 25px;
+				white-space: nowrap;
+
+
+				span {
+
+					color: #fff;
+
+				}
+			}
 		}
 	}
 }
+
+.view-tooltip
+{
+	display:inline-block !important;
+}
+
 
 // Floating Button
 

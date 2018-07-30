@@ -802,6 +802,18 @@ else {
         }
     };
 
+
+    //Tooltip FAB
+
+
+    $( "a.eq-ui-btn-fab" ).hover(
+        function() {
+            $( this ).siblings().addClass( "view-tooltip" );
+        }, function() {
+            $( this ).siblings().removeClass( "view-tooltip" );
+        }
+    );
+
     $(document).ready(function() {
         // Init
         EqUI.buttons.init();
@@ -809,6 +821,8 @@ else {
         // Update
         EqUI.buttons.update();
     });
+
+
 }( jQuery ));
 (function ($) {
     EqUI.cards = {};
