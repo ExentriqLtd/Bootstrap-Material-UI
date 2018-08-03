@@ -297,4 +297,10 @@
         border-radius: 0;
         will-change: bottom, opacity;
     }
+    .eq-ui-modal-small.eq-ui-modal.eq-ui-modal-full-sheet-mobile,
+    .eq-ui-modal-medium.eq-ui-modal.eq-ui-modal-full-sheet-mobile
+    {
+        height: 100%;
+        width: 100%;
+    }
 }
