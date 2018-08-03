@@ -806,7 +806,7 @@ else {
     //Tooltip FAB
 
 
-    $( "a.eq-ui-btn-fab" ).hover(
+    $( "a.eq-ui-btn-fab-with-tooltip" ).hover(
         function() {
             $( this ).siblings().addClass( "view-tooltip" );
         }, function() {
