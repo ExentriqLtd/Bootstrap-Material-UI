@@ -152,6 +152,55 @@ var EqUIDoc = {};
             }
         });
 
+        //-----------------------------------
+        // Table -> Lazy load (Sample 1)
+        //-----------------------------------
+        var fakeJsonData = "http://37.187.137.141:3500/posts"; // http://192.168.1.20:3500/posts
+        var fakeDataTable = [];
+        var EqUILazyLoad_Sample1 = null;
+        var EqUILazyLoad_Sample1_Scroll_Content_ID = $('#table-lazy-load-sample1 tbody')[0];
+
+        // Load json data
+        $.getJSON( fakeJsonData, {
+            _page: 1,
+            _limit: 300000
+        })
+        .done(function( data ) {
+
+            // Transform data
+            $.each( data, function( i, item ) {
+                fakeDataTable.push(
+                '<tr>\n' +
+                '<td class="eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs-">'+(i+1)+'</td>\n' +
+                '<td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">'+item.model+'</span></td>\n' +
+                '<td>'+item.quantity+'</td>\n' +
+                '<td>'+item.price+'</td>\n' +
+                '</tr>'
+                );
+            });
+
+            // Run Lazy Load
+            if(EqUILazyLoad_Sample1 === null){
+                EqUILazyLoad_Sample1 = new EqUILazyLoad({
+                    rows: fakeDataTable,
+                    scrollId: EqUILazyLoad_Sample1_Scroll_Content_ID,
+                    contentId: EqUILazyLoad_Sample1_Scroll_Content_ID,
+                    callbacks: {
+                        clusterWillChange: function(){
+                            console.log('[Table -> Lazy load] clusterWillChange');
+                        },
+                        clusterChanged: function(){
+                            console.log('[Table -> Lazy load] clusterChanged');
+                        },
+                        scrollingProgress: function(progress){
+                            // console.log('[Table -> Lazy load] scrollingProgress', progress);
+                        }
+                    }
+                });
+            }
+        });
+        //-----------------------------------
+
         // When our page loads, check to see if it contains and anchor
         EqUIDoc.site.scroll_if_anchor(window.location.hash);
     };

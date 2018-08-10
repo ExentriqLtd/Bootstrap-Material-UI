@@ -38,6 +38,7 @@ module.exports = function ( grunt ) {
             'src/bower_components/prism/components/prism-scss.js'
         ],
         imports_js: [
+            'src/js/helps/lazy-load.js',
             'src/js/global.js',
             'src/js/site.js',
             'src/js/layout/app-bar.js',

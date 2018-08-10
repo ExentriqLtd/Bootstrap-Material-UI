@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.3.8 (Aug 10, 2018)
+
+**Updates**
+- Add new [Lazy Load For Table](http://bootstrap-material-ui.exentriq.com/table.html#table-lazy-load)
+
 ### v0.3.7 (Dec 18, 2017)
 
 **Updates**

@@ -17,6 +17,9 @@
 @import "../bower_components/prism/themes/prism";
 @import "common/global";
 
+// helps
+@import "helps/lazy-load";
+
 // components
 @import "components/layout/layout-header";
 @import "components/layout/system-bar";

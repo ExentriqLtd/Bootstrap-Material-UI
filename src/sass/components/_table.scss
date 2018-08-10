@@ -132,7 +132,7 @@ table {
 		}
 
 		// Header fixed
-		&.eq-ui-header-fixed {
+		&.eq-ui-header-fixed, &.eq-ui-data-table-lazy-load {
 			display: flex;
 			flex-flow: column;
 
@@ -153,6 +153,7 @@ table {
 				display: block;
 				height: 144px;
 				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
 
 				@extend .eq-ui-scrollbar;
 				&::-webkit-scrollbar {
@@ -169,6 +170,11 @@ table {
 					}
 				}
 			}
+		}
+
+		// Lazy Load
+		&.eq-ui-data-table-lazy-load {
+
 		}
 
         // Is selected
