@@ -291,32 +291,32 @@
 
                 <tbody>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Acrylic (Transparent)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Acrylic (Transparent)</span></td>
                     <td>25</td>
                     <td>$2.90</td>
                 </tr>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Plywood (Birch)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Plywood (Birch)</span></td>
                     <td>50</td>
                     <td>$1.25</td>
                 </tr>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Laminate (Gold on Blue)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Laminate (Gold on Blue)</span></td>
                     <td>10</td>
                     <td>$2.35</td>
                 </tr>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Acrylic (Transparent)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Acrylic (Transparent)</span></td>
                     <td>25</td>
                     <td>$2.90</td>
                 </tr>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Plywood (Birch)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Plywood (Birch)</span></td>
                     <td>50</td>
                     <td>$1.25</td>
                 </tr>
                 <tr>
-                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Laminate (Gold on Blue)<span></td>
+                    <td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">Laminate (Gold on Blue)</span></td>
                     <td>10</td>
                     <td>$2.35</td>
                 </tr>
@@ -326,6 +326,92 @@
 &lt;table class=&quot;table eq-ui-data-table eq-ui-header-fixed z-depth-1&quot;&gt;
     ...
 &lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 id="table-lazy-load" class="header">Lazy Load</h2>
+            <p>For Lazy Load mode. We have than add <code class=" language-markup">.eq-ui-data-table-lazy-load</code></p>
+            <table id="table-lazy-load-sample1" class="table eq-ui-data-table eq-ui-data-table-lazy-load z-depth-1">
+                <thead>
+                <tr>
+                    <th class="eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs-">ID</th>
+                    <th class="eq-ui-data-table-cell-non-numeric">Model</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody style="height: 480px;">
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric" style="text-align: center;" >Loading...</td>
+                </tr>
+                </tbody>
+            </table>
+            <p>Example of implementation (HTML):</p>
+            <pre><code class="language-markup">
+&lt;table id=&quot;table-lazy-load-sample1&quot; class=&quot;table eq-ui-data-table eq-ui-data-table-lazy-load z-depth-1&quot;&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+    &lt;th class=&quot;eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs&quot;&gt;ID&lt;/th&gt;
+    &lt;th class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Model&lt;/th&gt;
+    &lt;th&gt;Quantity&lt;/th&gt;
+    &lt;th&gt;Unit price&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody style=&quot;height: 480px;&quot;&gt;
+&lt;tr&gt;
+    &lt;td class=&quot;eq-ui-data-table-cell-non-numeric&quot; style=&quot;text-align: center;&quot; &gt;Loading...&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+            <p>Example of implementation (JS):</p>
+            <pre><code class="language-javascript">
+var fakeJsonData = "http://192.168.1.20:3500/posts";
+var fakeDataTable = [];
+var EqUILazyLoad_Sample1 = null;
+var EqUILazyLoad_Sample1_Scroll_Content_ID = $('#table-lazy-load-sample1 tbody')[0];
+
+// Load json data
+$.getJSON( fakeJsonData, {
+    _page: 1,
+    _limit: 300000
+})
+.done(function( data ) {
+
+    // Transform data
+    $.each( data, function( i, item ) {
+        fakeDataTable.push(
+        '&lt;tr&gt;\n' +
+        '&lt;td class=&quot;eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs&quot;&gt;'+(i+1)+'&lt;/td&gt;\n' +
+        '&lt;td class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;&lt;span class=&quot;truncate&quot;&gt;'+item.model+'&lt;/span&gt;&lt;/td&gt;\n' +
+        '&lt;td&gt;'+item.quantity+'&lt;/td&gt;\n' +
+        '&lt;td&gt;'+item.price+'&lt;/td&gt;\n' +
+        '&lt;/tr&gt;'
+        );
+    });
+
+    // Run Lazy Load
+    if(EqUILazyLoad_Sample1 === null){
+        EqUILazyLoad_Sample1 = new EqUILazyLoad({
+            rows: fakeDataTable,
+            scrollId: EqUILazyLoad_Sample1_Scroll_Content_ID,
+            contentId: EqUILazyLoad_Sample1_Scroll_Content_ID,
+            callbacks: {
+                clusterWillChange: function(){
+                    console.log('[Table -> Lazy load] clusterWillChange');
+                },
+                clusterChanged: function(){
+                    console.log('[Table -> Lazy load] clusterChanged');
+                },
+                scrollingProgress: function(progress){
+                    // console.log('[Table -> Lazy load] scrollingProgress', progress);
+                }
+            }
+        });
+    }
+});</code></pre>
         </div>
     </div>
 

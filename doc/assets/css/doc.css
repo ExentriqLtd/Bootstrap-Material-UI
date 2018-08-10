@@ -198,3 +198,10 @@ p.last-commit-in-git-hub-p {
         display: block;
     }
 }
+
+/* Tables */
+.table-fixed-col-100 {
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: 100px !important;
+}

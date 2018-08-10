@@ -1,0 +1,40 @@
+// Lazy Load
+
+/* max-height - the only parameter in this file that needs to be edited.
+ * Change it to suit your needs. The rest is recommended to leave as is.
+ */
+.equi-lazy-load-scroll{
+    max-height: 200px;
+    overflow: auto;
+}
+
+/**
+ * Avoid vertical margins for extra tags
+ * Necessary for correct calculations when rows have nonzero vertical margins
+ */
+.equi-lazy-load-extra-row{
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* By default extra tag .equi-lazy-load-keep-parity added to keep parity of rows.
+ * Useful when used :nth-child(even/odd)
+ */
+.equi-lazy-load-extra-row.equi-lazy-load-keep-parity{
+    display: none;
+}
+
+/* During initialization equi-lazy-load adds tabindex to force the browser to keep focus
+ * on the scrolling list, see issue #11
+ * Outline removes default browser's borders for focused elements.
+ */
+.equi-lazy-load-content{
+    outline: 0;
+    counter-reset: clusterize-counter;
+}
+
+/* Centering message that appears when no data provided
+ */
+.equi-lazy-load-no-data td{
+    text-align: center;
+}
