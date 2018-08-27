@@ -1,5 +1,14 @@
 ## CHANGELOG
 
+### v0.3.9 (Aug 27, 2018)
+
+**Updates**
+- Add new [Sticky Table](http://bootstrap-material-ui.exentriq.com/sticky-table.html)
+
+**Fixes**
+- Focus in top Search
+- Others fixes
+
 ### v0.3.8 (Aug 10, 2018)
 
 **Updates**

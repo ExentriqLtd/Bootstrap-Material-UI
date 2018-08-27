@@ -4,11 +4,11 @@ var EqUIDoc = {};
 
     // Init
     EqUIDoc.site.init = function() {
-        
+
         // Set active path in side bar menu
-        if(_doc_route.root_path !== "" && _doc_route.path !== ""){
-            var _root_path = $('#collapsible-nav-'+_doc_route.root_path);
-            var _root_path_path = $('#collapsible-nav-'+_doc_route.root_path+'-'+_doc_route.path);
+        if (_doc_route.root_path !== "" && _doc_route.path !== "") {
+            var _root_path      = $('#collapsible-nav-' + _doc_route.root_path);
+            var _root_path_path = $('#collapsible-nav-' + _doc_route.root_path + '-' + _doc_route.path);
 
             // Set active for links
             _root_path.addClass("active");
@@ -17,8 +17,8 @@ var EqUIDoc = {};
             // Set for open collapsible item
             _root_path.parent().addClass("active");
 
-        } else if(_doc_route.path !== "") {
-            var _path = $('#collapsible-nav-'+_doc_route.path);
+        } else if (_doc_route.path !== "") {
+            var _path = $('#collapsible-nav-' + _doc_route.path);
 
             // Set active for links
             _path.addClass("active");
@@ -43,13 +43,13 @@ var EqUIDoc = {};
         }*/
 
         // Set Breadcrumb
-        var _breadcrumb = $('#main-eq-ui-app-bar').find('.eq-ui-breadcrumb');
-        var _breadcrumb_path = _doc_route.path === 'index' ? './':_doc_route.path+'.html';
-        if(_doc_route.name_section !== "" && _doc_route.name_chapter !== ""){
-            _breadcrumb.html('<a href="./" class="eq-ui-breadcrumb-item"><span>'+_doc_route.name_section+'</span></a>' +
-            '<a href="'+_breadcrumb_path+'" class="eq-ui-breadcrumb-item"><span>'+_doc_route.name_chapter+'</span></a>');
-        } else if(_doc_route.name_chapter !== "") {
-            _breadcrumb.html('<a href="'+_breadcrumb_path+'" class="eq-ui-breadcrumb-item"><span>'+_doc_route.name_chapter+'</span></a>');
+        var _breadcrumb      = $('#main-eq-ui-app-bar').find('.eq-ui-breadcrumb');
+        var _breadcrumb_path = _doc_route.path === 'index' ? './' : _doc_route.path + '.html';
+        if (_doc_route.name_section !== "" && _doc_route.name_chapter !== "") {
+            _breadcrumb.html('<a href="./" class="eq-ui-breadcrumb-item"><span>' + _doc_route.name_section + '</span></a>' +
+            '<a href="' + _breadcrumb_path + '" class="eq-ui-breadcrumb-item"><span>' + _doc_route.name_chapter + '</span></a>');
+        } else if (_doc_route.name_chapter !== "") {
+            _breadcrumb.html('<a href="' + _breadcrumb_path + '" class="eq-ui-breadcrumb-item"><span>' + _doc_route.name_chapter + '</span></a>');
         }
 
         // Refresh all collapsibles
@@ -57,51 +57,55 @@ var EqUIDoc = {};
 
         // Init modals
         $('.eq-ui-modal-trigger').leanModal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: .5, // Opacity of modal background
-            in_duration: 300, // Transition in duration
+            dismissible : true, // Modal can be dismissed by clicking outside of the modal
+            opacity     : .5, // Opacity of modal background
+            in_duration : 300, // Transition in duration
             out_duration: 200, // Transition out duration
-            ready: function() { console.log('Modal Open'); }, // Callback for Modal open
-            complete: function() { console.log('Modal Close'); } // Callback for Modal close
+            ready       : function () {
+                console.log('Modal Open');
+            }, // Callback for Modal open
+            complete    : function () {
+                console.log('Modal Close');
+            } // Callback for Modal close
         });
 
         // Form validations
-        if(_doc_route.path === "form-validation"){
+        if (_doc_route.path === "form-validation") {
             EqUIDoc.site.form_validations();
         }
 
         // Create File Upload Drop
         var _dropzone = EqUI.forms.file_upload_drop('.eq-ui-file-upload-drop-zone', {
-            url: 'http://localhost:8888/upload/',
+            url                  : 'http://localhost:8888/upload/',
             defaultImageThumbnail: "assets/img/doc/files/empty.png"
         });
 
-        if(_dropzone){
+        if (_dropzone) {
             // File Upload Drop - Events
-            _dropzone.on("addedfile", function(file) {
+            _dropzone.on("addedfile", function (file) {
                 console.log(file);
             });
         }
 
         // Build Git in Home
-        if(_doc_route.path === "index"){
+        if (_doc_route.path === "index") {
             EqUIDoc.site.build_git_home();
         }
 
         // Show layout structures
-        if(_doc_route.path === "buttons"){
+        if (_doc_route.path === "buttons") {
             EqUI.site.body.addClass('doc-show-in-layout-struture-1');
         }
 
         // Autocomplete
-        var autocomplete_minChars = 2;
+        var autocomplete_minChars  = 2;
         var autocomplete_countries = EqUIDoc.site.countries_v_d();
 
         // Autocomplete -> Top search
         $('#doc-eq-ui-top-search-autocomplete input').autocomplete({
-            lookup: autocomplete_countries,
+            lookup  : autocomplete_countries,
             appendTo: '#doc-eq-ui-top-search-autocomplete',
-            groupBy: '',
+            groupBy : '',
             minChars: autocomplete_minChars,
             onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
@@ -110,9 +114,9 @@ var EqUIDoc = {};
 
         // Autocomplete -> Side nav -> search
         $('#doc-eq-ui-side-nav-search-autocomplete input').autocomplete({
-            lookup: autocomplete_countries,
+            lookup  : autocomplete_countries,
             appendTo: '#doc-eq-ui-side-nav-search-autocomplete',
-            groupBy: '',
+            groupBy : '',
             minChars: autocomplete_minChars,
             onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
@@ -121,9 +125,9 @@ var EqUIDoc = {};
 
         // Autocomplete -> search
         $('#doc-eq-ui-search-autocomplete input').autocomplete({
-            lookup: autocomplete_countries,
+            lookup  : autocomplete_countries,
             appendTo: '#doc-eq-ui-search-autocomplete',
-            groupBy: '',
+            groupBy : '',
             minChars: autocomplete_minChars,
             onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
@@ -132,9 +136,9 @@ var EqUIDoc = {};
 
         // Autocomplete -> search expandable
         $('#doc-eq-ui-search-expandable-autocomplete input').autocomplete({
-            lookup: autocomplete_countries,
+            lookup  : autocomplete_countries,
             appendTo: '#doc-eq-ui-search-expandable-autocomplete',
-            groupBy: '',
+            groupBy : '',
             minChars: autocomplete_minChars,
             onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
@@ -143,9 +147,9 @@ var EqUIDoc = {};
 
         // Autocomplete -> input
         $('#doc-text-autocomplete input').autocomplete({
-            lookup: autocomplete_countries,
+            lookup  : autocomplete_countries,
             appendTo: '#doc-text-autocomplete',
-            groupBy: '',
+            groupBy : '',
             minChars: autocomplete_minChars,
             onSelect: function (suggestion) {
                 alert('You selected: ' + suggestion.value + ', ' + suggestion.data);
@@ -155,51 +159,56 @@ var EqUIDoc = {};
         //-----------------------------------
         // Table -> Lazy load (Sample 1)
         //-----------------------------------
-        var fakeJsonData = "http://37.187.137.141:3500/posts"; // http://192.168.1.20:3500/posts
-        var fakeDataTable = [];
-        var EqUILazyLoad_Sample1 = null;
+        var fakeJsonData                           = "http://37.187.137.141:3500/posts"; // http://192.168.1.20:3500/posts
+        var fakeDataTable                          = [];
+        var EqUILazyLoad_Sample1                   = null;
         var EqUILazyLoad_Sample1_Scroll_Content_ID = $('#table-lazy-load-sample1 tbody')[0];
 
         // Load json data
-        $.getJSON( fakeJsonData, {
-            _page: 1,
-            _limit: 300000
-        })
-        .done(function( data ) {
+        if (EqUILazyLoad_Sample1_Scroll_Content_ID) {
+            $.getJSON(fakeJsonData, {
+                _page : 1,
+                _limit: 300000
+            })
+            .done(function (data) {
 
-            // Transform data
-            $.each( data, function( i, item ) {
-                fakeDataTable.push(
-                '<tr>\n' +
-                '<td class="eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs-">'+(i+1)+'</td>\n' +
-                '<td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">'+item.model+'</span></td>\n' +
-                '<td>'+item.quantity+'</td>\n' +
-                '<td>'+item.price+'</td>\n' +
-                '</tr>'
-                );
-            });
-
-            // Run Lazy Load
-            if(EqUILazyLoad_Sample1 === null){
-                EqUILazyLoad_Sample1 = new EqUILazyLoad({
-                    rows: fakeDataTable,
-                    scrollId: EqUILazyLoad_Sample1_Scroll_Content_ID,
-                    contentId: EqUILazyLoad_Sample1_Scroll_Content_ID,
-                    callbacks: {
-                        clusterWillChange: function(){
-                            console.log('[Table -> Lazy load] clusterWillChange');
-                        },
-                        clusterChanged: function(){
-                            console.log('[Table -> Lazy load] clusterChanged');
-                        },
-                        scrollingProgress: function(progress){
-                            // console.log('[Table -> Lazy load] scrollingProgress', progress);
-                        }
-                    }
+                // Transform data
+                $.each(data, function (i, item) {
+                    fakeDataTable.push(
+                    '<tr>\n' +
+                    '<td class="eq-ui-data-table-cell-non-numeric table-fixed-col-100 eq-ui-hidden-xs-">' + (i + 1) + '</td>\n' +
+                    '<td class="eq-ui-data-table-cell-non-numeric"><span class="truncate">' + item.model + '</span></td>\n' +
+                    '<td>' + item.quantity + '</td>\n' +
+                    '<td>' + item.price + '</td>\n' +
+                    '</tr>'
+                    );
                 });
-            }
-        });
+
+                // Run Lazy Load
+                if (EqUILazyLoad_Sample1 === null) {
+                    EqUILazyLoad_Sample1 = new EqUILazyLoad({
+                        rows     : fakeDataTable,
+                        scrollId : EqUILazyLoad_Sample1_Scroll_Content_ID,
+                        contentId: EqUILazyLoad_Sample1_Scroll_Content_ID,
+                        callbacks: {
+                            clusterWillChange: function () {
+                                console.log('[Table -> Lazy load] clusterWillChange');
+                            },
+                            clusterChanged   : function () {
+                                console.log('[Table -> Lazy load] clusterChanged');
+                            },
+                            scrollingProgress: function (progress) {
+                                // console.log('[Table -> Lazy load] scrollingProgress', progress);
+                            }
+                        }
+                    });
+                }
+            });
+        }
         //-----------------------------------
+
+        // Sticky Table
+        $(".eq-ui-sticky-table").EqUIStickyTable({top:50});
 
         // When our page loads, check to see if it contains and anchor
         EqUIDoc.site.scroll_if_anchor(window.location.hash);

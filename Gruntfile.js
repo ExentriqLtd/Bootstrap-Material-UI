@@ -39,6 +39,7 @@ module.exports = function ( grunt ) {
         ],
         imports_js: [
             'src/js/helps/lazy-load.js',
+            'src/js/helps/sticky-table.js',
             'src/js/global.js',
             'src/js/site.js',
             'src/js/layout/app-bar.js',
@@ -322,6 +323,7 @@ module.exports = function ( grunt ) {
                     "doc/badges.html": "jade/badges.jade",
                     "doc/color.html": "jade/color.jade",
                     "doc/helpers.html": "jade/helpers.jade",
+                    "doc/sticky-table.html": "jade/sticky-table.jade",
                     "doc/table.html": "jade/table.jade",
                     "doc/typography.html": "jade/typography.jade",
                     "doc/buttons.html": "jade/buttons.jade",

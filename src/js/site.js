@@ -199,6 +199,7 @@
         _top_serach_action_show_element.on('click', function(e) {
             _top_serach_element.css('visibility', 'visible');
             _top_serach_element.css('top', '0');
+            _top_serach_element.find('input').focus();
         });
 
         // Close top search

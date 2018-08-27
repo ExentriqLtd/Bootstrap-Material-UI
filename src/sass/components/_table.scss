@@ -185,3 +185,18 @@ table {
 
 	}
 }
+
+// Sticky Table
+
+.eq-ui-sticky-table-cloned {
+	top:0;
+	position:fixed !important;
+	width:auto;
+	display:none;
+	border:none !important;
+	box-shadow: none !important;
+}
+
+.eq-ui-sticky-table-cloned thead {
+	border-bottom: 1px solid rgba(0,0,0,.06);
+}
