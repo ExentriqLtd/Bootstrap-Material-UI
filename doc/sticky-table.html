@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>Components - Loader | Exentriq - Bootstrap Material UI</title>
+    <title>CSS - Sticky Table | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
     <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.9" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.3.9" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"components",path:"loader",name_section:"Components",name_chapter:"Loader"};</script>
+    <script>var _doc_route = {root_path:"css",path:"sticky-table",name_section:"CSS",name_chapter:"Sticky Table"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -709,59 +709,616 @@
 
     <main class="eq-ui-main"><div class="jumbotron">
     <div class="container">
-        <h1>Loader</h1>
+        <h1>Sticky Table</h1>
     </div>
 </div>
+
 <div class="container">
+
     <div class="row">
         <div class="col-md-12">
-           <h1>Page Loader</h1>
-            <div class="loader_1">
-                <div class='eq-ui-loader-ring_for_material'>
-                    <div class='eq-ui-loader-ring-light'></div>
-                    <div class='eq-ui-loader-ring-track'></div>
-                </div>
-            </div>
+            <h2 class="header">Basic</h2>
+            <p>For sticky table mode. We have than add <code class="language-markup">eq-ui-sticky-table</code></p>
+            <table class="table eq-ui-data-table eq-ui-sticky-table z-depth-1">
+                <thead>
+                <tr>
+                    <th class="eq-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
             <pre><code class="language-markup">
-&lt;div class='eq-ui-loader-ring'>
-    &lt;div class='eq-ui-loader-ring-light'>&lt;/div>
-    &lt;div class='eq-ui-loader-ring-track'>&lt;/div>
-&lt;/div>
-            </code></pre>
+&lt;table class=&quot;table eq-ui-data-table eq-ui-sticky-table z-depth-1&quot;&gt;
+    &lt;thead&gt;
+    &lt;tr&gt;
+        &lt;th class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
+        &lt;th&gt;Quantity&lt;/th&gt;
+        &lt;th&gt;Unit price&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;/thead&gt;
 
-            <h1>Page Loader Mini</h1>
-            <div class="loader_4">
-                <div class='eq-ui-loader-ring_for_material-mini'>
-                    <div class='eq-ui-loader-ring-light-mini'></div>
-                    <div class='eq-ui-loader-ring-track-mini'></div>
-                </div>
-            </div>
-            <pre><code class="language-markup">
-            &lt;div class='eq-ui-loader-ring'>
-                &lt;div class='eq-ui-loader-ring-light'>&lt;/div>
-                &lt;div class='eq-ui-loader-ring-track'>&lt;/div>
-            &lt;/div>
-            </code></pre>
-
-
-         <h1>Data Loader</h1>
-            <div class="loader_2">
-                <div class="eq-ui-loader-line"></div>
-            </div>
-            <pre><code class="language-markup">
-&lt;div class="eq-ui-loader-line">&lt;/div>
-            </code></pre>
-
-            <h1>Scroll Easy Loader</h1>
-            <div class="loader_3 ">
-                <div class="eq-ui-loader-line-lazy"></div>
-            </div>
-            <pre><code class="language-markup">
-&lt;div class="eq-ui-loader-line-lazy">&lt;/div>
-            </code></pre>
-
+    &lt;tbody&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+        &lt;td&gt;25&lt;/td&gt;
+        &lt;td&gt;$2.90&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Plywood (Birch)&lt;/td&gt;
+        &lt;td&gt;50&lt;/td&gt;
+        &lt;td&gt;$1.25&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+        &lt;td&gt;10&lt;/td&gt;
+        &lt;td&gt;$2.35&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Striped</h2>
+            <p>For sticky table mode. We have than add <code class="language-markup">eq-ui-sticky-table</code></p>
+            <table class="table eq-ui-data-table eq-ui-striped eq-ui-sticky-table z-depth-1">
+                <thead>
+                <tr>
+                    <th class="eq-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;table eq-ui-data-table eq-ui-striped eq-ui-sticky-table z-depth-1&quot;&gt;
+    ...
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">Centered</h2>
+            <p>For sticky table mode. We have than add <code class="language-markup">eq-ui-sticky-table</code></p>
+            <table class="table eq-ui-data-table eq-ui-centered eq-ui-sticky-table z-depth-1">
+                <thead>
+                <tr>
+                    <th class="eq-ui-data-table-cell-non-numeric">Material</th>
+                    <th>Quantity</th>
+                    <th>Unit price</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                    <td>25</td>
+                    <td>$2.90</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                    <td>10</td>
+                    <td>$2.35</td>
+                </tr>
+                <tr>
+                    <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                    <td>50</td>
+                    <td>$1.25</td>
+                </tr>
+                </tbody>
+            </table>
+            <pre><code class="language-markup">
+&lt;table class=&quot;table eq-ui-data-table eq-ui-centered eq-ui-sticky-table z-depth-1&quot;&gt;
+    ...
+&lt;/table&gt;</code></pre>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="header">jQuery Plugin Initialization</h2>
+            <p>You will have to initialize them like this.</p>
+            <pre><code class="language-javascript">
+$(document).ready(function(){
+   $(".eq-ui-sticky-table").EqUIStickyTable({top:50});
+});</code></pre>
+        </div>
+    </div>
+
 </div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>

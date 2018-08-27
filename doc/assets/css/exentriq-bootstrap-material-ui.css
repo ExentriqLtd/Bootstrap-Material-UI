@@ -20525,6 +20525,19 @@ table.eq-ui-data-table tbody > tr.is-selected {
   background-color: rgba(27, 188, 155, 0.05);
 }
 
+.eq-ui-sticky-table-cloned {
+  top: 0;
+  position: fixed !important;
+  width: auto;
+  display: none;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.eq-ui-sticky-table-cloned thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
 .eq-ui-nav-menu {
   margin: 0;
   padding: 0;

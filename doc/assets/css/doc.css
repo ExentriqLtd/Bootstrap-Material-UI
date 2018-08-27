@@ -188,6 +188,13 @@ p.last-commit-in-git-hub-p {
     line-height: 28px;
 }
 
+/* Tables */
+.table-fixed-col-100 {
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: 100px !important;
+}
+
 /* Media */
 @media only screen and (max-width: 768px) {
     .eq-ui-app-bar .header-title span,
@@ -197,11 +204,4 @@ p.last-commit-in-git-hub-p {
     .eq-ui-app-bar .header-title span:last-of-type {
         display: block;
     }
-}
-
-/* Tables */
-.table-fixed-col-100 {
-    flex-grow: 0 !important;
-    flex-shrink: 0 !important;
-    flex-basis: 100px !important;
 }
