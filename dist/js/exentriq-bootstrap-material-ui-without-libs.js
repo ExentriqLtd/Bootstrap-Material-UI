@@ -954,7 +954,7 @@ else {
                 var _last_children;
                 var _last_children_hiden;
                 if(origin_children.length === 1 && origin_children_hiden.length > 0){
-                    _last_children = $(origin_children[0]);
+                    // _last_children = $(origin_children[0]);
                     _last_children_hiden = $(origin_children_hiden[origin_children_hiden.length-1]);
                     origin.addClass(_this.breadcrumb_min_class);
                     // Save old last children hiden width
@@ -1050,6 +1050,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.buttons = {};
 
@@ -1508,7 +1509,7 @@ else {
             var select_id = $(this).attr('id') || '';
             var input_id = select_id + '-fake';
             var valuesSelected = [];
-            var is_multiple = select.attr('multiple') ? true : false;
+            var is_multiple = !!select.attr('multiple');
             var last_ID = select.attr('data-select-id');
             var label = '';
 
@@ -1677,6 +1678,7 @@ else {
         EqUI.forms.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.collapsible = {};
 

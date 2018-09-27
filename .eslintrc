@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "jquery": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 5
+    },
+    "parser": "babel-eslint",
+    "globals": {
+        "NODE_ENV": true,
+        "EqUI": true,
+        "EqUIDoc": true
+    },
+    "rules": {
+        /*"comma-dangle": [
+            "error",
+            {
+                "arrays": "always-multiline",
+                "objects": "always-multiline",
+                "imports": "always-multiline",
+                "exports": "always-multiline",
+                "functions": "always-multiline"
+            }
+        ],*/
+        "no-useless-escape": 0,
+        "no-fallthrough": ["error",
+          { "commentPattern": "break[\\s\\w]*omitted" }],
+        "standard/computed-property-even-spacing": 0
+    }
+}
