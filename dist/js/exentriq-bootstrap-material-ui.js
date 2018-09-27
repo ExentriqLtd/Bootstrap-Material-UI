@@ -19331,6 +19331,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.init = {};
     var _this = function(){return EqUI.init;}();
