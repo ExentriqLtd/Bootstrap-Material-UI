@@ -292,7 +292,7 @@
             var select_id = $(this).attr('id') || '';
             var input_id = select_id + '-fake';
             var valuesSelected = [];
-            var is_multiple = select.attr('multiple') ? true : false;
+            var is_multiple = !!select.attr('multiple');
             var last_ID = select.attr('data-select-id');
             var label = '';
 

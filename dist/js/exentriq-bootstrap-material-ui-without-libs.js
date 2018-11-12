@@ -954,7 +954,7 @@ else {
                 var _last_children;
                 var _last_children_hiden;
                 if(origin_children.length === 1 && origin_children_hiden.length > 0){
-                    _last_children = $(origin_children[0]);
+                    // _last_children = $(origin_children[0]);
                     _last_children_hiden = $(origin_children_hiden[origin_children_hiden.length-1]);
                     origin.addClass(_this.breadcrumb_min_class);
                     // Save old last children hiden width
@@ -1050,6 +1050,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.buttons = {};
 
@@ -1508,7 +1509,7 @@ else {
             var select_id = $(this).attr('id') || '';
             var input_id = select_id + '-fake';
             var valuesSelected = [];
-            var is_multiple = select.attr('multiple') ? true : false;
+            var is_multiple = !!select.attr('multiple');
             var last_ID = select.attr('data-select-id');
             var label = '';
 
@@ -1677,6 +1678,7 @@ else {
         EqUI.forms.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.collapsible = {};
 
@@ -1874,6 +1876,8 @@ else {
             var origin = $(this);
             var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
+            var target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
+            var is_auto_align = !!target_auto_align[0];
             var target_items = $("#"+ origin.attr('data-target') + ' li');
 
             // Update options
@@ -1967,22 +1971,25 @@ else {
 
             // Dropdown Open
             function dropdownOpen(object) {
+                if(is_auto_align){
+                  autoAlign(object);
+                }
+
                 if ((options.hover && !object.hasClass('active')) || (!options.hover && !object.hasClass('open'))){
 
-					if(!object.hasClass("active")){
-						object.addClass('active');
-						
-						object.stop(true,false).slideDown({
-	                        duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
-	                            object.addClass('open');
-	                            $(this).css('height', '');
-	                        }
-	                    });
-					}
+                  if(!object.hasClass("active")){
+                    object.addClass('active');
+
+                    object.stop(true,false).slideDown({
+                                  duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
+                                      object.addClass('open');
+                                      $(this).css('height', '');
+                                  }
+                              });
+                  }
                     
                 }
             }
-            
 
             // Dropdown Close
             function dropdownClose(object) {
@@ -2011,6 +2018,70 @@ else {
                         });
                     });
                 }
+            }
+
+            // Auto Align
+            function autoAlign(object) {
+              // Clean
+              object.removeClass('eq-ui-dropdown-right-top');
+              object.removeClass('eq-ui-dropdown-left-bottom');
+              object.removeClass('eq-ui-dropdown-right-bottom');
+
+              var contSize = {
+                width: target_auto_align.outerWidth(true),
+                height: target_auto_align.outerHeight(true)
+              }
+
+              var targetSize = {
+                width: object.outerWidth(true),
+                height: object.outerHeight(true)
+              }
+
+              var originSize = {
+                width: origin.outerWidth(true),
+                height: origin.outerHeight(true)
+              }
+
+              var originPos = origin.offset();
+              var contPos = target_auto_align.offset();
+              var originOffset = {
+                top: originPos.top - contPos.top,
+                left: originPos.left - contPos.left
+              }
+
+              var isTop = false;
+              var isBottom = false;
+              var isLeft = false;
+              var isRight = false;
+
+              // Is Left/Right
+              if((originOffset.left + targetSize.width) <= contSize.width){
+                isLeft = true;
+              } else if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
+                isRight = true;
+              }
+
+              // Is Top/Bottom
+              if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
+                isTop = true;
+              } else if((originOffset.top - targetSize.height) >= 0){
+                isBottom = true;
+              }
+
+              if(isRight && isTop){
+                object.addClass('eq-ui-dropdown-right-top');
+              }
+
+              if(isLeft && isBottom){
+                object.addClass('eq-ui-dropdown-left-bottom');
+              }
+
+              if(isRight && isBottom){
+                object.addClass('eq-ui-dropdown-right-bottom');
+              }
+
+              // Set Gutter
+              setGutter(target);
             }
 
             // Set Gutter
@@ -2083,6 +2154,7 @@ else {
         EqUI.dropdown.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.modals = {};
 
@@ -2564,6 +2636,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.init = {};
     var _this = function(){return EqUI.init;}();
