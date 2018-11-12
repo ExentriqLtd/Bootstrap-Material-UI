@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.4.0 (Nov 12, 2018)
+
+**Updates**
+- Add new [Auto Align - Dropdown](http://bootstrap-material-ui.exentriq.com/dropdown.html#auto-align)
+
 ### v0.3.9 (Aug 27, 2018)
 
 **Updates**

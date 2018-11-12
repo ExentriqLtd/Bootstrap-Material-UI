@@ -190,7 +190,7 @@ module.exports = function ( grunt ) {
                     {
                         expand: true,
                         cwd: 'src/bower_components/',
-                        src: ['jquery/dist/**', 'jquery-timeago/**', 'riot/**'],
+                        src: ['jquery/dist/**', 'jquery-timeago/**', 'riot/**', 'moment/min/**'],
                         dest: 'doc/assets/js/vendor/'
                     }
                 ]
