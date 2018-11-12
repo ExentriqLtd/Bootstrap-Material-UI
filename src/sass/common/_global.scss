@@ -7,7 +7,9 @@ a {
 }
 
 html {
-	line-height: $eq-ui-line-height-base;
+    height: 100%;
+
+    line-height: $eq-ui-line-height-base;
 
 	@media only screen and (min-width: 0) {
 		font-size: $eq-ui-font-size-base - 1;

@@ -4,7 +4,7 @@ var EqUIDoc = {};
 
     // Init
     EqUIDoc.site.init = function() {
-
+        
         // Set active path in side bar menu
         if(_doc_route.root_path !== "" && _doc_route.path !== ""){
             var _root_path = $('#collapsible-nav-'+_doc_route.root_path);

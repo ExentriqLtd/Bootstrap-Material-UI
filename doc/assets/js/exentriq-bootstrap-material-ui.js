@@ -16763,7 +16763,8 @@ Prism.languages.insertBefore('scss', 'function', {
 
 Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.scss);
 //
-EqUI = {};
+if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
+if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
 
 // Unique ID
 EqUI.guid = (function() {
@@ -16854,9 +16855,11 @@ else {
         if(EqUI.site.body.hasClass('eq-ui-layout-header-fixed')){
             _layout_header.css('top', _layout_header_offset+'px');
             EqUI.site.body.css('margin-top', _layout_header.outerHeight(true)+_layout_header_offset+'px');
+            EqUI.site.body.css('height', 'calc(100% - '+(_layout_header.outerHeight(true)+_layout_header_offset)+'px)');
         } else {
             _layout_header.css('top', '0px');
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
+            EqUI.site.body.css('height', '');
         }
         
         if (window.innerWidth > 768) {
@@ -16889,11 +16892,12 @@ else {
             var _is_checked = this.checked;
 
             _tbody.find('tr input[type="checkbox"]').each(function() {
-                this.checked = _is_checked;
+                var _self = this;
+                _self.checked = _is_checked;
 
                 var _parent = $(this).parent().parent();
 
-                if(this.checked){
+                if(_self.checked){
                     _parent.addClass('is-selected');
                 } else {
                     _parent.removeClass('is-selected');
@@ -17792,9 +17796,7 @@ else {
             '</li>';
         }
 
-        var _dropzone = new Dropzone(object, _options);
-
-        return _dropzone;
+        return new Dropzone(object, _options);
     };
 
     // Init file input

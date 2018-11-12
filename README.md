@@ -6,9 +6,9 @@
 
 Implements Google's Material Design in Bootstrap
 
-View the [DEMO & DOC](http://bootstrap-material-ui.exentriq.com)
+- View the [DEMO & DOC](http://bootstrap-material-ui.exentriq.com)
 
-View the [CHANGELOG](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/CHANGELOG.md)
+- View the [CHANGELOG](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/CHANGELOG.md)
 
 ## HTML Setup
 
@@ -77,12 +77,13 @@ Run Grunt:
 grunt
 ```
 
-Grunt will then watch concurrently for changes to src and jade folders, js, scss and jade files build each as required.
+Grunt will then watch concurrently for changes to src and jade folders, scss and jade files build each as required.
 
 ## Links
 
-[Bootstrap](http://getbootstrap.com), [Google Material Design](http://www.google.com/design/spec/material-design)
+- [Bootstrap](http://getbootstrap.com)
+- [Google Material Design](http://www.google.com/design/spec/material-design)
 
 ## License
 
-View the [LICENSE](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/LICENSE.md)
+- View the [LICENSE](https://github.com/ExentriqLtd/Bootstrap-Material-UI/blob/master/LICENSE.md)

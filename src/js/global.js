@@ -1,4 +1,5 @@
-EqUI = {};
+if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
+if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
 
 // Unique ID
 EqUI.guid = (function() {
