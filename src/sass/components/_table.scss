@@ -132,7 +132,7 @@ table {
 		}
 
 		// Header fixed
-		&.eq-ui-header-fixed {
+		&.eq-ui-header-fixed, &.eq-ui-data-table-lazy-load {
 			display: flex;
 			flex-flow: column;
 
@@ -153,6 +153,7 @@ table {
 				display: block;
 				height: 144px;
 				overflow-y: auto;
+				-webkit-overflow-scrolling: touch;
 
 				@extend .eq-ui-scrollbar;
 				&::-webkit-scrollbar {
@@ -171,6 +172,11 @@ table {
 			}
 		}
 
+		// Lazy Load
+		&.eq-ui-data-table-lazy-load {
+
+		}
+
         // Is selected
         tbody > tr.is-selected {
             @include eq-ui-transition(background-color);
@@ -178,4 +184,19 @@ table {
         }
 
 	}
+}
+
+// Sticky Table
+
+.eq-ui-sticky-table-cloned {
+	top:0;
+	position:fixed !important;
+	width:auto;
+	display:none;
+	border:none !important;
+	box-shadow: none !important;
+}
+
+.eq-ui-sticky-table-cloned thead {
+	border-bottom: 1px solid rgba(0,0,0,.06);
 }

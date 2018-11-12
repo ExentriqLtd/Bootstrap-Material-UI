@@ -38,6 +38,8 @@ module.exports = function ( grunt ) {
             'src/bower_components/prism/components/prism-scss.js'
         ],
         imports_js: [
+            'src/js/helps/lazy-load.js',
+            'src/js/helps/sticky-table.js',
             'src/js/global.js',
             'src/js/site.js',
             'src/js/layout/app-bar.js',
@@ -188,7 +190,7 @@ module.exports = function ( grunt ) {
                     {
                         expand: true,
                         cwd: 'src/bower_components/',
-                        src: ['jquery/dist/**', 'jquery-timeago/**', 'riot/**'],
+                        src: ['jquery/dist/**', 'jquery-timeago/**', 'riot/**', 'moment/min/**'],
                         dest: 'doc/assets/js/vendor/'
                     }
                 ]
@@ -321,6 +323,7 @@ module.exports = function ( grunt ) {
                     "doc/badges.html": "jade/badges.jade",
                     "doc/color.html": "jade/color.jade",
                     "doc/helpers.html": "jade/helpers.jade",
+                    "doc/sticky-table.html": "jade/sticky-table.jade",
                     "doc/table.html": "jade/table.jade",
                     "doc/typography.html": "jade/typography.jade",
                     "doc/buttons.html": "jade/buttons.jade",
@@ -485,7 +488,7 @@ module.exports = function ( grunt ) {
     grunt.registerTask('Watch', ['concurrent:watch']);
 
     grunt.registerTask('sass_compile', ['sass:dist', 'postcss:dist', 'cssmin:dist', 'copy:css', 'notify:sass_compile']);
-    grunt.registerTask('js_compile', ['jshint:beforeconcat', 'concat:dist', 'concat:dist_without_libs', 'uglify:dist', 'uglify:dist_without_libs', 'copy:js', 'notify:js_compile']);
+    grunt.registerTask('js_compile', ['concat:dist', 'concat:dist_without_libs', 'uglify:dist', 'uglify:dist_without_libs', 'copy:js', 'notify:js_compile']);
     grunt.registerTask('jade_compile', ['jade:compile', 'notify:jade_compile']);
 
     grunt.registerTask('server', ['browserSync', 'notify:server']);
@@ -497,7 +500,6 @@ module.exports = function ( grunt ) {
         'postcss:dist',
         'cssmin:dist',
         'concat:bower',
-        'jshint:beforeconcat',
         'concat:dist',
         'concat:dist_without_libs',
         'uglify:dist',

@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Dropdown | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.3.7" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.3.7" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.4.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.4.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"dropdown",name_section:"JavaScript",name_chapter:"Dropdown"};</script>
@@ -248,6 +248,7 @@
                             <a id="collapsible-nav-css-color" href="./color.html">Color</a>
                             <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
                             <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-sticky-table" href="./sticky-table.html">Sticky Table</a>
                             <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
                         </div>
                     </li>
@@ -929,6 +930,342 @@
     </div>
 
     <div class="row">
+      <div class="col-md-12">
+        <h2 id="auto-align" class="header">Auto Align</h2>
+
+        <div class="">
+          <div class="doc-dropdown-auto-layout-page">
+            <div class="marvel-device iphone8 gold">
+              <div class="top-bar"></div>
+              <div class="sleep"></div>
+              <div class="volume"></div>
+              <div class="camera"></div>
+              <div class="screen">
+                <div class="screen-container">
+                  <div class="status-bar">
+                    <div class="time"></div>
+                    <div class="battery">
+                      <i class="zmdi zmdi-battery"></i>
+                    </div>
+                    <div class="network">
+                      <i class="zmdi zmdi-network"></i>
+                    </div>
+                    <div class="wifi">
+                      <i class="zmdi zmdi-wifi-alt-2"></i>
+                    </div>
+                    <div class="star">
+                      <i class="zmdi zmdi-star"></i>
+                    </div>
+                  </div>
+                  <div class="chat">
+                    <div class="chat-container">
+                      <div class="user-bar">
+                        <div class="back">
+                          <i class="zmdi zmdi-arrow-left"></i>
+                        </div>
+                        <div class="avatar">
+                          <img src="https://avatars2.githubusercontent.com/u/398893?s=128" alt="Avatar">
+                        </div>
+                        <div class="name">
+                          <span>Zeno Rocha</span>
+                          <span class="status">online</span>
+                        </div>
+                        <div class="actions more">
+                          <i class="zmdi zmdi-more-vert"></i>
+                        </div>
+                        <div class="actions attachment">
+                          <i class="zmdi zmdi-attachment-alt"></i>
+                        </div>
+                        <div class="actions">
+                          <i class="zmdi zmdi-phone"></i>
+                        </div>
+                      </div>
+                      <div class="conversation">
+                        <div id="doc-conversation-container" class="conversation-container">
+
+                          <div class="message sent">
+                            What happened last night?
+                            <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-1" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-1" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            You were drunk.
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-2" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-2" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message sent">
+                            No I wasn't.
+                            <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-3" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-3" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            <span id="random">You were hugging an old man with a beard screaming "DUMBLEDORE YOU'RE ALIVE!"</span>
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-4" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-4" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            Hi.
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-5" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-5" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            Hi. You were hugging
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-6" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-6" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            Hi. Lorem
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-7" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-7" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            <span>You were hugging an old man with a beard screaming "DUMBLEDORE YOU'RE ALIVE!"</span>
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-8" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-8" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message sent">
+                            No I wasn't.
+                            <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-9" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-9" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message sent">
+                            Yes or not.
+                            <span class="metadata">
+                      <span class="time"></span><span class="tick"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg></span>
+                  </span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-10" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-10" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            Hi. Lorem
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-11" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-11" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            <span>You were hugging an old man with a beard screaming "DUMBLEDORE YOU'RE ALIVE!"</span>
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-12" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-12" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="message received">
+                            Hi. Lorem
+                            <span class="metadata"><span class="time"></span></span>
+                            <div class="message-menu-option">
+                              <!-- Dropdown Trigger -->
+                              <a data-target="dropdown-message-menu-option-13" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger">
+                                <i class="mdi mdi-chevron-down icon icon-18"></i>
+                              </a>
+                              <!-- Dropdown Structure -->
+                              <ul id="dropdown-message-menu-option-13" class="eq-ui-dropdown">
+                                <li><a href="#!">Some Action</a></li>
+                                <li class="disabled"><a href="#!">Disabled Action</a></li>
+                                <li><a href="#!" class="active">Item Active</a></li>
+                                <li><a href="#!">Another Action</a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                        </div>
+                        <form class="conversation-compose">
+                          <div class="emoji">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"/></svg>
+                          </div>
+                          <input class="input-msg" name="input" placeholder="Type a message" autocomplete="off" autofocus></input>
+                          <div class="photo">
+                            <i class="zmdi zmdi-camera"></i>
+                          </div>
+                          <button class="send">
+                            <div class="circle">
+                              <i class="zmdi zmdi-mail-send"></i>
+                            </div>
+                          </button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p>Add target id for container in <code class="language-markup">data-auto-align-target</code> attr.</p>
+
+        <pre><code class="language-markup">
+  &lt;!-- Dropdown Trigger --&gt;
+  &lt;a data-target=&quot;dropdown-test1&quot; data-auto-align-target="doc-conversation-container" class=&quot;btn btn-default eq-ui-waves dropdown-trigger&quot;&gt;&lt;/a&gt;
+
+  &lt;!-- Dropdown Structure --&gt;
+  &lt;ul id=&quot;dropdown-test1&quot; class=&quot;eq-ui-dropdown&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Some Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;disabled&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Disabled Action&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot; class=&quot;active&quot;&gt;Item Active&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#!&quot;&gt;Another Action&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="row">
         <div class="col-md-12">
             <h2 class="header">Options</h2>
 
@@ -1004,6 +1341,7 @@ $(document).ready(function(){
     </div>
 
 </div>
+
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->
@@ -1018,13 +1356,14 @@ $(document).ready(function(){
     
 </div>
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
+<script src="assets/js/vendor/moment/min/moment.min.js?v=2.13.0"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.3.7"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.4.0"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.3.7"></script>
+<script src="assets/js/doc.js?v=0.4.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -1036,5 +1375,6 @@ $(document).ready(function(){
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
+
   </body>
 </html>

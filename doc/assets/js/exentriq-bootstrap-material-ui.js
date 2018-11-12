@@ -16763,6 +16763,374 @@ Prism.languages.insertBefore('scss', 'function', {
 
 Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.scss);
 //
+/*jshint ignore:start*/
+(function ($) {
+;(function(name, definition) {
+    if (typeof module !== 'undefined') module.exports = definition();
+    else if (typeof define === 'function' && typeof define.amd === 'object') define(definition);
+    else this[name] = definition();
+}('EqUILazyLoad', function() {
+    "use strict";
+
+    // detect ie9 and lower
+    var ie = (function(){
+            for( var v = 3,
+                     el = document.createElement('b'),
+                     all = el.all || [];
+                 el.innerHTML = '<!--[if gt IE ' + (++v) + ']><i><![endif]-->',
+                 all[0];
+            ){}
+            return v > 4 ? v : document.documentMode;
+        }()),
+        is_mac = navigator.platform.toLowerCase().indexOf('mac') + 1;
+    var EqUILazyLoad = function(data) {
+        if( ! (this instanceof EqUILazyLoad))
+            return new EqUILazyLoad(data);
+        var self = this;
+
+        var defaults = {
+            rows_in_block: 50,
+            blocks_in_cluster: 4,
+            tag: null,
+            show_no_data_row: true,
+            no_data_class: 'equi-lazy-load-no-data',
+            no_data_text: 'No data',
+            keep_parity: true,
+            callbacks: {}
+        };
+
+        // public parameters
+        self.options = {};
+        var options = ['rows_in_block', 'blocks_in_cluster', 'show_no_data_row', 'no_data_class', 'no_data_text', 'keep_parity', 'tag', 'callbacks'];
+        for(var i = 0, option; option = options[i]; i++) {
+            self.options[option] = typeof data[option] !== 'undefined' && data[option] != null
+            ? data[option]
+            : defaults[option];
+        }
+
+        var elems = ['scroll', 'content'];
+        for(var ii = 0, elem; elem = elems[ii]; ii++) {
+            if($.type(data[elem + 'Id']) === "string") {
+                self[elem + '_elem'] = data[elem + 'Id']
+                ? document.getElementById(data[elem + 'Id'])
+                : data[elem + 'Elem'];
+            } else {
+                self[elem + '_elem'] = data[elem + 'Id'];
+            }
+            if( ! self[elem + '_elem'])
+                throw new Error("Error! Could not find " + elem + " element");
+        }
+
+        // tabindex forces the browser to keep focus on the scrolling list
+        if( ! self.content_elem.hasAttribute('tabindex'))
+            self.content_elem.setAttribute('tabindex', 0);
+
+        // private parameters
+        var rows = isArray(data.rows)
+        ? data.rows
+        : self.fetchMarkup(),
+            cache = {},
+            scroll_top = self.scroll_elem.scrollTop;
+
+        // append initial data
+        self.insertToDOM(rows, cache);
+
+        // restore the scroll position
+        self.scroll_elem.scrollTop = scroll_top;
+
+        // adding scroll handler
+        var last_cluster = false,
+            scroll_debounce = 0,
+            pointer_events_set = false,
+            scrollEv = function() {
+                // fixes scrolling issue on Mac
+                /*if (is_mac) {
+                    if( ! pointer_events_set) self.content_elem.style.pointerEvents = 'none';
+                    pointer_events_set = true;
+                    clearTimeout(scroll_debounce);
+                    scroll_debounce = setTimeout(function () {
+                        self.content_elem.style.pointerEvents = 'auto';
+                        pointer_events_set = false;
+                    }, 50);
+                }*/
+                if (last_cluster !== (last_cluster = self.getClusterNum()))
+                    self.insertToDOM(rows, cache);
+                if (self.options.callbacks.scrollingProgress)
+                    self.options.callbacks.scrollingProgress(self.getScrollProgress());
+            },
+            resize_debounce = 0,
+            resizeEv = function() {
+                clearTimeout(resize_debounce);
+                resize_debounce = setTimeout(self.refresh, 100);
+            };
+        on('scroll', self.scroll_elem, scrollEv);
+        on('resize', window, resizeEv);
+
+        // public methods
+        self.destroy = function(clean) {
+            off('scroll', self.scroll_elem, scrollEv);
+            off('resize', window, resizeEv);
+            self.html((clean ? self.generateEmptyRow() : rows).join(''));
+        };
+        self.refresh = function(force) {
+            if(self.getRowsHeight(rows) || force) self.update(rows);
+        };
+        self.update = function(new_rows) {
+            rows = isArray(new_rows)
+            ? new_rows
+            : [];
+            var scroll_top = self.scroll_elem.scrollTop;
+            // fixes
+            if(rows.length * self.options.item_height < scroll_top) {
+                self.scroll_elem.scrollTop = 0;
+                last_cluster = 0;
+            }
+            self.insertToDOM(rows, cache);
+            self.scroll_elem.scrollTop = scroll_top;
+        };
+        self.clear = function() {
+            self.update([]);
+        };
+        self.getRowsAmount = function() {
+            return rows.length;
+        };
+        self.getScrollProgress = function() {
+            return this.options.scroll_top / (rows.length * this.options.item_height) * 100 || 0;
+        };
+
+        var add = function(where, _new_rows) {
+            var new_rows = isArray(_new_rows)
+            ? _new_rows
+            : [];
+            if( ! new_rows.length) return;
+            rows = where === 'append'
+            ? rows.concat(new_rows)
+            : new_rows.concat(rows);
+            self.insertToDOM(rows, cache);
+        };
+        self.append = function(rows) {
+            add('append', rows);
+        };
+        self.prepend = function(rows) {
+            add('prepend', rows);
+        }
+    };
+
+    EqUILazyLoad.prototype = {
+        constructor: EqUILazyLoad,
+        // fetch existing markup
+        fetchMarkup: function() {
+            var rows = [], rows_nodes = this.getChildNodes(this.content_elem);
+            while (rows_nodes.length) {
+                rows.push(rows_nodes.shift().outerHTML);
+            }
+            return rows;
+        },
+        // get tag name, content tag name, tag height, calc cluster height
+        exploreEnvironment: function(rows, cache) {
+            var opts = this.options;
+            opts.content_tag = this.content_elem.tagName.toLowerCase();
+            if( ! rows.length) return;
+            if(ie && ie <= 9 && ! opts.tag) opts.tag = rows[0].match(/<([^>\s/]*)/)[1].toLowerCase();
+            if(this.content_elem.children.length <= 1) cache.data = this.html(rows[0] + rows[0] + rows[0]);
+            if( ! opts.tag) opts.tag = this.content_elem.children[0].tagName.toLowerCase();
+            this.getRowsHeight(rows);
+        },
+        getRowsHeight: function(rows) {
+            var opts = this.options,
+                prev_item_height = opts.item_height;
+            opts.cluster_height = 0;
+            if( ! rows.length) return;
+            var nodes = this.content_elem.children;
+            var node = nodes[Math.floor(nodes.length / 2)];
+            opts.item_height = node.offsetHeight;
+            // consider table's border-spacing
+            if(opts.tag === 'tr' && getStyle('borderCollapse', this.content_elem) !== 'collapse')
+                opts.item_height += parseInt(getStyle('borderSpacing', this.content_elem), 10) || 0;
+            // consider margins (and margins collapsing)
+            if(opts.tag !== 'tr') {
+                var marginTop = parseInt(getStyle('marginTop', node), 10) || 0;
+                var marginBottom = parseInt(getStyle('marginBottom', node), 10) || 0;
+                opts.item_height += Math.max(marginTop, marginBottom);
+            }
+            opts.block_height = opts.item_height * opts.rows_in_block;
+            opts.rows_in_cluster = opts.blocks_in_cluster * opts.rows_in_block;
+            opts.cluster_height = opts.blocks_in_cluster * opts.block_height;
+            return prev_item_height !== opts.item_height;
+        },
+        // get current cluster number
+        getClusterNum: function () {
+            this.options.scroll_top = this.scroll_elem.scrollTop;
+            return Math.floor(this.options.scroll_top / (this.options.cluster_height - this.options.block_height)) || 0;
+        },
+        // generate empty row if no data provided
+        generateEmptyRow: function() {
+            var opts = this.options;
+            if( ! opts.tag || ! opts.show_no_data_row) return [];
+            var empty_row = document.createElement(opts.tag),
+                no_data_content = document.createTextNode(opts.no_data_text), td;
+            empty_row.className = opts.no_data_class;
+            if(opts.tag === 'tr') {
+                td = document.createElement('td');
+                // fixes
+                td.colSpan = 100;
+                td.appendChild(no_data_content);
+            }
+            empty_row.appendChild(td || no_data_content);
+            return [empty_row.outerHTML];
+        },
+        // generate cluster for current scroll position
+        generate: function (rows, cluster_num) {
+            var opts = this.options,
+                rows_len = rows.length;
+            if (rows_len < opts.rows_in_block) {
+                return {
+                    top_offset: 0,
+                    bottom_offset: 0,
+                    rows_above: 0,
+                    rows: rows_len ? rows : this.generateEmptyRow()
+                }
+            }
+            var items_start = Math.max((opts.rows_in_cluster - opts.rows_in_block) * cluster_num, 0),
+                items_end = items_start + opts.rows_in_cluster,
+                top_offset = Math.max(items_start * opts.item_height, 0),
+                bottom_offset = Math.max((rows_len - items_end) * opts.item_height, 0),
+                this_cluster_rows = [],
+                rows_above = items_start;
+            if(top_offset < 1) {
+                rows_above++;
+            }
+            for (var i = items_start; i < items_end; i++) {
+                rows[i] && this_cluster_rows.push(rows[i]);
+            }
+            return {
+                top_offset: top_offset,
+                bottom_offset: bottom_offset,
+                rows_above: rows_above,
+                rows: this_cluster_rows
+            }
+        },
+        renderExtraTag: function(class_name, height) {
+            var tag = document.createElement(this.options.tag),
+                equi_lazy_load_prefix = 'equi-lazy-load-';
+            tag.className = [equi_lazy_load_prefix + 'extra-row', equi_lazy_load_prefix + class_name].join(' ');
+            height && (tag.style.height = height + 'px');
+            return tag.outerHTML;
+        },
+        // if necessary verify data changed and insert to DOM
+        insertToDOM: function(rows, cache) {
+            // explore row's height
+            if( ! this.options.cluster_height) {
+                this.exploreEnvironment(rows, cache);
+            }
+            var data = this.generate(rows, this.getClusterNum()),
+                this_cluster_rows = data.rows.join(''),
+                this_cluster_content_changed = this.checkChanges('data', this_cluster_rows, cache),
+                top_offset_changed = this.checkChanges('top', data.top_offset, cache),
+                only_bottom_offset_changed = this.checkChanges('bottom', data.bottom_offset, cache),
+                callbacks = this.options.callbacks,
+                layout = [];
+
+            if(this_cluster_content_changed || top_offset_changed) {
+                if(data.top_offset) {
+                    this.options.keep_parity && layout.push(this.renderExtraTag('keep-parity'));
+                    layout.push(this.renderExtraTag('top-space', data.top_offset));
+                }
+                layout.push(this_cluster_rows);
+                data.bottom_offset && layout.push(this.renderExtraTag('bottom-space', data.bottom_offset));
+                callbacks.clusterWillChange && callbacks.clusterWillChange();
+                this.html(layout.join(''));
+                this.options.content_tag === 'ol' && this.content_elem.setAttribute('start', data.rows_above);
+                this.content_elem.style['counter-increment'] = 'equi-lazy-load-counter ' + (data.rows_above-1);
+                callbacks.clusterChanged && callbacks.clusterChanged();
+            } else if(only_bottom_offset_changed) {
+                this.content_elem.lastChild.style.height = data.bottom_offset + 'px';
+            }
+        },
+        // unfortunately ie <= 9 does not allow to use innerHTML for table elements, so make a workaround
+        html: function(data) {
+            var content_elem = this.content_elem;
+            if(ie && ie <= 9 && this.options.tag === 'tr') {
+                var div = document.createElement('div'), last;
+                div.innerHTML = '<table><tbody>' + data + '</tbody></table>';
+                while((last = content_elem.lastChild)) {
+                    content_elem.removeChild(last);
+                }
+                var rows_nodes = this.getChildNodes(div.firstChild.firstChild);
+                while (rows_nodes.length) {
+                    content_elem.appendChild(rows_nodes.shift());
+                }
+            } else {
+                content_elem.innerHTML = data;
+            }
+        },
+        getChildNodes: function(tag) {
+            var child_nodes = tag.children, nodes = [];
+            for (var i = 0, ii = child_nodes.length; i < ii; i++) {
+                nodes.push(child_nodes[i]);
+            }
+            return nodes;
+        },
+        checkChanges: function(type, value, cache) {
+            var changed = value !== cache[type];
+            cache[type] = value;
+            return changed;
+        }
+    };
+
+    // support functions
+    function on(evt, element, fnc) {
+        return element.addEventListener ? element.addEventListener(evt, fnc, false) : element.attachEvent("on" + evt, fnc);
+    }
+    function off(evt, element, fnc) {
+        return element.removeEventListener ? element.removeEventListener(evt, fnc, false) : element.detachEvent("on" + evt, fnc);
+    }
+    function isArray(arr) {
+        return Object.prototype.toString.call(arr) === '[object Array]';
+    }
+    function getStyle(prop, elem) {
+        return window.getComputedStyle ? window.getComputedStyle(elem)[prop] : elem.currentStyle[prop];
+    }
+
+    return EqUILazyLoad;
+}));
+}( jQuery ));
+/*jshint ignore:end*/
+;(function($) {
+    $.fn.EqUIStickyTable = function(data) {
+        var tableOffsetTopData = data.top ? data.top:0;
+        return this.each(function() {
+            var $this = $(this),
+                $t_fixed;
+            function init() {
+                $this.wrap('<div class="eq-ui-sticky-table-wrap" />');
+                $t_fixed = $this.clone();
+                $t_fixed.find("tbody").remove().end().addClass("eq-ui-sticky-table-cloned").insertAfter($this);
+                $t_fixed.css("top", tableOffsetTopData);
+                resizeFixed();
+            }
+            function resizeFixed() {
+                $t_fixed.find("th").each(function(index) {
+                    $(this).css("width",$this.find("th").eq(index).outerWidth()+"px");
+                });
+            }
+            function scrollFixed() {
+                var offset = $(this).scrollTop(),
+                    tableOffsetTop = $this.offset().top - tableOffsetTopData,
+                    tableOffsetBottom = tableOffsetTop + $this.height() - $this.find("thead").height();
+                if(offset < tableOffsetTop || offset > tableOffsetBottom){
+                    $t_fixed.hide();
+                }
+                else if(offset >= tableOffsetTop && offset <= tableOffsetBottom && $t_fixed.is(":hidden")){
+                    $t_fixed.show();
+                }
+            }
+            $(window).resize(resizeFixed);
+            $(window).scroll(scrollFixed);
+            init();
+        });
+    };
+})(jQuery);
 if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
 if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
 
@@ -17002,6 +17370,7 @@ else {
         _top_serach_action_show_element.on('click', function(e) {
             _top_serach_element.css('visibility', 'visible');
             _top_serach_element.css('top', '0');
+            _top_serach_element.find('input').focus();
         });
 
         // Close top search
@@ -17350,7 +17719,7 @@ else {
                 var _last_children;
                 var _last_children_hiden;
                 if(origin_children.length === 1 && origin_children_hiden.length > 0){
-                    _last_children = $(origin_children[0]);
+                    // _last_children = $(origin_children[0]);
                     _last_children_hiden = $(origin_children_hiden[origin_children_hiden.length-1]);
                     origin.addClass(_this.breadcrumb_min_class);
                     // Save old last children hiden width
@@ -17446,6 +17815,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.buttons = {};
 
@@ -17516,13 +17886,13 @@ else {
 
         // End animation event
         function animationEnd() {
-            if(!element.hasClass(EqUI.buttons.fab_action_id+' active')){
+            if(!element.hasClass('active')){
                 $('.'+EqUI.buttons.fab_action_id+' ul').css('height', '0');
             }
         }
 
         // Add animation class
-        if(!element.hasClass(EqUI.buttons.fab_action_id+' active') && (isClose === false || isClose === 'none')){
+        if(!element.hasClass('active') && (isClose === false || isClose === 'none')){
             // SHOW
             $('.'+EqUI.buttons.fab_action_id+' ul').css('height', 'auto');
             element.addClass("active");
@@ -17567,6 +17937,18 @@ else {
         }
     };
 
+
+    //Tooltip FAB
+
+
+    $( "a.eq-ui-btn-fab-with-tooltip" ).hover(
+        function() {
+            $( this ).siblings().addClass( "view-tooltip" );
+        }, function() {
+            $( this ).siblings().removeClass( "view-tooltip" );
+        }
+    );
+
     $(document).ready(function() {
         // Init
         EqUI.buttons.init();
@@ -17574,6 +17956,8 @@ else {
         // Update
         EqUI.buttons.update();
     });
+
+
 }( jQuery ));
 (function ($) {
     EqUI.cards = {};
@@ -17890,7 +18274,7 @@ else {
             var select_id = $(this).attr('id') || '';
             var input_id = select_id + '-fake';
             var valuesSelected = [];
-            var is_multiple = select.attr('multiple') ? true : false;
+            var is_multiple = !!select.attr('multiple');
             var last_ID = select.attr('data-select-id');
             var label = '';
 
@@ -18059,6 +18443,7 @@ else {
         EqUI.forms.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.collapsible = {};
 
@@ -18256,6 +18641,8 @@ else {
             var origin = $(this);
             var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
+            var target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
+            var is_auto_align = !!target_auto_align[0];
             var target_items = $("#"+ origin.attr('data-target') + ' li');
 
             // Update options
@@ -18349,22 +18736,25 @@ else {
 
             // Dropdown Open
             function dropdownOpen(object) {
+                if(is_auto_align){
+                  autoAlign(object);
+                }
+
                 if ((options.hover && !object.hasClass('active')) || (!options.hover && !object.hasClass('open'))){
 
-					if(!object.hasClass("active")){
-						object.addClass('active');
-						
-						object.stop(true,false).slideDown({
-	                        duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
-	                            object.addClass('open');
-	                            $(this).css('height', '');
-	                        }
-	                    });
-					}
+                  if(!object.hasClass("active")){
+                    object.addClass('active');
+
+                    object.stop(true,false).slideDown({
+                                  duration: options.inDuration, easing: "easeOutQuart", queue: false, complete: function() {
+                                      object.addClass('open');
+                                      $(this).css('height', '');
+                                  }
+                              });
+                  }
                     
                 }
             }
-            
 
             // Dropdown Close
             function dropdownClose(object) {
@@ -18393,6 +18783,70 @@ else {
                         });
                     });
                 }
+            }
+
+            // Auto Align
+            function autoAlign(object) {
+              // Clean
+              object.removeClass('eq-ui-dropdown-right-top');
+              object.removeClass('eq-ui-dropdown-left-bottom');
+              object.removeClass('eq-ui-dropdown-right-bottom');
+
+              var contSize = {
+                width: target_auto_align.outerWidth(true),
+                height: target_auto_align.outerHeight(true)
+              }
+
+              var targetSize = {
+                width: object.outerWidth(true),
+                height: object.outerHeight(true)
+              }
+
+              var originSize = {
+                width: origin.outerWidth(true),
+                height: origin.outerHeight(true)
+              }
+
+              var originPos = origin.offset();
+              var contPos = target_auto_align.offset();
+              var originOffset = {
+                top: originPos.top - contPos.top,
+                left: originPos.left - contPos.left
+              }
+
+              var isTop = false;
+              var isBottom = false;
+              var isLeft = false;
+              var isRight = false;
+
+              // Is Left/Right
+              if((originOffset.left + targetSize.width) <= contSize.width){
+                isLeft = true;
+              } else if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
+                isRight = true;
+              }
+
+              // Is Top/Bottom
+              if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
+                isTop = true;
+              } else if((originOffset.top - targetSize.height) >= 0){
+                isBottom = true;
+              }
+
+              if(isRight && isTop){
+                object.addClass('eq-ui-dropdown-right-top');
+              }
+
+              if(isLeft && isBottom){
+                object.addClass('eq-ui-dropdown-left-bottom');
+              }
+
+              if(isRight && isBottom){
+                object.addClass('eq-ui-dropdown-right-bottom');
+              }
+
+              // Set Gutter
+              setGutter(target);
             }
 
             // Set Gutter
@@ -18465,6 +18919,7 @@ else {
         EqUI.dropdown.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.modals = {};
 
@@ -18819,6 +19274,7 @@ else {
                 if ($this.is(":visible")) {
                     $indicator.css({"right": $tab_right});
                     $indicator.css({"left": $tab_left});
+                    $indicator.css({"width": $tab_width});
                 }
 
                 // Resize
@@ -18836,6 +19292,7 @@ else {
                     if ($tab_width !== 0 && $tabs_width !== 0) {
                         $indicator.css({"right": $tab_right});
                         $indicator.css({"left": $tab_left});
+                        $indicator.css({"width": $tab_width});
                     }
                 });
 
@@ -18886,10 +19343,12 @@ else {
                     if (($index - $prev_index) >= 0) {
                         $indicator.velocity({"right": $tab_right}, { duration: 300, queue: false, easing: 'easeOutQuad'});
                         $indicator.velocity({"left": $tab_left}, {duration: 300, queue: false, easing: 'easeOutQuad', delay: 90});
+                        $indicator.velocity({"width": $tab_width});
                     }
                     else {
                         $indicator.velocity({"left": $tab_left}, { duration: 300, queue: false, easing: 'easeOutQuad'});
                         $indicator.velocity({"right": $tab_right}, {duration: 300, queue: false, easing: 'easeOutQuad', delay: 90});
+                        $indicator.velocity({"width": $tab_width});
                     }
 
                     // Prevent the anchor's default click action
@@ -18942,6 +19401,7 @@ else {
     });
 
 }( jQuery ));
+
 (function ($) {
     EqUI.init = {};
     var _this = function(){return EqUI.init;}();

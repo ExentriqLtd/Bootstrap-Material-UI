@@ -1,6 +1,6 @@
 {
     "name": "exentriq-bootstrap-material-ui",
-    "version": "0.3.7",
+    "version": "0.4.0",
     "description": "Implements Google's Material Design in Bootstrap",
     "readme": "README.md",
     "repository": {
@@ -34,6 +34,12 @@
         "grunt-contrib-cssmin": "^0.13.0",
         "grunt-sass": "^1.0.0",
         "node-sass": "^3.2.0",
-        "grunt-contrib-jade": "^0.15.0"
+        "grunt-contrib-jade": "^0.15.0",
+        "babel-eslint": "^8.0.1",
+        "eslint": "^4.14.0",
+        "eslint-config-airbnb": "^16.1.0",
+        "eslint-plugin-import": "^2.8.0",
+        "eslint-plugin-jsx-a11y": "^6.0.2",
+        "eslint-plugin-react": "^7.4.0"
     }
 }
