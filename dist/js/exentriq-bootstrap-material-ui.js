@@ -17131,8 +17131,17 @@ Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.sc
         });
     };
 })(jQuery);
-if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
-if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
+// there is problem when using this inside meteor as it creates local variable name EqUI for the export
+// and then puts source code of this package, so EqUI is already in the scop so we need to set it.
+if (!EqUI) {
+  EqUI = {};
+}
+if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){
+  global.EqUI = EqUI;
+}
+if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){
+  window.EqUI = EqUI;
+}
 
 // Unique ID
 EqUI.guid = (function() {
