@@ -39,6 +39,7 @@ module.exports = function ( grunt ) {
         ],
         imports_js: [
             'src/js/helps/lazy-load.js',
+            'src/js/helps/observe.js',
             'src/js/helps/sticky-table.js',
             'src/js/global.js',
             'src/js/site.js',
