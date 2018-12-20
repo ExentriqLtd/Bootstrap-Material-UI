@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.4.1 (Dec 20, 2018)
+
+**Updates**
+- Dynamic Initialization for [Dropdown](http://bootstrap-material-ui.exentriq.com/dropdown.html#pin-vue-dropdown)
+
 ### v0.4.0 (Nov 12, 2018)
 
 **Updates**

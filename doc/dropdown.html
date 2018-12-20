@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>JavaScript - Dropdown | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.4.0" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.4.0" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.4.1" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.4.1" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"java-script",path:"dropdown",name_section:"JavaScript",name_chapter:"Dropdown"};</script>
@@ -1340,6 +1340,62 @@ $(document).ready(function(){
         </div>
     </div>
 
+    <div class="row">
+      <div class="col-md-12">
+        <h2 id="pin-vue-dropdown" class="header">Dynamic Initialization (Vue Example)</h2>
+        <p>Rest Mockup Data</p>
+
+        <div id="vue-dropdown">
+          <section v-if="errored">
+            <p>We're sorry, we're not able to retrieve this data at the moment, please try back later</p>
+          </section>
+
+          <section v-else>
+            <section v-if="loading" style="height: 100px; position: relative;">
+              <div class='eq-ui-loader-ring_for_material-mini' style="position: absolute; margin: 0; top: 25%; left: 50%;">
+                <div class='eq-ui-loader-ring-light-mini'></div>
+                <div class='eq-ui-loader-ring-track-mini'></div>
+              </div>
+            </section>
+
+            <section v-else>
+              <table id="vue-dropdown-table" class="table eq-ui-data-table z-depth-1">
+                <thead>
+                <tr>
+                  <th class="eq-ui-data-table-cell-non-numeric">Model</th>
+                  <th class="eq-ui-data-table-cell-non-numeric hidden-xs">Quantity</th>
+                  <th class="eq-ui-data-table-cell-non-numeric">Unit price</th>
+                  <th></th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr v-for="post in posts" v-bind:key="post.id">
+                  <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">{{ post.model }}</td>
+                  <td class="eq-ui-data-table-cell-non-numeric hidden-xs">{{ post.quantity | currencydecimal }}</td>
+                  <td class="eq-ui-data-table-cell-non-numeric">{{ post.price }}</td>
+                  <td style="padding: 8px; width: 32px;">
+                    <a v-bind:data-target="'dropdown-test-'+post.id" data-auto-align-target="vue-dropdown-table" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab dropdown-trigger">
+                      <i class="mdi mdi-dots-vertical icon"></i>
+                    </a>
+                    <!-- Dropdown Structure -->
+                    <ul v-bind:id="'dropdown-test-'+post.id" class="eq-ui-dropdown eq-ui-dropdown-right-top">
+                      <li><a href="#!">Some Action</a></li>
+                      <li class="disabled"><a href="#!">Disabled Action</a></li>
+                      <li><a href="#!" class="active">Item Active</a></li>
+                      <li><a href="#!">Another Action</a></li>
+                    </ul>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </section>
+          </section>
+        </div>
+
+      </div>
+    </div>
+
 </div>
 
 <!--footer>
@@ -1358,13 +1414,18 @@ $(document).ready(function(){
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/moment/min/moment.min.js?v=2.13.0"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.4.0"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.4.1"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
 
-<script src="assets/js/doc.js?v=0.4.0"></script>
+<script src="https://unpkg.com/lodash@4.16.0"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
+
+<script src="assets/js/doc.js?v=0.4.1"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
+<script src="assets/js/vue/dropdown.js"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>

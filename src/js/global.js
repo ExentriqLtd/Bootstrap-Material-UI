@@ -36,6 +36,8 @@ EqUI.elementOrParentIsFixed = function(element) {
     return isFixed;
 };
 
+EqUI.mutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver || null;
+
 // Velocity has conflicts when loaded with jQuery, this will check for it
 var Vel;
 if ($) {
