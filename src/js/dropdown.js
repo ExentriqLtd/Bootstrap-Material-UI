@@ -18,6 +18,9 @@
             var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
             var target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
+            if(!target_auto_align || target_auto_align.length <=0){
+              target_auto_align = $("."+ origin.attr('data-auto-align-target'));
+            }
             var is_auto_align = !!target_auto_align[0];
             var target_items = $("#"+ origin.attr('data-target') + ' li');
 
@@ -284,8 +287,21 @@
 
     // Load
     EqUI.dropdown.load = function() {
-        $('.dropdown-trigger').dropdown();
+
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // Load
+      EqUI.dropdown.load = function() {
+        $('.dropdown-trigger').dropdown();
+      };
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.dropdown-trigger', function () {
+        $(this).dropdown();
+      })
+    }
 
     $(document).ready(function() {
         // Init

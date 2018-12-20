@@ -216,92 +216,94 @@ var EqUIDoc = {};
       //-----------------------------------
       // Wassap Simulate
       //-----------------------------------
-      /* Meme */
-      var memes = [
-        'Dude, you smashed my turtle saying "I\'M MARIO BROS!"',
-        'Dude, you grabed seven oranges and yelled "I GOT THE DRAGON BALLS!"',
-        'Dude, you threw my hamster across the room and said "PIKACHU I CHOOSE YOU!"',
-        'Dude, you congratulated a potato for getting a part in Toy Story',
-        'Dude, you were hugging an old man with a beard screaming "DUMBLEDORE YOU\'RE ALIVE!"',
-        'Dude, you were cutting all my pinapples yelling "SPONGEBOB! I KNOW YOU\'RE THERE!"',
-      ];
+      if (_doc_route.path === "dropdown") {
+        /* Meme */
+        var memes = [
+          'Dude, you smashed my turtle saying "I\'M MARIO BROS!"',
+          'Dude, you grabed seven oranges and yelled "I GOT THE DRAGON BALLS!"',
+          'Dude, you threw my hamster across the room and said "PIKACHU I CHOOSE YOU!"',
+          'Dude, you congratulated a potato for getting a part in Toy Story',
+          'Dude, you were hugging an old man with a beard screaming "DUMBLEDORE YOU\'RE ALIVE!"',
+          'Dude, you were cutting all my pinapples yelling "SPONGEBOB! I KNOW YOU\'RE THERE!"',
+        ];
 
-      var random = document.querySelector('#random');
+        var random = document.querySelector('#random');
 
-      random.innerHTML = memes[Math.floor(Math.random() * memes.length)];
+        random.innerHTML = memes[Math.floor(Math.random() * memes.length)];
 
-      /* Time */
-      var deviceTime = document.querySelector('.status-bar .time');
-      var messageTime = document.querySelectorAll('.message .time');
+        /* Time */
+        var deviceTime = document.querySelector('.status-bar .time');
+        var messageTime = document.querySelectorAll('.message .time');
 
-      deviceTime.innerHTML = moment().format('h:mm');
-
-      setInterval(function() {
         deviceTime.innerHTML = moment().format('h:mm');
-      }, 1000);
 
-      for (var i = 0; i < messageTime.length; i++) {
-        messageTime[i].innerHTML = moment().format('h:mm A');
-      }
+        setInterval(function() {
+          deviceTime.innerHTML = moment().format('h:mm');
+        }, 1000);
 
-      /* Message */
-      var form = document.querySelector('.conversation-compose');
-      var conversation = document.querySelector('.conversation-container');
-
-      form.addEventListener('submit', newMessage);
-
-      function newMessage(e) {
-        var input = e.target.input;
-        var guid = EqUI.guid();
-
-        if (input.value) {
-          var message = buildMessage(input.value, guid);
-          conversation.appendChild(message);
-          $('.dropdown-trigger-'+guid).dropdown();
-          animateMessage(message);
+        for (var i = 0; i < messageTime.length; i++) {
+          messageTime[i].innerHTML = moment().format('h:mm A');
         }
 
-        input.value = '';
-        conversation.scrollTop = conversation.scrollHeight;
+        /* Message */
+        var form = document.querySelector('.conversation-compose');
+        var conversation = document.querySelector('.conversation-container');
 
-        e.preventDefault();
-      }
+        form.addEventListener('submit', newMessage);
 
-      function buildMessage(text, guid) {
-        var element = document.createElement('div');
+        function newMessage(e) {
+          var input = e.target.input;
+          var guid = EqUI.guid();
 
-        element.classList.add('message', 'sent');
+          if (input.value) {
+            var message = buildMessage(input.value, guid);
+            conversation.appendChild(message);
+            $('.dropdown-trigger-'+guid).dropdown();
+            animateMessage(message);
+          }
 
-        element.innerHTML = text +
-          '<span class="metadata">' +
-          '<span class="time">' + moment().format('h:mm A') + '</span>' +
-          '<span class="tick tick-animation">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck" x="2047" y="2061"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#92a58c"/></svg>' +
-          '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg>' +
-          '</span>' +
-          '</span>' +
-          '<div class="message-menu-option">' +
-          '<!-- Dropdown Trigger -->' +
-          '<a data-target="dropdown-message-menu-option-'+guid+'" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger-'+guid+'">' +
-          '<i class="mdi mdi-chevron-down icon icon-18"></i>' +
-          '</a>' +
-          '<!-- Dropdown Structure -->' +
-          '<ul id="dropdown-message-menu-option-'+guid+'" class="eq-ui-dropdown">' +
-          '<li><a href="#!">Some Action</a></li>' +
-          '<li class="disabled"><a href="#!">Disabled Action</a></li>' +
-          '<li><a href="#!" class="active">Item Active</a></li>' +
-          '<li><a href="#!">Another Action</a></li>' +
-          '</ul>' +
-          '</div>';
+          input.value = '';
+          conversation.scrollTop = conversation.scrollHeight;
 
-        return element;
-      }
+          e.preventDefault();
+        }
 
-      function animateMessage(message) {
-        setTimeout(function() {
-          var tick = message.querySelector('.tick');
-          tick.classList.remove('tick-animation');
-        }, 500);
+        function buildMessage(text, guid) {
+          var element = document.createElement('div');
+
+          element.classList.add('message', 'sent');
+
+          element.innerHTML = text +
+            '<span class="metadata">' +
+            '<span class="time">' + moment().format('h:mm A') + '</span>' +
+            '<span class="tick tick-animation">' +
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck" x="2047" y="2061"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#92a58c"/></svg>' +
+            '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" id="msg-dblcheck-ack" x="2063" y="2076"><path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.88a.32.32 0 0 1-.484.032l-.358-.325a.32.32 0 0 0-.484.032l-.378.48a.418.418 0 0 0 .036.54l1.32 1.267a.32.32 0 0 0 .484-.034l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.88a.32.32 0 0 1-.484.032L1.892 7.77a.366.366 0 0 0-.516.005l-.423.433a.364.364 0 0 0 .006.514l3.255 3.185a.32.32 0 0 0 .484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z" fill="#4fc3f7"/></svg>' +
+            '</span>' +
+            '</span>' +
+            '<div class="message-menu-option">' +
+            '<!-- Dropdown Trigger -->' +
+            '<a data-target="dropdown-message-menu-option-'+guid+'" data-auto-align-target="doc-conversation-container" data-hover="false" data-below-origin="true" class="dropdown-trigger-'+guid+'">' +
+            '<i class="mdi mdi-chevron-down icon icon-18"></i>' +
+            '</a>' +
+            '<!-- Dropdown Structure -->' +
+            '<ul id="dropdown-message-menu-option-'+guid+'" class="eq-ui-dropdown">' +
+            '<li><a href="#!">Some Action</a></li>' +
+            '<li class="disabled"><a href="#!">Disabled Action</a></li>' +
+            '<li><a href="#!" class="active">Item Active</a></li>' +
+            '<li><a href="#!">Another Action</a></li>' +
+            '</ul>' +
+            '</div>';
+
+          return element;
+        }
+
+        function animateMessage(message) {
+          setTimeout(function() {
+            var tick = message.querySelector('.tick');
+            tick.classList.remove('tick-animation');
+          }, 500);
+        }
       }
       //-----------------------------------
 
