@@ -176,4 +176,48 @@
             </div>
         </div>
 
+        <div class="row">
+          <div class="col-md-12">
+            <h2 id="pin-vue-collapsible" class="header">Dynamic Initialization (Vue Example)</h2>
+            <p>Rest Mockup Data</p>
+
+            <div id="vue-collapsible">
+              <section v-if="errored">
+                <p>We're sorry, we're not able to retrieve this data at the moment, please try back later</p>
+              </section>
+
+              <section v-else>
+                <section v-if="loading" style="height: 100px; position: relative;">
+                  <div class='eq-ui-loader-ring_for_material-mini' style="position: absolute; margin: 0; top: 25%; left: 50%;">
+                    <div class='eq-ui-loader-ring-light-mini'></div>
+                    <div class='eq-ui-loader-ring-track-mini'></div>
+                  </div>
+                </section>
+
+                <section v-else>
+
+                  <ul class="eq-ui-collapsible" data-collapsible="accordion">
+                    <li v-for="post in posts" v-bind:key="post.id">
+                      <div class="eq-ui-collapsible-header active">
+                        <a><i class="mdi mdi-image-filter-drama icon icon-left icon-24"></i>Collapsible #{{ post.id+1 }}</a>
+                      </div>
+                      <div class="eq-ui-collapsible-body">
+                        <div class="eq-ui-collapsible-body-inner">
+                          <ul class="eq-ui-list" style="display:block;">
+                            <li class="eq-ui-list-item">{{ post.model }}</li>
+                            <li class="eq-ui-list-item">{{ post.quantity | currencydecimal }}</li>
+                            <li class="eq-ui-list-item">{{ post.price }}</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+
+                </section>
+              </section>
+            </div>
+
+          </div>
+        </div>
+
     </div>

@@ -161,8 +161,21 @@
 
     // Load
     EqUI.tabs.load = function() {
-        $('ul.eq-ui-tabs').tabs();
+
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // Load
+      EqUI.tabs.load = function() {
+        $('ul.eq-ui-tabs').tabs();
+      };
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('ul.eq-ui-tabs', function () {
+        $(this).tabs();
+      })
+    }
 
     // Ready
     $(document).ready(function() {

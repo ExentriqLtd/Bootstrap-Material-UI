@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### v0.4.2 (Jan 10, 2019)
+
+**Updates**
+- Dynamic Initialization for [Collapsible](http://bootstrap-material-ui.exentriq.com/collapsible.html#pin-vue-collapsible)
+- Dynamic Initialization for [Tabs](http://bootstrap-material-ui.exentriq.com/tabs.html#pin-vue-tabs)
+
 ### v0.4.1 (Dec 20, 2018)
 
 **Updates**
