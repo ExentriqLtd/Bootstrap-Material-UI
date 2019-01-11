@@ -18698,10 +18698,20 @@ else {
     // Init
     EqUI.collapsible.init = function() {
 
-        // Init
-        EqUI.collapsible.element.eq_collapsible();
-
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // Load
+      EqUI.collapsible.init = function() {
+        EqUI.collapsible.element.eq_collapsible();
+      };
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.eq-ui-collapsible', function () {
+        $(this).eq_collapsible();
+      })
+    }
 
     // Update
     EqUI.collapsible.update = function() {
@@ -18716,6 +18726,7 @@ else {
         EqUI.collapsible.update();
     });
 }( jQuery ));
+
 (function ($) {
     EqUI.dropdown = {};
 
@@ -19498,8 +19509,21 @@ else {
 
     // Load
     EqUI.tabs.load = function() {
-        $('ul.eq-ui-tabs').tabs();
+
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // Load
+      EqUI.tabs.load = function() {
+        $('ul.eq-ui-tabs').tabs();
+      };
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('ul.eq-ui-tabs', function () {
+        $(this).tabs();
+      })
+    }
 
     // Ready
     $(document).ready(function() {

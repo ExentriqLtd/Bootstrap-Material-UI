@@ -287,4 +287,48 @@ $('#eq-ui-tab-s3-t1').bind('isShow', function () {
         </div>
     </div>
 
+  <div class="row">
+    <div class="col-md-12">
+      <h2 id="pin-vue-tabs" class="header">Dynamic Initialization (Vue Example)</h2>
+      <p>Rest Mockup Data</p>
+
+      <div id="vue-tabs">
+        <section v-if="errored">
+          <p>We're sorry, we're not able to retrieve this data at the moment, please try back later</p>
+        </section>
+
+        <section v-else>
+          <section v-if="loading" style="height: 100px; position: relative;">
+            <div class='eq-ui-loader-ring_for_material-mini' style="position: absolute; margin: 0; top: 25%; left: 50%;">
+              <div class='eq-ui-loader-ring-light-mini'></div>
+              <div class='eq-ui-loader-ring-track-mini'></div>
+            </div>
+          </section>
+
+          <section v-else>
+
+            <div class="eq-ui-card eq-ui-primary-color doc-margin-bottom doc-tabs">
+              <div class="eq-ui-card-supporting-text">
+                <div class="eq-ui-scrollbar-wrap eq-ui-scrollbar-wrap-x eq-ui-scrollbar-wrap-hide">
+                  <ul class="eq-ui-tabs">
+                    <li class="eq-ui-tab"><a href="#eq-ui-tab-vue-1">Item one</a></li>
+                    <li class="eq-ui-tab"><a class="active" href="#eq-ui-tab-vue-2">Item two</a></li>
+                    <li class="eq-ui-tab"><a href="#eq-ui-tab-vue-3">Item three</a></li>
+                    <li class="eq-ui-tab"><a href="#eq-ui-tab-vue-4">Item four</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div v-for="post in posts" v-bind:key="post.id" v-bind:id="'eq-ui-tab-vue-'+(post.id+1)" class="col-md-12">
+              [Item: {{ post.id+1 }}] -> {{ post.model }}
+            </div>
+
+          </section>
+        </section>
+      </div>
+
+    </div>
+  </div>
+
 </div>
