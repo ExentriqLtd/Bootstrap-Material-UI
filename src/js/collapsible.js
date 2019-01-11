@@ -158,10 +158,20 @@
     // Init
     EqUI.collapsible.init = function() {
 
-        // Init
-        EqUI.collapsible.element.eq_collapsible();
-
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // Load
+      EqUI.collapsible.init = function() {
+        EqUI.collapsible.element.eq_collapsible();
+      };
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.eq-ui-collapsible', function () {
+        $(this).eq_collapsible();
+      })
+    }
 
     // Update
     EqUI.collapsible.update = function() {

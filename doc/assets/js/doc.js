@@ -157,7 +157,7 @@ var EqUIDoc = {};
         });
 
         //-----------------------------------
-        // Table -> Lazy load (Sample 1)
+        // Table -> Lazy load (Sample)
         //-----------------------------------
         var fakeJsonData                           = "http://37.187.137.141:3500/posts"; // http://192.168.1.20:3500/posts
         var fakeDataTable                          = [];
