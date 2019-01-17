@@ -17914,12 +17914,21 @@ else {
     EqUI.buttons = {};
 
     // Init
-    EqUI.buttons.init = function() {
+    EqUI.buttons.init = function(_this) {
 
         // Global vars
         EqUI.buttons.element = $('.btn');
         EqUI.buttons.fab_action_id = 'eq-ui-btn-fab-action';
-        EqUI.buttons.fab_action_element = $('.'+EqUI.buttons.fab_action_id);
+        EqUI.buttons.fab_action_element = _this ? _this : $('.'+EqUI.buttons.fab_action_id);
+
+        // Tooltip FAB
+        $("a.eq-ui-btn-fab-with-tooltip").hover(
+          function() {
+            $(this).siblings().addClass( "view-tooltip" );
+          }, function() {
+            $(this).siblings().removeClass( "view-tooltip" );
+          }
+        );
 
         // Events for FAB Action Button
         if(EqUI.site.isTouch){
@@ -18031,28 +18040,29 @@ else {
         }
     };
 
-
-    //Tooltip FAB
-
-
-    $( "a.eq-ui-btn-fab-with-tooltip" ).hover(
-        function() {
-            $( this ).siblings().addClass( "view-tooltip" );
-        }, function() {
-            $( this ).siblings().removeClass( "view-tooltip" );
-        }
-    );
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // ...
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.eq-ui-btn-fab-action', function () {
+        EqUI.buttons.init($(this));
+      })
+    }
 
     $(document).ready(function() {
+      if (EqUI.mutationObserver === null) {
         // Init
         EqUI.buttons.init();
+      }
 
-        // Update
-        EqUI.buttons.update();
+      // Update
+      EqUI.buttons.update();
     });
 
 
 }( jQuery ));
+
 (function ($) {
     EqUI.cards = {};
 
@@ -18365,7 +18375,7 @@ else {
     $.fn.eq_select = function (callback) {
         $(this).each(function() {
             var select = $(this);
-            var select_id = $(this).attr('id') || '';
+            var select_id = $(this).attr('id') || EqUI.guid();
             var input_id = select_id + '-fake';
             var valuesSelected = [];
             var is_multiple = !!select.attr('multiple');
@@ -18528,6 +18538,16 @@ else {
             return value;
         }
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // ...
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.eq-ui-select', function () {
+        $(this).eq_select();
+      })
+    }
 
     $(document).ready(function() {
         // Init
