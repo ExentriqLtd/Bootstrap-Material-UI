@@ -289,7 +289,7 @@
     $.fn.eq_select = function (callback) {
         $(this).each(function() {
             var select = $(this);
-            var select_id = $(this).attr('id') || '';
+            var select_id = $(this).attr('id') || EqUI.guid();
             var input_id = select_id + '-fake';
             var valuesSelected = [];
             var is_multiple = !!select.attr('multiple');
@@ -452,6 +452,16 @@
             return value;
         }
     };
+
+    // READY & OBSERVE
+    if (EqUI.mutationObserver === null) {
+      // ...
+    } else {
+      // .EqUIObserve(selector, onAdded, onRemoved)
+      $(document).EqUIObserve('.eq-ui-select', function () {
+        $(this).eq_select();
+      })
+    }
 
     $(document).ready(function() {
         // Init

@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### v0.4.3 (Jan 17, 2019)
+**Updates**
+- Dynamic Initialization for Others small components
+
+**Fixes**
+- Others fixes
+
 ### v0.4.2 (Jan 10, 2019)
 
 **Updates**
