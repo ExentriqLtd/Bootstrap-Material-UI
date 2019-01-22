@@ -19621,4 +19621,5 @@ else {
 	    
 	});
 }( jQuery ));
+
 //# sourceMappingURL=exentriq-bootstrap-material-ui.js.map
