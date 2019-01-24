@@ -2845,20 +2845,20 @@ else {
   if (EqUI.mutationObserver === null) {
     _this.init = function() {
       // Init Waves
-      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
       EqUI.init.Waves.attach('.eq-ui-waves', ['waves-effect']);
       EqUI.init.Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
     };
   } else {
     // .EqUIObserve(selector, onAdded, onRemoved)
     $(document).EqUIObserve('.eq-ui-waves', function () {
-      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
       EqUI.init.Waves.attach(this, ['waves-effect']);
     }, function () {
       EqUI.init.Waves.calm(this);
     })
     $(document).EqUIObserve('.eq-ui-waves-light', function () {
-      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
       EqUI.init.Waves.attach(this, ['waves-effect', 'waves-light']);
     }, function () {
       EqUI.init.Waves.calm(this);
