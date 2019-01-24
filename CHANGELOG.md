@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### v0.4.4 (Jan 24, 2019)
+**Updates**
+- Added compatibility for Meteor
+
+**Fixes**
+- Dynamic Initialization for Waves
+
 ### v0.4.3 (Jan 17, 2019)
 **Updates**
 - Dynamic Initialization for Others small components

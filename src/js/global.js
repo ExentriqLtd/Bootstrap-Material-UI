@@ -1,5 +1,13 @@
-if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
-if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
+if (typeof Meteor === 'object') { // Meteor
+  if (typeof EqUI === "undefined") {
+    EqUI = {};
+  }
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = EqUI;}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = EqUI;}
+} else { // Node / Browser
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
+}
 
 // Unique ID
 EqUI.guid = (function() {
