@@ -458,8 +458,16 @@
         });
     };
 })(jQuery);
-if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
-if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
+if (typeof Meteor === 'object') { // Meteor
+  if (typeof EqUI === "undefined") {
+    EqUI = {};
+  }
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = EqUI;}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = EqUI;}
+} else { // Node / Browser
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
+}
 
 // Unique ID
 EqUI.guid = (function() {
@@ -2792,59 +2800,89 @@ else {
 }( jQuery ));
 
 (function ($) {
-    EqUI.init = {};
-    var _this = function(){return EqUI.init;}();
+  EqUI.init = {};
+  var _this = function(){return EqUI.init;}();
+  _this.Waves = Waves;
+  _this.WavesIsInit = false;
 
-    // Update
-    _this.update = function() {
-        EqUI.app_bar.update();
-        EqUI.side_nav.update();
-        EqUI.breadcrumb.update();
+  // Update
+  _this.update = function() {
+      EqUI.app_bar.update();
+      EqUI.side_nav.update();
+      EqUI.breadcrumb.update();
 
-        EqUI.buttons.update();
-        EqUI.cards.update();
-        EqUI.forms.update();
-        EqUI.collapsible.update();
-        EqUI.dropdown.update();
-        EqUI.modals.update();
-        EqUI.tabs.update();
+      EqUI.buttons.update();
+      EqUI.cards.update();
+      EqUI.forms.update();
+      EqUI.collapsible.update();
+      EqUI.dropdown.update();
+      EqUI.modals.update();
+      EqUI.tabs.update();
 
-        EqUI.site.update();
+      EqUI.site.update();
+  };
+
+  // Load
+  _this.load = function() {
+      // Site update
+      EqUI.site.update();
+
+      // Show body
+      EqUI.site.body.css('visibility', 'visible');
+
+      // Loads
+      EqUI.breadcrumb.load();
+      EqUI.dropdown.load();
+      EqUI.tabs.load();
+  };
+
+  // Init
+  _this.init = function() {
+    // ...
+  };
+
+  // READY & OBSERVE
+  if (EqUI.mutationObserver === null) {
+    _this.init = function() {
+      // Init Waves
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      EqUI.init.Waves.attach('.eq-ui-waves', ['waves-effect']);
+      EqUI.init.Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
     };
-
-    // Load
-    _this.load = function() {
-        // Site update
-        EqUI.site.update();
-
-        // Show body
-        EqUI.site.body.css('visibility', 'visible');
-
-        // Loads
-        EqUI.breadcrumb.load();
-        EqUI.dropdown.load();
-        EqUI.tabs.load();
-    };
+  } else {
+    // .EqUIObserve(selector, onAdded, onRemoved)
+    $(document).EqUIObserve('.eq-ui-waves', function () {
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      EqUI.init.Waves.attach(this, ['waves-effect']);
+    }, function () {
+      EqUI.init.Waves.calm(this);
+    })
+    $(document).EqUIObserve('.eq-ui-waves-light', function () {
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; console.log('init'); }
+      EqUI.init.Waves.attach(this, ['waves-effect', 'waves-light']);
+    }, function () {
+      EqUI.init.Waves.calm(this);
+    })
+  }
 
 	$(document).ready(function() {
 
-		// Init Waves
-        Waves.init();
-        Waves.attach('.eq-ui-waves', ['waves-effect']);
-        Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
+	  // Init
+	  _this.init();
 
 		// Resize
 		$(window).resize( function() {
-            // Update
-            _this.update();
+      // Update
+      _this.update();
 		});
 
 		// Load complete
-		$(window).load(function(){
-            // Update
-            _this.load();
-	    });
+    $(window).on('load', function() {
+      // Update
+      _this.load();
+		});
 	    
 	});
 }( jQuery ));
+
 //# sourceMappingURL=exentriq-bootstrap-material-ui-without-libs.js.map
