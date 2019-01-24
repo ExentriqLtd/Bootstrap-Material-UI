@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+### v0.4.5 (Jan 24, 2019)
+
+**Fixes**
+- Small fixes
+
 ### v0.4.4 (Jan 24, 2019)
 **Updates**
 - Added compatibility for Meteor
