@@ -18771,6 +18771,10 @@ else {
         };
 
         this.each(function(){
+            if (this.dropdownInitialized) {
+              return;
+            }
+            this.dropdownInitialized = true;
             var origin = $(this);
             var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
