@@ -2008,6 +2008,7 @@ else {
         this.each(function(){
             // Update options
             var origin = $(this);
+            var target = $("#"+ origin.attr('data-target'));
             var options = $.extend({}, defaults, option);
             updateOptions();
 
@@ -2021,7 +2022,6 @@ else {
               return;
             }
             this.dropdownInitialized = true;
-            var target = $("#"+ origin.attr('data-target'));
             const alignTargetEl = origin.attr('data-auto-align-target');
             var target_auto_align;
             if (alignTargetEl && alignTargetEl.length && alignTargetEl.charAt(0) === '.') {
