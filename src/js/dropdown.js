@@ -15,6 +15,8 @@
 
         this.each(function(){
             // Update options
+            var origin = $(this);
+            var options = $.extend({}, defaults, option);
             updateOptions();
 
             // Is close option
@@ -27,8 +29,6 @@
               return;
             }
             this.dropdownInitialized = true;
-            var origin = $(this);
-            var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
             const alignTargetEl = origin.attr('data-auto-align-target');
             var target_auto_align;
