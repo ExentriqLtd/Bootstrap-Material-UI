@@ -2,9 +2,85 @@
 /* MaterialDesignIcons.com */
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
 @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MaterialIcons-Regular-webfont.eot?v=3.0.1");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons-Regular-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/MaterialIcons-Regular-webfont.woff2?v=3.0.1") format("woff2"), url("../fonts/MaterialIcons-Regular-webfont.woff?v=3.0.1") format("woff"), url("../fonts/MaterialIcons-Regular-webfont.ttf?v=3.0.1") format("truetype"), url("../fonts/MaterialIcons-Regular-webfont.svg?v=3.0.1#MaterialIcons-Regularregular") format("svg");
+}
+
+.mdi {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.mdi-18px {
+  font-size: 18px;
+}
+
+.mdi-24px {
+  font-size: 24px;
+}
+
+.mdi-36px {
+  font-size: 36px;
+}
+
+.mdi-48px {
+  font-size: 48px;
+}
+
+.mdi-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mdi-dark.mdi-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.mdi-light {
+  color: white;
+}
+
+.mdi-light.mdi-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+     -moz-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+/* MaterialDesignIcons.com */
+@font-face {
   font-family: "Material Design Icons";
-  src: url("../fonts/materialdesignicons-webfont.eot?v=1.4.57");
-  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=1.4.57") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=1.4.57") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=1.4.57") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=1.4.57") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=1.4.57#materialdesigniconsregular") format("svg");
+  src: url("../fonts/materialdesignicons-webfont.eot?v=3.0.1");
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=3.0.1") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=3.0.1") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=3.0.1") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=3.0.1#materialdesigniconsregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -18869,7 +18945,7 @@ body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
   width: 100%;
   height: 50px;
   line-height: 30px;
-  padding: 10px 0 12px 21px;
+  padding: 10px 0 12px 16px;
   position: absolute;
 }
 
@@ -21084,7 +21160,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-search {
-  margin: 0 10px 16px 10px;
+  margin: 0 16px 16px 16px;
   padding-right: 6px;
 }
 
@@ -21209,7 +21285,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-header a {
   font-weight: 700;
   color: #9b9b9b;
-  padding: 0 16px 0 24px;
+  padding: 0 16px 0 16px;
   line-height: 3rem;
 }
 
@@ -21246,7 +21322,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body a {
-  padding: 0 16px 0 48px;
+  padding: 0 16px 0 32px;
   display: block;
   color: #9b9b9b;
   line-height: 3rem;
@@ -21259,15 +21335,15 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-header a {
-  padding: 0 16px 0 24px;
+  padding: 0 16px 0 16px;
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-body > .eq-ui-collapsible .eq-ui-collapsible-header a {
-  padding: 0 16px 0 48px;
+  padding: 0 16px 0 32px;
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-body > .eq-ui-collapsible .eq-ui-collapsible-body a {
-  padding: 0 16px 0 72px;
+  padding: 0 16px 0 48px;
 }
 
 .eq-ui-dropdown {

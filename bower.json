@@ -34,6 +34,8 @@
         "bootstrap-sass":           "^3.3.5",
 
         "mdi":                      "v1.4.57",
+        "material-icons":             "v3.0.1",
+
 
         "parsleyjs":                "^2.1.3",
 
