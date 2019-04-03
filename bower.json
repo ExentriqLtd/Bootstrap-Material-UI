@@ -1,6 +1,6 @@
 {
     "name": "exentriq-bootstrap-material-ui",
-    "version": "0.4.5",
+    "version": "0.4.6",
     "homepage": "https://github.com/ExentriqLtd/Bootstrap-Material-UI",
     "description": "Implements Google's Material Design in Bootstrap",
     "main": [
@@ -34,7 +34,7 @@
         "bootstrap-sass":           "^3.3.5",
 
         "mdi":                      "v1.4.57",
-        "material-icons":             "v3.0.1",
+        "material-icons":           "v3.0.1",
 
 
         "parsleyjs":                "^2.1.3",

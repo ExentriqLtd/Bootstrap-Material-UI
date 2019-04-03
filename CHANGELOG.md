@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+### v0.4.6 (Apr 3, 2019)
+
+**Fixes**
+- Added Layout Section, with guide to icons to use.
+
+
 ### v0.4.5 (Jan 24, 2019)
 
 **Fixes**
