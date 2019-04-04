@@ -19282,7 +19282,17 @@ table.eq-ui-data-table tbody > tr.is-selected {
 
 .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon > a {
   line-height: 32px;
-  margin: 10px 0;
+  margin: 8px 0;
+}
+
+.eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+}
+
+.eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab i {
+  line-height: 36px;
 }
 
 .eq-ui-tool-bar-system .eq-ui-nav-menu {
@@ -19292,16 +19302,6 @@ table.eq-ui-data-table tbody > tr.is-selected {
 .eq-ui-tool-bar-system .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon > a {
   line-height: 32px;
   margin: 8px 0;
-}
-
-.eq-ui-tool-bar-system .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab {
-  width: 36px;
-  min-width: 36px;
-  height: 36px;
-}
-
-.eq-ui-tool-bar-system .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab i {
-  line-height: 36px;
 }
 
 .eq-ui-badge {

@@ -39,8 +39,16 @@
 
         >a {
             line-height: 32px;
-            margin: (($eq-ui-tool-bar-height - 32px)/2) 0;
+            margin: (($eq-ui-tool-bar-height - 36px)/2) 0;
         }
+      a.eq-ui-btn-fab{
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+
+        i{
+          line-height: 36px;
+        }}
     }
 }
 
@@ -55,15 +63,6 @@
             >a {
                 line-height: 32px;
                 margin: (($eq-ui-tool-bar-system-height - 32px)/2) 0;
-            }
-            a.eq-ui-btn-fab{
-              width: 36px;
-              min-width: 36px;
-              height: 36px;
-
-              i{
-                line-height: 36px;
-              }
 
             }
         }
