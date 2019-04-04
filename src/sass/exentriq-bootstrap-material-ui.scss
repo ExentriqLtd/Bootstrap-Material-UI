@@ -12,7 +12,7 @@
 @import "common/variables";
 
 // Bootstrap
-@import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // Global
 @import "../bower_components/animate-sass/animate";
@@ -24,15 +24,14 @@
 @import "helps/lazy-load";
 
 // components
+
 @import "components/layout/layout-header";
 @import "components/layout/system-bar";
 @import "components/layout/tool-bar";
 @import "components/layout/app-bar";
 @import "components/layout/side-nav";
 @import "components/layout/breadcrumb";
-
 @import "components/table";
-
 @import "components/nav-menu";
 @import "components/badges";
 @import "components/buttons";
@@ -40,7 +39,7 @@
 @import "components/list";
 @import "components/forms";
 @import "components/search";
-
+@import "components/grid";
 @import "components/collapsible";
 @import "components/dropdown";
 @import "components/modals";

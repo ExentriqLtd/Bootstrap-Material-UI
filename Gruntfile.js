@@ -345,6 +345,8 @@ module.exports = function ( grunt ) {
                     "doc/cards.html": "jade/cards.jade",
                     "doc/list.html": "jade/list.jade",
                     "doc/icons.html": "jade/icons.jade",
+                    "doc/grid.html": "jade/grid.jade",
+                    "doc/spacing-methods.html": "jade/spacing-methods.jade",
                     "doc/forms.html": "jade/forms.jade",
                     "doc/form-validation.html": "jade/form-validation.jade",
                     "doc/collapsible.html": "jade/collapsible.jade",
