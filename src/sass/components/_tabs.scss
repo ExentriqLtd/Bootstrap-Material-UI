@@ -1,0 +1,117 @@
+// Tabs
+
+.eq-ui-tabs {
+    position: absolute;
+    display: inline-block;
+    height: 48px;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+
+    .eq-ui-tab {
+        display: inline-block;
+        text-align: center;
+        line-height: 48px;
+        height: 48px;
+        padding: 0 20px;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: .8px;
+
+        a {
+            line-height: 48px;
+            height: 48px;
+            color: $eq-ui-tabs-text-color;
+            font-weight: 500;
+            opacity: 0.6;
+            display: block;
+            width: 100%;
+            text-decoration: none;
+
+            @include eq-ui-transition-ease(opacity);
+
+            &:hover,&.active {
+                opacity: 1;
+            }
+        }
+
+        &.disabled a {
+            opacity: 0.3;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+
+    .eq-ui-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 2px;
+        background-color: $eq-ui-tabs-underline-color;
+        will-change: left, right;
+    }
+
+    // With-icons
+    &.eq-ui-tabs-with-icons {
+        .eq-ui-tab {
+            a {
+
+                i.icon {
+                    font-size: 24px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    // With-left-icons
+    &.eq-ui-tabs-with-left-icons {
+        .eq-ui-tab {
+            a {
+
+                i.icon {
+                    font-size: 18px;
+                    width: 18px;
+                }
+            }
+        }
+    }
+
+    // With-top-icons
+    &.eq-ui-tabs-with-top-icons {
+        .eq-ui-tab {
+            a {
+                line-height: 15px;
+                font-size: 11px;
+                padding-top: 4px;
+                i.icon {
+                    font-size: 24px;
+                    line-height: 24px;
+                    width: 24px;
+                }
+            }
+        }
+    }
+
+    // Color inverted
+    &.eq-ui-tabs-color-inverted {
+        .eq-ui-tab {
+            a {
+                color: $eq-ui-tabs-text-color-inverted;
+            }
+        }
+        .eq-ui-indicator {
+            background-color: $eq-ui-tabs-underline-color-inverted;
+        }
+    }
+
+    // Justified
+    &.eq-ui-tabs-justified {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        .eq-ui-tab {
+            width: 100%;
+        }
+    }
+}

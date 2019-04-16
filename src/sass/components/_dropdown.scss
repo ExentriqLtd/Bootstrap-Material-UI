@@ -1,0 +1,178 @@
+// Dropdown
+
+.eq-ui-dropdown {
+
+    @extend .z-depth-1;
+    background-color: $dropdown-bg-color;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 124px;
+    max-height: 480px;
+    margin: 0;
+    padding: 8px 0;
+    z-index: 999;
+    will-change: width, height;
+
+    li {
+        display: block;
+        position: relative;
+        height: $dropdown-item-height;
+        line-height: $dropdown-item-height;
+        text-align: left;
+        text-transform: none;
+        white-space: nowrap;
+
+        & > a {
+            display: block;
+            cursor: pointer;
+            font-size: 16px;
+            color: $dropdown-color;
+            height: $dropdown-item-height;
+            line-height: $dropdown-item-height;
+            padding: 0 16px;
+            text-transform: none;
+            white-space: nowrap;
+            text-decoration: none;
+
+            i.icon, i.eq-ui-icon {
+                pointer-events: none;
+                font-size: 18px;
+            }
+
+            &.active {
+                background-color: $dropdown-hover-bg-color;
+            }
+
+            &:hover {
+                background-color: darken($dropdown-hover-bg-color, 5%);
+            }
+        }
+
+        // Icon menu right
+        i.icon.mdi-menu-right, i.eq-ui-icon.mdi-menu-right {
+            pointer-events: none;
+            position: absolute;
+            right: 8px;
+            top: 2px;
+            & + a {
+                padding-right: 32px;
+            }
+        }
+
+        // Disabled
+        &.disabled {
+            pointer-events: none;
+            cursor: default;
+
+            a {
+                opacity: 0.3;
+                background: transparent;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+
+        // Divider
+        &.divider {
+            min-height: 0;
+            height: 1px;
+            margin: 8px 0;
+        }
+    }
+
+    // Dropdown Sub (Beta)
+    li > .eq-ui-dropdown {
+        left: 100%;
+        right: auto;
+        top: -8px;
+    }
+
+    // Align Right Top
+    &.eq-ui-dropdown-right-top {
+        left: auto;
+        right: 0px;
+
+
+        // Dropdown Sub
+        li > .eq-ui-dropdown {
+            left: auto;
+            right: 100%;
+        }
+    }
+
+    // Align Left Bottom
+    &.eq-ui-dropdown-left-bottom {
+        top: auto;
+        bottom: 0;
+
+        // Dropdown Sub
+        li > .eq-ui-dropdown {
+            top: auto;
+            bottom: -8px;
+        }
+    }
+
+    // Align Right Bottom
+    &.eq-ui-dropdown-right-bottom {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 0;
+
+        // Dropdown Sub
+        li > .eq-ui-dropdown {
+            left: auto;
+            right: 100%;
+            top: auto;
+            bottom: -8px;
+        }
+    }
+
+    // With Scroll
+    &.eq-ui-dropdown-scroll {
+        overflow-y: auto;
+        overflow-x: hidden;
+        word-wrap: break-word;
+
+        @extend .eq-ui-scrollbar-y;
+    }
+
+    // Below Origin
+    &.eq-ui-dropdown-below-origin {
+        top: auto;
+        &.eq-ui-dropdown-left-bottom,
+        &.eq-ui-dropdown-right-bottom {
+            bottom: 100%;
+        }
+    }
+
+    // Active
+    &.active {
+
+    }
+
+    // Open
+    &.open {
+
+    }
+
+}
+
+html.is-touch {
+    .eq-ui-dropdown {
+        li {
+
+            & > a {
+
+                &:hover {
+                    background-color: $dropdown-hover-bg-color;
+                }
+                &:not(.active):hover {
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}

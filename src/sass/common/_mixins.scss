@@ -1,0 +1,27 @@
+@mixin eq-ui-transition($property) {
+    transition: $property .2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin eq-ui-transition-ease($property) {
+    transition: $property .28s ease;
+}
+
+@mixin eq-ui-select-caret() {
+    span.eq-ui-caret {
+        color: color("grey", "800");
+        position: absolute;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        right: 10px;
+        top: 21px;
+        border-top: 6px dashed;
+        border-right: 6px solid transparent;
+        border-left: 6px solid transparent;
+        pointer-events: none;
+
+        &.disabled {
+            color: $input-disabled-color;
+        }
+    }
+}

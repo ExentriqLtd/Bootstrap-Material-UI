@@ -1,0 +1,34 @@
+/* Vars */
+
+
+// App bar
+.eq-ui-app-bar {
+    position: relative;
+    color: color("shades", "white");
+    background-color: $eq-ui-primary-color;
+    height: $eq-ui-tool-bar-height;
+    line-height: $eq-ui-tool-bar-height;
+
+    .eq-ui-side-nav-toggle {
+        // Hide nav togglee
+        display: none;
+        float: left;
+        i {
+           margin-top: 6px;
+           margin-bottom: 0px;
+           line-height: 41px;
+        }
+    }
+}
+
+// Show nav toggle
+body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
+    display: block;
+}
+
+@media (max-width: $screen-sm-min) {
+	// Show nav toggle
+    .eq-ui-app-bar .eq-ui-side-nav-toggle {
+        display: block;
+    }
+}

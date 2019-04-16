@@ -1,0 +1,121 @@
+// List
+
+.eq-ui-list {
+    border: 1px solid $eq-ui-list-line-color;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    .eq-ui-list-item {
+        background-color: $eq-ui-list-bg-color;
+        line-height: 1.5rem;
+        padding: 10px 16px;
+        margin: 0;
+        position: relative;
+        border-bottom: 1px solid $eq-ui-list-line-color;
+        @include eq-ui-transition(background-color);
+
+        .eq-ui-list-title {
+            line-height: 42px;
+            margin: 0;
+            font-size: 16px;
+            color: $eq-ui-list-primary-line-text-color;
+            @extend .truncate;
+        }
+
+        .eq-ui-list-body {
+            color: $eq-ui-list-secondary-line-text-color;
+
+            .eq-ui-list-title {
+                line-height: inherit;
+            }
+        }
+
+        // Avatar
+        &.eq-ui-list-avatar {
+            min-height: 62px;
+            padding-left: 72px;
+            position: relative;
+
+            .circle {
+                position: absolute;
+                width: 42px;
+                height: 42px;
+                overflow: hidden;
+                left: 16px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        // Secondary Content
+        &.eq-ui-list-secondary-content {
+            padding-right: 56px;
+
+            .eq-ui-list-secondary-content-body {
+                color: $eq-ui-list-secondary-line-text-color;
+                position: absolute;
+                top: 19px;
+                right: 16px;
+
+                &:hover, &.active {
+                    color: $eq-ui-list-active-color;
+                }
+            }
+        }
+
+        // Truncate
+        &.eq-ui-list-truncate {
+
+            .eq-ui-list-body {
+                @extend .truncate;
+            }
+        }
+
+        // Header
+        &.eq-ui-list-header {
+
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &.active {
+            background-color: $eq-ui-list-hover-bg-color;
+        }
+    }
+
+    a.eq-ui-list-item{
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+
+    &.eq-ui-hoverable {
+
+        .eq-ui-list-item {
+            cursor: pointer;
+
+            &:not(.active) {
+                &:hover {
+                    text-decoration: none;
+                    background-color: $eq-ui-list-hover-bg-color;
+                }
+            }
+
+            // Header
+            &.eq-ui-list-header, &.dismissable {
+                cursor: default;
+                &:hover, &.active {
+                    background-color: $eq-ui-list-bg-color;
+                }
+            }
+        }
+    }
+
+}

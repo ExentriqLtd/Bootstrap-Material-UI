@@ -1,0 +1,196 @@
+// Collapsible
+
+.eq-ui-collapsible {
+    @extend .z-depth-1;
+    border-top: 1px solid $collapsible-border-color;
+    border-left: 1px solid $collapsible-border-color;
+    border-right: 1px solid $collapsible-border-color;
+    margin-bottom: 24px;
+    padding: 0;
+
+    li {
+        display: block;
+
+        .eq-ui-collapsible-header {
+            width: 100%;
+            display: block;
+            border-bottom: 1px solid $collapsible-border-color;
+            height: $collapsible-height;
+            background-color: $collapsible-header-color;
+            font-size: $eq-ui-font-size-base;
+            line-height: $collapsible-height;
+            cursor: pointer;
+
+            a {
+                user-select: none;
+                display: block;
+                padding: 0 $collapsible-body-padding;
+                line-height: inherit;
+                text-decoration: none;
+                color: inherit;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .eq-ui-collapsible-body {
+            display: none;
+            border-bottom: 1px solid $collapsible-border-color;
+
+            .eq-ui-collapsible-body-inner {
+                padding: $collapsible-body-padding;
+            }
+        }
+    }
+}
+
+// Collapsible -> Popout
+
+.eq-ui-collapsible.popout {
+    border: none;
+    box-shadow: none;
+    >li {
+        @extend .z-depth-1;
+        margin: 0 24px;
+        transition: margin .35s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+
+        border-left: 1px solid $collapsible-border-color;
+        border-right: 1px solid $collapsible-border-color;
+
+        &:first-child {
+            border-top: 1px solid $collapsible-border-color;
+        }
+
+        .eq-ui-collapsible-header {
+            border-bottom: 1px solid $collapsible-border-color;
+        }
+
+        .eq-ui-collapsible-body {
+            border-bottom: none;
+        }
+    }
+    >li.active {
+        @extend .z-depth-1-half;
+        margin: 16px 0;
+
+        border-top: 1px solid $collapsible-border-color;
+        border-bottom: 1px solid $collapsible-border-color;
+    }
+}
+
+
+// Collapsible -> Side Nav
+
+.eq-ui-side-nav nav {
+    padding: 16px 0;
+
+    .eq-ui-collapsible {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+
+        li {
+            border: none;
+            box-shadow: none;
+            background-color: transparent;
+
+            .eq-ui-collapsible-header {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+
+                a {
+                    font-weight: 700;
+                    color: $eq-ui-side-nav-font-color;
+                    padding: 0 16px 0 $eq-ui-side-nav-menu-padding-left;
+                    line-height: $collapsible-height;
+
+                    &:hover, &.active {
+                        color: $eq-ui-link-color;
+                        background-color: $eq-ui-side-nav-link-bg-color;
+                    }
+
+                }
+
+                &.active {
+                    a {
+                        color: $eq-ui-link-color;
+                        background-color: $eq-ui-side-nav-link-bg-color;
+
+                        .eq-ui-collapsible-view-open{
+                            display: inherit;
+                        }
+                        .eq-ui-collapsible-view-close {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:not(.active) {
+                    a {
+                        .eq-ui-collapsible-view-open {
+                            display: none;
+                        }
+                        .eq-ui-collapsible-view-close {
+                            display: inherit;
+                        }
+                    }
+                }
+            }
+
+            .eq-ui-collapsible-body {
+                border: none;
+                box-shadow: none;
+                background-color: transparent;
+
+                a {
+                    padding: 0 16px 0 $eq-ui-side-nav-menu-padding-left*2;
+                    display: block;
+                    color: $eq-ui-side-nav-font-color;
+                    line-height: $collapsible-height;
+                    text-decoration: none;
+                    &:hover, &.active {
+                        text-decoration: none;
+                        color: $eq-ui-link-color;
+                    }
+                }
+            }
+        }
+
+        // Second level not group
+        &:not(.eq-ui-collapsible-group) {
+
+            li {
+
+                .eq-ui-collapsible-header {
+                    a {
+                        padding: 0 16px 0 $eq-ui-side-nav-menu-padding-left;
+                    }
+                }
+
+                .eq-ui-collapsible-body {
+
+                    // Second level
+                    >.eq-ui-collapsible {
+
+                        .eq-ui-collapsible-header {
+                            a {
+                                padding: 0 16px 0 $eq-ui-side-nav-menu-padding-left*2;
+                            }
+                        }
+
+                        .eq-ui-collapsible-body {
+
+                            a {
+                                padding: 0 16px 0 $eq-ui-side-nav-menu-padding-left*3;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}

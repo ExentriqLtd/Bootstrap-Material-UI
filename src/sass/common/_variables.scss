@@ -1,0 +1,384 @@
+/* --------------------------------------- */
+/* Import Fonts                            */
+/* --------------------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,500,700,700italic,900,900italic);
+
+
+/* --------------------------------------- */
+/* Default Variables                       */
+/* --------------------------------------- */
+/*** Grid Variables ***/
+$eq-ui-num-cols: 12 !default;
+$eq-ui-gutter-width: 32px !default;
+
+/*** Custom Colors ***/
+//$eq-ui-primary-color: #3e50b4 !default;
+//$eq-ui-secondary-color: #FF4081 !default;
+
+/*** Colors ***/
+$eq-ui-primary-color: color("eq-deep-blue", "500") !default;
+$eq-ui-primary-color-light: lighten($eq-ui-primary-color, 15%) !default;
+$eq-ui-primary-color-dark: darken($eq-ui-primary-color, 15%) !default;
+
+$eq-ui-secondary-color: color("eq-green-turquoise", "500") !default;
+
+$eq-ui-success-color: color("green", "500") !default;
+$eq-ui-info-color: color("light-blue", "200") !default;
+$eq-ui-warning-color: color("amber", "500") !default;
+$eq-ui-error-color: color("red", "500") !default;
+
+$eq-ui-body-bg:	color("eq-medium-grey", "50") !default;
+$eq-ui-text-color:	rgba(0, 0, 0, 0.87) !default;
+
+$eq-ui-link-color: $eq-ui-primary-color !default;
+
+/*** Fonts ***/
+$eq-ui-font-family-sans-serif: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$eq-ui-font-family-serif: "Roboto", Georgia, "Times New Roman", Times, serif !default;
+$eq-ui-font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+/*** Typography ***/
+$eq-ui-font-size-base: 16px !default;
+$eq-ui-line-height-base: 1.5 !default;
+
+$eq-ui-h1-fontsize: 64px !default;
+$eq-ui-h2-fontsize: $eq-ui-h1-fontsize/1.3 !default;
+$eq-ui-h3-fontsize: $eq-ui-h2-fontsize/1.3 !default;
+$eq-ui-h4-fontsize: $eq-ui-h3-fontsize/1.3 !default;
+$eq-ui-h5-fontsize: $eq-ui-h4-fontsize/1.3 !default;
+$eq-ui-h6-fontsize: $eq-ui-h5-fontsize/1.3 !default;
+
+
+/*** Global ***/
+$eq-ui-border-radius-base: 2px !default;
+
+/*** Badges ***/
+$eq-ui-badge-bg-color: $eq-ui-secondary-color !default;
+
+/*** Buttons ***/
+$eq-ui-button-bg-color-disabled: #DFDFDF !default;
+$eq-ui-button-color: $eq-ui-secondary-color !default;
+$eq-ui-button-color-disabled: #9F9F9F !default;
+$eq-ui-button-fab-size: 56px !default;
+$eq-ui-button-mini-fab-size: 40px !default;
+$eq-ui-button-font-size-shared: 1.3rem !default;
+$eq-ui-button-large-icon-font-size: 1.6rem !default;
+
+$eq-ui-button-font-size: $eq-ui-font-size-base !default;
+$eq-ui-button-min-width: 64px !default;
+$eq-ui-button-padding: 0 12px !default;
+$eq-ui-button-height: 36px !default;
+$eq-ui-button-line-height: 36px !default;
+
+$eq-ui-button-large-font-size: $eq-ui-button-font-size + 2 !default;
+$eq-ui-button-large-padding: 0 15px !default;
+$eq-ui-button-large-height: $eq-ui-button-height + 12 !default;
+$eq-ui-button-large-line-height: $eq-ui-button-line-height + 12 !default;
+
+/*** Side Nav ***/
+$eq-ui-side-nav-width: 240px !default;
+$eq-ui-side-nav-font-color: color("eq-medium-grey", "500") !default;
+$eq-ui-side-nav-bg-color: color("shades", "white") !default;
+$eq-ui-side-nav-line-color: color("eq-medium-grey", "100") !default;
+$eq-ui-side-nav-link-bg-color: color("eq-medium-grey", "50") !default;
+$eq-ui-side-nav-menu-padding-left: 16px !default;
+
+/*** Tool bar ***/
+$eq-ui-tool-bar-height: 52px !default;
+$eq-ui-tool-bar-font-color: color("eq-medium-grey", "500") !default;
+$eq-ui-tool-bar-bg-color: #ffffff !default;
+
+/*** System bar ***/
+$eq-ui-tool-bar-system-height: 48px !default;
+$eq-ui-tool-bar-system-font-color: #ffffff !default;
+$eq-ui-tool-bar-system-bg-color: $eq-ui-primary-color-dark !default;
+$eq-ui-tool-bar-system-font-color-inverted: $eq-ui-tool-bar-font-color !default;
+$eq-ui-tool-bar-system-bg-color-inverted: $eq-ui-tool-bar-bg-color !default;
+
+/*** Tables ***/
+$table-border: 1px solid rgba(0,0,0,.06) !default;
+$row-height: 48px !default;
+$table-striped-color: #f2f2f2 !default;
+
+/*** List ***/
+$eq-ui-list-bg-color: #fff !default;
+$eq-ui-list-active-color: $eq-ui-secondary-color !default;
+$eq-ui-list-hover-bg-color: color("eq-medium-grey", "50") !default;
+$eq-ui-list-line-color: $eq-ui-side-nav-line-color !default;
+$eq-ui-list-primary-line-text-color: $eq-ui-text-color !default;
+$eq-ui-list-secondary-line-text-color: color("eq-medium-grey", "500") !default;
+
+/*** Collapsible ***/
+$collapsible-height: 3rem !default;
+$collapsible-header-color: #fff !default;
+$collapsible-border-color: #ddd !default;
+$collapsible-body-padding: 16px !default;
+
+/*** Modals ***/
+$modals-header-height: 50px !default;
+$modals-footer-height: 36px !default;
+$modals-line-color: $eq-ui-side-nav-line-color !default;
+
+/*** Tabs ***/
+$eq-ui-tabs-text-color: #fff !default;
+$eq-ui-tabs-underline-color: $eq-ui-secondary-color !default;
+
+$eq-ui-tabs-text-color-inverted: $eq-ui-primary-color !default;
+$eq-ui-tabs-underline-color-inverted: $eq-ui-primary-color !default;
+
+/*** Dropdown ***/
+$dropdown-bg-color: #fff !default;
+$dropdown-hover-bg-color: #eee !default;
+$dropdown-color: $eq-ui-text-color !default;
+$dropdown-item-height: 48px;
+
+/*** Forms ***/
+$input-border-color: color("grey", "500") !default;
+$input-bg-color: #fff !default;
+$input-error-color: $eq-ui-error-color !default;
+$input-success-color: $eq-ui-success-color !default;
+$input-focus-color: $eq-ui-secondary-color !default;
+$label-font-size: .8rem !default;
+$input-disabled-color: rgba(0,0,0, .26) !default;
+$input-disabled-solid-color: #BDBDBD !default;
+
+/*** Radio Buttons ***/
+$radio-fill-color: $eq-ui-secondary-color !default;
+$radio-empty-color: #5a5a5a !default;
+
+/*** Switches ***/
+$switch-bg-color: $eq-ui-secondary-color !default;
+$switch-checked-lever-bg: desaturate(lighten($eq-ui-secondary-color, 25%), 25%) !default;
+$switch-unchecked-bg: #F1F1F1 !default;
+$switch-unchecked-lever-bg: #818181 !default;
+
+/*** Date Picker ***/
+/*$datepicker-weekday-bg: darken($secondary_color, 7%) !default;
+$datepicker-date-bg: $secondary_color !default;
+$datepicker-year: rgba(255, 255, 255, .4) !default;
+$datepicker-focus: rgba(0,0,0, .05) !default;
+$datepicker-selected: $secondary-color !default;
+$datepicker-selected-outfocus: desaturate(lighten($secondary-color, 35%), 15%) !default;*/
+
+/*** Toasts ***/
+/*$toast-height: 48px !default;
+$toast-color: #323232 !default;
+$toast-text-color: #fff !default;*/
+
+/* Progress Bar */
+$progress-bar-color: $eq-ui-secondary-color !default;
+
+/* z-index master list */
+$eq-ui-zindex-status-bar:        			300 !default;
+$eq-ui-zindex-modal:           	 			250 !default;
+$eq-ui-zindex-modal-overlay:     			249 !default;
+$eq-ui-zindex-app-bar-primary:        		210 !default;
+$eq-ui-zindex-nav-drawer:        			200 !default;
+$eq-ui-zindex-nav-drawer-overlay:			199 !default;
+$eq-ui-zindex-app-bar-search:       		100 !default;
+$eq-ui-zindex-app-bar-search-overlay:		90 !default;
+$eq-ui-zindex-app-bar-nav-drawer-toggle:	80 !default;
+$eq-ui-zindex-app-bar-fab:           		60 !default;
+$eq-ui-zindex-standalone-content:          	55 !default;
+$eq-ui-zindex-app-bar:           			50 !default;
+$eq-ui-zindex-content:           			0 !default;
+
+/* --------------------------------------- */
+/* Animate CSS Default Variables           */
+/* --------------------------------------- */
+
+/** Active all animations
+-------------------------------------------------------------------------------------------------- **/
+
+// Fade Enter
+$use-fadeIn 			:	true !default;
+$use-fadeInUp 			:	true !default;
+$use-fadeInUpBig 		:	true !default;
+$use-fadeInDown 		:	true !default;
+$use-fadeInDownBig 		:	true !default;
+$use-fadeInLeft 		:	true !default;
+$use-fadeInLeftBig 		:	true !default;
+$use-fadeInRight 		:	true !default;
+$use-fadeInRightBig 	:	true !default;
+
+// Fade Exit
+$use-fadeOut			:   true !default;
+$use-fadeOutUp			:	true !default;
+$use-fadeOutUpBig   	:	true !default;
+$use-fadeOutDown		:	true !default;
+$use-fadeOutDownBig 	:	true !default;
+$use-fadeOutLeft		:	true !default;
+$use-fadeOutLeftBig 	:	true !default;
+$use-fadeOutRight		:	true !default;
+$use-fadeOutRightBig	:	true !default;
+
+// Bounce Enter
+$use-bounceIn			:	true !default;
+$use-bounceInUp			: 	true !default;
+$use-bounceInDown 		: 	true !default;
+$use-bounceInLeft 		: 	true !default;
+$use-bounceInRight 		: 	true !default;
+
+// Bounce Exit
+$use-bounceOut			:	true !default;
+$use-bounceOutUp		: 	true !default;
+$use-bounceOutDown 		: 	true !default;
+$use-bounceOutLeft 		: 	true !default;
+$use-bounceOutRight 	: 	true !default;
+
+// Rotate Enter
+$use-rotateIn 			:	true !default;
+$use-rotateInUpLeft 	: 	true !default;
+$use-rotateInUpRight 	: 	true !default;
+$use-rotateInDownLeft 	: 	true !default;
+$use-rotateInDownRight 	: 	true !default;
+
+// Rotate Exit
+$use-rotateOut 			:	true !default;
+$use-rotateOutUpLeft 	: 	true !default;
+$use-rotateOutUpRight 	: 	true !default;
+$use-rotateOutDownLeft 	: 	true !default;
+$use-rotateOutDownRight : 	true !default;
+
+// Slide Enter
+$use-slideIn			:   true !default;
+$use-slideInUp			:   true !default;
+$use-slideInDown		:   true !default;
+$use-slideInLeft		:   true !default;
+$use-slideInRight		:   true !default;
+
+// Slide Exit
+$use-slideOut			:   true !default;
+$use-slideOutUp			:   true !default;
+$use-slideOutDown		:   true !default;
+$use-slideOutLeft		:   true !default;
+$use-slideOutRight		:   true !default;
+
+// Flippers
+$use-flip				:	true !default;
+$use-flipInX			:	true !default;
+$use-flipInY			:	true !default;
+$use-flipOutX			:	true !default;
+$use-flipOutY			:	true !default;
+
+// Lightspeed
+$use-lightSpeedIn 		:	true !default;
+$use-lightSpeedOut 		:	true !default;
+
+// Attention Seekers
+$use-bounce				:	true !default;
+$use-flash				:	true !default;
+$use-pulse				:	true !default;
+$use-wiggle				:	true !default;
+$use-swing				:	true !default;
+$use-shake				:	true !default;
+$use-tada				:	true !default;
+$use-wobble				:	true !default;
+
+// Special
+$use-hinge				:	true !default;
+$use-rollIn				: 	true !default;
+$use-rollOut 			:	true !default;
+
+// Zoom In
+$use-zoomIn 			:	true !default;
+$use-zoomInDown 		:	true !default;
+$use-zoomInLeft 		:	true !default;
+$use-zoomInRight 		:	true !default;
+$use-zoomInUp 			:	true !default;
+
+// Zoom Out
+$use-zoomOut			:	true !default;
+$use-zoomOutDown		:	true !default;
+$use-zoomOutLeft		:	true !default;
+$use-zoomOutRight		:	true !default;
+$use-zoomOutUp			:	true !default;
+
+/* --------------------------------------- */
+/* Bootstrap Default Variables             */
+/* --------------------------------------- */
+
+/** Colors (Gray and brand colors for use across Bootstrap)
+-------------------------------------------------------------------------------------------------- **/
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary: 		$eq-ui-primary-color !default;
+$brand-success: 		$eq-ui-success-color !default;
+$brand-info:    		$eq-ui-info-color !default;
+$brand-warning: 		$eq-ui-warning-color !default;
+$brand-danger:  		$eq-ui-error-color !default;
+
+
+/** Scaffolding (Settings for some of the most global styles)
+-------------------------------------------------------------------------------------------------- **/
+$body-bg:               $eq-ui-body-bg !default;
+
+$text-color:            $eq-ui-text-color !default;
+
+$link-color:            $eq-ui-link-color !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+
+/** Typography (Font, line-height, and color for body text, headings, and more)
+-------------------------------------------------------------------------------------------------- **/
+$font-family-sans-serif:  $eq-ui-font-family-sans-serif !default;
+$font-family-serif:       $eq-ui-font-family-serif !default;
+
+$font-family-monospace:   $eq-ui-font-family-monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          $eq-ui-font-size-base !default;
+$line-height-base:        $eq-ui-line-height-base !default;
+
+$margin-headers-base:     36px 0 36px 0 !default;
+
+/** Components (Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start))
+-------------------------------------------------------------------------------------------------- **/
+$border-radius-base:		$eq-ui-border-radius-base !default;
+$border-radius-large:       $eq-ui-border-radius-base !default;
+$border-radius-small:       $eq-ui-border-radius-base !default;
+
+
+/** Buttons (For each of Bootstrap's buttons, define text, background and border color)
+-------------------------------------------------------------------------------------------------- **/
+$btn-font-weight:			normal !default;
+
+$btn-default-color:			color("grey", "800") !default;
+$btn-default-bg:			color("grey", "100") !default;
+$btn-default-border:		color("grey", "100") !default;
+
+$btn-primary-color:			#fff !default;
+$btn-primary-bg:			$eq-ui-button-color !default;
+$btn-primary-border:		$eq-ui-button-color !default;
+
+$btn-success-color:			#fff !default;
+$btn-success-bg:			$brand-success !default;
+$btn-success-border:		$brand-success !default;
+
+$btn-info-color:			#fff !default;
+$btn-info-bg:				$brand-info !default;
+$btn-info-border:			$brand-info !default;
+
+$btn-warning-color:			#fff !default;
+$btn-warning-bg:			$brand-warning !default;
+$btn-warning-border:		$brand-warning !default;
+
+$btn-danger-color:			#fff !default;
+$btn-danger-bg:				$brand-danger !default;
+$btn-danger-border:			$brand-danger !default;
+
+
+/** Grid system (Define your custom responsive grid)
+-------------------------------------------------------------------------------------------------- **/
+/* Number of columns in the grid */
+$grid-columns:              $eq-ui-num-cols !default;
+
+/* Padding between columns. Gets divided in half for the left and right. */
+$grid-gutter-width:         $eq-ui-gutter-width !default;
+
