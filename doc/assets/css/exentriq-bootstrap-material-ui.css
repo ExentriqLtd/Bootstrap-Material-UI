@@ -21575,6 +21575,7 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 
 .eq-ui-modal .eq-ui-modal-header .header-title {
   font-size: 24px;
+  float: left;
 }
 
 .eq-ui-modal .eq-ui-modal-header .header-title .section-title {
