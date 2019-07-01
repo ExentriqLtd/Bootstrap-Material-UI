@@ -47,6 +47,7 @@ module.exports = function ( grunt ) {
             'src/js/layout/side-nav.js',
             'src/js/layout/breadcrumb.js',
             'src/js/buttons.js',
+            'src/js/table.js',
             'src/js/cards.js',
             'src/js/forms.js',
             'src/js/collapsible.js',

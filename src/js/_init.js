@@ -9,7 +9,7 @@
       EqUI.app_bar.update();
       EqUI.side_nav.update();
       EqUI.breadcrumb.update();
-
+      EqUI.table.update();
       EqUI.buttons.update();
       EqUI.cards.update();
       EqUI.forms.update();
