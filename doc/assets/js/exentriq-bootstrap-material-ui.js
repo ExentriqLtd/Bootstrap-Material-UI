@@ -18081,18 +18081,17 @@ else {
             var $element = $(element);
             var th = $element.find('th');
             for (x = 0; x < th.length; x++) {
-              $(th[x]).attr('data-column', x);
+              if (th[x].classList.contains('eq-ui-data-table-sort-column')) {
+                $(th[x]).attr('data-column', x);
+              }
             }
-            var columns = $element.find('.eq-ui-data-table-sort-column');
-            for (x = 0; x < columns.length; x++) {
-                $(columns[x]).on('click', function (e) {
-                    self.sort( this, $(e.target).data('column'));
-
-                });
-            }
+            $('.eq-ui-data-table-sort-column').on('click', function() {
+              self.sort(this);
+            });
         });
     };
-    EqUI.table.sort = function( element, n) {
+    EqUI.table.sort = function( element ) {
+        var col = $(element).attr('data-column');
         var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
         table = $(element).closest(this.order_table);
         if(!table){
@@ -18115,17 +18114,17 @@ else {
             shouldSwitch = false;
             /*Get the two elements you want to compare,
             one from current row and one from the next:*/
-            x = rows[i].getElementsByTagName("TD")[n];
-            y = rows[i + 1].getElementsByTagName("TD")[n];
+            x = rows[i].getElementsByTagName("TD")[col];
+            y = rows[i + 1].getElementsByTagName("TD")[col];
             /*check if the two rows should switch place,
             based on the direction, asc or desc:*/
             var iconSwitch = $(element).children();
-            var cipolla = $(".eq-ui-table-sort").find(".material-icons");
+            var resetIcon = $(".eq-ui-table-sort").find(".material-icons");
             if (dir == "asc") {
                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch= true;
-                $(cipolla).text('sort');
+                $(resetIcon).text('sort');
                 $(iconSwitch).text('arrow_drop_down');
                 break;  
                 }
@@ -18133,7 +18132,7 @@ else {
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
-                $(cipolla).text('sort');
+                $(resetIcon).text('sort');
                 $(iconSwitch).text('arrow_drop_up');
                 break;
                 }
@@ -18145,7 +18144,7 @@ else {
             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
             switching = true;
             //Each time a switch is done, increase this count by 1:
-            switchcount ++;      
+            switchcount ++;
             } else {
             /*If no switching has been done AND the direction is "asc",
             set the direction to "desc" and run the while loop again.*/
