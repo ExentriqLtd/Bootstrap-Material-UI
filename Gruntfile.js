@@ -4,7 +4,7 @@ module.exports = function ( grunt ) {
         imports_bower_bootstrap: [
             'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js',
             'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js',
-            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js',
+            'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js', 
             'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js',
             'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js',
             'src/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js',

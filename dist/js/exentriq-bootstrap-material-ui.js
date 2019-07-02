@@ -18098,7 +18098,7 @@ else {
         if(!table){
             return;
         }
-        switching = true;
+        switching = true; 
         
         //Set the sorting direction to ascending:
         dir = "asc"; 
