@@ -70,14 +70,14 @@
 
     <div class="row">
             <div class="col-md-12">
-                <h2 class="header">Basic Order</h2>
-                <p>Basic table for organize data</p>
+                <h2 class="header">Sortable Table</h2>
+                <p>Sortable Table by clicking on column head</p>
                 <table class="table eq-ui-data-table z-depth-1 eq-ui-table-sort">
                     <thead>
                     <tr>
-                        <th class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column">Material</th>
+                        <th class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column">Material<i class="material-icons">sort</i></th>
                         <th>Quantity</th>
-                        <th class="eq-ui-data-table-sort-column">Unit price</th>
+                        <th class="eq-ui-data-table-sort-column">Unit price<i class="material-icons">sort</i></th>
                     </tr>
                     </thead>
     
@@ -97,15 +97,25 @@
                         <td>10</td>
                         <td>$2.35</td>
                     </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Red (Velvet)</td>
+                        <td>15</td>
+                        <td>$3.46</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Pink (Rose)</td>
+                        <td>44</td>
+                        <td>$6.31</td>
+                    </tr>
                     </tbody>
                 </table>
                 <pre><code class="language-markup">
-    &lt;table class=&quot;table eq-ui-data-table z-depth-1&quot;&gt;
+    &lt;table class=&quot;table eq-ui-data-table z-depth-1 eq-ui-table-sort&quot;&gt;
         &lt;thead&gt;
         &lt;tr&gt;
-            &lt;th class=&quot;eq-ui-data-table-cell-non-numeric&quot;&gt;Material&lt;/th&gt;
-            &lt;th&gt;Quantity&lt;/th&gt;
-            &lt;th&gt;Unit price&lt;/th&gt;
+            &lt;th class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column&quot;&gt;Material&lt;/th&gt;
+            &lt;th class=&quot;&quot;&gt;Quantity&lt;/th&gt;
+            &lt;th class=&quot;eq-ui-data-table-sort-column&quot;&gt;Unit price&lt;/th&gt;
         &lt;/tr&gt;
         &lt;/thead&gt;
     

@@ -19099,6 +19099,16 @@ table.eq-ui-data-table thead tr th {
   border-bottom: none;
 }
 
+table.eq-ui-data-table thead tr th.eq-ui-data-table-sort-column {
+  cursor: pointer;
+}
+
+table.eq-ui-data-table thead tr th.eq-ui-data-table-sort-column i {
+  vertical-align: middle;
+  margin-left: 8px;
+  font-size: 22px;
+}
+
 table.eq-ui-data-table tbody tr {
   position: relative;
   height: 48px;

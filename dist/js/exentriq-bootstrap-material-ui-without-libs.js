@@ -1322,6 +1322,7 @@ else {
             for (x = 0; x < columns.length; x++) {
                 $(columns[x]).on('click', function (e) {
                     self.sort( this, $(e.target).data('column'));
+
                 });
             }
         });
@@ -1353,16 +1354,22 @@ else {
             y = rows[i + 1].getElementsByTagName("TD")[n];
             /*check if the two rows should switch place,
             based on the direction, asc or desc:*/
+            var iconSwitch = $(element).children();
+            var cipolla = $(".eq-ui-table-sort").find(".material-icons");
             if (dir == "asc") {
                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch= true;
-                break;
+                $(cipolla).text('sort');
+                $(iconSwitch).text('arrow_drop_down');
+                break;  
                 }
             } else if (dir == "desc") {
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                 //if so, mark as a switch and break the loop:
                 shouldSwitch = true;
+                $(cipolla).text('sort');
+                $(iconSwitch).text('arrow_drop_up');
                 break;
                 }
             }
