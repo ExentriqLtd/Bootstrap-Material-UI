@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>CSS - Table | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.4.3" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.4.3" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"css",path:"table",name_section:"CSS",name_chapter:"Table"};</script>
@@ -143,7 +143,7 @@
                         <i class="mdi mdi-comment icon"></i>
                     </a>
                 </li>
-                <li class="eq-ui-nav-menu-item-icon">
+                <li class="eq-ui-nav-menu-item-icon last-item-before-mobile">
                     <a data-target="doc-dropdown-app-bar-user" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-account icon"></i>
                     </a>
@@ -236,22 +236,23 @@
                         </div>
                     </li>
 
-                    <li>
-                        <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-css">
-                                <i class="mdi mdi-book-variant icon icon-left icon-24"></i>
-                                CSS
-                            </a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <a id="collapsible-nav-css-badges" href="./badges.html">Badges</a>
-                            <a id="collapsible-nav-css-color" href="./color.html">Color</a>
-                            <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
-                            <a id="collapsible-nav-css-table" href="./table.html">Table</a>
-                            <a id="collapsible-nav-css-sticky-table" href="./sticky-table.html">Sticky Table</a>
-                            <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
-                        </div>
-                    </li>
+                  <li>
+                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                      <a id="collapsible-nav-css">
+                        <i class="material-icons icon icon-left icon-24">aspect_ratio</i>
+                        Layout
+                      </a>
+                    </div>
+                    <div class="eq-ui-collapsible-body">
+                      <a id="collapsible-nav-css-grid" href="./grid.html">Responsive Grid</a>
+                      <a id="collapsible-nav-css-grid" href="./spacing-methods.html">Spacing Methods</a>
+                      <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
+                      <a id="collapsible-nav-css-color" href="./color.html">Colors</a>
+                      <a id="collapsible-nav-css-icons" href="./icons.html">Icons</a>
+                      <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
+                    </div>
+                  </li>
+
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
@@ -264,8 +265,11 @@
                             <a id="collapsible-nav-components-buttons" href="./buttons.html">Buttons</a>
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
+                            <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-sticky-table" href="./sticky-table.html">Sticky Table</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
                             <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
+                            <a id="collapsible-nav-css-badges" href="./badges.html">Badges</a>
                             <a id="collapsible-nav-components-loader" href="./loader.html">Loader</a>
                         </div>
                     </li>
@@ -778,10 +782,83 @@
     </div>
 
     <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Sortable Table</h2>
+                <p>Sortable Table by clicking on column head</p>
+                <table class="table eq-ui-data-table z-depth-1 eq-ui-table-sort">
+                    <thead>
+                    <tr>
+                        <th class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column">Material<i class="material-icons">sort</i></th>
+                        <th>Quantity</th>
+                        <th class="eq-ui-data-table-sort-column">Unit price<i class="material-icons">sort</i></th> 
+                    </tr>
+                    </thead>
+    
+                    <tbody>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                        <td>25</td>
+                        <td>$2.90</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                        <td>50</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                        <td>10</td>
+                        <td>$2.35</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Red (Velvet)</td>
+                        <td>15</td>
+                        <td>$3.46</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Pink (Rose)</td>
+                        <td>44</td>
+                        <td>$6.31</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <pre><code class="language-markup">
+    &lt;table class=&quot;table eq-ui-data-table z-depth-1 eq-ui-table-sort&quot;&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column&quot;&gt;Material&lt;i class=&quot;material-icons&quot;&gt;sort&lt;/i&gt;&lt;/th&gt;
+            &lt;th class=&quot;&quot;&gt;Quantity&lt;/th&gt;
+            &lt;th class=&quot;eq-ui-data-table-sort-column&quot;&gt;Unit price&lt;i class=&quot;material-icons&quot;&gt;sort&lt;/i&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+    
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;$2.90&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Plywood (Birch)&lt;/td&gt;
+            &lt;td&gt;50&lt;/td&gt;
+            &lt;td&gt;$1.25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;$2.35&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code></pre>
+            </div>
+        </div>
+    
+
+    <div class="row">
         <div class="col-md-12">
             <h2 class="header">With Checkbox</h2>
             <p>For checkbox table mode. We have than add <code class="language-markup">eq-ui-data-table-js eq-ui-with-checkbox</code></p>
-            <table class="table eq-ui-data-table eq-ui-data-table-js eq-ui-with-checkbox eq-ui-hoverable z-depth-1">
+            <table class="table eq-ui-data-table eq-ui-data-table-js eq-ui-with-checkbox eq-ui-hoverable z-depth-1" id="eq-ui-sortable-table">
                 <thead>
                 <tr>
                     <th>
@@ -789,8 +866,8 @@
                         <label for="checkbox-all"></label>
                     </th>
                     <th class="eq-ui-data-table-cell-non-numeric">Material</th>
-                    <th>Quantity</th>
-                    <th>Unit price</th>
+                    <th class="sort-column">Quantity</th>
+                    <th class="sort-column">Unit price</th>
                 </tr>
                 </thead>
 
@@ -1142,7 +1219,7 @@ $.getJSON( fakeJsonData, {
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/moment/min/moment.min.js?v=2.13.0"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
@@ -1151,7 +1228,7 @@ $.getJSON( fakeJsonData, {
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
 
-<script src="assets/js/doc.js?v=0.4.3"></script>
+<script src="assets/js/doc.js?v=0.0.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 <script src="assets/js/vue/collapsible.js"></script>
 <script src="assets/js/vue/dropdown.js"></script>

@@ -1,5 +1,23 @@
 ## CHANGELOG
 
+### v0.4.6 (Apr 3, 2019)
+
+**Fixes**
+- Added Layout Section, with guide to icons to use.
+
+
+### v0.4.5 (Jan 24, 2019)
+
+**Fixes**
+- Small fixes
+
+### v0.4.4 (Jan 24, 2019)
+**Updates**
+- Added compatibility for Meteor
+
+**Fixes**
+- Dynamic Initialization for Waves
+
 ### v0.4.3 (Jan 17, 2019)
 **Updates**
 - Dynamic Initialization for Others small components

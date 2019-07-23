@@ -8,7 +8,7 @@
     >li {
         position: relative;
         color: inherit;
-        margin-right: 15px;
+        margin-right: 16px;
         line-height: inherit;
         float: left;
 
@@ -21,12 +21,17 @@
             color: inherit;
             line-height: inherit;
 
+
             &:hover {
-                color: inherit;
-                text-decoration: none;
+              color: inherit;
+              text-decoration: none;
             }
 
+
         }
+    }
+    li.last-item-before-mobile{
+      margin-right:0px;
     }
 
     // Item with icon
@@ -34,8 +39,16 @@
 
         >a {
             line-height: 32px;
-            margin: (($eq-ui-tool-bar-height - 32px)/2) 0;
+            margin: (($eq-ui-tool-bar-height - 36px)/2) 0;
         }
+      a.eq-ui-btn-fab{
+        width: 36px;
+        min-width: 36px;
+        height: 36px;
+
+        i{
+          line-height: 36px;
+        }}
     }
 }
 
@@ -50,6 +63,7 @@
             >a {
                 line-height: 32px;
                 margin: (($eq-ui-tool-bar-system-height - 32px)/2) 0;
+
             }
         }
     }

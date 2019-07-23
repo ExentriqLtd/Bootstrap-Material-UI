@@ -35,12 +35,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /*** Header Styles ***/
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
-h1 { font-size: $eq-ui-h1-fontsize; line-height: 110%; margin: ($eq-ui-h1-fontsize / 2) 0 ($eq-ui-h1-fontsize / 2.5) 0;}
-h2 { font-size: $eq-ui-h2-fontsize; line-height: 110%; margin: ($eq-ui-h2-fontsize / 2) 0 ($eq-ui-h2-fontsize / 2.5) 0;}
-h3 { font-size: $eq-ui-h3-fontsize; line-height: 110%; margin: ($eq-ui-h3-fontsize / 2) 0 ($eq-ui-h3-fontsize / 2.5) 0;}
-h4 { font-size: $eq-ui-h4-fontsize; line-height: 110%; margin: ($eq-ui-h4-fontsize / 2) 0 ($eq-ui-h4-fontsize / 2.5) 0;}
-h5 { font-size: $eq-ui-h5-fontsize; line-height: 110%; margin: ($eq-ui-h5-fontsize / 2) 0 ($eq-ui-h5-fontsize / 2.5) 0;}
-h6 { font-size: $eq-ui-h6-fontsize; line-height: 110%; margin: ($eq-ui-h6-fontsize / 2) 0 ($eq-ui-h6-fontsize / 2.5) 0;}
+h1 { font-size: $eq-ui-h1-fontsize; line-height: 110%; margin: $margin-headers-base;}
+h2 { font-size: $eq-ui-h2-fontsize; line-height: 110%; margin: $margin-headers-base;}
+h3 { font-size: $eq-ui-h3-fontsize; line-height: 110%; margin: $margin-headers-base;}
+h4 { font-size: $eq-ui-h4-fontsize; line-height: 110%; margin: $margin-headers-base;}
+h5 { font-size: $eq-ui-h5-fontsize; line-height: 110%; margin: $margin-headers-base;}
+h6 { font-size: $eq-ui-h6-fontsize; line-height: 110%; margin: $margin-headers-base;}
 
 /*** Text Styles ***/
 em { font-style: italic; }
@@ -48,6 +48,19 @@ strong { font-weight: 500; }
 small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
+
+p {
+  margin-bottom: 0px;
+}
+p.spacer-bottom{
+      margin-bottom: 16px;
+    }
+p.lead {
+    margin-bottom: 0px;
+}
+  p.spacer-bottom{
+    margin-bottom: 16px;
+  }
 
 /* --------------------------------------- */
 /* Tools Custom AND REA                    */
@@ -69,7 +82,12 @@ small { font-size: 75%; }
 }
 
 body {
-	background-color: $eq-ui-body-bg;
+    height: 100%;
+
+    visibility: hidden;
+	@include eq-ui-transition(visibility);
+
+	background-color: #fff;
 
 	/* Fix for webkit rendering */
 	-webkit-font-smoothing: antialiased;
@@ -85,7 +103,9 @@ ul li {
 
 /*** Body lead ***/
 .lead {
-	font-size: $eq-ui-font-size-base + 4;
+	font-size: $eq-ui-font-size-base;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 /*** Container ***/

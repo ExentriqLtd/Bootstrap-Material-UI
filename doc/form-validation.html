@@ -8,8 +8,8 @@
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
     <title>Components - Form Validation | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
-    <link href="assets/css/exentriq-bootstrap-material-ui.min.css?v=0.4.3" rel="stylesheet">
-    <link href="assets/css/doc.css?v=0.4.3" rel="stylesheet">
+    <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
+    <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
     <script>var _doc_route = {root_path:"components",path:"form-validation",name_section:"Components",name_chapter:"Form Validation"};</script>
@@ -143,7 +143,7 @@
                         <i class="mdi mdi-comment icon"></i>
                     </a>
                 </li>
-                <li class="eq-ui-nav-menu-item-icon">
+                <li class="eq-ui-nav-menu-item-icon last-item-before-mobile">
                     <a data-target="doc-dropdown-app-bar-user" data-gutter="-48" data-hover="false" class="btn btn-default eq-ui-btn-flat eq-ui-btn-fab eq-ui-btn-menu-fab eq-ui-waves dropdown-trigger">
                         <i class="mdi mdi-account icon"></i>
                     </a>
@@ -236,22 +236,23 @@
                         </div>
                     </li>
 
-                    <li>
-                        <div class="eq-ui-collapsible-header eq-ui-waves">
-                            <a id="collapsible-nav-css">
-                                <i class="mdi mdi-book-variant icon icon-left icon-24"></i>
-                                CSS
-                            </a>
-                        </div>
-                        <div class="eq-ui-collapsible-body">
-                            <a id="collapsible-nav-css-badges" href="./badges.html">Badges</a>
-                            <a id="collapsible-nav-css-color" href="./color.html">Color</a>
-                            <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
-                            <a id="collapsible-nav-css-table" href="./table.html">Table</a>
-                            <a id="collapsible-nav-css-sticky-table" href="./sticky-table.html">Sticky Table</a>
-                            <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
-                        </div>
-                    </li>
+                  <li>
+                    <div class="eq-ui-collapsible-header eq-ui-waves">
+                      <a id="collapsible-nav-css">
+                        <i class="material-icons icon icon-left icon-24">aspect_ratio</i>
+                        Layout
+                      </a>
+                    </div>
+                    <div class="eq-ui-collapsible-body">
+                      <a id="collapsible-nav-css-grid" href="./grid.html">Responsive Grid</a>
+                      <a id="collapsible-nav-css-grid" href="./spacing-methods.html">Spacing Methods</a>
+                      <a id="collapsible-nav-css-typography" href="./typography.html">Typography</a>
+                      <a id="collapsible-nav-css-color" href="./color.html">Colors</a>
+                      <a id="collapsible-nav-css-icons" href="./icons.html">Icons</a>
+                      <a id="collapsible-nav-css-helpers" href="./helpers.html">Helpers</a>
+                    </div>
+                  </li>
+
 
                     <li>
                         <div class="eq-ui-collapsible-header eq-ui-waves">
@@ -264,8 +265,11 @@
                             <a id="collapsible-nav-components-buttons" href="./buttons.html">Buttons</a>
                             <a id="collapsible-nav-components-cards" href="./cards.html">Cards</a>
                             <a id="collapsible-nav-components-list" href="./list.html">List</a>
+                            <a id="collapsible-nav-css-table" href="./table.html">Table</a>
+                            <a id="collapsible-nav-css-sticky-table" href="./sticky-table.html">Sticky Table</a>
                             <a id="collapsible-nav-components-forms" href="./forms.html">Forms</a>
                             <a id="collapsible-nav-components-form-validation" href="./form-validation.html">Form Validation</a>
+                            <a id="collapsible-nav-css-badges" href="./badges.html">Badges</a>
                             <a id="collapsible-nav-components-loader" href="./loader.html">Loader</a>
                         </div>
                     </li>
@@ -786,12 +790,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="eq-ui-form-group eq-ui-input-field">
-                                    <select id="gender-test1" class="eq-ui-select" required>
+                                    <select id="gender-test1" class="eq-ui-select">
                                         <option value="" disabled selected>Choose your gender</option>
                                         <option value="1">Male</option>
                                         <option value="2">Female</option>
                                     </select>
-                                    <label data-error="Required">Gender</label>
+                                    <label >Gender</label>
                                 </div>
                             </div>
                         </div>
@@ -1004,6 +1008,7 @@ $(document).ready(function(){
     </div>
 
 </div>
+
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->
@@ -1020,7 +1025,7 @@ $(document).ready(function(){
     </main><script src="assets/js/vendor/jquery/dist/jquery.min.js?v=2.1.4"></script>
 <script src="assets/js/vendor/moment/min/moment.min.js?v=2.13.0"></script>
 <script src="assets/js/vendor/jquery-timeago/jquery.timeago.js?v=1.4.3"></script>
-<script src="assets/js/exentriq-bootstrap-material-ui.min.js?v=0.4.3"></script>
+<script src="assets/js/exentriq-bootstrap-material-ui.js?v=0.0.0"></script>
 
 <script src="assets/js/tp/tp-color.html" type="riot/tag"></script>
 <script src="assets/js/vendor/riot/riot+compiler.min.js?v=2.3.0"></script>
@@ -1029,7 +1034,7 @@ $(document).ready(function(){
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue@2.5.21/dist/vue.js"></script>
 
-<script src="assets/js/doc.js?v=0.4.3"></script>
+<script src="assets/js/doc.js?v=0.0.0"></script>
 <script src="assets/js/ctrl/ctrl-color.js"></script>
 <script src="assets/js/vue/collapsible.js"></script>
 <script src="assets/js/vue/dropdown.js"></script>

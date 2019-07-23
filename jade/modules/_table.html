@@ -69,10 +69,83 @@
     </div>
 
     <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Sortable Table</h2>
+                <p>Sortable Table by clicking on column head</p>
+                <table class="table eq-ui-data-table z-depth-1 eq-ui-table-sort">
+                    <thead>
+                    <tr>
+                        <th class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column">Material<i class="material-icons">sort</i></th>
+                        <th>Quantity</th>
+                        <th class="eq-ui-data-table-sort-column">Unit price<i class="material-icons">sort</i></th> 
+                    </tr>
+                    </thead>
+    
+                    <tbody>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Acrylic (Transparent)</td>
+                        <td>25</td>
+                        <td>$2.90</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Plywood (Birch)</td>
+                        <td>50</td>
+                        <td>$1.25</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Laminate (Gold on Blue)</td>
+                        <td>10</td>
+                        <td>$2.35</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Red (Velvet)</td>
+                        <td>15</td>
+                        <td>$3.46</td>
+                    </tr>
+                    <tr>
+                        <td class="eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate">Pink (Rose)</td>
+                        <td>44</td>
+                        <td>$6.31</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <pre><code class="language-markup">
+    &lt;table class=&quot;table eq-ui-data-table z-depth-1 eq-ui-table-sort&quot;&gt;
+        &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-sort-column&quot;&gt;Material&lt;i class=&quot;material-icons&quot;&gt;sort&lt;/i&gt;&lt;/th&gt;
+            &lt;th class=&quot;&quot;&gt;Quantity&lt;/th&gt;
+            &lt;th class=&quot;eq-ui-data-table-sort-column&quot;&gt;Unit price&lt;i class=&quot;material-icons&quot;&gt;sort&lt;/i&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;/thead&gt;
+    
+        &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Acrylic (Transparent)&lt;/td&gt;
+            &lt;td&gt;25&lt;/td&gt;
+            &lt;td&gt;$2.90&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Plywood (Birch)&lt;/td&gt;
+            &lt;td&gt;50&lt;/td&gt;
+            &lt;td&gt;$1.25&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td class=&quot;eq-ui-data-table-cell-non-numeric eq-ui-data-table-cell-truncate&quot;&gt;Laminate (Gold on Blue)&lt;/td&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;$2.35&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;</code></pre>
+            </div>
+        </div>
+    
+
+    <div class="row">
         <div class="col-md-12">
             <h2 class="header">With Checkbox</h2>
             <p>For checkbox table mode. We have than add <code class="language-markup">eq-ui-data-table-js eq-ui-with-checkbox</code></p>
-            <table class="table eq-ui-data-table eq-ui-data-table-js eq-ui-with-checkbox eq-ui-hoverable z-depth-1">
+            <table class="table eq-ui-data-table eq-ui-data-table-js eq-ui-with-checkbox eq-ui-hoverable z-depth-1" id="eq-ui-sortable-table">
                 <thead>
                 <tr>
                     <th>
@@ -80,8 +153,8 @@
                         <label for="checkbox-all"></label>
                     </th>
                     <th class="eq-ui-data-table-cell-non-numeric">Material</th>
-                    <th>Quantity</th>
-                    <th>Unit price</th>
+                    <th class="sort-column">Quantity</th>
+                    <th class="sort-column">Unit price</th>
                 </tr>
                 </thead>
 

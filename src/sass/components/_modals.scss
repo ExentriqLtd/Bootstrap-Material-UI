@@ -48,7 +48,7 @@
         min-height: $modals-header-height;
         line-height: $modals-header-height;
         width: 100%;
-        padding: 0 24px;
+        padding: 0 16px;
 
         .header-title {
             font-size: 24px;
@@ -62,7 +62,7 @@
     .eq-ui-modal-content {
         position: relative;
         width: 100%;
-        padding: 24px;
+        padding: 16px;
     }
 
     // Footer

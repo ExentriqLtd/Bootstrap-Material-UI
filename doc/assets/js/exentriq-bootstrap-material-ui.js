@@ -4582,33 +4582,33 @@ if ('undefined' !== typeof window.ParsleyValidator)
  * to offer multiple easing options
  *
  * TERMS OF USE - jQuery Easing
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2008 George McGinley Smith
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
 */
 
@@ -4724,7 +4724,7 @@ jQuery.extend( jQuery.easing,
 		return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
 	},
 	easeInOutBack: function (x, t, b, c, d, s) {
-		if (s == undefined) s = 1.70158; 
+		if (s == undefined) s = 1.70158;
 		if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
 		return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
 	},
@@ -4751,33 +4751,33 @@ jQuery.extend( jQuery.easing,
 /*
  *
  * TERMS OF USE - EASING EQUATIONS
- * 
- * Open source under the BSD License. 
- * 
+ *
+ * Open source under the BSD License.
+ *
  * Copyright © 2001 Robert Penner
  * All rights reserved.
- * 
- * Redistribution and use in source and binary forms, with or without modification, 
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
- * 
- * Redistributions of source code must retain the above copyright notice, this list of 
+ *
+ * Redistributions of source code must retain the above copyright notice, this list of
  * conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright notice, this list 
- * of conditions and the following disclaimer in the documentation and/or other materials 
+ * Redistributions in binary form must reproduce the above copyright notice, this list
+ * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * 
- * Neither the name of the author nor the names of contributors may be used to endorse 
+ *
+ * Neither the name of the author nor the names of contributors may be used to endorse
  * or promote products derived from this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
  * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
  * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
  *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
  *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+ *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED
  * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
- * OF THE POSSIBILITY OF SUCH DAMAGE. 
+ *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ * OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
 /*! Hammer.JS - v2.0.4 - 2014-09-28
@@ -7281,7 +7281,7 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 /*!
  * jQuery event extension: jquery-elementresize 0.2.2, 2016-01-21, 09:02.
  * Description: Provides a custom jQuery event to detect resizing of a positioned (non-static) element.
- * Author: Robert Bar, robert@rbsoftware.pl, http://rbsoftware.pl 
+ * Author: Robert Bar, robert@rbsoftware.pl, http://rbsoftware.pl
  * License: MIT
  */
 (function (factory) {
@@ -7296,10 +7296,10 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
         // Browser globals
         factory(jQuery);
     }
-}(function ($) {    
+}(function ($) {
     'use strict';
     var specialEventName = 'elementResize';
-    
+
     function ElementResizeDetector(elem) {
         this.elem = elem;
         this.$elem = $(elem);
@@ -7309,28 +7309,28 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
     function addDetector(elem) {
         if (!$.data(elem, specialEventName)) {
             $.data(elem, specialEventName, new ElementResizeDetector(elem));
-        }        
+        }
     }
-    
+
     function removeDetector(elem) {
         var detector = $.data(elem, specialEventName);
-        
+
         if (detector) {
             detector.destroy();
             $.removeData(elem, specialEventName);
-        }            
-    }    
+        }
+    }
 
     $.extend(ElementResizeDetector.prototype, {
         activate: function () {
             var frameContent = '<!DOCTYPE html><html><head><title>jquery.elementResize</title></head><body><script>window.onresize = resize;function resize() { var detector = parent.$ ? parent.$(this.frameElement).data("elementResize") : null; if (detector) { detector.trigger(); } }</script></body></html>',
                 iframes = [
-                    $('<iframe src="about:blank" style="position:absolute; top:-50000px; left:0px; width:100%;"></iframe>'), 
-                    $('<iframe src="about:blank" style="position:absolute; top:0; left:-50000px; height:100%;"></iframe>') 
+                    $('<iframe src="about:blank" style="position:absolute; top:-50000px; left:0px; width:100%;"></iframe>'),
+                    $('<iframe src="about:blank" style="position:absolute; top:0; left:-50000px; height:100%;"></iframe>')
                 ];
 
             for (var index = 0; index < iframes.length; index++) {
-                var $iframe = iframes[index];            
+                var $iframe = iframes[index];
                 this.$elem.append($iframe);
                 $iframe.data(specialEventName, this);
                 $iframe[0].contentWindow.emitcontent = frameContent;
@@ -7340,9 +7340,9 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
             }
 
             this.iFrameArray = iframes;
-        },        
+        },
 
-        destroy: function() {  
+        destroy: function() {
             for (var index = 0; index < this.iFrameArray.length; index++) {
                 var $iframe = this.iFrameArray[index];
                 $iframe.removeData(specialEventName);
@@ -7357,10 +7357,10 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
             this.$elem.elementResize();
         }
     });
-    
-    $.event.special[specialEventName] = {              
+
+    $.event.special[specialEventName] = {
         version: '0.2.0',
-        
+
         setup: function() {
             if (this.nodeType === 1) {
                 addDetector(this);
@@ -7368,17 +7368,17 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
                 throw new Error('Unsupported node type: ' + this.nodeType);
             }
         },
-        
+
         teardown: function() {
              removeDetector(this);
         }
-    }; 
-    
+    };
+
     $.fn.extend({
         elementResize: function(fn) {
             return fn ? this.bind(specialEventName, fn) : this.trigger(specialEventName);
         },
-        
+
         unelementResize: function(fn) {
             return this.unbind(specialEventName, fn);
         }
@@ -7519,7 +7519,7 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 
     Autocomplete.formatResult = function (suggestion, currentValue) {
         var pattern = '(' + utils.escapeRegExChars(currentValue) + ')';
-        
+
         return suggestion.value
             .replace(new RegExp(pattern, 'gi'), '<strong>$1<\/strong>')
             .replace(/&/g, '&amp;')
@@ -7608,7 +7608,7 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
         onBlur: function () {
             this.enableKillerFn();
         },
-        
+
         abortAjax: function () {
             var that = this;
             if (that.currentRequest) {
@@ -7741,7 +7741,7 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
                     that.el.val(that.currentValue);
                     that.hide();
                 }
-                
+
                 that.stopKillSuggestions();
             }, 50);
         },
@@ -8476,9 +8476,9 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 
     /*
     This is a list of all available events you can register on a dropzone object.
-    
+
     You can register an event handler like this:
-    
+
         dropzone.on("dragEnter", function() { });
      */
 
@@ -10011,7 +10011,7 @@ if (typeof define == TYPE_FUNCTION && define.amd) {
 
 
   /*
-  
+
   Bugfix for iOS 6 and 7
   Source: http://stackoverflow.com/questions/11929099/html5-canvas-drawimage-ratio-bug-ios
   based on the work of https://github.com/stomita/ios-imagefile-megapixel
@@ -12314,7 +12314,7 @@ return function (global, window, document, undefined) {
                             }
 
                             /* Iterate through the calls targeted by the stop command. */
-                            $.each(elements, function(l, element) {                                
+                            $.each(elements, function(l, element) {
                                 /* Check that this call was applied to the target element. */
                                 if (element === activeElement) {
                                     /* Optionally clear the remaining queued calls. */
@@ -13597,7 +13597,7 @@ return function (global, window, document, undefined) {
                             tween.currentValue = currentValue;
 
                             /* If we're tweening a fake 'tween' property in order to log transition values, update the one-per-call variable so that
-                               it can be passed into the progress callback. */ 
+                               it can be passed into the progress callback. */
                             if (property === "tween") {
                                 tweenDummyValue = currentValue;
                             } else {
@@ -15149,16 +15149,16 @@ return function (global, window, document, undefined) {
             }
         }
     };
-    
+
     /**
      * Collection of wrapper for HTML element that only have single tag
      * like <input> and <img>
      */
     var TagWrapper = {
-        
+
         // Wrap <input> tag so it can perform the effect
         input: function(element) {
-            
+
             var parent = element.parentNode;
 
             // If input already have parent just pass through
@@ -15182,12 +15182,12 @@ return function (global, window, document, undefined) {
 
             wrapper.setAttribute('style', 'color:' + color + ';background:' + backgroundColor);
             element.setAttribute('style', 'background-color:rgba(0,0,0,0);');
-            
+
         },
-        
+
         // Wrap <img> tag so it can perform the effect
         img: function(element) {
-            
+
             var parent = element.parentNode;
 
             // If input already have parent just pass through
@@ -15199,7 +15199,7 @@ return function (global, window, document, undefined) {
             var wrapper  = document.createElement('i');
             parent.replaceChild(wrapper, element);
             wrapper.appendChild(element);
-            
+
         }
     };
 
@@ -15208,7 +15208,7 @@ return function (global, window, document, undefined) {
      * a separate function to pass the JSLint...
      */
     function removeRipple(e, el, ripple) {
-        
+
         // Check if the ripple still exist
         if (!ripple) {
             return;
@@ -15424,7 +15424,7 @@ return function (global, window, document, undefined) {
      * or skimming effect should be applied to the elements.
      */
     Waves.attach = function(elements, classes) {
-        
+
         elements = getWavesElements(elements);
 
         if (toString.call(classes) === '[object Array]') {
@@ -15434,12 +15434,12 @@ return function (global, window, document, undefined) {
         classes = classes ? ' ' + classes : '';
 
         var element, tagName;
-        
+
         for (var i = 0, len = elements.length; i < len; i++) {
-            
+
             element = elements[i];
             tagName = element.tagName.toLowerCase();
-            
+
             if (['input', 'img'].indexOf(tagName) !== -1) {
                 TagWrapper[tagName](element);
                 element = element.parentElement;
@@ -15616,19 +15616,19 @@ var _ = _self.Prism = {
 		insertBefore: function (inside, before, insert, root) {
 			root = root || _.languages;
 			var grammar = root[inside];
-			
+
 			if (arguments.length == 2) {
 				insert = arguments[1];
-				
+
 				for (var newToken in insert) {
 					if (insert.hasOwnProperty(newToken)) {
 						grammar[newToken] = insert[newToken];
 					}
 				}
-				
+
 				return grammar;
 			}
-			
+
 			var ret = {};
 
 			for (var token in grammar) {
@@ -15648,7 +15648,7 @@ var _ = _self.Prism = {
 					ret[token] = grammar[token];
 				}
 			}
-			
+
 			// Update references in other language definitions
 			_.languages.DFS(_.languages, function(key, value) {
 				if (value === root[inside] && key != inside) {
@@ -16047,7 +16047,7 @@ if (Prism.languages.markup) {
 			alias: 'language-css'
 		}
 	});
-	
+
 	Prism.languages.insertBefore('inside', 'attr-value', {
 		'style-attr': {
 			pattern: /\s*style=("|').*?\1/i,
@@ -16693,7 +16693,7 @@ if (Prism.languages.markup) {
 			alias: 'language-css'
 		}
 	});
-	
+
 	Prism.languages.insertBefore('inside', 'attr-value', {
 		'style-attr': {
 			pattern: /\s*style=("|').*?\1/i,
@@ -17223,16 +17223,15 @@ Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.sc
         });
     };
 })(jQuery);
-// there is problem when using this inside meteor as it creates local variable name EqUI for the export
-// and then puts source code of this package, so EqUI is already in the scop so we need to set it.
-if (!EqUI) {
-  EqUI = {};
-}
-if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){
-  global.EqUI = EqUI;
-}
-if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){
-  window.EqUI = EqUI;
+if (typeof Meteor === 'object') { // Meteor
+  if (typeof EqUI === "undefined") {
+    EqUI = {};
+  }
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = EqUI;}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = EqUI;}
+} else { // Node / Browser
+  if(typeof global !== "undefined" && typeof global.EqUI === "undefined"){global.EqUI = {};}
+  if(typeof window !== "undefined" && typeof window.EqUI === "undefined"){window.EqUI = {};}
 }
 
 // Unique ID
@@ -17274,7 +17273,7 @@ else {
 
 (function ($) {
     EqUI.site = {};
-    
+
     // jQuery reverse
     $.fn.reverse = [].reverse;
 
@@ -17332,14 +17331,14 @@ else {
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
             EqUI.site.body.css('height', '');
         }
-        
+
         if (window.innerWidth > 768) {
-            
-            
+
+
         }
         else {
 
-            
+
         }
     };
 
@@ -17648,9 +17647,9 @@ else {
 
     // Update
     EqUI.app_bar.update = function() {
-        
+
         if (window.innerWidth > 768) {
-            
+
             //...
         }
         else {
@@ -17977,7 +17976,7 @@ else {
 
     // Update
     EqUI.buttons.update = function() {
-        
+
     };
 
     // Toggle FAB
@@ -18073,6 +18072,108 @@ else {
 }( jQuery ));
 
 (function ($) {
+    EqUI.table = {};
+
+    EqUI.table.init = function() {
+        EqUI.table.order_table = '.eq-ui-table-sort';
+        var self = this;
+        $(EqUI.table.order_table).each(function(index, element) {
+            var $element = $(element);
+            var th = $element.find('th');
+            for (x = 0; x < th.length; x++) {
+              if (th[x].classList.contains('eq-ui-data-table-sort-column')) {
+                $(th[x]).attr('data-column', x);
+              }
+            }
+            $('.eq-ui-data-table-sort-column').on('click', function() {
+              self.sort(this);
+            });
+        });
+    };
+    EqUI.table.sort = function( element ) {
+        var col = $(element).attr('data-column');
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = $(element).closest(this.order_table);
+        if(!table){
+            return;
+        }
+        switching = true;
+
+        //Set the sorting direction to ascending:
+        dir = "asc";
+        /*Make a loop that will continue until
+        no switching has been done:*/
+        while (switching) {
+            //start by saying: no switching is done:
+            switching = false;
+            rows = table[0].rows;
+            /*Loop through all table rows (except the
+            first, which contains table headers):*/
+            for (i = 1; i < (rows.length - 1); i++) {
+            //start by saying there should be no switching:
+            shouldSwitch = false;
+            /*Get the two elements you want to compare,
+            one from current row and one from the next:*/
+            x = rows[i].getElementsByTagName("TD")[col];
+            y = rows[i + 1].getElementsByTagName("TD")[col];
+            /*check if the two rows should switch place,
+            based on the direction, asc or desc:*/
+            var iconSwitch = $(element).children();
+            var resetIcon = $(".eq-ui-table-sort").find(".material-icons");
+            if (dir == "asc") {
+                if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch= true;
+                $(resetIcon).text('sort');
+                $(iconSwitch).text('arrow_drop_down');
+                break;
+                }
+            } else if (dir == "desc") {
+                if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                //if so, mark as a switch and break the loop:
+                shouldSwitch = true;
+                $(resetIcon).text('sort');
+                $(iconSwitch).text('arrow_drop_up');
+                break;
+                }
+            }
+            }
+            if (shouldSwitch) {
+            /*If a switch has been marked, make the switch
+            and mark that a switch has been done:*/
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            //Each time a switch is done, increase this count by 1:
+            switchcount ++;
+            } else {
+            /*If no switching has been done AND the direction is "asc",
+            set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+                dir = "desc";
+                switching = true;
+            }
+            }
+        }
+    };
+
+    // Update
+    EqUI.table.update = function() {
+
+    };
+
+
+    $(document).ready(function() {
+        // Init
+        EqUI.table.init();
+
+
+        // Update
+        EqUI.table.update();
+
+
+    });
+}( jQuery ));
+(function ($) {
     EqUI.cards = {};
 
     // Init
@@ -18082,7 +18183,7 @@ else {
 
     // Update
     EqUI.cards.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -18744,7 +18845,7 @@ else {
 
     // Update
     EqUI.collapsible.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -18889,7 +18990,7 @@ else {
                                   }
                               });
                   }
-                    
+
                 }
             }
 
@@ -19040,7 +19141,7 @@ else {
 
     // Update
     EqUI.dropdown.update = function() {
-        
+
     };
 
     // Load
@@ -19364,7 +19465,7 @@ else {
 
     // Update
     EqUI.modals.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -19533,7 +19634,7 @@ else {
 
     // Update
     EqUI.tabs.update = function() {
-        
+
     };
 
     // Load
@@ -19566,59 +19667,88 @@ else {
 }( jQuery ));
 
 (function ($) {
-    EqUI.init = {};
-    var _this = function(){return EqUI.init;}();
+  EqUI.init = {};
+  var _this = function(){return EqUI.init;}();
+  _this.Waves = Waves;
+  _this.WavesIsInit = false;
 
-    // Update
-    _this.update = function() {
-        EqUI.app_bar.update();
-        EqUI.side_nav.update();
-        EqUI.breadcrumb.update();
+  // Update
+  _this.update = function() {
+      EqUI.app_bar.update();
+      EqUI.side_nav.update();
+      EqUI.breadcrumb.update();
+      EqUI.table.update();
+      EqUI.buttons.update();
+      EqUI.cards.update();
+      EqUI.forms.update();
+      EqUI.collapsible.update();
+      EqUI.dropdown.update();
+      EqUI.modals.update();
+      EqUI.tabs.update();
 
-        EqUI.buttons.update();
-        EqUI.cards.update();
-        EqUI.forms.update();
-        EqUI.collapsible.update();
-        EqUI.dropdown.update();
-        EqUI.modals.update();
-        EqUI.tabs.update();
+      EqUI.site.update();
+  };
 
-        EqUI.site.update();
+  // Load
+  _this.load = function() {
+      // Site update
+      EqUI.site.update();
+
+      // Show body
+      EqUI.site.body.css('visibility', 'visible');
+
+      // Loads
+      EqUI.breadcrumb.load();
+      EqUI.dropdown.load();
+      EqUI.tabs.load();
+  };
+
+  // Init
+  _this.init = function() {
+    // ...
+  };
+
+  // READY & OBSERVE
+  if (EqUI.mutationObserver === null) {
+    _this.init = function() {
+      // Init Waves
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
+      EqUI.init.Waves.attach('.eq-ui-waves', ['waves-effect']);
+      EqUI.init.Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
     };
-
-    // Load
-    _this.load = function() {
-        // Site update
-        EqUI.site.update();
-
-        // Show body
-        EqUI.site.body.css('visibility', 'visible');
-
-        // Loads
-        EqUI.breadcrumb.load();
-        EqUI.dropdown.load();
-        EqUI.tabs.load();
-    };
+  } else {
+    // .EqUIObserve(selector, onAdded, onRemoved)
+    $(document).EqUIObserve('.eq-ui-waves', function () {
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
+      EqUI.init.Waves.attach(this, ['waves-effect']);
+    }, function () {
+      EqUI.init.Waves.calm(this);
+    })
+    $(document).EqUIObserve('.eq-ui-waves-light', function () {
+      if(!_this.WavesIsInit){ EqUI.init.Waves.init(); _this.WavesIsInit=true; }
+      EqUI.init.Waves.attach(this, ['waves-effect', 'waves-light']);
+    }, function () {
+      EqUI.init.Waves.calm(this);
+    })
+  }
 
 	$(document).ready(function() {
 
-		// Init Waves
-        Waves.init();
-        Waves.attach('.eq-ui-waves', ['waves-effect']);
-        Waves.attach('.eq-ui-waves-light', ['waves-effect', 'waves-light']);
+	  // Init
+	  _this.init();
 
 		// Resize
 		$(window).resize( function() {
-            // Update
-            _this.update();
+      // Update
+      _this.update();
 		});
 
 		// Load complete
-		$(window).on('load', function(){
-            // Update
-            _this.load();
-	    });
-	    
+    $(window).on('load', function() {
+      // Update
+      _this.load();
+		});
+
 	});
 }( jQuery ));
 

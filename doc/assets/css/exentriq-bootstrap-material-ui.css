@@ -1,9 +1,85 @@
 @charset "UTF-8";
 /* MaterialDesignIcons.com */
 @font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/MaterialIcons-Regular-webfont.eot?v=3.0.1");
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons-Regular-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/MaterialIcons-Regular-webfont.woff2?v=3.0.1") format("woff2"), url("../fonts/MaterialIcons-Regular-webfont.woff?v=3.0.1") format("woff"), url("../fonts/MaterialIcons-Regular-webfont.ttf?v=3.0.1") format("truetype"), url("../fonts/MaterialIcons-Regular-webfont.svg?v=3.0.1#MaterialIcons-Regularregular") format("svg");
+}
+
+.mdi {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+}
+
+.mdi-18px {
+  font-size: 18px;
+}
+
+.mdi-24px {
+  font-size: 24px;
+}
+
+.mdi-36px {
+  font-size: 36px;
+}
+
+.mdi-48px {
+  font-size: 48px;
+}
+
+.mdi-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.mdi-dark.mdi-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.mdi-light {
+  color: white;
+}
+
+.mdi-light.mdi-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+     -moz-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+
+/* MaterialDesignIcons.com */
+@font-face {
   font-family: "Material Design Icons";
-  src: url("../fonts/materialdesignicons-webfont.eot?v=1.4.57");
-  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=1.4.57") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=1.4.57") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=1.4.57") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=1.4.57") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=1.4.57#materialdesigniconsregular") format("svg");
+  src: url("../fonts/materialdesignicons-webfont.eot?v=3.0.1");
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../fonts/materialdesignicons-webfont.woff2?v=3.0.1") format("woff2"), url("../fonts/materialdesignicons-webfont.woff?v=3.0.1") format("woff"), url("../fonts/materialdesignicons-webfont.ttf?v=3.0.1") format("truetype"), url("../fonts/materialdesignicons-webfont.svg?v=3.0.1#materialdesigniconsregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -14579,11 +14655,10 @@ a.badge:hover, a.badge:focus {
 }
 
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
 }
 
 .jumbotron h1,
@@ -14592,13 +14667,13 @@ a.badge:hover, a.badge:focus {
 }
 
 .jumbotron p {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   font-size: 24px;
   font-weight: 200;
 }
 
 .jumbotron > hr {
-  border-top-color: #d5d5d5;
+  border-top-color: gainsboro;
 }
 
 .container .jumbotron,
@@ -14612,13 +14687,13 @@ a.badge:hover, a.badge:focus {
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
   .container .jumbotron,
   .container-fluid .jumbotron {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
@@ -18065,39 +18140,39 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 {
-  font-size: 4.2rem;
+  font-size: 64px;
   line-height: 110%;
-  margin: 2.1rem 0 1.68rem 0;
+  margin: 36px 0 36px 0;
 }
 
 h2 {
-  font-size: 3.56rem;
+  font-size: 49.2307692308px;
   line-height: 110%;
-  margin: 1.78rem 0 1.424rem 0;
+  margin: 36px 0 36px 0;
 }
 
 h3 {
-  font-size: 2.92rem;
+  font-size: 37.8698224852px;
   line-height: 110%;
-  margin: 1.46rem 0 1.168rem 0;
+  margin: 36px 0 36px 0;
 }
 
 h4 {
-  font-size: 2.28rem;
+  font-size: 29.1306326809px;
   line-height: 110%;
-  margin: 1.14rem 0 0.912rem 0;
+  margin: 36px 0 36px 0;
 }
 
 h5 {
-  font-size: 1.64rem;
+  font-size: 22.4081789853px;
   line-height: 110%;
-  margin: 0.82rem 0 0.656rem 0;
+  margin: 36px 0 36px 0;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 17.2370607579px;
   line-height: 110%;
-  margin: 0.5rem 0 0.4rem 0;
+  margin: 36px 0 36px 0;
 }
 
 /*** Text Styles ***/
@@ -18121,6 +18196,22 @@ small {
   font-weight: 200;
 }
 
+p {
+  margin-bottom: 0px;
+}
+
+p.spacer-bottom {
+  margin-bottom: 16px;
+}
+
+p.lead {
+  margin-bottom: 0px;
+}
+
+p.spacer-bottom {
+  margin-bottom: 16px;
+}
+
 /* --------------------------------------- */
 /* Tools Custom AND REA                    */
 /* --------------------------------------- */
@@ -18136,7 +18227,10 @@ small {
 }
 
 body {
-  background-color: #f5f5f5;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #fff;
   /* Fix for webkit rendering */
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -18151,7 +18245,9 @@ ul li {
 
 /*** Body lead ***/
 .lead {
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }
 
 /*** Container ***/
@@ -18645,8 +18741,8 @@ input.eq-ui-input[type="radio"]:checked + label, input.eq-ui-input[type="checkbo
 }
 
 .eq-ui-layout-header .container-fluid, .eq-ui-layout-header-primary .container-fluid {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .eq-ui-layout-header .header-title, .eq-ui-layout-header-primary .header-title {
@@ -18714,8 +18810,8 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
   position: relative;
   color: #9b9b9b;
   background-color: #ffffff;
-  height: 50px;
-  line-height: 50px;
+  height: 52px;
+  line-height: 52px;
 }
 
 /* Vars */
@@ -18723,8 +18819,8 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
   position: relative;
   color: #FFFFFF;
   background-color: #2f4357;
-  height: 50px;
-  line-height: 50px;
+  height: 52px;
+  line-height: 52px;
 }
 
 .eq-ui-app-bar .eq-ui-side-nav-toggle {
@@ -18733,7 +18829,7 @@ body.eq-ui-side-nav-hide .eq-ui-layout-header {
 }
 
 .eq-ui-app-bar .eq-ui-side-nav-toggle i {
-  margin-top: 5px;
+  margin-top: 6px;
   margin-bottom: 0px;
   line-height: 41px;
 }
@@ -18775,9 +18871,9 @@ body.eq-ui-side-nav-hide .eq-ui-app-bar .eq-ui-side-nav-toggle {
   border-bottom: 1px solid #e1e1e1;
   display: block;
   width: 100%;
-  height: 50px;
-  line-height: 30px;
-  padding: 10px 0 12px 21px;
+  height: 52px;
+  line-height: 34px;
+  padding: 10px 0 12px 16px;
   position: absolute;
 }
 
@@ -18920,6 +19016,16 @@ table.eq-ui-data-table thead tr th {
   line-height: 24px;
   letter-spacing: 0;
   border-bottom: none;
+}
+
+table.eq-ui-data-table thead tr th.eq-ui-data-table-sort-column {
+  cursor: pointer;
+}
+
+table.eq-ui-data-table thead tr th.eq-ui-data-table-sort-column i {
+  vertical-align: middle;
+  margin-left: 8px;
+  font-size: 22px;
 }
 
 table.eq-ui-data-table tbody tr {
@@ -19073,13 +19179,13 @@ table.eq-ui-data-table tbody > tr.is-selected {
 .eq-ui-nav-menu {
   margin: 0;
   padding: 0;
-  height: 50px;
+  height: 52px;
 }
 
 .eq-ui-nav-menu > li {
   position: relative;
   color: inherit;
-  margin-right: 15px;
+  margin-right: 16px;
   line-height: inherit;
   float: left;
 }
@@ -19099,9 +19205,23 @@ table.eq-ui-data-table tbody > tr.is-selected {
   text-decoration: none;
 }
 
+.eq-ui-nav-menu li.last-item-before-mobile {
+  margin-right: 0px;
+}
+
 .eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon > a {
   line-height: 32px;
-  margin: 9px 0;
+  margin: 8px 0;
+}
+
+.eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+}
+
+.eq-ui-nav-menu > li.eq-ui-nav-menu-item-icon a.eq-ui-btn-fab i {
+  line-height: 36px;
 }
 
 .eq-ui-tool-bar-system .eq-ui-nav-menu {
@@ -20810,12 +20930,12 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 
 .eq-ui-search input {
   font-size: 16px;
-  height: 32px;
+  height: 22px;
   border: 0;
   width: calc(100% - 39px);
   margin: 0;
   line-height: 32px;
-  vertical-align: middle;
+  vertical-align: baseline;
   background-color: transparent;
 }
 
@@ -20988,7 +21108,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-search {
-  margin: 0 10px 16px 10px;
+  margin: 0 16px 16px 16px;
   padding-right: 6px;
 }
 
@@ -21008,6 +21128,22 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 
 .eq-ui-card .eq-ui-search.eq-ui-search-expandable.active .eq-ui-search-clear {
   top: 0;
+}
+
+p.grid-legend {
+  margin-bottom: 16px;
+}
+
+p.grid-legend:lastChild {
+  margin-bottom: 0px;
+}
+
+p.grid-legend span.number-round-green {
+  background-color: #1bbc9b;
+  padding: 5px 15px;
+  color: #fff;
+  font-size: 26px;
+  border-radius: 100%;
 }
 
 .eq-ui-collapsible {
@@ -21113,7 +21249,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-header a {
   font-weight: 700;
   color: #9b9b9b;
-  padding: 0 16px 0 24px;
+  padding: 0 16px 0 16px;
   line-height: 3rem;
 }
 
@@ -21150,7 +21286,7 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible li .eq-ui-collapsible-body a {
-  padding: 0 16px 0 48px;
+  padding: 0 16px 0 32px;
   display: block;
   color: #9b9b9b;
   line-height: 3rem;
@@ -21163,15 +21299,15 @@ input.eq-ui-input[type="checkbox"].filled-in:disabled:checked + label:after {
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-header a {
-  padding: 0 16px 0 24px;
+  padding: 0 16px 0 16px;
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-body > .eq-ui-collapsible .eq-ui-collapsible-header a {
-  padding: 0 16px 0 48px;
+  padding: 0 16px 0 32px;
 }
 
 .eq-ui-side-nav nav .eq-ui-collapsible:not(.eq-ui-collapsible-group) li .eq-ui-collapsible-body > .eq-ui-collapsible .eq-ui-collapsible-body a {
-  padding: 0 16px 0 72px;
+  padding: 0 16px 0 48px;
 }
 
 .eq-ui-dropdown {
@@ -21363,7 +21499,7 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
   min-height: 50px;
   line-height: 50px;
   width: 100%;
-  padding: 0 24px;
+  padding: 0 16px;
 }
 
 .eq-ui-modal .eq-ui-modal-header .header-title {
@@ -21377,7 +21513,7 @@ html.is-touch .eq-ui-dropdown li > a:not(.active):hover {
 .eq-ui-modal .eq-ui-modal-content {
   position: relative;
   width: 100%;
-  padding: 24px;
+  padding: 16px;
 }
 
 .eq-ui-modal .eq-ui-modal-footer {
