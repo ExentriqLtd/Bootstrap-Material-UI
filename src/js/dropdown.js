@@ -131,7 +131,7 @@
                                   }
                               });
                   }
-                    
+
                 }
             }
 
@@ -193,16 +193,18 @@
                 left: originPos.left - contPos.left
               }
 
-              var isTop = false;
+              var isTop = true;
               var isBottom = false;
               var isLeft = false;
               var isRight = false;
 
               // Is Left/Right
-              if((originOffset.left + targetSize.width) <= contSize.width){
-                isLeft = true;
-              } else if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
+              // if((originOffset.left + targetSize.width) <= contSize.width){
+              //   isLeft = true;
+              // } else
+              if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
                 isRight = true;
+                isTop = false;
               }
 
               // Is Top/Bottom
@@ -282,7 +284,7 @@
 
     // Update
     EqUI.dropdown.update = function() {
-        
+
     };
 
     // Load
