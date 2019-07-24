@@ -508,7 +508,7 @@ else {
 
 (function ($) {
     EqUI.site = {};
-
+    
     // jQuery reverse
     $.fn.reverse = [].reverse;
 
@@ -566,14 +566,14 @@ else {
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
             EqUI.site.body.css('height', '');
         }
-
+        
         if (window.innerWidth > 768) {
-
-
+            
+            
         }
         else {
 
-
+            
         }
     };
 
@@ -882,9 +882,9 @@ else {
 
     // Update
     EqUI.app_bar.update = function() {
-
+        
         if (window.innerWidth > 768) {
-
+            
             //...
         }
         else {
@@ -1211,7 +1211,7 @@ else {
 
     // Update
     EqUI.buttons.update = function() {
-
+        
     };
 
     // Toggle FAB
@@ -1316,7 +1316,7 @@ else {
 
     // Update
     EqUI.cards.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -1978,7 +1978,7 @@ else {
 
     // Update
     EqUI.collapsible.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -2629,7 +2629,7 @@ else {
 
     // Update
     EqUI.modals.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -2798,7 +2798,7 @@ else {
 
     // Update
     EqUI.tabs.update = function() {
-
+        
     };
 
     // Load
@@ -2912,7 +2912,7 @@ else {
       // Update
       _this.load();
 		});
-
+	    
 	});
 }( jQuery ));
 
