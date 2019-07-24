@@ -508,7 +508,7 @@ else {
 
 (function ($) {
     EqUI.site = {};
-    
+
     // jQuery reverse
     $.fn.reverse = [].reverse;
 
@@ -566,14 +566,14 @@ else {
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
             EqUI.site.body.css('height', '');
         }
-        
+
         if (window.innerWidth > 768) {
-            
-            
+
+
         }
         else {
 
-            
+
         }
     };
 
@@ -882,9 +882,9 @@ else {
 
     // Update
     EqUI.app_bar.update = function() {
-        
+
         if (window.innerWidth > 768) {
-            
+
             //...
         }
         else {
@@ -1211,7 +1211,7 @@ else {
 
     // Update
     EqUI.buttons.update = function() {
-        
+
     };
 
     // Toggle FAB
@@ -1316,7 +1316,7 @@ else {
 
     // Update
     EqUI.cards.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -1978,7 +1978,7 @@ else {
 
     // Update
     EqUI.collapsible.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -2201,7 +2201,7 @@ else {
                 left: originPos.left - contPos.left
               }
 
-              var isTop = false;
+              var isTop = true;
               var isBottom = false;
               var isLeft = false;
               var isRight = false;
@@ -2214,10 +2214,9 @@ else {
               }
 
               // Is Top/Bottom
-              if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
-                isTop = true;
-              } else if((originOffset.top - targetSize.height) >= 0){
+              if((originOffset.top - targetSize.height) >= 0){
                 isBottom = true;
+                isTop = false;
               }
 
               if(isRight && isTop){
@@ -2614,7 +2613,7 @@ else {
 
     // Update
     EqUI.modals.update = function() {
-        
+
     };
 
     $(document).ready(function() {
@@ -2783,7 +2782,7 @@ else {
 
     // Update
     EqUI.tabs.update = function() {
-        
+
     };
 
     // Load
@@ -2897,7 +2896,7 @@ else {
       // Update
       _this.load();
 		});
-	    
+
 	});
 }( jQuery ));
 

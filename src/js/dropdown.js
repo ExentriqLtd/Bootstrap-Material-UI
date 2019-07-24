@@ -209,7 +209,7 @@
                 left: originPos.left - contPos.left
               }
 
-              var isTop = false;
+              var isTop = true;
               var isBottom = false;
               var isLeft = false;
               var isRight = false;
@@ -222,10 +222,9 @@
               }
 
               // Is Top/Bottom
-              if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
-                isTop = true;
-              } else if((originOffset.top - targetSize.height) >= 0){
+              if((originOffset.top - targetSize.height) >= 0){
                 isBottom = true;
+                isTop = false;
               }
 
               if(isRight && isTop){
