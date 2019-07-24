@@ -2179,6 +2179,22 @@ else {
               object.removeClass('eq-ui-dropdown-left-bottom');
               object.removeClass('eq-ui-dropdown-right-bottom');
 
+              var alignTargetEl = origin.attr('data-auto-align-target');
+              if (alignTargetEl && alignTargetEl.length && alignTargetEl.charAt(0) === '.') {
+                target_auto_align = origin.closest(alignTargetEl);
+                if (!target_auto_align.length) {
+                  target_auto_align = $(alignTargetEl);
+                }
+              } else {
+                target_auto_align = $("#"+ alignTargetEl);
+                if(!target_auto_align || target_auto_align.length <=0){
+                  target_auto_align = origin.closest("."+ alignTargetEl);
+                  if (!target_auto_align.length) {
+                    target_auto_align = $("."+ alignTargetEl);
+                  }
+                }
+              }
+
               var contSize = {
                 width: target_auto_align.outerWidth(true),
                 height: target_auto_align.outerHeight(true)
