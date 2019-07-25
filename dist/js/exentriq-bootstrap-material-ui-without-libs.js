@@ -508,7 +508,7 @@ else {
 
 (function ($) {
     EqUI.site = {};
-
+    
     // jQuery reverse
     $.fn.reverse = [].reverse;
 
@@ -566,14 +566,14 @@ else {
             EqUI.site.body.css('margin-top', _layout_header_offset+'px');
             EqUI.site.body.css('height', '');
         }
-
+        
         if (window.innerWidth > 768) {
-
-
+            
+            
         }
         else {
 
-
+            
         }
     };
 
@@ -882,9 +882,9 @@ else {
 
     // Update
     EqUI.app_bar.update = function() {
-
+        
         if (window.innerWidth > 768) {
-
+            
             //...
         }
         else {
@@ -1211,7 +1211,7 @@ else {
 
     // Update
     EqUI.buttons.update = function() {
-
+        
     };
 
     // Toggle FAB
@@ -1310,8 +1310,8 @@ else {
     EqUI.table = {};
 
     EqUI.table.init = function() {
-        EqUI.table.order_table = '.eq-ui-table-sort';
-        var self = this;
+        EqUI.table.order_table = '.eq-ui-table-sort';  
+        var self = this;  
         $(EqUI.table.order_table).each(function(index, element) {
             var $element = $(element);
             var th = $element.find('th');
@@ -1332,10 +1332,10 @@ else {
         if(!table){
             return;
         }
-        switching = true;
-
+        switching = true; 
+        
         //Set the sorting direction to ascending:
-        dir = "asc";
+        dir = "asc"; 
         /*Make a loop that will continue until
         no switching has been done:*/
         while (switching) {
@@ -1361,7 +1361,7 @@ else {
                 shouldSwitch= true;
                 $(resetIcon).text('sort');
                 $(iconSwitch).text('arrow_drop_down');
-                break;
+                break;  
                 }
             } else if (dir == "desc") {
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
@@ -1393,14 +1393,14 @@ else {
 
     // Update
     EqUI.table.update = function() {
-
+        
     };
 
 
     $(document).ready(function() {
         // Init
         EqUI.table.init();
-
+        
 
         // Update
         EqUI.table.update();
@@ -1418,7 +1418,7 @@ else {
 
     // Update
     EqUI.cards.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -2080,7 +2080,7 @@ else {
 
     // Update
     EqUI.collapsible.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -2265,6 +2265,11 @@ else {
               object.removeClass('eq-ui-dropdown-left-bottom');
               object.removeClass('eq-ui-dropdown-right-bottom');
 
+              target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
+              if(!target_auto_align || target_auto_align.length <=0){
+                target_auto_align = $("."+ origin.attr('data-auto-align-target'));
+              }
+
               var contSize = {
                 width: target_auto_align.outerWidth(true),
                 height: target_auto_align.outerHeight(true)
@@ -2303,7 +2308,7 @@ else {
               // if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
               //   isTop = true;
               // } else
-              if ((originOffset.top - targetSize.height) >= 0) {
+              if((originOffset.top - targetSize.height) >= 0){
                 isBottom = true;
                 isTop = false;
               }
@@ -2702,7 +2707,7 @@ else {
 
     // Update
     EqUI.modals.update = function() {
-
+        
     };
 
     $(document).ready(function() {
@@ -2871,7 +2876,7 @@ else {
 
     // Update
     EqUI.tabs.update = function() {
-
+        
     };
 
     // Load

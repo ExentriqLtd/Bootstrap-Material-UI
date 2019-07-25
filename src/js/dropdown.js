@@ -171,6 +171,11 @@
               object.removeClass('eq-ui-dropdown-left-bottom');
               object.removeClass('eq-ui-dropdown-right-bottom');
 
+              target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
+              if(!target_auto_align || target_auto_align.length <=0){
+                target_auto_align = $("."+ origin.attr('data-auto-align-target'));
+              }
+
               var contSize = {
                 width: target_auto_align.outerWidth(true),
                 height: target_auto_align.outerHeight(true)
@@ -199,19 +204,19 @@
               var isRight = false;
 
               // Is Left/Right
-              // if((originOffset.left + targetSize.width) <= contSize.width){
-              //   isLeft = true;
-              // } else
-              if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
+              if((originOffset.left + targetSize.width) <= contSize.width){
+                isLeft = true;
+              } else if(((originOffset.left + originSize.width) - targetSize.width) >= 0){
                 isRight = true;
-                isTop = false;
               }
 
               // Is Top/Bottom
-              if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
-                isTop = true;
-              } else if((originOffset.top - targetSize.height) >= 0){
+              // if(((originOffset.top + originSize.height) + targetSize.height) <= contSize.height){
+              //   isTop = true;
+              // } else
+              if((originOffset.top - targetSize.height) >= 0){
                 isBottom = true;
+                isTop = false;
               }
 
               if(isRight && isTop){
