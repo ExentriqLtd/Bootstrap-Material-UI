@@ -18893,7 +18893,8 @@ else {
                 }
               }
             }
-
+            var is_auto_align = !!target_auto_align[0];
+            var target_items = $("#"+ origin.attr('data-target') + ' li');
             // Update options
             updateOptions();
 
