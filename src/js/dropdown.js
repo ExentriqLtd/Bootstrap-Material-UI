@@ -17,12 +17,23 @@
             var origin = $(this);
             var options = $.extend({}, defaults, option);
             var target = $("#"+ origin.attr('data-target'));
-            var target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
-            if(!target_auto_align || target_auto_align.length <=0){
-              target_auto_align = $("."+ origin.attr('data-auto-align-target'));
+
+            const alignTargetEl = origin.attr('data-auto-align-target');
+            var target_auto_align;
+            if (alignTargetEl && alignTargetEl.length && alignTargetEl.charAt(0) === '.') {
+              target_auto_align = origin.closest(alignTargetEl);
+              if (!target_auto_align.length) {
+                target_auto_align = $(alignTargetEl);
+              }
+            } else {
+              target_auto_align = $("#"+ alignTargetEl);
+              if(!target_auto_align || target_auto_align.length <=0){
+                target_auto_align = origin.closest("."+ alignTargetEl);
+                if (!target_auto_align.length) {
+                  target_auto_align = $("."+ alignTargetEl);
+                }
+              }
             }
-            var is_auto_align = !!target_auto_align[0];
-            var target_items = $("#"+ origin.attr('data-target') + ' li');
 
             // Update options
             updateOptions();
@@ -171,9 +182,21 @@
               object.removeClass('eq-ui-dropdown-left-bottom');
               object.removeClass('eq-ui-dropdown-right-bottom');
 
-              target_auto_align = $("#"+ origin.attr('data-auto-align-target'));
-              if(!target_auto_align || target_auto_align.length <=0){
-                target_auto_align = $("."+ origin.attr('data-auto-align-target'));
+              var alignTargetEl = origin.attr('data-auto-align-target');
+              target_auto_align;
+              if (alignTargetEl && alignTargetEl.length && alignTargetEl.charAt(0) === '.') {
+                target_auto_align = origin.closest(alignTargetEl);
+                if (!target_auto_align.length) {
+                  target_auto_align = $(alignTargetEl);
+                }
+              } else {
+                target_auto_align = $("#"+ alignTargetEl);
+                if(!target_auto_align || target_auto_align.length <=0){
+                  target_auto_align = origin.closest("."+ alignTargetEl);
+                  if (!target_auto_align.length) {
+                    target_auto_align = $("."+ alignTargetEl);
+                  }
+                }
               }
 
               var contSize = {
