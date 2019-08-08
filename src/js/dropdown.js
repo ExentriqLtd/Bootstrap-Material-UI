@@ -67,7 +67,7 @@
 
             // Is Touch
             if(EqUI.site.isTouch){
-                origin.on('click', function(e) {
+                origin.on('touchstart', function(e) {
                     dropdownOpen(target);
                 });
 
