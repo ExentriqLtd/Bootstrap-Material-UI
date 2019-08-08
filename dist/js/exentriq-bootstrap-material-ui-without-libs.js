@@ -2059,16 +2059,14 @@ else {
 
             // Is Touch
             if(EqUI.site.isTouch){
-                origin.on('touchstart', function(e) {
-
-                    dropdownOpen(target);
-                });
-
                 $('html').on('touchstart', function(e) {
                     var element = $(e.target);
                     if (!element.hasClass(EqUI.dropdown.element_class) && element.parents('.'+EqUI.dropdown.element_class).length !== 1) {
                         dropdownClose(target);
                     }
+                });
+                origin.on('click', function(e) {
+                  dropdownOpen(target);
                 });
             } else {
                 // Close on html click
