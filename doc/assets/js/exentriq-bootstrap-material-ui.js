@@ -19333,8 +19333,9 @@ else {
 
             options = $.extend(defaults, options);
 
-            // Disable scrolling
-            $('body').css('overflow', '');
+            // Enable scrolling only if there no other modals open
+            if($(EqUI.modals.overlay_selector).length < 2)
+	            $('body').css('overflow', '');
 
             $modal.find(EqUI.modals.action_close_selector).off('click.close');
             $(document).off('keyup.leanModal' + overlayID);
