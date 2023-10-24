@@ -79,6 +79,45 @@ grunt
 
 Grunt will then watch concurrently for changes to src and jade folders, scss and jade files build each as required.
 
+
+## How To Use
+
+Use Node 7
+
+To create a new section:
+
+Duplicate Jade files in doc/jade and html file doc/jade/module
+
+Open _layout_default.jade and insert page varible
+```
+when "tabs"
+include modules/_tabs.html
+```
+
+on the sidebar file _header.html under doc/jade/module/snippets to make it work modify:
+```
+
+<li>
+  <div class="eq-ui-collapsible-header eq-ui-waves">
+    <a id="collapsible-nav-(root_path)">
+      <i class="mdi mdi-layers icon icon-left icon-24"></i>
+      Exentriq
+    </a>
+  </div>
+  <div class="eq-ui-collapsible-body">
+    <a id="collapsible-nav-(root_path)-(path)" href="./tablev2.html">Table App</a>
+    <a id="collapsible-nav-(root_path)-(path)" href="./cardsv2.html">Card App</a>
+  </div>
+</li>
+
+```
+
+in Gruntfile.js add under file your new page :
+```
+"doc/dropdown.html": "jade/dropdown.jade",
+```
+
+
 ## Links
 
 - [Bootstrap](http://getbootstrap.com)
