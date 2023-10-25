@@ -1,0 +1,193 @@
+// Table V2
+:root {
+// General
+  --heightTable: 400px;
+  --shadowTable: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  --headPaddingTable: 8px 16px;
+  --bodyPaddingTable: 8px 16px;
+  --headColorTable: #f5f5f5;
+  --marginTable: 32px 0px;
+  --borderBottomTable: 1px solid #f5f5f5;
+  --tbodyBackground: #ffffff;
+//Column Custom
+
+  --firstColumnWidth: 70px;
+  --firstColumnalign: left;
+  --firstColumnBg: #ffffff;
+
+  --lastColumnWidth: 30px;
+  --lastColumnalign: right;
+  --lastColumnBg: #ffffff;
+
+  --columnOneWidth: auto;
+  --columnOnealign: left;
+  --columnOneBg: #ffffff;
+
+  --columnTwoWidth: auto;
+  --columnTwoalign: left;
+  --columnTwoBg: #ffffff;
+
+  --columnThreeWidth: auto;
+  --columnThreealign: left;
+  --columnThreeBg: #ffffff;
+
+  --columnFourWidth: auto;
+  --columnFouralign: left;
+  --columnFourBg: #ffffff;
+
+  --columnFiveWidth: auto;
+  --columnFivealign: left;
+  --columnFiveBg: #ffffff;
+
+  --columnSixWidth: auto;
+  --columnSixalign: left;
+  --columnSixBg: #ffffff;
+
+  --columnEightWidth: auto;
+  --columnEightalign: left;
+  --columnEightBg: #ffffff;
+
+  --columnNineWidth: auto;
+  --columnNinealign: left;
+  --columnNineBg: #ffffff;
+
+  --columnNineWidth: auto;
+  --columnNinealign: left;
+  --columnNineBg: #ffffff;
+
+  --columnTenWidth: auto;
+  --columnTenalign: left;
+  --columnTenBg: #ffffff;
+
+  --columnElevenWidth: auto;
+  --columnElevenalign: left;
+  --columnElevenBg: #ffffff;
+
+}
+
+.containerRootSection{
+	p{
+		margin: 16px 0px;
+		font-weight: bold;
+	}
+}
+
+.containerTableSticky {
+  overflow: auto;
+  height: var(--heightTable);
+  margin: var(--marginTable);
+  box-shadow: var(--shadowTable);
+  table.tableSticky {
+    position: relative;
+    border-collapse: collapse;
+    thead {
+      tr {
+        th {
+          position: sticky !important;
+          top: 0;
+          z-index: 100;
+          padding: var(--headPaddingTable);
+          background-color: var(--headColorTable);
+        }
+      }
+    }
+    tbody {
+      background-color: var(--tbodyBackground);
+      tr {
+        border-bottom: var(--borderBottomTable);
+        td {
+          position: relative;
+          padding: var(--bodyPaddingTable);
+          .eq-ui-dropdown{
+          	right: 0;
+    		left: auto;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+    .eq-ui-data-table-sort-column i{
+    	vertical-align: middle;
+    	margin-left: 4px;
+    	cursor: pointer;
+    }
+  }
+}
+
+td{
+	.containerMultiline{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+td,
+th {
+  &.firstColumn {
+    width: var(--firstColumnWidth);
+    text-align: var(--firstColumnalign);
+    background-color: var(--firstColumnBg);
+  }	
+  &.lastColumn {
+    width: var(--lastColumnWidth);
+    text-align: var(--lastColumnalign);
+    background-color: var(--lastColumnBg);
+  }
+  &.columnOne {
+    width: var(--columnOneWidth);
+    text-align: var(--columnOneAlign);
+    background-color: var(--columnOneBg);
+  }
+  &.columnTwo {
+    width: var(--columnTwoWidth);
+    text-align: var(--columnTwoAlign);
+    background-color: var(--columnTwoBg);
+  }
+  &.columnThree {
+    width: var(--columnThreeWidth);
+    text-align: var(--columnThreeAlign);
+    background-color: var(--columnThreeBg);
+  }
+  &.columnFour {
+    width: var(--columnFourWidth);
+    text-align: var(--columnFourAlign);
+    background-color: var(--columnFourBg);
+  }
+  &.columnFive {
+    width: var(--columnFiveWidth);
+    text-align: var(--columnFiveAlign);
+    background-color: var(--columnFiveBg);
+  }
+  &.columnSix {
+    width: var(--columnSixWidth);
+    text-align: var(--columnSixAlign);
+    background-color: var(--columnSixBg);
+  }
+  &.columnSeven {
+    width: var(--columnSevenWidth);
+    text-align: var(--columnSevenAlign);
+    background-color: var(--columnSevenBg);
+  }
+  &.columnEight {
+    width: var(--columnEightWidth);
+    text-align: var(--columnEightAlign);
+    background-color: var(--columnEightBg);
+  }
+  &.columnNine {
+    width: var(--columnNineWidth);
+    text-align: var(--columnNineAlign);
+    background-color: var(--columnNineBg);
+  }
+  &.columnTen {
+    width: var(--columnTenWidth);
+    text-align: var(--columnTenAlign);
+    background-color: var(--columnTenBg);
+  }
+  &.columnEleven {
+    width: var(--columnElevenWidth);
+    text-align: var(--columnElevenAlign);
+    background-color: var(--columnElevenBg);
+  }
+}
