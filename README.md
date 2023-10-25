@@ -56,6 +56,8 @@ External dependencies, should be included separately:
 
 ## Installation
 
+!! Use Node 6 !!
+
 Install the main tools (require sudo on certain systems):
 
 ```
@@ -81,8 +83,6 @@ Grunt will then watch concurrently for changes to src and jade folders, scss and
 
 
 ## How To Use
-
-Use Node 7
 
 To create a new section:
 
