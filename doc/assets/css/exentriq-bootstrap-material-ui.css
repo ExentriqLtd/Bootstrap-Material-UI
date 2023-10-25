@@ -19266,6 +19266,9 @@ table.eq-ui-data-table tbody > tr.is-selected {
   --marginTable: 32px 0px;
   --borderBottomTable: 1px solid #f5f5f5;
   --tbodyBackground: #ffffff;
+  --headColorTextTable: rgba(0, 0, 0, 0.54);
+  --headWeightTable: 400;
+  --headSizeTable: 14px;
   --firstColumnWidth: 70px;
   --firstColumnalign: left;
   --firstColumnBg: #ffffff;
@@ -19331,6 +19334,12 @@ table.eq-ui-data-table tbody > tr.is-selected {
   z-index: 100;
   padding: var(--headPaddingTable);
   background-color: var(--headColorTable);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: var(--headWeightTable);
+  color: var(--headColorTextTable);
+  font-size: var(--headSizeTable);
 }
 
 .containerTableSticky table.tableSticky tbody {
@@ -19344,11 +19353,20 @@ table.eq-ui-data-table tbody > tr.is-selected {
 .containerTableSticky table.tableSticky tbody tr td {
   position: relative;
   padding: var(--bodyPaddingTable);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .containerTableSticky table.tableSticky tbody tr td .eq-ui-dropdown {
   right: 0;
   left: auto;
+}
+
+.containerTableSticky table.tableSticky tbody tr td.lastColumn {
+  white-space: unset;
+  overflow: visible;
+  text-overflow: normal;
 }
 
 .containerTableSticky table.tableSticky tbody tr:last-child {
