@@ -1,2 +1,102 @@
 // Cards
 
+:root{
+	--spacerSectionCard: 16px;
+	--backgroundCard: linear-gradient(161deg, #FBFBFB 0%, #F5F5F5 100%);
+	--backgroundCardIns:linear-gradient(-20deg, #1279ab 0%, #025095 100%);
+	--subTextColorCard: #757575;
+	--widthCard: 33.3333%;
+	--shadowCard: 2px 2px 10px rgba(0, 0, 0, 0.25);
+
+
+	--cardTitleSectionPageFontSize: 32px;
+	--cardTitleSectionPageFontWeight: 500;
+
+
+
+	--iconCardColor: #ffffff;
+	--iconCardSize: 50px;
+
+
+	--cardTitleFontSize:22px;
+	--cardTitleFontWeight:500;
+	--cardTitleMarginTop:8px;
+	--cardTitleMarginBottom:8px;
+	--cardTitleColor: #4a4a4a;
+
+
+	--subTextColorCard: #757575;
+	--subTextFontSizeCard: 14px;
+	--subTextLineHeightCard: normal;
+
+}
+
+.containerAppList {
+  height: auto;
+  padding: var(--spacerSectionCard);
+  overflow: auto;
+  box-shadow: var(--shadowCard);
+  margin: 16px 0px;
+  .titleSectionPage {
+    padding: var(--spacerSectionCard) 0px;
+    font-size: var(--cardTitleSectionPageFontSize);
+    font-weight: var(--cardTitleSectionPageFontWeight);
+    margin: 0px;
+    padding-bottom: calc(var(--spacerSectionCard) * 2);
+  }
+  .appList {
+    display: flex;
+    gap: var(--spacerSectionCard);
+    flex-wrap: wrap;
+    .hr-card {
+      background-image: var(--backgroundCard);
+      padding: var(--spacerSectionCard);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: calc(var(--widthCard) - var(--spacerSectionCard));
+      border-radius: 5px;
+      .hrCard-content {
+        text-align: center;
+        cursor: pointer;
+      }
+      .hrCard-icon-container {
+        background-image: var(--backgroundCardIns);
+        padding: var(--spacerSectionCard);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--shadowCard);
+        cursor: pointer;
+        span {
+          font-size: var(--iconCardSize);
+          color: var(--iconCardColor);
+        }
+      }
+      .hrCard-content {
+        .hrCard-title {
+          font-weight: var(--cardTitleFontWeight);
+          font-size: var(--cardTitleFontSize);
+          margin-bottom: var(--cardTitleMarginTop);
+          margin-top: var(--cardTitleMarginBottom);
+          color: var(--cardTitleColor)
+        }
+        .hrCard-description {
+          color: var(--subTextColorCard);
+          font-size: var(--subTextFontSizeCard);
+          line-height: var(--subTextLineHeightCard);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .appList {
+    .hr-card {
+      width: 100%;
+    }
+  }
+}
