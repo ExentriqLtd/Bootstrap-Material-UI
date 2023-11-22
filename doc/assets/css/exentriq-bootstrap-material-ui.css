@@ -20066,6 +20066,21 @@ fieldset[disabled] .btn-danger.active {
   position: relative;
 }
 
+.container-buttons-section {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.center-button-items {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  gap: 8px;
+}
+
 :root {
   --spacerSectionCard: 16px;
   --backgroundCard: linear-gradient(161deg, #FBFBFB 0%, #F5F5F5 100%);

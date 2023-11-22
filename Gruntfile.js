@@ -344,6 +344,7 @@ module.exports = function ( grunt ) {
                     "doc/tablev2.html": "jade/tablev2.jade",
                     "doc/typography.html": "jade/typography.jade",
                     "doc/buttons.html": "jade/buttons.jade",
+                    "doc/buttonsv2.html": "jade/buttonsv2.jade",
                     "doc/cards.html": "jade/cards.jade",
                     "doc/cardsv2.html": "jade/cardsv2.jade",
                     "doc/list.html": "jade/list.jade",
