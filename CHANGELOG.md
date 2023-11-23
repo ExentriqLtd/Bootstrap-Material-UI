@@ -1,6 +1,14 @@
 ## CHANGELOG
 
-### v0.4.6 (Apr 3, 2019)
+### v0.4.6 (Nov 22, 2023)
+
+**Fixes**
+- Added Material Symbols.
+- Added new sticky Table.
+- Added New card Section.
+- Added New Buttons Section.
+
+### v0.4.6.1 (Apr 3, 2019)
 
 **Fixes**
 - Added Layout Section, with guide to icons to use.

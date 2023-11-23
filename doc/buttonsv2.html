@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="description" content="Implements Google's Material Design in Bootstrap.">
-    <title>Components - List | Exentriq - Bootstrap Material UI</title>
+    <title>Exentriq - Buttons App | Exentriq - Bootstrap Material UI</title>
     <!-- CSS-->
     <link href="assets/css/exentriq-bootstrap-material-ui.css?v=0.0.0" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
     <link href="assets/css/doc.css?v=0.0.0" rel="stylesheet">
   </head>
   <body class="eq-ui-layout-header-fixed eq-ui-side-nav-auto">
-    <script>var _doc_route = {root_path:"components",path:"list",name_section:"Components",name_chapter:"List"};</script>
+    <script>var _doc_route = {root_path:"exentriq",path:"buttonsnew",name_section:"Exentriq",name_chapter:"Buttons App"};</script>
 <!--[if lt IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -725,199 +725,213 @@
 
 </div>
 
-    <main class="eq-ui-main"><div class="jumbotron">
-    <div class="container">
-        <h1>List</h1>
-    </div>
-</div>
-
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Basic</h2>
-
-            <ul class="eq-ui-list doc-margin-bottom">
-                <li class="eq-ui-list-item">Cras justo odio</li>
-                <li class="eq-ui-list-item">Dapibus ac facilisis in</li>
-                <li class="eq-ui-list-item">Morbi leo risus</li>
-                <li class="eq-ui-list-item">Porta ac consectetur ac</li>
-            </ul>
-
-            <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-list&quot;&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Cras justo odio&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
+    <main class="eq-ui-main">    
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Buttons</h1>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Links</h2>
+    <div class="container"> 
 
-            <div class="eq-ui-list eq-ui-hoverable doc-margin-bottom">
-                <a href="#" class="eq-ui-list-item">Cras justo odio</a>
-                <a href="#" class="eq-ui-list-item active">Dapibus ac facilisis in</a>
-                <a href="#" class="eq-ui-list-item">Morbi leo risus</a>
-                <a href="#" class="eq-ui-list-item">Porta ac consectetur ac</a>
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">FAB</h2>
+                <p>Fab button variation, add the class <code class="language-markup">eq-ui-btn-fab</code>.</p>
+                <p class="container-buttons-section">
+                <a class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light"><span class="material-symbols-outlined">add</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light disabled"><span class="material-symbols-outlined">add</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;add&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light disabled&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;add&lt;/span&gt;&lt;/a&gt;</code></pre>
             </div>
-
-            <pre><code class="language-markup">
-&lt;div class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
-    &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Cras justo odio&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item active&quot;&gt;Dapibus ac facilisis in&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/a&gt;
-    &lt;a href=&quot;#&quot; class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/a&gt;
-&lt;/div&gt;</code></pre>
         </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Mini FAB</h2>
+                <p>Mini Fab button variation, add the class <code class="language-markup">eq-ui-btn-fab eq-ui-btn-mini-fab</code>.</p>
+                <p class="container-buttons-section">
+                <a class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light"><span class="material-symbols-outlined">add</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light disabled"><span class="material-symbols-outlined">add</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;&lt;/span&gt;add&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-mini-fab eq-ui-waves-light disabled&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;add&lt;/span&gt;&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Action FAB</h2>
+                <p>Action Fab button variation. You can see in bottom right on this page</p>
+
+                <div class="eq-ui-btn-fab-action">
+                    <a class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light"><span class="material-symbols-outlined">edit</span></a>
+                    <ul>
+                        <li>
+                            <a href="./" class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-sea-blue-500">
+                            <span class="material-symbols-outlined">monitoring</span></a>
+                            <div class="tooltip-buttons mobile-tooltip-view"><span>Title 1 - The description i'll show is pretty long</span></div>
+                        </li>
+                        <li><a href="./" class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-water-blue-500">
+                            <span class="material-symbols-outlined">format_quote</span></a>
+                            <div class="tooltip-buttons mobile-tooltip-view"><span>Title 2</span></div>
+                        </li>
+                        <li><a href="./" class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-pastel-red-500">
+                            <span class="material-symbols-outlined">upload</span></a>
+                            <div class="tooltip-buttons"><span>Title 3 - Med</span></div>
+                        </li>
+                        <li><a href="./" class="btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-desert-orange-500">
+                            <span class="material-symbols-outlined">attach_file</span></a>
+                            <div class="tooltip-buttons mobile-tooltip-view"><span>Title 4 - Example 1 </span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <pre><code class="language-markup">
+                &lt;div class=&quot;eq-ui-btn-fab-action&quot;&gt;
+                    &lt;a class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-waves-light&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;edit&lt;/span&gt;&lt;/a&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;
+                            &lt;a href=&quot;./&quot; class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-sea-blue-500&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined&quot;&gt;monitoring&lt;/span&gt;&lt;/a&gt;
+                            &lt;div class=&quot;tooltip-buttons mobile-tooltip-view&quot;&gt;&lt;span&gt;Title 1 - The description i'll show is pretty long&lt;/span&gt;&lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;./&quot; class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-water-blue-500&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined&quot;&gt;format_quote&lt;/span&gt;&lt;/a&gt;
+                            &lt;div class=&quot;tooltip-buttons mobile-tooltip-view&quot;&gt;&lt;span&gt;Title 2&lt;/span&gt;&lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;./&quot; class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-pastel-red-500&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined&quot;&gt;upload&lt;/span&gt;&lt;/a&gt;
+                            &lt;div class=&quot;tooltip-buttons&quot;&gt;&lt;span&gt;Title 3 - Med&lt;/span&gt;&lt;/div&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;./&quot; class=&quot;btn btn-primary center-button-items eq-ui-btn-fab eq-ui-btn-fab eq-ui-btn-fab-with-tooltip eq-ui-waves-light eq-desert-orange-500&quot;&gt;
+                            &lt;span class=&quot;material-symbols-outlined&quot;&gt;attach_file&lt;/span&gt;&lt;/a&gt;
+                            &lt;div class=&quot;tooltip-buttons mobile-tooltip-view&quot;&gt;&lt;span&gt;Title 4 - Example 1 &lt;/span&gt;&lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+</code></pre>
+
+                <p>You can also toggle them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').toggleFAB();</code></pre>
+
+                <p>You can also open them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').openFAB();</code></pre>
+
+                <p>You can also close them programmatically:</p>
+
+                <pre><code class="language-javascript">
+$('.eq-ui-btn-fab-action').closeFAB();</code></pre>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Flat</h2>
+                <p>Flat button variation, add the class <code class="language-markup ">eq-ui-btn-flat</code>.</p>
+                <p>
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves"><span class="center-button-items">Button</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text"><span class="center-button-items">Button</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-btn-flat eq-ui-waves disabled"><span class="center-button-items">Disabled</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Button&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves eq-ui-secondary-color-text&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Button&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-btn-flat eq-ui-waves disabled&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Disabled&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Raised</h2>
+                <p>Raised button variation, add the class <code class="language-markup">btn-default</code>.</p>
+                <p>
+                <a class="btn btn-default eq-ui-waves"><span class="center-button-items">Button</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-default eq-ui-waves disabled"><span class="center-button-items">Disabled</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-default eq-ui-waves&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Button&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-default eq-ui-waves disabled&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Disabled&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Colored</h2>
+                <p>Colored button variations.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light"><span class="center-button-items">Button</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-success eq-ui-waves-light"><span class="center-button-items">Success</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-info eq-ui-waves-light"><span class="center-button-items">Info</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-warning eq-ui-waves-light"><span class="center-button-items">Warning</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-danger eq-ui-waves-light"><span class="center-button-items">Danger</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-waves-light eq-desert-orange-500"><span class="center-button-items">Custom</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Button&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-success eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Success&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-info eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Info&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-warning eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Warning&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-danger eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Danger&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light eq-desert-orange-500&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Custom&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Size</h2>
+                <p>Size button variation, add the class <code class="language-markup">btn-lg</code> for large size.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light"><span class="center-button-items">Button</span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary btn-lg eq-ui-waves-light"><span class="center-button-items">Large Button</span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Button&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary btn-lg eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;Large Button&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="header">Icon</h2>
+                <p>Icon button variation, add the left or right icon.</p>
+                <p>
+                <a class="btn btn-primary eq-ui-waves-light"><span class="center-button-items"><span class="material-symbols-outlined">cloud</span><span>Button</span></span></a>
+                &nbsp;&nbsp;&nbsp;
+                <a class="btn btn-primary eq-ui-waves-light"><span class="center-button-items"><span>Button</span><span class="material-symbols-outlined">cloud</span></span></a>
+                </p>
+                <pre><code class="language-markup">
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;cloud&lt;/span&gt;&lt;span&gt;Button&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+&lt;a class=&quot;btn btn-primary eq-ui-waves-light&quot;&gt;&lt;span class=&quot;center-button-items&quot;&gt;&lt;span&gt;Button&lt;/span&gt;&lt;span class=&quot;material-symbols-outlined&quot;&gt;cloud&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;
+</code></pre>
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">With Header</h2>
-
-            <ul class="eq-ui-list eq-ui-hoverable doc-margin-bottom">
-                <li class="eq-ui-list-item eq-ui-list-header"><h4>Header</h4></li>
-                <li class="eq-ui-list-item">Dapibus ac facilisis in</li>
-                <li class="eq-ui-list-item">Morbi leo risus</li>
-                <li class="eq-ui-list-item">Porta ac consectetur ac</li>
-            </ul>
-
-            <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
-    &lt;li class=&quot;eq-ui-list-item eq-ui-list-header&quot;&gt;&lt;h4&gt;Header&lt;/h4&gt;&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Dapibus ac facilisis in&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Morbi leo risus&lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;Porta ac consectetur ac&lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">With Content</h2>
-
-            <ul class="eq-ui-list eq-ui-hoverable doc-margin-bottom">
-
-                <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
-                    <img class="circle" src="assets/img/doc/avatar/avatar_1.jpg">
-                    <h6 class="eq-ui-list-title">Title - Single line</h6>
-                    <a class="eq-ui-list-secondary-content-body"><i class="mdi mdi-star icon icon-24"></i></a>
-                </li>
-
-                <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate active">
-                    <img class="circle" src="assets/img/doc/avatar/avatar_2.jpg">
-                    <div class="eq-ui-list-body">
-                        <h6 class="eq-ui-list-title">Title - Truncate text - Large title sample</h6>
-                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                    </div>
-                </li>
-
-                <li class="eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content">
-                    <img class="circle" src="assets/img/doc/avatar/avatar_3.jpg">
-                    <div class="eq-ui-list-body">
-                        <h6 class="eq-ui-list-title">Title</h6>
-                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                    </div>
-                    <a class="eq-ui-list-secondary-content-body active"><i class="mdi mdi-star icon icon-24"></i></a>
-                </li>
-
-                <li class="eq-ui-list-item">
-                    <div class="eq-ui-list-body">
-                        <h6 class="eq-ui-list-title">Title - Without Avatar</h6>
-                        Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-                    </div>
-                </li>
-
-            </ul>
-
-            <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
-
-    &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content&quot;&gt;
-        &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_1.jpg&quot;&gt;
-        &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title - Single line&lt;/h6&gt;
-        &lt;a class=&quot;eq-ui-list-secondary-content-body&quot;&gt;&lt;i class=&quot;mdi mdi-star icon icon-24&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    &lt;/li&gt;
-
-    &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-truncate active&quot;&gt;
-        &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_2.jpg&quot;&gt;
-        &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-            &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title - Truncate text - Large title sample&lt;/h6&gt;
-            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-        &lt;/div&gt;
-    &lt;/li&gt;
-
-    &lt;li class=&quot;eq-ui-list-item eq-ui-list-avatar eq-ui-list-secondary-content&quot;&gt;
-        &lt;img class=&quot;circle&quot; src=&quot;assets/img/doc/avatar/avatar_3.jpg&quot;&gt;
-        &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-            &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title&lt;/h6&gt;
-            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-        &lt;/div&gt;
-        &lt;a class=&quot;eq-ui-list-secondary-content-body active&quot;&gt;&lt;i class=&quot;mdi mdi-star icon icon-24&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-    &lt;/li&gt;
-
-    &lt;li class=&quot;eq-ui-list-item&quot;&gt;
-        &lt;div class=&quot;eq-ui-list-body&quot;&gt;
-            &lt;h6 class=&quot;eq-ui-list-title&quot;&gt;Title - Without Avatar&lt;/h6&gt;
-            Duis bibendum nisl quis tellus rutrum, ut aliquet massa interdum. Mauris sit amet nisl augue. Nullam turpis mauris, aliquam in fermentum non, malesuada faucibus orci.
-        &lt;/div&gt;
-    &lt;/li&gt;
-
-&lt;/ul&gt;</code></pre>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <h2 class="header">Dismissable</h2>
-            <p>Adding the class <code class="language-markup">dismissable</code> after to eq-ui-list-item. This is only for touch enabled devices.</p>
-
-            <ul class="eq-ui-list eq-ui-hoverable eq-ui-secondary-color doc-margin-bottom">
-                <li class="eq-ui-list-item dismissable">
-                    Cras justo odio
-                    <i class="mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text"></i>
-                </li>
-                <li class="eq-ui-list-item dismissable">
-                    Dapibus ac facilisis in
-                    <i class="mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text"></i>
-                </li>
-                <li class="eq-ui-list-item dismissable">
-                    Morbi leo risus
-                    <i class="mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text"></i>
-                </li>
-                <li class="eq-ui-list-item dismissable">
-                    Porta ac consectetur ac
-                    <i class="mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text"></i>
-                </li>
-            </ul>
-
-            <pre><code class="language-markup">
-&lt;ul class=&quot;eq-ui-list eq-ui-hoverable&quot;&gt;
-    &lt;li class=&quot;eq-ui-list-item dismissable&quot;&gt;
-        Cras justo odio
-        &lt;i class=&quot;mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text&quot;&gt;&lt;/i&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item dismissable&quot;&gt;
-        Dapibus ac facilisis in
-        &lt;i class=&quot;mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text&quot;&gt;&lt;/i&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item dismissable&quot;&gt;
-        Morbi leo risus
-        &lt;i class=&quot;mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text&quot;&gt;&lt;/i&gt;
-    &lt;/li&gt;
-    &lt;li class=&quot;eq-ui-list-item dismissable&quot;&gt;
-        Porta ac consectetur ac
-        &lt;i class=&quot;mdi mdi-send icon icon-right icon-24 eq-ui-secondary-color-text&quot;&gt;&lt;/i&gt;
-    &lt;/li&gt;
-&lt;/ul&gt;</code></pre>
-        </div>
-    </div>
-
-</div>
 <!--footer>
     <p>&copy; Exentriq 2015</p>
 </footer-->

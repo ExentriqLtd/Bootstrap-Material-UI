@@ -12,11 +12,11 @@
 @import "common/variables";
 
 // Bootstrap
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap"; 
 
 // Global
 @import "../bower_components/animate-sass/animate";
-@import "../bower_components/waves/src/sass/waves";
+@import "../bower_components/waves/src/sass/waves"; 
 @import "../bower_components/prism/themes/prism";
 @import "common/global";
 
@@ -36,6 +36,7 @@
 @import "components/nav-menu";
 @import "components/badges";
 @import "components/buttons";
+@import "components/buttonsv2";
 @import "components/cards";
 @import "components/cardsv2";
 @import "components/list";
